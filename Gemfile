@@ -34,15 +34,38 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'faraday'
+gem 'json'
+gem 'date'
+gem 'omniauth-google-oauth2'
+
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
+  gem 'figaro'
 end
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rake', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'travis'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'simplecov'
+  gem 'shoulda-matchers'
+  gem 'launchy'
+  gem 'capybara'
+  gem 'orderly'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 

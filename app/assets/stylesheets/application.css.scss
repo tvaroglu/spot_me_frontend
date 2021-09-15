@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css?family=Voltaire');
+html, body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  background-attachment: fixed;
+  font-family: 'Voltaire';
+  // font-size: 20px;
+}
+
+main {
+  // flex: 1;
+}
+
+footer {
+  // display: flex;
+  // align-self: baseline;
+  // flex-direction: row;
+}

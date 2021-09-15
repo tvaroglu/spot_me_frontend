@@ -1,66 +1,193 @@
-# Spot Me (FE)
+<div align="center">
+  
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Issues][issues-shield]][issues-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Forks][forks-shield]][forks-url]
+
+#  [Spot Me](https://spotme-app.herokuapp.com/) (FE)
+  
+  <img src="https://user-images.githubusercontent.com/74567704/133356706-90e886e7-a9ec-4fbe-8b96-d876a9e08112.png" width="70%"><br/>
+
+  Finding a gym buddy to help maintain motivation for a long-term fitness regimen can be a challenging (and sometimes awkward) task... enter SpotMe!
+SpotMe is a database-driven web application in which users can register with their gym(s) of choice, and find other registered users to share in their collective workout experience.
+  
+  
+# <a href="https://github.com/tvaroglu/spot_me_backend"><img src="https://img.shields.io/static/v1?label=Spot+Me&message=Back+End+Repo&color=9cf"></a><br/><br/>
+  
+  ## Contributors
+
+|Brian Fletcher|Caroline Tan|Ezzedine Alwafai|Gunnar Runkle|Scott Borecki|Taylor Varoglu
+|--- |--- |--- |--- |--- |--- |
+|[GitHub](https://github.com/bfl3tch)|[GitHub](https://github.com/carolinectan)|[GitHub](https://github.com/ealwafai)|[GitHub](https://github.com/gunnarrunner)|[GitHub](https://github.com/Scott-Borecki)|[GitHub](https://github.com/tvaroglu)
+|[LinkedIn](https://www.linkedin.com/in/bfl3tch/)|[LinkedIn](https://www.linkedin.com/in/carolinectan/)|[LinkedIn](https://www.linkedin.com/in/ezzedine-alwafai/)|[LinkedIn](https://www.linkedin.com/in/gunnar-runkle/)|[LinkedIn](https://www.linkedin.com/in/scott-borecki/)|[LinkedIn](https://www.linkedin.com/in/taylorvaroglu/)
+
+<br/><br/>
+
+
+
+</div>
+
+ <div align="center">
 
 ## Table of Contents
+|Links
+|--- |
+[Tools Used](#tools-used)
+[Setup](#setup)
+[Learning Goals](#learning-goals)
+[Wireframes](#wireframes)
+[Database Schema](#database-schema)
 
-- [About this Project](#about-this-project)
-- [Learning Goals](#learning-goals)
-- [Overview](#overview)
-- [Local Setup](#local-setup)
-- [Versions](#versions)
-- [Wireframes](#wireframes)
-- [Database Schema](#database-schema)
-- [Tools Used](#tools-used)
-- [Contributors](#contributors)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+  <br/><br/><br/><ins>Tools Used</ins>
+  
+  |Development|Development|Testing|Deployment
+  |--- |--- |--- |--- |
+  |[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
+  |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[Travis CI](https://travis-ci.org/)|
+  |[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[Webmock](https://github.com/bblimke/webmock)
+  |[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)|[VCR](https://github.com/vcr/vcr)
+  |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)|[Launchy](https://rubygems.org/gems/launchy/versions/2.4.3)
+  |[Postico](https://eggerapps.at/postico/)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[Orderly](https://github.com/jmondo/orderly)
+  |[Faraday](https://github.com/lostisland/faraday)|[Atom](https://atom.io/)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)
+  |[Figaro](https://github.com/laserlemon/figaro)|[FactoryBot](https://github.com/thoughtbot/factory_bot)
+  |[Postman](https://www.postman.com/product/rest-client/)|
 
-## Versions
+</div>
 
-- Ruby 2.7.2
+## <ins>Setup</ins>
 
-- Rails 5.2.5
+  This project requires Ruby 2.7.2.
 
-* System dependencies
+  * Fork this repository
+  * Clone your fork
+  * From the command line, install gems and set up your DB:
+      * `bundle`
+      * `bundle update`
+      * `rails db:create`
+  * Run the test suite with `bundle exec rspec`.
+  * Run your development server with `rails s` to see the app in action.
 
-* Configuration
+  #### Project Configurations
 
-* Database creation
+  * Ruby version
+      ```bash
+      $ ruby -v
+      ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin20]
+      ```
 
-* Database initialization
+  * [System dependencies](https://github.com/tvaroglu/spot_me_frontend/blob/main/Gemfile)
+      ```bash
+      $ rails -v
+      Rails 5.2.6
+      ```
+      
+      
+  * Database creation
+      ```bash
+      $ rails db:{drop,create,migrate,seed}
+      Created database 'spot_me_frontend_development'
+      Created database 'spot_me_frontend_test'
+      ```
+      
+  * [OAuth setup](https://github.com/zquestz/omniauth-google-oauth2#installation)
+      ```bash
+      Add to your Gemfile:
+        gem 'omniauth-google-oauth2'
+      $ bundle install
+      ```
+      
+      
+  * [Google API setup](https://console.developers.google.com)
+    ```visit https://console.developers.google.com
+    - Select your project.
+      - Go to Credentials
+        - Select the "OAuth consent screen" tab on top, and provide an 'EMAIL ADDRESS' and a 'PRODUCT NAME'
+        - Wait 10 minutes for changes to take effect.
+    ```
 
-* How to run the test suite
+  * [Yelp API access](https://www.yelp.com/developers/documentation/v3/get_started)
+      ```visit https://www.yelp.com/developers/documentation/v3/get_started
+      - Signup for an account
+      - To register for an API key, click the  from within your account settings page.
+        - Click on your avatar or initials in the main navigation
+        - Click the "Settings" link
+        - Click the "API" link in the left sidebar
+        - Click "Create" or "click here" on the API page
+      - We will be using the `v3` token.
+      ```
 
-* Services (job queues, cache servers, search engines, etc.)
+  * [API access setup](https://github.com/laserlemon/figaro)
+      ```bash
+      $ gem install figaro
+      $ bundle exec figaro install
+      open the new hidden file `application.yml`
+      set `yelp_api_key`: <<Bearer (your v4 token)>>
+      ```
 
-* Deployment instructions
+  * How to run the test suite
+      ```bash
+      $ bundle exec rspec
+      ```
 
-* ...
+  * [Local Deployment](http://localhost:3000), for testing:
+      ```bash
+      $ rails s
+      => Booting Puma
+      => Rails 5.2.6 application starting in development
+      => Run `rails server -h` for more startup options
+      Puma starting in single mode...
+      * Version 3.12.6 (ruby 2.7.2-p137), codename: Llamas in Pajamas
+      * Min threads: 5, max threads: 5
+      * Environment: development
+      * Listening on tcp://localhost:3000
+      Use Ctrl-C to stop
 
-## Contributors
+      ```
+          
+  ### Learning Goals
+  
+  - ⭐ Consume two or more external APIs which require authentication
+  - ⭐ Build APIs that return JSON responses
+  - ⭐ Use an external OAuth provider to authenticate users
+  - ⭐ Create a project with a separate frontend and backend
+  - ⭐ Organize and refactor code to be more maintainable
+  - ⭐ Implement a self-referential relationship in ActiveRecord
+  - ⭐ Utilize Continuous Integration using Travis CI
+  - ⭐ Deploy to Heroku
+  - ⭐ Implement a production-quality user interface using Bootstrap or other common CSS styling framework
+  - ⭐ Implement project management by using project boards, participating in daily stand-ups and team retros
+  - ⭐ Use Rails to create web pages that allow users to CRUD resources
+  - ⭐ Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews
+  - ⭐ Write thorough, understandable documentation
+  - ⭐ Create instance and class methods on a Rails model that use ActiveRecord methods and helpers
+  - ⭐ Write model and feature tests that fully cover data logic and potential user behavior
+  - ⭐ Apply RuboCop’s style guide for code quality
+  
 
-👤  **Brian Fletcher**
-- [GitHub](https://github.com/bfl3tch)
-- [LinkedIn](https://www.linkedin.com/in/bfl3tch/)
+  [Heroku Deployment](https://spotme-app.herokuapp.com/), for production
+  
+</div>
 
-👤  **Caroline Tan**
-- [GitHub](https://github.com/carolinectan)
-- [LinkedIn](https://www.linkedin.com/in/carolinectan/)
+<div align="center">
 
-👤  **Ezzedine Alwafai**
-- [GitHub](https://github.com/ealwafai)
-- [LinkedIn](https://www.linkedin.com/in/ezzedine-alwafai/)
+## Database Schema
 
-👤  **Gunnar Runkle**
-- [GitHub](https://github.com/gunnarrunner)
-- [LinkedIn](https://www.linkedin.com/in/gunnar-runkle/)
+<img src="https://user-images.githubusercontent.com/74567704/133355636-6dc4278a-bb77-45f2-a277-7899632c85d2.png">
 
-👤  **Scott Borecki**
-- [GitHub](https://github.com/Scott-Borecki)
-- [LinkedIn](https://www.linkedin.com/in/scott-borecki/)
+  </div>
 
-👤  **Taylor Varoglu**
-- [GitHub](https://github.com/tvaroglu)
-- [LinkedIn](https://www.linkedin.com/in/taylorvaroglu/)
+  <!-- MARKDOWN LINKS & IMAGES -->
+
+  [contributors-shield]: https://img.shields.io/github/contributors/tvaroglu/spot_me_frontend.svg?style=flat-square
+  [contributors-url]: https://github.com/tvaroglu/spot_me_frontend/graphs/contributors
+  [forks-shield]: https://img.shields.io/github/forks/tvaroglu/spot_me_frontend.svg?style=flat-square
+  [forks-url]: https://github.com/tvaroglu/spot_me_frontend/network/members
+  [stars-shield]: https://img.shields.io/github/stars/tvaroglu/spot_me_frontend.svg?style=flat-square
+  [stars-url]: https://github.com/tvaroglu/spot_me_frontend/stargazers
+  [issues-shield]: https://img.shields.io/github/issues/tvaroglu/spot_me_frontend.svg?style=flat-square
+  [issues-url]: https://github.com/tvaroglu/spot_me_frontend/issues
+  <!--
+

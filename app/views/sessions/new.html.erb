@@ -1,6 +1,6 @@
 <h1>Register</h1>
 
-<%= form_with url: '/login', method: :post, local: true do |f| %>
+<%= form_with url: authentication_path, method: :post, local: true do |f| %>
   <%= f.label :email, 'Email' %>
   <br>
   <%= f.text_field :email, id: :email %>

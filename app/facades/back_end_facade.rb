@@ -1,7 +1,12 @@
 class BackEndFacade
   class << self
-    def authenticate_user(endpoint, params)
-      BackEndService.send_request(endpoint, params)
+    def get_user(google_id)
+      user = BackEndService.get_user(google_id)
+      user[:data][:id].present? ? User.new(user[:data]) : nil
+    end
+
+    def create_user(params)
+      BackEndService.create_user(params)
     end
   end
 end

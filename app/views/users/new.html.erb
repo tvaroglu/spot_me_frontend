@@ -1,17 +1,9 @@
 <h1>Register</h1>
 
-<%= form_with url: authentication_path, method: :post, local: true do |f| %>
+<%= form_with url: registration_path(params[:format]), local: true do |f| %>
   <%= f.label :email, 'Email' %>
   <br>
   <%= f.text_field :email, id: :email %>
-  <br>
-  <%= f.label :first_name, 'First Name' %>
-  <br>
-  <%= f.text_field :first_name, id: :first_name %>
-  <br>
-  <%= f.label :last_name, 'Last Name' %>
-  <br>
-  <%= f.text_field :last_name, id: :last_name %>
   <br>
   <%= f.label :zip_code, 'Zip Code' %>
   <br>

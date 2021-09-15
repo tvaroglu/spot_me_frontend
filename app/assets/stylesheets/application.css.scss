@@ -19,14 +19,15 @@ html, body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(193,193,255,1) 0%, rgba(78,205,255,1) 0%, rgba(45,208,255,1) 32%, rgba(184,227,236,1) 74%);
   margin: 0;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
   background-attachment: fixed;
   font-family: 'Voltaire';
-  // font-size: 20px;
+  font-size: 20px;
 }
 
 main {

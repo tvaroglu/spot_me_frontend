@@ -1,9 +1,5 @@
 class BackEndService
   class << self
-    def hello
-      'world'
-    end
-
     def base_url
       'http://localhost/api/v1'
       # 'https://spotme-app.herokuapp.com/api/v1'
@@ -21,16 +17,14 @@ class BackEndService
       conn = Faraday.new(url: base_url) do |faraday|
         # faraday.headers['Authorization'] = ENV['bearer']
       end.get(uri)
-      JSON.parse(conn.body)
+      JSON.parse(conn.body, symbolize_names: true)
     end
 
     def send_request(uri, params)
-      # require "pry"; binding.pry
       Faraday.new(url: base_url) do |faraday|
         # faraday.headers['Authorization'] = ENV['bearer']
         faraday.headers['Content-Type'] = 'application/json'
         # faraday.body = params.to_json
-        # require "pry"; binding.pry
       end.post(uri, params.to_json)
     end
   end

@@ -1,11 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe BackEndService do
-  it 'can call a class method' do
-    expect(BackEndService.hello).to eq 'world'
-  end
-
-  it 'can do other stuff' do
-    # stuff
+  it 'can retrieve the base url for API calls' do
+    expect(BackEndService.base_url).to eq 'http://localhost/api/v1'
   end
 end

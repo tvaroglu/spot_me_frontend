@@ -8,9 +8,6 @@ RSpec.describe 'login page' do
       expect(page).to have_content('SpotMe')
       expect(page).to have_content('Mission')
 
-      expect(page).to have_link('Create an Account')
-
-      # note, refactor as necessary per Oauth process
       expect(page).to have_link('Sign in with Google')
     end
 

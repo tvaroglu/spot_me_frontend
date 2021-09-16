@@ -3,7 +3,6 @@ class SessionsController < ApplicationController
   # skip_before_action :verify_authenticity_token, only: :create
 
   def create
-    require "pry"; binding.pry
     found_user = BackEndFacade.get_user(helper_hash[:google_id])
     if found_user.present?
       session[:google_token] = helper_hash[:google_token]
@@ -11,6 +10,7 @@ class SessionsController < ApplicationController
     else
       redirect_to registration_path(helper_hash)
     end
+    # redirect_to registration_path(helper_hash)
   end
 
   private

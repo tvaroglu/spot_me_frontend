@@ -1,9 +1,9 @@
 <h1>Register</h1>
 
-<%= form_with url: registration_path(params[:format]), local: true do |f| %>
+<%= form_with url: registration_path(google_id: params[:google_id], google_token: params[:google_token], profile_pic_url: params[:profile_pic_url]), local: true do |f| %>
   <%= f.label :email, 'Email' %>
   <br>
-  <%= f.text_field :email, id: :email %>
+  <%= f.text_field :email, value: params[:email], id: :email %>
   <br>
   <%= f.label :zip_code, 'Zip Code' %>
   <br>
@@ -13,9 +13,9 @@
   <br>
   <%= f.text_area :summary, cols: 40, id: :summary %>
   <br>
-  <%= f.label :goals, 'Goals' %>
+  <%= f.label :goal, 'Goals' %>
   <br>
-  <%= f.select :goals, ['Gain Weight', 'Lose Weight', 'Increase Flexibility', 'Increase Stamina'], include_blank: 'Select your motivation' %>
+  <%= f.select :goal, ['Gain Weight', 'Lose Weight', 'Increase Flexibility', 'Increase Stamina'], include_blank: 'Select your motivation', id: :goal %>
   <br>
   <br>
   <h4>Availability</h4>

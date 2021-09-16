@@ -1,9 +1,13 @@
 <h1>Register</h1>
 
 <%= form_with url: registration_path(google_id: params[:google_id], google_token: params[:google_token], profile_pic_url: params[:profile_pic_url]), local: true do |f| %>
+  <%= f.label :name, 'Name' %>
+  <br>
+  <%= f.text_field :name, value: params[:name], id: :name %>
+  <br>
   <%= f.label :email, 'Email' %>
   <br>
-  <%= f.text_field :email, value: params[:email], id: :email %>
+  <%= f.text_field :email, value: params[:email], readonly: true, id: :email %>
   <br>
   <%= f.label :zip_code, 'Zip Code' %>
   <br>

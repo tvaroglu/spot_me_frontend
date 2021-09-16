@@ -6,6 +6,7 @@ RSpec.describe 'registration page' do
       visit registration_path
 
       expect(page).to have_field(:email)
+      expect(page).to have_field(:name)
       expect(page).to have_field(:zip_code)
       expect(page).to have_field(:summary)
       expect(page).to have_field(:goal)

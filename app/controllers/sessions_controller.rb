@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     {
       google_id: auth_hash['uid'],
       email: auth_hash['info']['email'],
-      # name: auth_hash['info']['name'],
+      name: auth_hash['info']['name'],
       profile_pic_url: auth_hash['info']['image'],
       google_token: auth_hash['credentials']['token']
     }

@@ -6,6 +6,7 @@ require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
+require './spec/support/integration_spec_helper'
 require 'simplecov'
 SimpleCov.start do
   add_filter 'spec/'
@@ -23,7 +24,7 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock
-  # update the following line when we actually have an API key
+  # update the following line when we actually have API keys
   # config.filter_sensitive_data('DONT_SHARE_MY_PROPUBLIC_SECRET_KEY') { ENV['PROPUBLICA_KEY'] }
   config.default_cassette_options = { re_record_interval: 7.days }
   config.configure_rspec_metadata!
@@ -53,6 +54,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.include IntegrationSpecHelper, :type => :feature
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -84,3 +86,12 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+Capybara.default_host = 'http://testing.com'
+OmniAuth.config.test_mode = true
+OmniAuth.config.add_mock(:google_oauth2, {
+  uid: '12345',
+  credentials: {
+    token: '678910'
+  }
+})

@@ -3,13 +3,16 @@ rbenv:
 - 2.7.2
 addons:
   postgresql: 9.6
+before_install:
+- yes | gem update --system --force
+- gem install bundler
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec -fd
 deploy:
   provider: heroku
   api_key:
-    secure:
-  app:
+    secure: T43d7XUcCuvKAZsz0EnGluHQiW2wpUVvlUcgs7m2rOoeOQoOmc+SQrhO8zaBHERuw/2DJWErB48WtsfOQQqgo4mG4jALZ3wfRq0BbiQllTgpNVflJzQ1Gq2FnyUR3otpCHGzwXa9QL/I1evM48xv3YiZEJm0rtUSjO0LVQ9R2KQnMllW+URWePw1WzCFwju6XFnwNDB/+RhY0vOyHLuxLGHRuNjUa+o9/kGJVIgtJYy+jBf32CtkrDjuFCDBtrfzwjn6+1JhSFdWXv737ggg/VZOaLVP7omCW2i/5KM8EbQ0W6yXH115tYNyv8M33D/SrUjQMEGpsM9PIBmce2amMhgPe2QrojtxVAXGXz8GomwLR+n0HfxQ9LF9PKjOcuaD7WIibJKLgpGXgjtEGjXnWkiwOux3hzY2R4qocdHYWCfBqnQftFAphfKLBW1dICD7KHT9WuWSXhC0QrPYeA/5h0++zAGZ3mr4hIsVeLuwLf7KioZs4d4e5qEJwSPQh6gnpg3WJwE309kukLwVmhYKSBAHXcMt1NOxraTxfpvWgOHQ8PefSTXAetwSicPeQNCajpKMLVBBCSRRpNi6UYUYg3zaIMQn3+gzBHcKZhgsa0e/CqWA1xViiS9pF/zL82hUyquxlhNGf0qbOrD9FWh1jTWZuQgqYO/YtCj4pNItvqA=
+  app: spotme-app
   on: main
   run: rake db:migrate

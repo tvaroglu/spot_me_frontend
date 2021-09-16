@@ -41,7 +41,8 @@ SpotMe is a database-driven web application in which users can register with the
 
 
 
-  <br/><br/><br/><ins>Tools Used</ins>
+  <br/><br/><br/> 
+  ## Tools Used
   
   |Development|Development|Testing|Deployment
   |--- |--- |--- |--- |

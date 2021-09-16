@@ -1,8 +1,8 @@
 class BackEndService
   class << self
     def base_url
-      'http://localhost/api/v1'
-      # 'https://spotme-app.herokuapp.com/api/v1'
+      'http://localhost:3000/api/v1'
+      # 'https://spotme-app-api.herokuapp.com/api/v1'
     end
 
     def get_user(google_id)
@@ -22,10 +22,8 @@ class BackEndService
 
     def send_request(uri, params)
       Faraday.new(url: base_url) do |faraday|
-        # faraday.headers['Authorization'] = ENV['bearer']
         faraday.headers['Content-Type'] = 'application/json'
-        # faraday.body = params.to_json
-      end.post(uri, params.to_json)
+      end.post("#{base_url}#{uri}", params.to_json)
     end
   end
 end

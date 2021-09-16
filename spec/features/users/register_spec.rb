@@ -16,7 +16,7 @@ RSpec.describe 'registration page' do
 
     let(:post_user_request) { stub_request(:post, "#{BackEndService.base_url}/users")
       .with(headers: headers, body: user_blob)
-      .to_return(status: 204, headers: {}) }
+      .to_return(status: 201, headers: {}) }
 
     it 'is on the correct page' do
       visit registration_path
@@ -39,7 +39,7 @@ RSpec.describe 'registration page' do
       visit registration_path
 
       # janky stub #1... this one prevents us from hitting Faraday.post (until we figure that method call out)
-      allow(BackEndService).to receive(:send_request).and_return(204)
+      allow(BackEndService).to receive(:send_request).and_return(201)
       # janky stub #2... have to double-JSON parse the fixture file for some reason..
       allow(BackEndService).to receive(:get_user)
         .and_return(JSON.parse(JSON.parse(user_blob), symbolize_names: true))

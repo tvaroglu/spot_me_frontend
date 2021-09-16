@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def new; end
 
   def create
-    require "pry"; binding.pry
+    # require "pry"; binding.pry
     BackEndFacade.create_user(params)
     found_user = BackEndFacade.get_user(params[:google_id])
     if found_user.present?

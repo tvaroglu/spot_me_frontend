@@ -25,11 +25,13 @@ class BackEndService
     end
 
     def send_request(uri, params)
+      # require "pry"; binding.pry
       Faraday.new(url: base_url) do |faraday|
         # faraday.headers['Authorization'] = ENV['bearer']
         faraday.headers['Content-Type'] = 'application/json'
-        faraday.body = params.to_json
-      end.post(uri)
+        # faraday.body = params.to_json
+        # require "pry"; binding.pry
+      end.post(uri, params.to_json)
     end
   end
 end

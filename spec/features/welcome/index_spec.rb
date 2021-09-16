@@ -1,16 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe 'welcome page' do
-  let(:headers) { {
-    'Accept' => '*/*',
-    'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-    'User-Agent' => 'Faraday v1.7.1'
+  let(:headers) do
+    {
+      'Accept' => '*/*',
+      'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+      'User-Agent' => 'Faraday v1.7.1'
     # 'Authorization'=>ENV['bearer']
-  } }
+    }
+  end
   let(:user_blob) { File.read('./spec/fixtures/user.json') }
-  let(:get_user_request) { stub_request(:get, "#{BackEndService.base_url}/users/1")
-    .with(headers: headers)
-    .to_return(status: 200, body: user_blob, headers: {}) }
+  let(:get_user_request) do
+    stub_request(:get, "#{BackEndService.base_url}/users/1")
+      .with(headers: headers)
+      .to_return(status: 200, body: user_blob, headers: {})
+  end
 
   it 'is on the correct page' do
     visit root_path
@@ -29,6 +33,6 @@ RSpec.describe 'welcome page' do
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock
     login_with_oauth
-    expect(current_path).to eq(dashboard_path(1))
+    expect(page).to have_current_path(dashboard_path(1), ignore_query: true)
   end
 end

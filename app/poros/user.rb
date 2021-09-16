@@ -3,7 +3,6 @@ class User
               :email,
               :name,
               :google_id,
-              # :google_token,
               :google_image_url,
               :zip_code,
               :summary,
@@ -17,7 +16,6 @@ class User
     @email = user_params[:email]
     @name = user_params[:name]
     @google_id = user_params[:google_id]
-    # @google_token = user_params[:google_token]
     @google_image_url = user_params[:google_image_url]
     @zip_code = user_params[:zip_code]
     @summary = user_params[:summary]

@@ -38,7 +38,7 @@ RSpec.describe 'registration page' do
     it 'can register a new user if all required attributes are provided' do
       visit registration_path
 
-      # janky stub #1... this one prevents us from hitting Faraday.post (until we figure that method call out)
+      # janky stub #1... not sure why the Webmock stub in the LET block above isn't blocking this request..
       allow(BackEndService).to receive(:send_request).and_return(201)
       # janky stub #2... have to double-JSON parse the fixture file for some reason..
       allow(BackEndService).to receive(:get_user)

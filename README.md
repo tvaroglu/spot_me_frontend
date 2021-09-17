@@ -4,8 +4,10 @@
   [![Issues][issues-shield]][issues-url]
   [![Stargazers][stars-shield]][stars-url]
   [![Forks][forks-shield]][forks-url]
+  <br>
+  <img src="https://img.shields.io/travis/tvaroglu/spot_me_frontend?style=flat-square" />  
 
-#  [Spot Me](https://spotme-app.herokuapp.com/) (FE)
+#  [SpotMe](https://spotme-app.herokuapp.com/) (FE)
 
   <img src="https://user-images.githubusercontent.com/74567704/133356706-90e886e7-a9ec-4fbe-8b96-d876a9e08112.png" width="70%"><br/>
 
@@ -39,9 +41,7 @@ SpotMe is a database-driven web application in which users can register with the
 [Database Schema](#database-schema)
 [Wireframes](#wireframes)
 
-
-
-  <br/><br/><br/>
+  <br/><br/>
   ## Tools Used
 
   |Development|Development|Testing|Deployment

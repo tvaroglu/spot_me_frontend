@@ -64,8 +64,47 @@ RSpec.describe 'registration page' do
   end
 
   describe 'sad path' do
-    xit "can't register a new user if all required attributes are provided" do
-      # stuff
+    let(:headers) do
+      {
+        'Accept' => '*/*',
+        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'User-Agent' => 'Faraday v1.7.1'
+      # 'Authorization'=>ENV['bearer']
+      }
+    end
+
+    let(:user_blob) { File.read('./spec/fixtures/empty_user.json') }
+    let(:get_user_request) do
+      stub_request(:get, "#{BackEndService.base_url}/users/1")
+        .with(headers: headers)
+        .to_return(status: 200, body: user_blob, headers: {})
+    end
+
+    let(:post_user_request) do
+      stub_request(:post, "#{BackEndService.base_url}/users")
+        .with(headers: headers, body: user_blob)
+        .to_return(status: 400, headers: {})
+    end
+
+    it "can't register a new user if all required attributes are provided" do
+      visit registration_path
+
+      allow(BackEndService).to receive(:send_request).and_return(201)
+
+      allow(BackEndService).to receive(:get_user)
+        .and_return(JSON.parse(JSON.parse(user_blob), symbolize_names: true))
+
+      fill_in :name, with: 'Foo Bar'
+      fill_in :email, with: 'test@testing.com'
+      fill_in :zip_code, with: '80227'
+      fill_in :summary, with: ''
+      select 'Gain Weight', from: :goal
+      page.check :availability_morning
+
+      click_on 'Register'
+
+      expect(page).to have_current_path(root_path)
+      expect(page).to have_content("Couldn't create your account, please try again.")
     end
   end
 end

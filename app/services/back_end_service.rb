@@ -3,7 +3,6 @@ class BackEndService
 
     def get_user(google_id)
       response = db_conn.get("/users/#{google_id}")
-      require "pry"; binding.pry
       get_json(response)
     end
 

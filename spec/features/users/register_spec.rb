@@ -48,7 +48,7 @@ RSpec.describe 'registration page' do
       allow(BackEndService).to receive(:send_request).and_return(201)
       # janky stub #2... have to double-JSON parse the fixture file for some reason..
       allow(BackEndService).to receive(:get_user)
-        .and_return(JSON.parse(JSON.parse(user_blob), symbolize_names: true))
+        .and_return(JSON.parse(user_blob), symbolize_names: true)
 
       fill_in :name, with: 'Foo Bar'
       fill_in :email, with: 'test@testing.com'

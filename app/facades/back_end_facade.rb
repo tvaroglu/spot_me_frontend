@@ -2,7 +2,7 @@ class BackEndFacade
   class << self
     def get_user(google_id)
       user = BackEndService.get_user(google_id)
-      user[:data][:id].present? ? User.new(user[:data]) : nil
+      user[:data].present? ? User.new(user[:data]) : nil
     end
 
     def create_user(params)

@@ -40,6 +40,7 @@ class BackEndService
     end
 
     def get_json(response)
+      # require "pry"; binding.pry
       JSON.parse(response.body, symbolize_names: true)
     end
   end

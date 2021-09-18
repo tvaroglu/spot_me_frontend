@@ -18,6 +18,6 @@ class UsersController < ApplicationController
   end
 
   def dashboard 
-    @
+    # @user_friends = BackEndFacade.get_user_friends(current_user.id)
   end
 end

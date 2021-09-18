@@ -6,6 +6,11 @@ class BackEndService
       get_json(response)
     end
 
+    def get_friends(google_id)
+      response = db_conn.get("/users/#{google_id}/friendships")
+      get_json(response)
+    end
+
     def base_url
       'https://spotme-app-api.herokuapp.com/api/v1'
     end

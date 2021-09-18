@@ -15,7 +15,7 @@
 SpotMe is a database-driven web application in which users can register with their gym(s) of choice, and find other registered users to share in their collective workout experience.
 
 
-# <a href="https://github.com/tvaroglu/spot_me_backend"><img src="https://img.shields.io/static/v1?style=flat-square&label=Spot+Me&message=Back+End+Repo&color=9cf"></a><br/><br/>
+<a href="https://github.com/tvaroglu/spot_me_backend"><img src="https://img.shields.io/static/v1?style=flat-square&label=Spot+Me&message=Back+End+Repo&color=9cf"></a><br/><br/>
 
   ## Contributors
 
@@ -124,7 +124,7 @@ SpotMe is a database-driven web application in which users can register with the
       $ gem install figaro
       $ bundle exec figaro install
       open the new hidden file `application.yml`
-      set `yelp_api_key`: <<Bearer (your v4 token)>>
+      set `yelp_api_key`: Bearer <<your v4 token>>
       ```
 
   * How to run the test suite

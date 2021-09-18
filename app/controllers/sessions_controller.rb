@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     found_user = BackEndFacade.get_user(helper_hash[:google_id])
     if found_user.present?
       session[:google_token] = helper_hash[:google_token]
+      session[:google_id] = helper_hash[:google_id]
       #existing user
       redirect_to dashboard_path(found_user.id)
     else

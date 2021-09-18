@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     if found_user.present?
     # if params[:google_token]
       session[:google_token] = params[:google_token]
+      session[:google_id] = params[:google_id]
       redirect_to dashboard_path(found_user.id)
       # redirect_to dashboard_path(params[:google_id])
     else
@@ -16,5 +17,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def dashboard; end
+  def dashboard 
+    # @user_friends = BackEndFacade.get_user_friends(current_user.id)
+  end
 end

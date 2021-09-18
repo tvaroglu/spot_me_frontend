@@ -1,0 +1,42 @@
+{
+  :data=>
+  [
+    {
+      :id=>"5071",
+      :type=>"user",
+      :attributes=>
+     {
+        :email=>"rich@lynch-heller.name",
+        :google_id=>"123456789102345678910",
+        :google_image_url=>
+       "https://robohash.org/isteanimiillum.png?size=300x300&set=set1",
+        :zip_code=>"01498",
+        :summary=>
+       "Know how to listen, and you will profit even from those who talk badly.",
+        :goal=>5,
+        :availability_morning=>false,
+        :availability_afternoon=>false,
+        :availability_evening=>false,
+        :full_name=>"Toni Mitchell"
+      }
+    },
+    {
+      :id=>"5072",
+      :type=>"user",
+      :attributes=>
+     {
+        :email=>"catina_altenwerth@wyman.name",
+        :google_id=>"198765432101987654321",
+        :google_image_url=>
+       "https://robohash.org/officiapariaturdolorem.png?size=300x300&set=set1",
+        :zip_code=>"42574",
+        :summary=>"Love is composed of a single soul inhabiting two bodies.",
+        :goal=>4,
+        :availability_morning=>false,
+        :availability_afternoon=>false,
+        :availability_evening=>true,
+        :full_name=>"Vince Dickens"
+      }
+    }
+  ]
+}

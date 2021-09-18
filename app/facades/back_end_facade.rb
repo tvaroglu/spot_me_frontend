@@ -8,5 +8,12 @@ class BackEndFacade
     def create_user(params)
       BackEndService.create_user(params)
     end
+
+    def get_user_friends(google_id)
+      friends = BackEndService.get_friends(google_id)
+      friends.map do |friend|
+        User.new(friend)
+      end
+    end
   end
 end

@@ -28,7 +28,7 @@ RSpec.describe 'welcome page' do
     visit root_path
 
     allow(BackEndService).to receive(:get_user)
-    .and_return(JSON.parse(user_blob), symbolize_names: true)
+    .and_return(JSON.parse(user_blob, symbolize_names: true))
 
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock

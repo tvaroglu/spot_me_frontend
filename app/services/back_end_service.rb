@@ -6,13 +6,14 @@ class BackEndService
       get_json(response)
     end
 
+    def get_friends(google_id)
+      response = db_conn.get("/users/#{google_id}/friendships")
+      get_json(response)
+    end
+
     def base_url
       'https://spotme-app-api.herokuapp.com/api/v1'
     end
-
-    # def get_user(google_id)
-    #   receive_request("/users/#{google_id}")
-    # end
 
     def create_user(user_params)
       db_conn.post(
@@ -22,25 +23,19 @@ class BackEndService
       )
     end
 
-    # def receive_request(uri)
-    #   conn = Faraday.new(url: base_url) do |faraday|
-    #     # faraday.headers['Authorization'] = ENV['bearer']
-    #   end.get(uri)
-    #   JSON.parse(conn.body, symbolize_names: true)
+    # def send_request(uri, params)
+    #   Faraday.new(url: base_url) do |faraday|
+    #     faraday.headers['Content-Type'] = 'application/json'
+    #   end.post("#{base_url}#{uri}", params.to_json)
     # end
-
-    def send_request(uri, params)
-      Faraday.new(url: base_url) do |faraday|
-        faraday.headers['Content-Type'] = 'application/json'
-      end.post("#{base_url}#{uri}", params.to_json)
-    end
 
     def db_conn
       Faraday.new(base_url)
     end
 
     def get_json(response)
-      JSON.parse(response.body, symbolize_names: true)
+      # require "pry"; binding.pry
+      response.instance_of?(String) ? JSON.parse(response, symbolize_names: true) : JSON.parse(response.body, symbolize_names: true)
     end
   end
 end

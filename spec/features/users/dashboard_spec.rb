@@ -22,6 +22,7 @@ RSpec.describe 'can visit a users show page' do
     end
 
     it 'can see all the user workout events' do
+      save_and_open_page
       expect(page).to have_content("My Upcoming Workouts")
       expect(page).to have_content("Wednesday, Sep 29, 2021 6:43pm: Digital arts")
     end

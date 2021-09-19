@@ -9,21 +9,21 @@ RSpec.describe 'can visit a users show page' do
     it 'can visit a users show page and see there attributes' do
       expect(current_path).to eq(dashboard_path)
       expect(page).to have_content("Welcome, #{@user.full_name}!")
-      expect(page).to have_content("Lashawn Baumbach")
-      expect(page).to have_content("Kayce Witting DC")
-      expect(page).to have_content("Cortez Goldner")
+      expect(page).to have_content("Emerson Cummerata")
+      expect(page).to have_content("Stan Gutmann VM")
+      expect(page).to have_content("Demetrius Bergstrom DVM")
     end
 
     it 'can see all the user gyms' do
       expect(page).to have_content("My Gyms")
-      expect(page).to have_content("6s6y4iljmrs93b7gwqyadz")
-      expect(page).to have_content("jpk4ts58432183cz0w9yyw")
-      expect(page).to have_content("lnjnx75zjtkf727da1p30c")
+      expect(page).to have_content("Gusikowski, Heller and Orn")
+      expect(page).to have_content("Nolan LLC")
+      expect(page).to have_content("Koss-Roberts")
     end
 
     it 'can see all the user workout events' do
       expect(page).to have_content("My Upcoming Workouts")
-      expect(page).to have_content("2021-09-27T16:52:22.095Z: Brazilian jiu-jitsu")
+      expect(page).to have_content("Wednesday, Sep 29, 2021 6:43pm: Digital arts")
     end
   end
 end

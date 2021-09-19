@@ -15,31 +15,30 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Sat, 18 Sep 2021 22:03:14 GMT
+      - Sun, 19 Sep 2021 18:59:46 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"9d29321ffd54e5c4231442e91a531dbc"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 842f609f-e260-4125-93e8-2cfeced9e26b
+      - 63c6daf0-10e8-4aa1-9e04-1b96c19b371c
       X-Runtime:
-      - '2.328387'
+      - '0.012208'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym","attributes":{"yelp_gym_id":"6s6y4iljmrs93b7gwqyadz"}},{"id":"3","type":"gym","attributes":{"yelp_gym_id":"jpk4ts58432183cz0w9yyw"}},{"id":"5","type":"gym","attributes":{"yelp_gym_id":"lnjnx75zjtkf727da1p30c"}}]}'
-  recorded_at: Sat, 18 Sep 2021 22:03:14 GMT
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=1"]}'
+  recorded_at: Sun, 19 Sep 2021 18:59:46 GMT
 recorded_with: VCR 6.0.0

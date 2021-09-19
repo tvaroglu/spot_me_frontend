@@ -15,32 +15,30 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Sun, 19 Sep 2021 00:39:41 GMT
+      - Sun, 19 Sep 2021 18:59:47 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"7191584ff74aeab2d66340455d1b4540"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - e171dbbd-37fa-4032-bb80-b788f28c12b4
+      - 8279f7bf-85b5-421b-87c7-6e02e39079bf
       X-Runtime:
-      - '0.008975'
+      - '0.007707'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":1,"gym_id":1,"date_time":"2021-09-27T16:52:22.095Z","activity":"Brazilian
-        jiu-jitsu"}},{"id":"2","type":"event","attributes":{"user_id":1,"gym_id":1,"date_time":"2021-09-19T16:52:22.125Z","activity":"Fashion"}},{"id":"3","type":"event","attributes":{"user_id":1,"gym_id":3,"date_time":"2021-09-21T16:52:22.130Z","activity":"Magic"}}]}'
-  recorded_at: Sun, 19 Sep 2021 00:39:42 GMT
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=1"]}'
+  recorded_at: Sun, 19 Sep 2021 18:59:47 GMT
 recorded_with: VCR 6.0.0

@@ -1,9 +1,7 @@
 class UserGym
-  attr_reader :yelp_gym_id
+  attr_reader :name
 
   def initialize(info)
-    @yelp_gym_id = info[:attributes][:yelp_gym_id]
-    # @name = info[:attributes][:name]
-    @id = info[:id]
+    @name = info[:name]    
   end
 end

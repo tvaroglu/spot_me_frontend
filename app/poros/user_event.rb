@@ -5,7 +5,11 @@ class UserEvent
     @id = info[:id]
     @user_id = info[:attributes][:user_id]
     @gym_id = info[:attributes][:gym_id]
-    @date_time = info[:attributes][:date_time]
+    @date_time = format_date(info[:attributes][:date_time])
     @activity = info[:attributes][:activity]
+  end
+
+  def format_date(date)
+    date.to_datetime.strftime('%A, %b %d, %Y %l:%M%P')
   end
 end

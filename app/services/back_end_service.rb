@@ -24,10 +24,10 @@ class BackEndService
       )
     end
 
-    def gyms_near_user(location)
-      response = yelp_connection.get("v3/businesses/search?term=gyms&radius=40000&sort_by=distance&location=#{location}")
-      get_json(response)
-    end
+    # def gyms_near_user(location)
+    #   response = yelp_connection.get("v3/businesses/search?term=gyms&radius=40000&sort_by=distance&location=#{location}")
+    #   get_json(response)
+    # end
 
     def get_events(user_id)
       response = db_conn.get("/api/v1/users/#{user_id}/events")

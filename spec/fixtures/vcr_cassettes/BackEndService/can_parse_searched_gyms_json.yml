@@ -1,0 +1,144 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=1&radius=40000&sort_by=distance&term=gyms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer Hmy9yZNUg25XWov24drrnIqhNP7b7qshtwInwyJOwJ5PAc7r4Zgk_JJLtC5BNxjDqBppN0iFag6xuzppm_0juzI1om0MlzgQVNQ46jTfWQ7kyl7kGcmFUYh764ZCYXYx
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Routing-Service:
+      - routing-main--useast1-7bbf457c88-plcpl; site=public_api_v3
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '5000'
+      X-Zipkin-Id:
+      - f6177624018c0b75
+      Ratelimit-Remaining:
+      - '4831'
+      Ratelimit-Resettime:
+      - '2021-09-19T00:00:00+00:00'
+      X-B3-Sampled:
+      - '0'
+      X-Cloudmap:
+      - routing_useast1
+      X-Proxied:
+      - 10-65-175-160-useast1bprod
+      X-Extlb:
+      - 10-65-175-160-useast1bprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 18 Sep 2021 23:33:48 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-dfw18626-DFW
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "LHIH_N0qdlHSMtpIwAJiGA", "alias": "james-dean-tanzbar-eisenstadt",
+        "name": "James Dean Tanzbar", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/james-dean-tanzbar-eisenstadt?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 2, "categories": [{"alias": "dancestudio", "title": "Dance
+        Studios"}, {"alias": "nightlife", "title": "Nightlife"}], "rating": 4.5, "coordinates":
+        {"latitude": 47.8344499, "longitude": 16.5233199}, "transactions": [], "location":
+        {"address1": "Mattersburger Str. 26", "address2": null, "address3": null,
+        "city": "Eisenstadt", "zip_code": "7000", "country": "AT", "state": "1", "display_address":
+        ["Mattersburger Str. 26", "7000 Eisenstadt", "Austria"]}, "phone": "+43268264249x0",
+        "display_phone": "+43 2682 64249 ext. 0", "distance": 20072.357732294604},
+        {"id": "qGbFaj-I2vz3ymCRRChTGw", "alias": "club-top-u-fit-fitnesscenter-wiener-neustadt-2",
+        "name": "Club Top u Fit, Fitnesscenter", "image_url": "", "is_closed": false,
+        "url": "https://www.yelp.com/biz/club-top-u-fit-fitnesscenter-wiener-neustadt-2?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 2, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        4.5, "coordinates": {"latitude": 47.8237107, "longitude": 16.2559708}, "transactions":
+        [], "location": {"address1": "Stadionstr. 4-12", "address2": null, "address3":
+        null, "city": "Wiener Neustadt", "zip_code": "2700", "country": "AT", "state":
+        "3", "display_address": ["Stadionstr. 4-12", "2700 Wiener Neustadt", "Austria"]},
+        "phone": "+43262228972", "display_phone": "+43 2622 28972", "distance": 25368.04368725589},
+        {"id": "OvRIPIHKNhSjXM3gR9x9Uw", "alias": "reebok-trainingscenter-wiener-neustadt",
+        "name": "Reebok Trainingscenter", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/reebok-trainingscenter-wiener-neustadt?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 1, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        1.0, "coordinates": {"latitude": 47.817, "longitude": 16.2436}, "transactions":
+        [], "location": {"address1": "Baumkirchnerring 6", "address2": null, "address3":
+        null, "city": "Wiener Neustadt", "zip_code": "2700", "country": "AT", "state":
+        "3", "display_address": ["Baumkirchnerring 6", "2700 Wiener Neustadt", "Austria"]},
+        "phone": "+43262220100", "display_phone": "+43 2622 20100", "distance": 25470.49705978748},
+        {"id": "WYlooE-5IU20cT4yNVgAdA", "alias": "perfect-you-wiener-neustadt", "name":
+        "Perfect You", "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/perfect-you-wiener-neustadt?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 1, "categories": [{"alias": "nutritionists", "title": "Nutritionists"},
+        {"alias": "fitness", "title": "Fitness & Instruction"}], "rating": 5.0, "coordinates":
+        {"latitude": 47.8222049, "longitude": 16.2266131}, "transactions": [], "location":
+        {"address1": "Fischauergasse 82", "address2": "", "address3": "", "city":
+        "Wiener Neustadt", "zip_code": "2700", "country": "AT", "state": "3", "display_address":
+        ["Fischauergasse 82", "2700 Wiener Neustadt", "Austria"]}, "phone": "+43262283368",
+        "display_phone": "+43 2622 83368", "distance": 26782.83405903849}, {"id":
+        "z7hj9t0a8NPith4r6lxMWQ", "alias": "freizeittempel-fitness-wiener-neustadt",
+        "name": "Freizeittempel Fitness", "image_url": "", "is_closed": false, "url":
+        "https://www.yelp.com/biz/freizeittempel-fitness-wiener-neustadt?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 1, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        3.0, "coordinates": {"latitude": 47.8347587, "longitude": 16.2441851}, "transactions":
+        [], "location": {"address1": "Wiener Stra\u00dfe-Werkstr. 109", "address2":
+        null, "address3": null, "city": "Wiener Neustadt", "zip_code": "2700", "country":
+        "AT", "state": "3", "display_address": ["Wiener Stra\u00dfe-Werkstr. 109",
+        "2700 Wiener Neustadt", "Austria"]}, "phone": "+43262220720", "display_phone":
+        "+43 2622 20720", "distance": 26868.62237746528}, {"id": "ZLvvcCP0QGAPvcd0qgXc-w",
+        "alias": "fitinn-wiener-neustadt-2", "name": "FITINN", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/-b8SW2PC4tEwNvdQCYQ7Bw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/fitinn-wiener-neustadt-2?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 1, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        2.0, "coordinates": {"latitude": 47.844856, "longitude": 16.245211}, "transactions":
+        [], "location": {"address1": "Wiener Str. 127", "address2": null, "address3":
+        null, "city": "Wiener Neustadt", "zip_code": "2700", "country": "AT", "state":
+        "3", "display_address": ["Wiener Str. 127", "2700 Wiener Neustadt", "Austria"]},
+        "phone": "+43262232012", "display_phone": "+43 2622 32012", "distance": 27661.32556592878},
+        {"id": "ETz2l406Eaz84Vurl3JvYw", "alias": "fitnessland-betriebsges-mbh-tribuswinkel",
+        "name": "Fitnessland-, Betriebsges.mbH", "image_url": "", "is_closed": false,
+        "url": "https://www.yelp.com/biz/fitnessland-betriebsges-mbh-tribuswinkel?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 1, "categories": [{"alias": "gyms", "title": "Gyms"}], "rating":
+        5.0, "coordinates": {"latitude": 47.9838993, "longitude": 16.2891}, "transactions":
+        [], "location": {"address1": "Sochorgasse 3", "address2": null, "address3":
+        null, "city": "Tribuswinkel", "zip_code": "2512", "country": "AT", "state":
+        "3", "display_address": ["Sochorgasse 3", "2512 Tribuswinkel", "Austria"]},
+        "phone": "+432252489000", "display_phone": "+43 2252 489000", "distance":
+        39346.536417048264}, {"id": "c4xwU7WOBY0_fNZ0OTty6w", "alias": "club-top-und-fit-fitnesscenter-bad-v\u00f6slau",
+        "name": "Club Top und Fit, Fitnesscenter", "image_url": "", "is_closed": false,
+        "url": "https://www.yelp.com/biz/club-top-und-fit-fitnesscenter-bad-v%C3%B6slau?adjust_creative=U3I_hTsM_rclzkCXyDmD1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=U3I_hTsM_rclzkCXyDmD1w",
+        "review_count": 1, "categories": [{"alias": "health", "title": "Health & Medical"},
+        {"alias": "massage", "title": "Massage"}, {"alias": "fitness", "title": "Fitness
+        & Instruction"}], "rating": 1.0, "coordinates": {"latitude": 47.9770312, "longitude":
+        16.2220599}, "transactions": [], "location": {"address1": "Industriestr. 12",
+        "address2": null, "address3": null, "city": "Bad V\u00f6slau", "zip_code":
+        "2540", "country": "AT", "state": "3", "display_address": ["Industriestr.
+        12", "2540 Bad V\u00f6slau", "Austria"]}, "phone": "+43225277285", "display_phone":
+        "+43 2252 77285", "distance": 40797.78641809466}], "total": 8, "region": {"center":
+        {"longitude": 16.4849853515625, "latitude": 47.65540056639365}}}'
+  recorded_at: Sat, 18 Sep 2021 23:33:48 GMT
+recorded_with: VCR 6.0.0

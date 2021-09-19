@@ -1,3 +1,12 @@
 <h1>Welcome, <%= current_user.full_name %>! </h1>
 <h2> Location is <%= current_user.zip_code %> </h2>
 
+<h2>My Friends</h2>
+<% @user_friends.each do |friend| %>
+<p><%= friend.full_name %></p>
+<% end %>
+
+<h2>My Gyms</h2>
+<% @user_gyms.each do |gym| %>
+<p><%= gym.yelp_gym_id %></p>
+<% end %>

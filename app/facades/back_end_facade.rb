@@ -9,10 +9,25 @@ class BackEndFacade
       BackEndService.create_user(params)
     end
 
-    def get_user_friends(google_id)
-      friends = BackEndService.get_friends(google_id)
-      friends.map do |friend|
-        User.new(friend)
+    def get_user_friends(user_id)
+      friends = BackEndService.get_friends(user_id)
+      friends[:data].map do |friend|
+        User.new(friend[:attributes])
+      end
+    end
+
+    def get_user_gyms(user_id)
+      gyms = BackEndService.get_gyms(user_id)
+      gyms[:data].map do |gym|
+        UserGym.new(gym)
+      end
+    end
+
+    def searched_gyms(location)
+      gyms = BackEndService.gyms_near_user(location)
+      # require "pry"; binding.pry
+      gyms[:businesses].map do |gym|
+        YelpGym.new(gym)
       end
     end
   end

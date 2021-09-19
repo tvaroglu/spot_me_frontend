@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 18 Sep 2021 17:24:34 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"510b7887592e3005261c48db4345ba40"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '05827ced-dfa5-4909-a8fa-fe7484d36f88'
+      X-Runtime:
+      - '0.008363'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"emilie_bernhard@mcdermott.name","google_id":"5ghl0rmxba2296v8xf3x5","google_image_url":"https://robohash.org/minusveniamet.png?size=300x300\u0026set=set1","zip_code":"14684","summary":"Good
+        habits formed at youth make all the difference.","goal":0,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Lashawn
+        Baumbach"}},{"id":"9","type":"user","attributes":{"email":"reynaldo@langosh-bradtke.com","google_id":"3s6c7qqsvl5uwagdorinp","google_image_url":"https://robohash.org/inventorevoluptatumest.png?size=300x300\u0026set=set1","zip_code":"47204","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":1,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Kayce
+        Witting DC"}},{"id":"10","type":"user","attributes":{"email":"eric_bartoletti@bechtelar.net","google_id":"odnk6nib6bcc8561wl73x","google_image_url":"https://robohash.org/nobiseumest.png?size=300x300\u0026set=set1","zip_code":"21048","summary":"Only
+        the educated are free.","goal":5,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Cortez
+        Goldner"}}]}'
+  recorded_at: Sat, 18 Sep 2021 17:24:34 GMT
+recorded_with: VCR 6.0.0

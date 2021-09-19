@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BackEndService do
   it 'can retrieve the base url for API calls' do
-    expect(BackEndService.base_url).to eq 'https://spotme-app-api.herokuapp.com/api/v1'
+    expect(BackEndService.base_url).to eq 'https://spotme-app-api.herokuapp.com'
   end
 
   it 'can receive a request' do
@@ -48,7 +48,19 @@ RSpec.describe BackEndService do
         'User-Agent'=>'Faraday v1.7.0'
         })
         .to_return(status: 200, body: json_response, headers: {})
-    
+
     expect(BackEndService.get_json(json_response).class).to eq(Hash)
+  end
+
+  it 'can parse friendships json', :vcr do
+    expect(BackEndService.get_friends(1).class).to eq(Hash)
+  end
+
+  it 'can parse gyms json', :vcr do
+    expect(BackEndService.get_gyms(1).class).to eq(Hash)
+  end
+
+  it 'can parse searched gyms json', :vcr do
+    expect(BackEndService.gyms_near_user(1).class).to eq(Hash)
   end
 end

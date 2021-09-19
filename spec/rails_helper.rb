@@ -22,7 +22,7 @@ Shoulda::Matchers.configure do |config|
 end
 
 VCR.configure do |config|
-  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
   # update the following line when we actually have API keys
   # config.filter_sensitive_data('DONT_SHARE_MY_PROPUBLIC_SECRET_KEY') { ENV['PROPUBLICA_KEY'] }
@@ -57,6 +57,7 @@ RSpec.configure do |config|
   config.include IntegrationSpecHelper, :type => :feature
   config.before(:each, type: :feature) do
     @user = User.new({
+        :id=>1, 
         :email=>"ron_hermiston@schinner.net",
         :google_id=>"123456789102345678910",
         :google_image_url=>"https://robohash.org/doloribusutmagni.png?size=300x300&set=set1",

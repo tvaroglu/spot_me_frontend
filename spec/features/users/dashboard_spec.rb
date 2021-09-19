@@ -15,11 +15,15 @@ RSpec.describe 'can visit a users show page' do
     end
 
     it 'can see all the user gyms' do
-      save_and_open_page
       expect(page).to have_content("My Gyms")
       expect(page).to have_content("6s6y4iljmrs93b7gwqyadz")
       expect(page).to have_content("jpk4ts58432183cz0w9yyw")
       expect(page).to have_content("lnjnx75zjtkf727da1p30c")
+    end
+
+    it 'can see all the user workout events' do
+      expect(page).to have_content("My Upcoming Workouts")
+      expect(page).to have_content("2021-09-27T16:52:22.095Z: Brazilian jiu-jitsu")
     end
   end
 end

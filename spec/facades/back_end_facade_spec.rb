@@ -19,4 +19,10 @@ RSpec.describe BackEndFacade do
     expect(gyms[0]).to be_an_instance_of(YelpGym)
     expect(gyms.count).to eq(20)
   end
+
+  it 'can create an array of workout events' do
+    events = BackEndFacade.get_user_events(1)
+    expect(events[0]).to be_an_instance_of(UserEvent)
+    expect(events.count).to eq(3)
+  end
 end

@@ -10,3 +10,8 @@
 <% @user_gyms.each do |gym| %>
 <p><%= gym.yelp_gym_id %></p>
 <% end %>
+
+<h2>My Upcoming Workouts</h2>
+<% @user_events.each do |event| %>
+<p><%= event.date_time %>: <%= event.activity %></p>
+<% end %>

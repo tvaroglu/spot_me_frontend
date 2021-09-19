@@ -29,6 +29,11 @@ class BackEndService
       get_json(response)
     end
 
+    def get_events(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}/events")
+      get_json(response)
+    end
+
     # def send_request(uri, params)
     #   Faraday.new(url: base_url) do |faraday|
     #     faraday.headers['Content-Type'] = 'application/json'

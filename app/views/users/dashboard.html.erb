@@ -1,19 +1,19 @@
 <% if current_user %>
-  <img src="<%= current_user.google_image_url %>">
-  <h1>Welcome, <%= current_user.full_name %>! </h1>
+  <img id="profile_pic" src="<%= current_user.google_image_url %>">
+  <h1 id="user_name">Welcome, <%= current_user.full_name %>!</h1>
 
-  <h2>My Friends</h2>
+  <h2 id="friends">My Friends:</h2>
   <% @user_friends.each do |friend| %>
-  <p><%= friend.full_name %></p>
+    <p id="friend"><%= friend.full_name %></p>
   <% end %>
 
-  <h2>My Gyms</h2>
+  <h2 id="gyms">My Gyms:</h2>
   <% @user_gyms.each do |gym| %>
-  <p><%= gym.name %></p>
+    <p id="gym"><%= gym.name %></p>
   <% end %>
 
-  <h2>My Upcoming Workouts</h2>
+  <h2 id="events">Upcoming Workouts:</h2>
   <% @user_events.each do |event| %>
-  <p><%= event.date_time %>: <%= event.activity %></p>
+    <p id="event"><%= event.activity %>: <%= event.date_time %></p>
   <% end %>
 <% end %>

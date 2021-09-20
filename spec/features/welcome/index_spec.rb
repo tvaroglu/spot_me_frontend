@@ -33,7 +33,7 @@ RSpec.describe 'welcome page' do
         .and_return(JSON.parse(empty_user), symbolize_names: true)
 
       login_with_oauth
-      expect(current_path).to eq(registration_path)
+      expect(page).to have_current_path(registration_path, ignore_query: true)
     end
   end
 end

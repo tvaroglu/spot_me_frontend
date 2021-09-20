@@ -17,7 +17,7 @@ RSpec.describe BackEndFacade do
 
   it "can return an array of the user's workouts", :vcr do
     events = BackEndFacade.get_user_events(31)
-    
+
     expect(events[0]).to be_an_instance_of(UserEvent)
     expect(events.count).to eq(3)
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
-RSpec.describe 'it displays the user show page' do
-  before :each do
+RSpec.describe 'user profile page' do
+  before do
     visit "/users/#{@user.id}/profile"
   end
 
@@ -10,6 +10,7 @@ RSpec.describe 'it displays the user show page' do
     expect(page).to have_content(@user.availability_morning)
     expect(page).to have_content(@user.availability_afternoon)
     expect(page).to have_content(@user.availability_evening)
+
     expect(page).to have_content('Lashawn Baumbach')
     expect(page).to have_content('Kayce Witting DC')
     expect(page).to have_content('Cortez Goldner')

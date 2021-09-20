@@ -28,7 +28,7 @@ class BackEndService
 
     def create_user(user_params)
       db_conn.post(
-        "/users",
+        '/users',
         user_params.to_json,
         'Content-Type' => 'application/json'
       )

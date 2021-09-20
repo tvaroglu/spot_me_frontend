@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   def create
     BackEndFacade.create_user(params)
     found_user = BackEndFacade.get_user(params[:google_id])
-    if found_user.present?
     # if params[:google_token]
+    if found_user.present?
       session[:google_token] = params[:google_token]
       session[:google_id] = params[:google_id]
       redirect_to dashboard_path(found_user.id)

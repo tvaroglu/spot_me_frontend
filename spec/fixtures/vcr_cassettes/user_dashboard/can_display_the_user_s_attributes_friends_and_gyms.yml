@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:50:40 GMT
+      - Mon, 20 Sep 2021 04:56:18 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 027c9c12-4bec-4ef8-bb52-306686fe76ce
+      - b26757df-ad62-49d1-a97b-9cb270c44d63
       X-Runtime:
-      - '4.143374'
+      - '0.006890'
       Transfer-Encoding:
       - chunked
       Via:
@@ -47,7 +47,7 @@ http_interactions:
         Gutmann VM"}},{"id":"40","type":"user","attributes":{"email":"krystle@lind.net","google_id":"og1crcri9my7drwdk5mxn","google_image_url":"https://robohash.org/aspernaturlaboretempore.png?size=300x300\u0026set=set1","zip_code":"33830","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":2,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Demetrius
         Bergstrom DVM"}}]}'
-  recorded_at: Mon, 20 Sep 2021 04:50:41 GMT
+  recorded_at: Mon, 20 Sep 2021 04:56:18 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:50:41 GMT
+      - Mon, 20 Sep 2021 04:56:18 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -79,9 +79,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 06553a36-3a6b-40da-84f0-7efff35c708c
+      - e5cd7585-2ea2-4d70-a6dc-39ab83ef47a1
       X-Runtime:
-      - '0.293384'
+      - '0.006470'
       Transfer-Encoding:
       - chunked
       Via:
@@ -91,7 +91,7 @@ http_interactions:
       string: '{"data":[{"id":"16","type":"gym","attributes":{"yelp_gym_id":"8j30z2eaypjo0buakw5mi0","name":"Gusikowski,
         Heller and Orn"}},{"id":"18","type":"gym","attributes":{"yelp_gym_id":"lg1tor0922xr4wdiigdqg4","name":"Nolan
         LLC"}},{"id":"20","type":"gym","attributes":{"yelp_gym_id":"tit42wzx84xo53yja74f8t","name":"Koss-Roberts"}}]}'
-  recorded_at: Mon, 20 Sep 2021 04:50:42 GMT
+  recorded_at: Mon, 20 Sep 2021 04:56:19 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/events
@@ -113,7 +113,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:50:42 GMT
+      - Mon, 20 Sep 2021 04:56:18 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -123,9 +123,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3a9dc10d-9f99-427a-b939-15a1131430bc
+      - 45c09abe-0ecc-42fc-aea7-b588b90c614c
       X-Runtime:
-      - '0.150412'
+      - '0.005876'
       Transfer-Encoding:
       - chunked
       Via:
@@ -135,5 +135,5 @@ http_interactions:
       string: '{"data":[{"id":"46","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-29T18:43:33.904Z","activity":"Digital
         arts"}},{"id":"47","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-27T18:43:33.939Z","activity":"Scouting"}},{"id":"48","type":"event","attributes":{"user_id":31,"gym_id":18,"date_time":"2021-09-22T18:43:33.947Z","activity":"Web
         surfing"}}]}'
-  recorded_at: Mon, 20 Sep 2021 04:50:42 GMT
+  recorded_at: Mon, 20 Sep 2021 04:56:19 GMT
 recorded_with: VCR 6.0.0

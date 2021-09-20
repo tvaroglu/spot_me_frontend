@@ -6,12 +6,12 @@ RSpec.describe 'welcome page' do
   it 'is on the correct page' do
     visit root_path
 
-    expect(page).to have_content('SpotMe')
-    expect(page).to have_content('Mission')
-    expect(page).to have_link('Sign in with Google')
+    expect(page).to have_content 'SpotMe'
+    expect(page).to have_content 'Mission'
+    expect(page).to have_link 'Sign in with Google'
   end
 
-  it 'can log in to the application with valid Google token', :vcr do
+  it 'can log in and out of the application with a valid Google token', :vcr do
     visit root_path
 
     allow(BackEndService).to receive(:get_user)
@@ -21,9 +21,17 @@ RSpec.describe 'welcome page' do
     # see bottom of rails_helper for OmniAuth mock
     login_with_oauth
     expect(page).to have_current_path(dashboard_path(1), ignore_query: true)
+
+    expect(page).to have_link 'Dashboard'
+    expect(page).to have_link 'Find Gyms Near You'
+    expect(page).to have_link 'Log Out'
+
+    click_on 'Log Out'
+    expect(page).to have_content 'You are now logged out, please come back soon!'
+    expect(current_path).to eq root_path
   end
 
-  describe 'sad path' do
+  describe 'new user registration' do
     let(:empty_user) { File.read('./spec/fixtures/empty_user.json') }
 
     it 'will redirect to registration page if new user' do

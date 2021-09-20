@@ -1,7 +1,7 @@
 class BackEndService
   class << self
     def get_user(google_id)
-      response = db_conn.get("/users/#{google_id}")
+      response = db_conn.get("/api/v1/users/find?google_id=#{google_id}")
       parse_json(response.body)
     end
 
@@ -11,7 +11,7 @@ class BackEndService
     end
 
     def get_gyms(user_id)
-      response = db_conn.get("/api/v1/users/#{user_id}/gyms")
+      response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
       parse_json(response.body)
     end
 
@@ -20,21 +20,18 @@ class BackEndService
       parse_json(response.body)
     end
 
-    # TODO:  understand why we need this method?  BE is calling the API for us
-    # def gyms_near_user(location)
-    #   response = yelp_connection.get("v3/businesses/search?term=gyms&radius=40000&sort_by=distance&location=#{location}")
-    #   parse_json(response.body)
-    # end
-
     def create_user(user_params)
       db_conn.post(
-        '/users',
+        '/api/v1/users',
         user_params.to_json,
         'Content-Type' => 'application/json'
       )
     end
 
     def base_url
+      # NOTE: base_url needs to be localhost if you want to auth in during development
+      # Open your BE server via $ rails s --port 4500
+      # 'http://localhost:4500'
       'https://spotme-app-api.herokuapp.com'
     end
 

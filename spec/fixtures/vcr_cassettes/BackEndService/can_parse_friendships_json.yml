@@ -15,30 +15,37 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:56:21 GMT
+      - Mon, 20 Sep 2021 22:58:43 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"1e1696e5cd41245b2d734144a88b1533"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bcb57f27-4a2b-44bc-b599-532ab6019723
+      - 3874366b-8d1d-4b9a-8cfe-274fbf46d117
       X-Runtime:
-      - '0.013269'
+      - '0.006713'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"message":"your query could not be completed","errors":["Couldn''t
-        find User with ''id''=1"]}'
-  recorded_at: Mon, 20 Sep 2021 04:56:22 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"tarah@williamson.name","google_id":"9pnasaniqjfl8u9apcj2k","google_image_url":"https://robohash.org/quiestautem.png?size=300x300\u0026set=set1","zip_code":"68916","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":2,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Clinton
+        Hagenes"}},{"id":"9","type":"user","attributes":{"email":"kasey@muller-emmerich.io","google_id":"7s3girwpzom9h2ekgoaaj","google_image_url":"https://robohash.org/rerumquisuscipit.png?size=300x300\u0026set=set1","zip_code":"20186","summary":"It''s
+        not what happens to you, but how you react to it that matters.","goal":1,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Isabelle
+        Leannon V"}},{"id":"10","type":"user","attributes":{"email":"yuriko@gusikowski.co","google_id":"0u4bd2e15kad5ndj6g0fk","google_image_url":"https://robohash.org/temporibuscorporisquisquam.png?size=300x300\u0026set=set1","zip_code":"28331","summary":"Good
+        habits formed at youth make all the difference.","goal":3,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Jon
+        Graham"}}]}'
+  recorded_at: Mon, 20 Sep 2021 22:58:44 GMT
 recorded_with: VCR 6.0.0

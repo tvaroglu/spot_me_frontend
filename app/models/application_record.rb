@@ -3,17 +3,19 @@ class ApplicationRecord < ActiveRecord::Base
 
   def self.user_stub
     User.new({
-      id: 31,
-      email: 'ron_hermiston@schinner.net',
-      google_id: '123456789102345678910',
-      google_image_url: 'https://robohash.org/doloribusutmagni.png?size=300x300&set=set1',
-      zip_code: '55919',
-      summary: 'The secret to humor is surprise.',
-      goal: 'Gain Weight',
-      availability_morning: false,
-      availability_afternoon: true,
-      availability_evening: true,
-      full_name: 'Alvaro Stanton'
-      })
+      id: 1,
+      attributes: {
+        email: '123@test.com',
+        full_name: 'Joe Shmoe',
+        google_id: 789,
+        google_image_url: 'pretty face',
+        zip_code: '80227',
+        summary: 'Muy guesta gimnasios',
+        goal: 'Gain Weight',
+        availability_morning: true,
+        availability_afternoon: true,
+        availability_evening: false
+      }
+    })
   end
 end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -21,27 +21,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:56:18 GMT
+      - Mon, 20 Sep 2021 22:58:40 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5409062df00c8cc4b8efa5c5f12d07a4"
+      - W/"75548423930fd96ccc9883b5619216b1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c83cf2ef-7147-43ba-bc26-afb5ff2d4064
+      - 0a659778-8820-4b09-84c4-232c62673248
       X-Runtime:
-      - '0.007783'
+      - '0.027112'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"46","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-29T18:43:33.904Z","activity":"Digital
-        arts"}},{"id":"47","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-27T18:43:33.939Z","activity":"Scouting"}},{"id":"48","type":"event","attributes":{"user_id":31,"gym_id":18,"date_time":"2021-09-22T18:43:33.947Z","activity":"Web
-        surfing"}}]}'
-  recorded_at: Mon, 20 Sep 2021 04:56:18 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-23T18:56:54.944Z","activity":"Bird
+        watching"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-21T18:56:54.958Z","activity":"Bird
+        watching"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T18:56:54.964Z","activity":"Computer
+        programming"}}]}'
+  recorded_at: Mon, 20 Sep 2021 22:58:40 GMT
 recorded_with: VCR 6.0.0

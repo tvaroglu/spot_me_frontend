@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gyms
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -15,30 +15,33 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:56:25 GMT
+      - Mon, 20 Sep 2021 22:58:43 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"628f96fdab79e67fafa64bc043c1479e"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a183afb8-9601-47d5-bafc-4ddcc671cc58
+      - f2b16652-e3fe-4a0a-8ce4-046e2a0416c8
       X-Runtime:
-      - '0.003919'
+      - '0.005543'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"message":"your query could not be completed","errors":["Couldn''t
-        find User with ''id''=1"]}'
-  recorded_at: Mon, 20 Sep 2021 04:56:25 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
+        Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
+        LLC"}}]}'
+  recorded_at: Mon, 20 Sep 2021 22:58:44 GMT
 recorded_with: VCR 6.0.0

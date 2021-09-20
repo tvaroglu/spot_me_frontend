@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#dashboard'
   # get '/profile/:user_id', to: 'users#profile'
   get '/profile', to: 'users#profile'
-  post '/profile/:user_id', to: 'users#profile'
+  post '/profile/:user_id', to: 'users#update'
 
   get '/gyms', to: 'search#index'
 end

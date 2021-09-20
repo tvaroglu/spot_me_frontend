@@ -31,4 +31,9 @@ class UsersController < ApplicationController
     # placeholder for sprint
     @user = ApplicationRecord.user_stub
   end
+
+  def update
+    # TODO: write this method
+    # db_conn.update_user(params)
+  end
 end

@@ -9,8 +9,8 @@ RSpec.describe 'user profile page' do
     expect(page).to have_content @user.goal
 
     expect(page).to have_content 'Availability'
+    expect(page).to have_content 'Morning'
     expect(page).to have_content 'Afternoon'
-    expect(page).to have_content 'Evening'
 
     expect(page).to have_link 'Edit Profile'
   end

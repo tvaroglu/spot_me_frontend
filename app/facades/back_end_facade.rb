@@ -11,23 +11,17 @@ class BackEndFacade
 
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
-      friends[:data].map do |friend|
-        User.new(friend[:attributes])
-      end
+      friends[:data].map { |friend| User.new(friend[:attributes]) } if friends[:data]
     end
 
     def get_user_gyms(user_id)
       gyms = BackEndService.get_gyms(user_id)
-      gyms[:data].map do |gym|
-        UserGym.new(gym[:attributes])
-      end
+      gyms[:data].map { |gym| UserGym.new(gym[:attributes]) } if gyms[:data]
     end
 
     def get_user_events(user_id)
       events = BackEndService.get_events(user_id)
-      events[:data].map do |event|
-        UserEvent.new(event)
-      end
+      events[:data].map { |event| UserEvent.new(event) } if events[:data]
     end
 
     # def searched_gyms(location)

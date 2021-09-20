@@ -1,6 +1,6 @@
 <h1>Register</h1>
 
-<%= form_with url: registration_path(google_id: params[:google_id], google_token: params[:google_token], profile_pic_url: params[:profile_pic_url]), local: true do |f| %>
+<%= form_with url: registration_path(google_id: params[:google_id], google_token: params[:google_token], google_image_url: params[:google_image_url]), local: true do |f| %>
   <%= f.label :full_name, 'Name' %>
   <br>
   <%= f.text_field :full_name, value: params[:full_name], id: :full_name %>

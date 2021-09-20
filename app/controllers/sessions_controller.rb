@@ -8,11 +8,21 @@ class SessionsController < ApplicationController
     found_user = BackEndFacade.get_user(helper_hash[:google_id])
     if found_user.present?
       session[:google_token] = helper_hash[:google_token]
+      session[:google_id] = helper_hash[:google_id]
+      # existing user
       redirect_to dashboard_path(found_user.id)
     else
+      # new user
       redirect_to registration_path(helper_hash)
     end
-    # redirect_to registration_path(helper_hash)
+  end
+
+  def destroy
+    session[:google_token] = nil
+    session[:google_id] = nil
+    reset_session
+    flash[:alert] = 'You are now logged out, please come back soon!'
+    redirect_to root_path
   end
 
   private
@@ -21,7 +31,7 @@ class SessionsController < ApplicationController
     {
       google_id: auth_hash['uid'],
       email: auth_hash['info']['email'],
-      name: auth_hash['info']['name'],
+      full_name: auth_hash['info']['name'],
       profile_pic_url: auth_hash['info']['image'],
       google_token: auth_hash['credentials']['token']
     }

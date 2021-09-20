@@ -1,0 +1,4 @@
+<%# if current_user %>
+<% current_user = @user %>
+  <%= render partial: 'profiles', locals: { view_type: 'profile (self)' } %>
+<%# end %>

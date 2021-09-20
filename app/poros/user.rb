@@ -1,7 +1,7 @@
 class User
   attr_reader :id,
               :email,
-              :name,
+              :full_name,
               :google_id,
               :google_image_url,
               :zip_code,
@@ -14,7 +14,7 @@ class User
   def initialize(user_params)
     @id = user_params[:id]
     @email = user_params[:email]
-    @name = user_params[:name]
+    @full_name = user_params[:full_name]
     @google_id = user_params[:google_id]
     @google_image_url = user_params[:google_image_url]
     @zip_code = user_params[:zip_code]

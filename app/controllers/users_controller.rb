@@ -2,12 +2,12 @@ class UsersController < ApplicationController
   def new; end
 
   def create
-    # require "pry"; binding.pry
     BackEndFacade.create_user(params)
     found_user = BackEndFacade.get_user(params[:google_id])
-    if found_user.present?
     # if params[:google_token]
+    if found_user.present?
       session[:google_token] = params[:google_token]
+      session[:google_id] = params[:google_id]
       redirect_to dashboard_path(found_user.id)
       # redirect_to dashboard_path(params[:google_id])
     else
@@ -16,5 +16,24 @@ class UsersController < ApplicationController
     end
   end
 
-  def dashboard; end
+  def dashboard
+    # placeholder conditional for sprint
+    if current_user
+      @user_friends = BackEndFacade.get_user_friends(current_user.id)
+      @user_gyms = BackEndFacade.get_user_gyms(current_user.id)
+      @user_events = BackEndFacade.get_user_events(current_user.id)
+    end
+    # placeholder for sprint
+    @user = ApplicationRecord.user_stub
+  end
+
+  def profile
+    # placeholder for sprint
+    @user = ApplicationRecord.user_stub
+  end
+
+  def update
+    # TODO: write this method
+    # BackEndFacade.update_user(params)
+  end
 end

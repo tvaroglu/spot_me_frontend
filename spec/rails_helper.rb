@@ -12,6 +12,9 @@ SimpleCov.start do
   add_filter 'spec/'
   add_filter 'app/channels/'
   add_filter 'app/jobs/'
+  # TODO: decide if we want to add the following filter so coverage isn't skewed
+    # (from current_user method that is a hook in the config block)
+  # add_filter 'app/controllers/application_controller'
 end
 
 Shoulda::Matchers.configure do |config|
@@ -22,13 +25,13 @@ Shoulda::Matchers.configure do |config|
 end
 
 VCR.configure do |config|
-  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
-  # update the following line when we actually have API keys
+  # update the following line if we have API keys we're using with these cassettes
   # config.filter_sensitive_data('DONT_SHARE_MY_PROPUBLIC_SECRET_KEY') { ENV['PROPUBLICA_KEY'] }
   config.default_cassette_options = { re_record_interval: 7.days }
   config.configure_rspec_metadata!
-  config.allow_http_connections_when_no_cassette = true
+  # config.allow_http_connections_when_no_cassette = true
 end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -54,7 +57,14 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  # see spec/support for omniauth login helper method
   config.include IntegrationSpecHelper, :type => :feature
+  # hook for ApplicationController.current_user
+  config.before(:each, type: :feature) do
+    @user = ApplicationRecord.user_stub
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+  end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -91,6 +101,11 @@ Capybara.default_host = 'http://testing.com'
 OmniAuth.config.test_mode = true
 OmniAuth.config.add_mock(:google_oauth2, {
   uid: '12345',
+  info: {
+    email: 'heisenberg@nm.gov',
+    name: 'Walter White',
+    image: 'i-am-the-one-who-knocks.png'
+  },
   credentials: {
     token: '678910'
   }

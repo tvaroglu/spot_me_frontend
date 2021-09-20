@@ -1,1 +1,4 @@
-<h1>Dashboard</h1>
+<%# if current_user %>
+<% current_user = @user %>
+  <%= render partial: 'profiles', locals: { view_type: 'dashboard' } %>
+<%# end %>

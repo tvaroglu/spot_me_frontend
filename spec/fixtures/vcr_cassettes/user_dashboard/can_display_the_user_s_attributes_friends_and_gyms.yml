@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -21,36 +21,36 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:56:18 GMT
+      - Mon, 20 Sep 2021 20:46:44 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"47a19fbd29dbcb6582a94cdd336749ff"
+      - W/"1e1696e5cd41245b2d734144a88b1533"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b26757df-ad62-49d1-a97b-9cb270c44d63
+      - b7870fd0-9605-4716-a0b6-7ece90e0c6f4
       X-Runtime:
-      - '0.006890'
+      - '0.006015'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"33","type":"user","attributes":{"email":"darwin@lesch-predovic.biz","google_id":"l1h9ozrr4oayvtqzy97pf","google_image_url":"https://robohash.org/doloribusdolornesciunt.png?size=300x300\u0026set=set1","zip_code":"49598","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":4,"availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Emerson
-        Cummerata"}},{"id":"39","type":"user","attributes":{"email":"deborah@cremin.info","google_id":"p9rpxp5jgjdlz2i2uxhib","google_image_url":"https://robohash.org/adipiscisaepeea.png?size=300x300\u0026set=set1","zip_code":"65240","summary":"Beware
-        the barrenness of a busy life.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Stan
-        Gutmann VM"}},{"id":"40","type":"user","attributes":{"email":"krystle@lind.net","google_id":"og1crcri9my7drwdk5mxn","google_image_url":"https://robohash.org/aspernaturlaboretempore.png?size=300x300\u0026set=set1","zip_code":"33830","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":2,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Demetrius
-        Bergstrom DVM"}}]}'
-  recorded_at: Mon, 20 Sep 2021 04:56:18 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"tarah@williamson.name","google_id":"9pnasaniqjfl8u9apcj2k","google_image_url":"https://robohash.org/quiestautem.png?size=300x300\u0026set=set1","zip_code":"68916","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":2,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Clinton
+        Hagenes"}},{"id":"9","type":"user","attributes":{"email":"kasey@muller-emmerich.io","google_id":"7s3girwpzom9h2ekgoaaj","google_image_url":"https://robohash.org/rerumquisuscipit.png?size=300x300\u0026set=set1","zip_code":"20186","summary":"It''s
+        not what happens to you, but how you react to it that matters.","goal":1,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Isabelle
+        Leannon V"}},{"id":"10","type":"user","attributes":{"email":"yuriko@gusikowski.co","google_id":"0u4bd2e15kad5ndj6g0fk","google_image_url":"https://robohash.org/temporibuscorporisquisquam.png?size=300x300\u0026set=set1","zip_code":"28331","summary":"Good
+        habits formed at youth make all the difference.","goal":3,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Jon
+        Graham"}}]}'
+  recorded_at: Mon, 20 Sep 2021 20:46:44 GMT
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -69,32 +69,32 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:56:18 GMT
+      - Mon, 20 Sep 2021 20:46:44 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0ab70bf44cb7316a1c5b1bbd37f7e20c"
+      - W/"628f96fdab79e67fafa64bc043c1479e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e5cd7585-2ea2-4d70-a6dc-39ab83ef47a1
+      - ee3c0bee-1e85-4fa6-a2da-0012f645ab70
       X-Runtime:
-      - '0.006470'
+      - '0.004951'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"16","type":"gym","attributes":{"yelp_gym_id":"8j30z2eaypjo0buakw5mi0","name":"Gusikowski,
-        Heller and Orn"}},{"id":"18","type":"gym","attributes":{"yelp_gym_id":"lg1tor0922xr4wdiigdqg4","name":"Nolan
-        LLC"}},{"id":"20","type":"gym","attributes":{"yelp_gym_id":"tit42wzx84xo53yja74f8t","name":"Koss-Roberts"}}]}'
-  recorded_at: Mon, 20 Sep 2021 04:56:19 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
+        Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
+        LLC"}}]}'
+  recorded_at: Mon, 20 Sep 2021 20:46:44 GMT
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -113,27 +113,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 04:56:18 GMT
+      - Mon, 20 Sep 2021 20:46:44 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5409062df00c8cc4b8efa5c5f12d07a4"
+      - W/"75548423930fd96ccc9883b5619216b1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 45c09abe-0ecc-42fc-aea7-b588b90c614c
+      - 3787990f-951a-47d0-a670-0765b46b4991
       X-Runtime:
-      - '0.005876'
+      - '0.009954'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"46","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-29T18:43:33.904Z","activity":"Digital
-        arts"}},{"id":"47","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-27T18:43:33.939Z","activity":"Scouting"}},{"id":"48","type":"event","attributes":{"user_id":31,"gym_id":18,"date_time":"2021-09-22T18:43:33.947Z","activity":"Web
-        surfing"}}]}'
-  recorded_at: Mon, 20 Sep 2021 04:56:19 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-23T18:56:54.944Z","activity":"Bird
+        watching"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-21T18:56:54.958Z","activity":"Bird
+        watching"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T18:56:54.964Z","activity":"Computer
+        programming"}}]}'
+  recorded_at: Mon, 20 Sep 2021 20:46:45 GMT
 recorded_with: VCR 6.0.0

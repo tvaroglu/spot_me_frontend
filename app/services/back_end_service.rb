@@ -29,6 +29,7 @@ class BackEndService
     end
 
     def base_url
+      # NOTE: localhost needs to be your base_url if you want to auth in during development
       # 'http://localhost:4500'
       'https://spotme-app-api.herokuapp.com'
     end

@@ -4,16 +4,18 @@ RSpec.describe User do
   it 'can initialize from user params' do
     user_params = {
       id: 1,
-      email: '123@test.com',
-      full_name: 'Joe Shmoe',
-      google_id: 789,
-      google_image_url: 'pretty face',
-      zip_code: '80227',
-      summary: 'Muy guesta gimnasios',
-      goal: 'Gain Weight',
-      availability_morning: true,
-      availability_afternoon: true,
-      availability_evening: false
+      attributes: {
+        email: '123@test.com',
+        full_name: 'Joe Shmoe',
+        google_id: 789,
+        google_image_url: 'pretty face',
+        zip_code: '80227',
+        summary: 'Muy guesta gimnasios',
+        goal: 'Gain Weight',
+        availability_morning: true,
+        availability_afternoon: true,
+        availability_evening: false
+      }
     }
 
     user = User.new(user_params)

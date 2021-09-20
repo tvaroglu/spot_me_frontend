@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 20:46:47 GMT
+      - Mon, 20 Sep 2021 22:58:43 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 41ca418a-fcd2-4c48-a967-bf0119d7336a
+      - f2b16652-e3fe-4a0a-8ce4-046e2a0416c8
       X-Runtime:
-      - '0.010779'
+      - '0.005543'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
         Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
         LLC"}}]}'
-  recorded_at: Mon, 20 Sep 2021 20:46:47 GMT
+  recorded_at: Mon, 20 Sep 2021 22:58:44 GMT
 recorded_with: VCR 6.0.0

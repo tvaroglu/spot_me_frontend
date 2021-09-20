@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 20:46:43 GMT
+      - Mon, 20 Sep 2021 22:58:40 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 54c6001b-a3cf-409c-9676-4af0cf7bc980
+      - 0a659778-8820-4b09-84c4-232c62673248
       X-Runtime:
-      - '0.007677'
+      - '0.027112'
       Transfer-Encoding:
       - chunked
       Via:
@@ -44,5 +44,5 @@ http_interactions:
         watching"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-21T18:56:54.958Z","activity":"Bird
         watching"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T18:56:54.964Z","activity":"Computer
         programming"}}]}'
-  recorded_at: Mon, 20 Sep 2021 20:46:44 GMT
+  recorded_at: Mon, 20 Sep 2021 22:58:40 GMT
 recorded_with: VCR 6.0.0

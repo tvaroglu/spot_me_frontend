@@ -1,7 +1,7 @@
 class BackEndService
   class << self
     def get_user(google_id)
-      response = db_conn.get("/api/v1/users/find/#{google_id}")
+      response = db_conn.get("/api/v1/users/find?google_id=#{google_id}")
       parse_json(response.body)
     end
 
@@ -29,7 +29,8 @@ class BackEndService
     end
 
     def base_url
-      # NOTE: localhost needs to be your base_url if you want to auth in during development
+      # NOTE: base_url needs to be localhost if you want to auth in during development
+      # Open your BE server via $ rails s --port 4500
       # 'http://localhost:4500'
       'https://spotme-app-api.herokuapp.com'
     end

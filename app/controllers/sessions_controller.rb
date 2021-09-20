@@ -9,10 +9,10 @@ class SessionsController < ApplicationController
     if found_user.present?
       session[:google_token] = helper_hash[:google_token]
       session[:google_id] = helper_hash[:google_id]
-      #existing user
+      # existing user
       redirect_to dashboard_path(found_user.id)
     else
-      #new user
+      # new user
       redirect_to registration_path(helper_hash)
     end
   end

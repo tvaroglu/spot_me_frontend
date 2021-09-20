@@ -18,9 +18,15 @@ class BackEndFacade
 
     def get_user_gyms(user_id)
       gyms = BackEndService.get_gyms(user_id)
-      # require "pry"; binding.pry
       gyms[:data].map do |gym|
         UserGym.new(gym[:attributes])
+      end
+    end
+
+    def get_user_events(user_id)
+      events = BackEndService.get_events(user_id)
+      events[:data].map do |event|
+        UserEvent.new(event)
       end
     end
 
@@ -30,12 +36,5 @@ class BackEndFacade
     #     YelpGym.new(gym)
     #   end
     # end
-
-    def get_user_events(user_id)
-      events = BackEndService.get_events(user_id)
-      events[:data].map do |event|
-        UserEvent.new(event)
-      end
-    end
   end
 end

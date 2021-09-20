@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 20 Sep 2021 00:08:43 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0ab70bf44cb7316a1c5b1bbd37f7e20c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 88a40517-7615-4b21-b8bf-c228dc6da4c3
+      X-Runtime:
+      - '0.006274'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"16","type":"gym","attributes":{"yelp_gym_id":"8j30z2eaypjo0buakw5mi0","name":"Gusikowski,
+        Heller and Orn"}},{"id":"18","type":"gym","attributes":{"yelp_gym_id":"lg1tor0922xr4wdiigdqg4","name":"Nolan
+        LLC"}},{"id":"20","type":"gym","attributes":{"yelp_gym_id":"tit42wzx84xo53yja74f8t","name":"Koss-Roberts"}}]}'
+  recorded_at: Mon, 20 Sep 2021 00:08:43 GMT
+recorded_with: VCR 6.0.0

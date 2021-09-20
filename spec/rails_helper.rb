@@ -12,6 +12,9 @@ SimpleCov.start do
   add_filter 'spec/'
   add_filter 'app/channels/'
   add_filter 'app/jobs/'
+  # TODO: decide if we want to add the following filter so coverage isn't skewed
+    # (current_user method that is a hook in the config block)
+  # add_filter 'app/controllers/application_controller'
 end
 
 Shoulda::Matchers.configure do |config|
@@ -28,7 +31,7 @@ VCR.configure do |config|
   # config.filter_sensitive_data('DONT_SHARE_MY_PROPUBLIC_SECRET_KEY') { ENV['PROPUBLICA_KEY'] }
   config.default_cassette_options = { re_record_interval: 7.days }
   config.configure_rspec_metadata!
-  config.allow_http_connections_when_no_cassette = true
+  # config.allow_http_connections_when_no_cassette = true
 end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -57,7 +60,7 @@ RSpec.configure do |config|
   config.include IntegrationSpecHelper, :type => :feature
   config.before(:each, type: :feature) do
     @user = User.new({
-        :id=>31, 
+        :id=>31,
         :email=>"ron_hermiston@schinner.net",
         :google_id=>"123456789102345678910",
         :google_image_url=>"https://robohash.org/doloribusutmagni.png?size=300x300&set=set1",

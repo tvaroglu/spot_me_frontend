@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/users/789
     body:
       encoding: US-ASCII
       string: ''
@@ -21,24 +21,21 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 00:08:51 GMT
+      - Mon, 20 Sep 2021 00:08:50 GMT
       Connection:
       - keep-alive
       Content-Type:
-      - application/json; charset=utf-8
-      Cache-Control:
-      - no-cache
+      - text/html; charset=UTF-8
       X-Request-Id:
-      - 3b049fe6-8a18-41c0-af82-00a055d6f14d
+      - 4e11bd38-9b4d-4f2f-ab26-30c9af0e0104
       X-Runtime:
-      - '0.003625'
-      Transfer-Encoding:
-      - chunked
+      - '0.000839'
+      Content-Length:
+      - '0'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"message":"your query could not be completed","errors":["Couldn''t
-        find User with ''id''=1"]}'
-  recorded_at: Mon, 20 Sep 2021 00:08:51 GMT
+      string: ''
+  recorded_at: Mon, 20 Sep 2021 00:08:50 GMT
 recorded_with: VCR 6.0.0

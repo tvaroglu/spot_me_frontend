@@ -1,0 +1,139 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/friendships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 20 Sep 2021 00:08:45 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"47a19fbd29dbcb6582a94cdd336749ff"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7d0ea1bb-f2b6-4139-b5d9-b66b46c294f7
+      X-Runtime:
+      - '0.008475'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"33","type":"user","attributes":{"email":"darwin@lesch-predovic.biz","google_id":"l1h9ozrr4oayvtqzy97pf","google_image_url":"https://robohash.org/doloribusdolornesciunt.png?size=300x300\u0026set=set1","zip_code":"49598","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":4,"availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Emerson
+        Cummerata"}},{"id":"39","type":"user","attributes":{"email":"deborah@cremin.info","google_id":"p9rpxp5jgjdlz2i2uxhib","google_image_url":"https://robohash.org/adipiscisaepeea.png?size=300x300\u0026set=set1","zip_code":"65240","summary":"Beware
+        the barrenness of a busy life.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Stan
+        Gutmann VM"}},{"id":"40","type":"user","attributes":{"email":"krystle@lind.net","google_id":"og1crcri9my7drwdk5mxn","google_image_url":"https://robohash.org/aspernaturlaboretempore.png?size=300x300\u0026set=set1","zip_code":"33830","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":2,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Demetrius
+        Bergstrom DVM"}}]}'
+  recorded_at: Mon, 20 Sep 2021 00:08:46 GMT
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/gyms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 20 Sep 2021 00:08:46 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0ab70bf44cb7316a1c5b1bbd37f7e20c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e6cea997-6cf1-45ed-ad1a-41c23ceebb62
+      X-Runtime:
+      - '0.020732'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"16","type":"gym","attributes":{"yelp_gym_id":"8j30z2eaypjo0buakw5mi0","name":"Gusikowski,
+        Heller and Orn"}},{"id":"18","type":"gym","attributes":{"yelp_gym_id":"lg1tor0922xr4wdiigdqg4","name":"Nolan
+        LLC"}},{"id":"20","type":"gym","attributes":{"yelp_gym_id":"tit42wzx84xo53yja74f8t","name":"Koss-Roberts"}}]}'
+  recorded_at: Mon, 20 Sep 2021 00:08:46 GMT
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 20 Sep 2021 00:08:47 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5409062df00c8cc4b8efa5c5f12d07a4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7569d819-eb20-4320-855e-8bc75bbc2bb3
+      X-Runtime:
+      - '0.007148'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"46","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-29T18:43:33.904Z","activity":"Digital
+        arts"}},{"id":"47","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-27T18:43:33.939Z","activity":"Scouting"}},{"id":"48","type":"event","attributes":{"user_id":31,"gym_id":18,"date_time":"2021-09-22T18:43:33.947Z","activity":"Web
+        surfing"}}]}'
+  recorded_at: Mon, 20 Sep 2021 00:08:47 GMT
+recorded_with: VCR 6.0.0

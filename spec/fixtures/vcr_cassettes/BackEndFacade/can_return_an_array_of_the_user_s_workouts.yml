@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 00:08:42 GMT
+      - Mon, 20 Sep 2021 00:49:58 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e8a634fc-8d52-4d1b-8158-1ead8a05bd55
+      - 477b3d94-a32b-4f68-9845-f8bd232ebce4
       X-Runtime:
-      - '0.006126'
+      - '0.206464'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":[{"id":"46","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-29T18:43:33.904Z","activity":"Digital
         arts"}},{"id":"47","type":"event","attributes":{"user_id":31,"gym_id":16,"date_time":"2021-09-27T18:43:33.939Z","activity":"Scouting"}},{"id":"48","type":"event","attributes":{"user_id":31,"gym_id":18,"date_time":"2021-09-22T18:43:33.947Z","activity":"Web
         surfing"}}]}'
-  recorded_at: Mon, 20 Sep 2021 00:08:43 GMT
+  recorded_at: Mon, 20 Sep 2021 00:49:59 GMT
 recorded_with: VCR 6.0.0

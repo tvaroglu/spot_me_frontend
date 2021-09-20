@@ -1,10 +1,9 @@
 require 'rails_helper'
 RSpec.describe 'user profile page' do
-  before do
-    visit "/users/#{@user.id}/profile"
-  end
+  xit 'can show the attributes of the current user', :vcr do
+    visit profile_path(@user.id)
+    save_and_open_page
 
-  xit 'can show the attributes of the current user' do
     expect(page).to have_content(@user.name)
     expect(page).to have_content(@user.summary)
     expect(page).to have_content(@user.availability_morning)

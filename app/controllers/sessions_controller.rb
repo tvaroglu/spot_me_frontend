@@ -17,6 +17,14 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    session[:google_token] = nil
+    session[:google_id] = nil
+    reset_session
+    flash[:alert] = "You are now logged out, please come back soon!"
+    redirect_to root_path
+  end
+
   private
 
   def helper_hash

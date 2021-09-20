@@ -1,19 +1,4 @@
-<% if current_user %>
-  <img id="profile_pic" src="<%= current_user.google_image_url %>">
-  <h1 id="user_name">Welcome, <%= current_user.full_name %>!</h1>
-
-  <h2 id="friends">My Friends:</h2>
-  <% @user_friends.each do |friend| %>
-    <p id="friend"><%= friend.full_name %></p>
-  <% end %>
-
-  <h2 id="gyms">My Gyms:</h2>
-  <% @user_gyms.each do |gym| %>
-    <p id="gym"><%= gym.name %></p>
-  <% end %>
-
-  <h2 id="events">Upcoming Workouts:</h2>
-  <% @user_events.each do |event| %>
-    <p id="event"><%= event.activity %>: <%= event.date_time %></p>
-  <% end %>
-<% end %>
+<%# if current_user %>
+<% current_user = @user %>
+  <%= render partial: 'profiles', locals: { view_type: 'dashboard' } %>
+<%# end %>

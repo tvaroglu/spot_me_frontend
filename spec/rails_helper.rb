@@ -100,8 +100,13 @@ end
 Capybara.default_host = 'http://testing.com'
 OmniAuth.config.test_mode = true
 OmniAuth.config.add_mock(:google_oauth2, {
-  google_id: '12345',
+  uid: '12345',
+  info: {
+    email: 'heisenberg@nm.gov',
+    name: 'Walter White',
+    image: 'i-am-the-one-who-knocks.png'
+  },
   credentials: {
-    google_token: '678910'
+    token: '678910'
   }
 })

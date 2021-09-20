@@ -34,6 +34,6 @@ class UsersController < ApplicationController
 
   def update
     # TODO: write this method
-    # db_conn.update_user(params)
+    # BackEndFacade.update_user(params)
   end
 end

@@ -28,7 +28,7 @@ RSpec.describe 'welcome page' do
 
     click_on 'Log Out'
     expect(page).to have_content 'You are now logged out, please come back soon!'
-    expect(current_path).to eq root_path
+    expect(page).to have_current_path(root_path)
   end
 
   describe 'new user registration' do

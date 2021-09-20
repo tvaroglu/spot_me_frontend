@@ -17,39 +17,18 @@ class UsersController < ApplicationController
   end
 
   def dashboard
-    @user_friends = BackEndFacade.get_user_friends(current_user.id)
-    @user_gyms = BackEndFacade.get_user_gyms(current_user.id)
-    @user_events = BackEndFacade.get_user_events(current_user.id)
+    # placeholder conditional for sprint
+    if current_user
+      @user_friends = BackEndFacade.get_user_friends(current_user.id)
+      @user_gyms = BackEndFacade.get_user_gyms(current_user.id)
+      @user_events = BackEndFacade.get_user_events(current_user.id)
+    end
     # placeholder for sprint
-    @user = User.new({
-      id: 31,
-      email: 'ron_hermiston@schinner.net',
-      google_id: '123456789102345678910',
-      google_image_url: 'https://robohash.org/doloribusutmagni.png?size=300x300&set=set1',
-      zip_code: '55919',
-      summary: 'The secret to humor is surprise.',
-      goal: 'Gain Weight',
-      availability_morning: false,
-      availability_afternoon: true,
-      availability_evening: true,
-      full_name: 'Alvaro Stanton'
-      })
+    @user = ApplicationRecord.user_stub
   end
 
   def profile
     # placeholder for sprint
-    @user = User.new({
-      id: 31,
-      email: 'ron_hermiston@schinner.net',
-      google_id: '123456789102345678910',
-      google_image_url: 'https://robohash.org/doloribusutmagni.png?size=300x300&set=set1',
-      zip_code: '55919',
-      summary: 'The secret to humor is surprise.',
-      goal: 'Gain Weight',
-      availability_morning: false,
-      availability_afternoon: true,
-      availability_evening: true,
-      full_name: 'Alvaro Stanton'
-      })
+    @user = ApplicationRecord.user_stub
   end
 end

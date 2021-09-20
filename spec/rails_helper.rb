@@ -61,19 +61,7 @@ RSpec.configure do |config|
   config.include IntegrationSpecHelper, :type => :feature
   # hook for ApplicationController.current_user
   config.before(:each, type: :feature) do
-    @user = User.new({
-      id: 31,
-      email: 'ron_hermiston@schinner.net',
-      google_id: '123456789102345678910',
-      google_image_url: 'https://robohash.org/doloribusutmagni.png?size=300x300&set=set1',
-      zip_code: '55919',
-      summary: 'The secret to humor is surprise.',
-      goal: 'Gain Weight',
-      availability_morning: false,
-      availability_afternoon: true,
-      availability_evening: true,
-      full_name: 'Alvaro Stanton'
-      })
+    @user = ApplicationRecord.user_stub
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end

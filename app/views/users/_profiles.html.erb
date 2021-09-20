@@ -10,7 +10,9 @@
         <br>
         <br>
         <% if view_type == 'profile (self)' %>
+        <!-- todo: add view helper method(s) to get goal from enum (req's still pending from BE) -->
           <h4 id="goals">Goal: <%= current_user.goal %></h4>
+          <!-- todo: add view helper method(s) to get availability from booleans to strings for cleaner display -->
           <h4 id="availability"><u>Availability:</u>
             <br>
             <% if current_user.availability_morning %>
@@ -23,7 +25,12 @@
               <p>Evening</p>
             <% end %>
           </h4>
+          <%= link_to 'Edit Profile', profile_path(current_user.id), method: :post, class: "btn btn-info btn-lg btn-outline-dark" %>
+          <br>
         <% elsif view_type == 'dashboard' %>
+          <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-info btn-lg btn-outline-dark" %>
+          <br>
+          <br>
           <h2 id="friends">My Friends:</h2>
           <!-- placeholder for stubs in controller, remove guard clause after sprint -->
           <% if @user_friends %>

@@ -9,7 +9,10 @@
         <br>
         <% if view_type == 'profile (self)' %>
         <!-- todo: add view helper method(s) to get goal from enum (req's still pending from BE) -->
-          <h4 id="goals">Goal: <%= current_user.goal %></h4>
+          <h4 id="goals"><u>Goal:</u>
+            <br>
+            <%= current_user.goal if current_user.goal %>
+          </h4>
           <!-- todo: add view helper method(s) to get availability from booleans to strings for cleaner display -->
           <h4 id="availability"><u>Availability:</u>
             <br>

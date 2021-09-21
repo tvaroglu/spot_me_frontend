@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe BackEndService do
-  it 'can retrieve the base url for API calls' do
+  xit 'can retrieve the base url for API calls' do
     expect(BackEndService.base_url).to eq 'https://spotme-app-api.herokuapp.com'
   end
 
@@ -40,5 +40,10 @@ RSpec.describe BackEndService do
 
   it 'can parse searched gyms json', :vcr do
     expect(BackEndService.gyms_near_user('80227').class).to eq(Hash)
+  end
+
+  it 'can parse one gym json', :vcr do
+    result = BackEndService.get_one_gym('BJBXzKYxQAXZKb5W6HrRnA')
+    expect(result.class).to eq(Hash)
   end
 end

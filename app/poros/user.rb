@@ -26,4 +26,8 @@ class User
       @availability_evening = user_params[:attributes][:availability_evening]
     end
   end
+
+  def self.goals_array
+    ['Gain Muscle', 'Lose Weight', 'Maintain Weight', 'Increase Flexibility', 'Increase Stamina']
+  end
 end

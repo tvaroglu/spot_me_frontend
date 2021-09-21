@@ -41,5 +41,11 @@ class BackEndFacade
         YelpGym.new(gym) if gyms[:data]
       end
     end
+
+    def get_selected_gym(yelp_gym_id)
+      gym = BackEndService.get_one_gym(yelp_gym_id)
+      gym = gym[:data] if gym[:data]
+      YelpGym.new(gym) if gym
+    end
   end
 end

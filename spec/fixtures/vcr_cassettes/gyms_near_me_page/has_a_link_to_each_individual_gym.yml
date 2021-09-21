@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1fe59bef-3dba-43f5-bf14-e5c53db95500
+      - 795e262d-f703-467e-b40e-e893c46f9ea8
       X-Runtime:
-      - '0.003864'
+      - '0.004831'
       Transfer-Encoding:
       - chunked
     body:
@@ -39,7 +39,7 @@ http_interactions:
         Gleason"}},{"id":"10","type":"user","attributes":{"email":"breann_jakubowski@howell.co","google_id":"cc87e5xxq9t5ygprjo8nk","google_image_url":"https://robohash.org/rerumautvel.png?size=300x300\u0026set=set1","zip_code":"90485","summary":"The
         virtue of justice consists in moderation, as regulated by wisdom.","goal":5,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Amb.
         Burma Jones"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:16:06 GMT
+  recorded_at: Tue, 21 Sep 2021 23:16:05 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/gym_memberships
@@ -65,16 +65,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a7eaabd9-90d7-48ec-b398-5f3b84d26bc8
+      - cbfc1cdd-fc0c-496f-a5c4-7f69926aa9da
       X-Runtime:
-      - '0.006049'
+      - '0.004436'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Marvin
         and Sons"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ernser-Lubowitz"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Littel-Hodkiewicz"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:16:06 GMT
+  recorded_at: Tue, 21 Sep 2021 23:16:05 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/events
@@ -100,16 +100,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0c4aa26c-f3ea-4516-97ae-8633317b0f79
+      - ed53c8a4-f47d-4266-8b8a-5f50a3b102dd
       X-Runtime:
-      - '0.003709'
+      - '0.004345'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-21T23:41:54.377Z","activity":"Flying
         disc"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-25T23:41:54.380Z","activity":"Rafting"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-23T23:41:54.381Z","activity":"Paintball"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:16:06 GMT
+  recorded_at: Tue, 21 Sep 2021 23:16:05 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
@@ -135,9 +135,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b2e0791a-28fe-4e99-8517-08347f91fc15
+      - 6f492188-29ee-439b-b9a0-50ce795dda18
       X-Runtime:
-      - '0.462206'
+      - '0.545969'
       Transfer-Encoding:
       - chunked
     body:
@@ -183,5 +183,41 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
+  recorded_at: Tue, 21 Sep 2021 23:16:05 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"16754341873e7a97a3e33d860ea231dc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 24a0239d-7224-4ff2-8786-70a2eb510c2b
+      X-Runtime:
+      - '0.371048'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
+        Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
+        CO 80227","phone":"(303) 601-0789"}}}'
   recorded_at: Tue, 21 Sep 2021 23:16:06 GMT
 recorded_with: VCR 6.0.0

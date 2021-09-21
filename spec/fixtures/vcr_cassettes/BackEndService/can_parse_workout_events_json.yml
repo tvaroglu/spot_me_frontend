@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
+    uri: http://localhost:4500/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -18,30 +18,21 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 21 Sep 2021 21:35:34 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2ae9aab8aae57de3b2118f891a0852e9"
+      - W/"16c4da520b2715b704bc0f3fa2ee99f0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 281ef2ce-7ea2-4782-b747-8adedffffcdf
+      - 48539859-3b78-430d-85ea-3db4c0f969a5
       X-Runtime:
-      - '0.016783'
+      - '0.004856'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-23T18:56:54.944Z","activity":"Bird
-        watching"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T18:56:54.964Z","activity":"Computer
-        programming"}}]}'
-  recorded_at: Tue, 21 Sep 2021 21:35:34 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-21T23:41:54.377Z","activity":"Flying
+        disc"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-25T23:41:54.380Z","activity":"Rafting"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-23T23:41:54.381Z","activity":"Paintball"}}]}'
+  recorded_at: Tue, 21 Sep 2021 23:16:07 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/31/gym_memberships
+    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -15,22 +15,25 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"16754341873e7a97a3e33d860ea231dc"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1fa75926-2e92-48d7-a5b9-35db34e51056
+      - ebd76895-d06b-4ba0-a70b-e642d271ac0a
       X-Runtime:
-      - '0.001570'
+      - '0.366183'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"your query could not be completed","errors":["Couldn''t
-        find User with ''id''=31"]}'
+      string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
+        Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
+        CO 80227","phone":"(303) 601-0789"}}}'
   recorded_at: Tue, 21 Sep 2021 23:16:07 GMT
 recorded_with: VCR 6.0.0

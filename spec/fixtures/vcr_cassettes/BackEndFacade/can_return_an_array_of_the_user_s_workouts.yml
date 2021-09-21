@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
+    uri: http://localhost:4500/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -18,30 +18,21 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 21 Sep 2021 21:43:33 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e92ae735fe57813a9b5d7d404a813bbc"
+      - W/"16c4da520b2715b704bc0f3fa2ee99f0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 305543bf-6307-46e1-9936-1185323498d3
+      - 9a619111-c00c-4369-9a04-1f638ee482d9
       X-Runtime:
-      - '0.007954'
+      - '0.015445'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-22T21:41:28.289Z","activity":"Bodybuilding"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
-        diving"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
-        sports"}}]}'
-  recorded_at: Tue, 21 Sep 2021 21:43:34 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-21T23:41:54.377Z","activity":"Flying
+        disc"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-25T23:41:54.380Z","activity":"Rafting"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-23T23:41:54.381Z","activity":"Paintball"}}]}'
+  recorded_at: Tue, 21 Sep 2021 23:16:04 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
+    uri: http://localhost:4500/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,39 +18,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 21 Sep 2021 21:35:27 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1e1696e5cd41245b2d734144a88b1533"
+      - W/"955279e51db82e1da38dcec511de93e0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c12efb18-a3c3-42c8-afa1-d6a82d074ba5
+      - 654c1a93-209a-4a9c-9720-11fb9cf22ebd
       X-Runtime:
-      - '0.033554'
+      - '0.003561'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"tarah@williamson.name","google_id":"9pnasaniqjfl8u9apcj2k","google_image_url":"https://robohash.org/quiestautem.png?size=300x300\u0026set=set1","zip_code":"68916","summary":"Dignity
-        does not consist in possessing honors, but in deserving them.","goal":2,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Clinton
-        Hagenes"}},{"id":"9","type":"user","attributes":{"email":"kasey@muller-emmerich.io","google_id":"7s3girwpzom9h2ekgoaaj","google_image_url":"https://robohash.org/rerumquisuscipit.png?size=300x300\u0026set=set1","zip_code":"20186","summary":"It''s
-        not what happens to you, but how you react to it that matters.","goal":1,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Isabelle
-        Leannon V"}},{"id":"10","type":"user","attributes":{"email":"yuriko@gusikowski.co","google_id":"0u4bd2e15kad5ndj6g0fk","google_image_url":"https://robohash.org/temporibuscorporisquisquam.png?size=300x300\u0026set=set1","zip_code":"28331","summary":"Good
-        habits formed at youth make all the difference.","goal":3,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Jon
-        Graham"}}]}'
-  recorded_at: Tue, 21 Sep 2021 21:35:27 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"maxwell@willms.org","google_id":"48nbeemzf3n6s383cwu2v","google_image_url":"https://robohash.org/autaliasimpedit.png?size=300x300\u0026set=set1","zip_code":"21791","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":1,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Natisha
+        Jacobs"}},{"id":"9","type":"user","attributes":{"email":"douglass@anderson-champlin.org","google_id":"1ql16sv34bahifhjhkmwk","google_image_url":"https://robohash.org/aspernatureased.png?size=300x300\u0026set=set1","zip_code":"62508","summary":"The
+        secret to humor is surprise.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eliseo
+        Gleason"}},{"id":"10","type":"user","attributes":{"email":"breann_jakubowski@howell.co","google_id":"cc87e5xxq9t5ygprjo8nk","google_image_url":"https://robohash.org/rerumautvel.png?size=300x300\u0026set=set1","zip_code":"90485","summary":"The
+        virtue of justice consists in moderation, as regulated by wisdom.","goal":5,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Amb.
+        Burma Jones"}}]}'
+  recorded_at: Tue, 21 Sep 2021 23:16:04 GMT
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -66,35 +58,26 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 21 Sep 2021 21:35:27 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"628f96fdab79e67fafa64bc043c1479e"
+      - W/"74c7436a9a464a7c0b62292b1ab95ac8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d909f407-f0f8-47c7-9b06-6b4a5e4c9243
+      - 752841df-8364-4325-a0c7-cf459fd35ef5
       X-Runtime:
-      - '0.017570'
+      - '0.009301'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
-        Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
-        LLC"}}]}'
-  recorded_at: Tue, 21 Sep 2021 21:35:27 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Marvin
+        and Sons"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ernser-Lubowitz"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Littel-Hodkiewicz"}}]}'
+  recorded_at: Tue, 21 Sep 2021 23:16:04 GMT
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
+    uri: http://localhost:4500/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -110,35 +93,26 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 21 Sep 2021 21:35:27 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2ae9aab8aae57de3b2118f891a0852e9"
+      - W/"16c4da520b2715b704bc0f3fa2ee99f0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7a89219e-52fd-4064-861e-60a7386fc03e
+      - c842fadd-dbfb-4524-b805-1f2f6d162efd
       X-Runtime:
-      - '0.025292'
+      - '0.006690'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-23T18:56:54.944Z","activity":"Bird
-        watching"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T18:56:54.964Z","activity":"Computer
-        programming"}}]}'
-  recorded_at: Tue, 21 Sep 2021 21:35:27 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-21T23:41:54.377Z","activity":"Flying
+        disc"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-25T23:41:54.380Z","activity":"Rafting"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-23T23:41:54.381Z","activity":"Paintball"}}]}'
+  recorded_at: Tue, 21 Sep 2021 23:16:04 GMT
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
+    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -154,12 +128,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Tue, 21 Sep 2021 21:35:28 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -167,13 +135,11 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - db31ac47-e002-4a14-abd8-31bf8d00416d
+      - f3c74390-b014-4507-9011-135cf97e4f5f
       X-Runtime:
-      - '0.500937'
+      - '0.584521'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
@@ -217,5 +183,5 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Tue, 21 Sep 2021 21:35:28 GMT
+  recorded_at: Tue, 21 Sep 2021 23:16:05 GMT
 recorded_with: VCR 6.0.0

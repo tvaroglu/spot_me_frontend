@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,26 +18,34 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 21 Sep 2021 21:35:25 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b1c0d68926145b8bbc27579a5828193b"
+      - W/"1e1696e5cd41245b2d734144a88b1533"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d0e3fc36-e69f-436a-8de0-62989c820e39
+      - 68fc6440-6b9d-46d0-afe7-99aba0d971ac
       X-Runtime:
-      - '0.003734'
+      - '1.379874'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"garnett.hammes@bashirian.io","google_id":"yfe41kzelu0ahhj29e70v","google_image_url":"https://robohash.org/odioquosrecusandae.png?size=300x300\u0026set=set1","zip_code":"32044","summary":"It''s
-        not what happens to you, but how you react to it that matters.","goal":2,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Lynwood
-        Kuhn VM"}},{"id":"9","type":"user","attributes":{"email":"jorge@kilback.info","google_id":"dloatfh0hsszmv3n0q47r","google_image_url":"https://robohash.org/etdoloressint.png?size=300x300\u0026set=set1","zip_code":"93492","summary":"Only
-        the educated are free.","goal":4,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Sung
-        Paucek"}},{"id":"10","type":"user","attributes":{"email":"matthew@emard.com","google_id":"p14o890pcdl0bmyza0mwk","google_image_url":"https://robohash.org/omnisautemducimus.png?size=300x300\u0026set=set1","zip_code":"82431","summary":"The
-        mind is not a vessel to be filled but a fire to be kindled.","goal":3,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Adolfo
-        Welch"}}]}'
-  recorded_at: Tue, 21 Sep 2021 03:47:09 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"tarah@williamson.name","google_id":"9pnasaniqjfl8u9apcj2k","google_image_url":"https://robohash.org/quiestautem.png?size=300x300\u0026set=set1","zip_code":"68916","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":2,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Clinton
+        Hagenes"}},{"id":"9","type":"user","attributes":{"email":"kasey@muller-emmerich.io","google_id":"7s3girwpzom9h2ekgoaaj","google_image_url":"https://robohash.org/rerumquisuscipit.png?size=300x300\u0026set=set1","zip_code":"20186","summary":"It''s
+        not what happens to you, but how you react to it that matters.","goal":1,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Isabelle
+        Leannon V"}},{"id":"10","type":"user","attributes":{"email":"yuriko@gusikowski.co","google_id":"0u4bd2e15kad5ndj6g0fk","google_image_url":"https://robohash.org/temporibuscorporisquisquam.png?size=300x300\u0026set=set1","zip_code":"28331","summary":"Good
+        habits formed at youth make all the difference.","goal":3,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Jon
+        Graham"}}]}'
+  recorded_at: Tue, 21 Sep 2021 21:35:26 GMT
 recorded_with: VCR 6.0.0

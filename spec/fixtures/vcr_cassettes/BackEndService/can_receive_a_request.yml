@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/find?google_id=789
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=789
     body:
       encoding: US-ASCII
       string: ''
@@ -18,19 +18,27 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 21 Sep 2021 21:35:33 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 8e855fbd-482f-4321-937b-dd61d9503264
+      - aac25eae-6cce-4d42-a83c-97d1523bea3c
       X-Runtime:
-      - '0.002900'
+      - '0.015269'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User"]}'
-  recorded_at: Tue, 21 Sep 2021 03:47:11 GMT
+  recorded_at: Tue, 21 Sep 2021 21:35:33 GMT
 recorded_with: VCR 6.0.0

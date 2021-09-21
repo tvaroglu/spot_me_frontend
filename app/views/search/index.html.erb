@@ -6,7 +6,7 @@
       <%= gym.name %>
       <%= gym.address %>
       <%= gym.phone %>
-      <%# <%= link_to gym.name, gym_path(gym) %> %>
+      <%= link_to gym.name, gym_path(gym.yelp_gym_id) %>
     </div>
   <% end %>
 </div>

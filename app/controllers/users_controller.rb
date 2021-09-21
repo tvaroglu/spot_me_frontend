@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   def profile; end
 
   def update
-    # TODO: write this method
+    # TODO: write this method and create view
     # BackEndFacade.update_user(params)
   end
 end

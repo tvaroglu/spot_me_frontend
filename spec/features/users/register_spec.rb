@@ -32,7 +32,7 @@ RSpec.describe 'registration page' do
       fill_in :email, with: 'test@testing.com'
       fill_in :zip_code, with: '80227'
       fill_in :summary, with: 'Hello World'
-      select 'Gain Weight', from: :goal
+      select 'Gain Muscle', from: :goal
       page.check :availability_morning
 
       click_on 'Register'
@@ -55,7 +55,7 @@ RSpec.describe 'registration page' do
       fill_in :email, with: 'test@testing.com'
       fill_in :zip_code, with: '80227'
       fill_in :summary, with: ''
-      select 'Gain Weight', from: :goal
+      select 'Gain Muscle', from: :goal
       page.check :availability_morning
 
       click_on 'Register'

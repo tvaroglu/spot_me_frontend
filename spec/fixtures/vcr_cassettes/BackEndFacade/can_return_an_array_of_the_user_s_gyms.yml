@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,30 +18,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 20 Sep 2021 22:58:39 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"628f96fdab79e67fafa64bc043c1479e"
+      - W/"f4402920703770d4406c32096441d4ca"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 06d4ee91-8980-4848-8ccf-ac12a43f7ba9
+      - 4c52da69-979f-4724-8aed-44b03e74bde6
       X-Runtime:
-      - '0.019599'
+      - '0.032101'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
-        Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
-        LLC"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:58:40 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Stanton
+        LLC"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Schinner-Cremin"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Auer,
+        Jones and McKenzie"}}]}'
+  recorded_at: Tue, 21 Sep 2021 23:23:37 GMT
 recorded_with: VCR 6.0.0

@@ -34,11 +34,16 @@ class BackEndService
       parse_json(response.body)
     end
 
+    def get_one_gym(yelp_gym_id)
+      response = db_conn.get("/api/v1/gym_search/#{yelp_gym_id}")
+      parse_json(response.body)
+    end
+
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500
-      # 'http://localhost:4500'
-      'https://spotme-app-api.herokuapp.com'
+      'http://localhost:4500'
+      # 'https://spotme-app-api.herokuapp.com'
     end
 
     def db_conn

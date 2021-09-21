@@ -21,28 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 22:58:40 GMT
+      - Tue, 21 Sep 2021 21:43:33 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"75548423930fd96ccc9883b5619216b1"
+      - W/"e92ae735fe57813a9b5d7d404a813bbc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0a659778-8820-4b09-84c4-232c62673248
+      - 305543bf-6307-46e1-9936-1185323498d3
       X-Runtime:
-      - '0.027112'
+      - '0.007954'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-23T18:56:54.944Z","activity":"Bird
-        watching"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-21T18:56:54.958Z","activity":"Bird
-        watching"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T18:56:54.964Z","activity":"Computer
-        programming"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:58:40 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-22T21:41:28.289Z","activity":"Bodybuilding"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
+        diving"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
+        sports"}}]}'
+  recorded_at: Tue, 21 Sep 2021 21:43:34 GMT
 recorded_with: VCR 6.0.0

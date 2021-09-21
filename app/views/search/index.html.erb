@@ -1,0 +1,12 @@
+<h1>Gyms Near <%= current_user.zip_code %></h1>
+
+<div id="gyms">
+  <% @gyms.each do |gym| %>
+    <div id="<%= gym.yelp_gym_id %>">
+      <%= gym.name %>
+      <%= gym.address %>
+      <%= gym.phone %>
+      <%# <%= link_to gym.name, gym_path(gym) %> %>
+    </div>
+  <% end %>
+</div>

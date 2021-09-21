@@ -11,7 +11,11 @@ class BackEndFacade
 
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
-      friends[:data].map { |friend| User.new(friend[:attributes]) } if friends[:data]
+      if friends[:data]
+        friends[:data].map do |friend|
+          User.new(friend[:attributes])
+        end
+      end
     end
 
     def get_user_gyms(user_id)
@@ -30,5 +34,12 @@ class BackEndFacade
     #     YelpGym.new(gym)
     #   end
     # end
+
+    def get_gyms_near_user(zip_code)
+      gyms = BackEndService.gyms_near_user(zip_code)
+      gyms[:data].map do |gym|
+        YelpGym.new(gym) if gyms[:data]
+      end
+    end
   end
 end

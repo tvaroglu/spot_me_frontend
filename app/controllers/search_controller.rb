@@ -1,3 +1,5 @@
 class SearchController < ApplicationController
-  def index; end
+  def index
+    @gyms = BackEndFacade.get_gyms_near_user(params['zip_code'])
+  end
 end

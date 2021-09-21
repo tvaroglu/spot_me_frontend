@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -15,33 +15,30 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 22:58:43 GMT
+      - Tue, 21 Sep 2021 21:35:33 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"628f96fdab79e67fafa64bc043c1479e"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - f2b16652-e3fe-4a0a-8ce4-046e2a0416c8
+      - 251c0b65-b29b-4feb-9b0b-7e757b4a6377
       X-Runtime:
-      - '0.005543'
+      - '0.015474'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
-        Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
-        LLC"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:58:44 GMT
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=31"]}'
+  recorded_at: Tue, 21 Sep 2021 21:35:34 GMT
 recorded_with: VCR 6.0.0

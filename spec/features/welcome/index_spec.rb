@@ -23,7 +23,7 @@ RSpec.describe 'welcome page' do
     expect(page).to have_current_path(dashboard_path(1), ignore_query: true)
 
     expect(page).to have_link 'Dashboard'
-    expect(page).to have_link 'Find Gyms Near You'
+    expect(page).to have_button 'Find Gyms Near Me'
     expect(page).to have_link 'Log Out'
 
     click_on 'Log Out'

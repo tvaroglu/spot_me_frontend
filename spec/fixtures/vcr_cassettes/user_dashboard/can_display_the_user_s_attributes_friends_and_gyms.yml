@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 22:58:40 GMT
+      - Tue, 21 Sep 2021 21:35:28 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1b78008d-0651-4cfc-b7e1-0d8fa401c061
+      - 72bb0da0-62cb-4743-96f4-f164c316b173
       X-Runtime:
-      - '0.008950'
+      - '0.010663'
       Transfer-Encoding:
       - chunked
       Via:
@@ -47,7 +47,7 @@ http_interactions:
         Leannon V"}},{"id":"10","type":"user","attributes":{"email":"yuriko@gusikowski.co","google_id":"0u4bd2e15kad5ndj6g0fk","google_image_url":"https://robohash.org/temporibuscorporisquisquam.png?size=300x300\u0026set=set1","zip_code":"28331","summary":"Good
         habits formed at youth make all the difference.","goal":3,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Jon
         Graham"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:58:40 GMT
+  recorded_at: Tue, 21 Sep 2021 21:35:29 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
@@ -69,7 +69,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 22:58:40 GMT
+      - Tue, 21 Sep 2021 21:35:29 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -79,9 +79,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8d87edfa-a185-4035-8a90-962e0d563a57
+      - 42b2b5f9-2d0b-4a45-954e-0a1ebaac4748
       X-Runtime:
-      - '0.005767'
+      - '0.013724'
       Transfer-Encoding:
       - chunked
       Via:
@@ -91,7 +91,7 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
         Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
         LLC"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:58:41 GMT
+  recorded_at: Tue, 21 Sep 2021 21:35:29 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
@@ -113,19 +113,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 22:58:40 GMT
+      - Tue, 21 Sep 2021 21:35:29 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"75548423930fd96ccc9883b5619216b1"
+      - W/"2ae9aab8aae57de3b2118f891a0852e9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cf080c3b-a60e-4b1e-bbf2-d191da2cdbee
+      - 672dc83c-d20b-4b1f-8e6d-eb785ef100da
       X-Runtime:
-      - '0.007751'
+      - '0.028574'
       Transfer-Encoding:
       - chunked
       Via:
@@ -133,8 +133,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-23T18:56:54.944Z","activity":"Bird
-        watching"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-21T18:56:54.958Z","activity":"Bird
         watching"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T18:56:54.964Z","activity":"Computer
         programming"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:58:41 GMT
+  recorded_at: Tue, 21 Sep 2021 21:35:29 GMT
 recorded_with: VCR 6.0.0

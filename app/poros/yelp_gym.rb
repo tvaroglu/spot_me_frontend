@@ -3,8 +3,8 @@ class YelpGym
 
   def initialize(info)
     @yelp_gym_id = info[:id]
-    @name = info[:name]
-    @address = info[:address]
-    @phone = info[:phone]
+    @name = info[:attributes][:name]
+    @address = info[:attributes][:address]
+    @phone = info[:attributes][:phone]
   end
 end

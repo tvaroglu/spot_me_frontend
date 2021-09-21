@@ -31,14 +31,14 @@ RSpec.describe BackEndService do
   end
 
   it 'can parse gyms json', :vcr do
-    expect(BackEndService.get_gyms(1).class).to eq(Hash)
+    expect(BackEndService.get_gyms(31).class).to eq(Hash)
   end
 
   it 'can parse workout events json', :vcr do
     expect(BackEndService.get_events(1).class).to eq(Hash)
   end
 
-  # it 'can parse searched gyms json', :vcr do
-  #   expect(BackEndService.gyms_near_user(1).class).to eq(Hash)
-  # end
+  it 'can parse searched gyms json', :vcr do
+    expect(BackEndService.gyms_near_user('80227').class).to eq(Hash)
+  end
 end

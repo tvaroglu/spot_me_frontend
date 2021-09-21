@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 20 Sep 2021 22:58:39 GMT
+      - Tue, 21 Sep 2021 21:35:25 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 517ca27f-eb6c-40eb-8460-673a6c90a53f
+      - 68fc6440-6b9d-46d0-afe7-99aba0d971ac
       X-Runtime:
-      - '0.081374'
+      - '1.379874'
       Transfer-Encoding:
       - chunked
       Via:
@@ -47,5 +47,5 @@ http_interactions:
         Leannon V"}},{"id":"10","type":"user","attributes":{"email":"yuriko@gusikowski.co","google_id":"0u4bd2e15kad5ndj6g0fk","google_image_url":"https://robohash.org/temporibuscorporisquisquam.png?size=300x300\u0026set=set1","zip_code":"28331","summary":"Good
         habits formed at youth make all the difference.","goal":3,"availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Jon
         Graham"}}]}'
-  recorded_at: Mon, 20 Sep 2021 22:58:40 GMT
+  recorded_at: Tue, 21 Sep 2021 21:35:26 GMT
 recorded_with: VCR 6.0.0

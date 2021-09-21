@@ -25,49 +25,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4094e107-8042-4326-80bd-8a4f53b4588d
+      - 23f8d4f0-3e1c-4fe0-967b-aaec9daf0d22
       X-Runtime:
-      - '0.017585'
+      - '0.007483'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T23:42:54.341Z","activity":"Lapidary"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-28T23:42:54.348Z","activity":"Air
         sports"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-26T23:42:54.350Z","activity":"Hooping"}}]}'
-  recorded_at: Tue, 21 Sep 2021 02:09:49 GMT
-- request:
-    method: get
-    uri: http://localhost:4500/api/v1/users/1/events
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"b0200d3b203d1fe2f894bf57a26a1dd1"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 9740c2ed-59e5-4033-b9dd-a541252c074d
-      X-Runtime:
-      - '0.010256'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T23:42:54.341Z","activity":"Lapidary"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-28T23:42:54.348Z","activity":"Air
-        sports"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-26T23:42:54.350Z","activity":"Hooping"}}]}'
-  recorded_at: Tue, 21 Sep 2021 02:10:05 GMT
+  recorded_at: Tue, 21 Sep 2021 03:47:11 GMT
 recorded_with: VCR 6.0.0

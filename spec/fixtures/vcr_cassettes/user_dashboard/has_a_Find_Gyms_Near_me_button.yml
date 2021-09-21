@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dff24ce1-3aa4-4a55-ac9c-1e51b4251c14
+      - 61fea40a-8517-4f83-9522-44fc4d48e32b
       X-Runtime:
-      - '0.127219'
+      - '0.005840'
       Transfer-Encoding:
       - chunked
     body:
@@ -39,7 +39,7 @@ http_interactions:
         Paucek"}},{"id":"10","type":"user","attributes":{"email":"matthew@emard.com","google_id":"p14o890pcdl0bmyza0mwk","google_image_url":"https://robohash.org/omnisautemducimus.png?size=300x300\u0026set=set1","zip_code":"82431","summary":"The
         mind is not a vessel to be filled but a fire to be kindled.","goal":3,"availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Adolfo
         Welch"}}]}'
-  recorded_at: Tue, 21 Sep 2021 00:53:16 GMT
+  recorded_at: Tue, 21 Sep 2021 03:47:10 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/gym_memberships
@@ -65,9 +65,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e25a02c1-5e8d-49c0-b798-35d61b8b12e1
+      - 8dc2a9a2-2cd4-47c7-a809-e66b98780ab2
       X-Runtime:
-      - '0.031057'
+      - '0.005088'
       Transfer-Encoding:
       - chunked
     body:
@@ -75,7 +75,7 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Torphy
         Group"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Quigley-Crona"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Tromp
         LLC"}}]}'
-  recorded_at: Tue, 21 Sep 2021 00:53:16 GMT
+  recorded_at: Tue, 21 Sep 2021 03:47:10 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/events
@@ -101,14 +101,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '02820551-9df3-4d3a-88a3-69c65099b443'
+      - 782ebc6f-a15f-431e-bcc2-48e30984db6e
       X-Runtime:
-      - '0.041604'
+      - '0.004296'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T23:42:54.341Z","activity":"Lapidary"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-28T23:42:54.348Z","activity":"Air
         sports"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-26T23:42:54.350Z","activity":"Hooping"}}]}'
-  recorded_at: Tue, 21 Sep 2021 00:53:16 GMT
+  recorded_at: Tue, 21 Sep 2021 03:47:10 GMT
 recorded_with: VCR 6.0.0

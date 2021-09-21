@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe 'user dashboard' do
-  before :each do
+  before do
     visit dashboard_path(@user.id)
   end
 
@@ -21,12 +21,12 @@ RSpec.describe 'user dashboard' do
   end
 
   it 'has a Find Gyms Near me button', :vcr do
-    expect(page).to have_link('Find Gyms Near Me')
+    expect(page).to have_button('Find Gyms Near Me')
   end
 
   it 'can find gyms near me', :vcr do
     click_on 'Find Gyms Near Me'
 
-    expect(current_path).to eq('/gym_search')
+    expect(page).to have_current_path('/gyms?zip_code=80227')
   end
 end

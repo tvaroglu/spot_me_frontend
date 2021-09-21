@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'gyms near me page' do
-  before do
+  before(:each) do
     visit dashboard_path(@user.id)
 
     click_on 'Find Gyms Near Me'
@@ -19,5 +19,14 @@ RSpec.describe 'gyms near me page' do
         expect(page).to have_content('(303) 601-0789')
       end
     end
+  end
+
+  it 'has a link to each individual gym', :vcr do
+    within '#BJBXzKYxQAXZKb5W6HrRnA' do
+      expect(page).to have_link("Rishi's Community Yoga")
+      click_on "Rishi's Community Yoga"
+    end
+      expect(current_path).to eq(gym_path('BJBXzKYxQAXZKb5W6HrRnA'))
+      # expect(current_path).to eq('/gyms/BJBXzKYxQAXZKb5W6HrRnA')
   end
 end

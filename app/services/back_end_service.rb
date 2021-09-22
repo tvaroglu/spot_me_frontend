@@ -48,12 +48,5 @@ class BackEndService
     def parse_json(response_body)
       JSON.parse(response_body, symbolize_names: true)
     end
-
-    # TODO:  understand why we need this method?  BE is calling the API for us
-    def yelp_connection
-      Faraday.new(url: 'https://api.yelp.com/') do |faraday|
-        faraday.headers['Authorization'] = ENV['yelp_api_key']
-      end
-    end
   end
 end

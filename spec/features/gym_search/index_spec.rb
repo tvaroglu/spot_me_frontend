@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe 'gyms near me page' do
   before do
     visit dashboard_path(@user.id)
-
-    click_on 'Find Gyms Near Me'
+    within('#gyms') { click_on 'Find Gyms Near Me' }
   end
 
   it 'can find gyms near me', :vcr do

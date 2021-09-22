@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   # get '/profile', to: 'users#profile'
   post '/profile/:user_id', to: 'users#update'
 
-  resources :gyms, only: [:index, :show], controller: :search
+  resources :gyms, only: [:index, :show, :create], controller: :search
 end

@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e3b87dc3-2e5f-4aa7-99a4-e632dba5c9a0
+      - 2b26dd2d-73a3-4189-bdfa-4a5d37f56343
       X-Runtime:
-      - '0.003780'
+      - '0.008126'
       Transfer-Encoding:
       - chunked
     body:
@@ -40,5 +40,5 @@ http_interactions:
         virtue of justice consists in moderation, as regulated by wisdom.","goal":"Increase
         Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Cayla
         Predovic DDS"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:31 GMT
+  recorded_at: Wed, 22 Sep 2021 19:39:29 GMT
 recorded_with: VCR 6.0.0

@@ -1,0 +1,338 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"16754341873e7a97a3e33d860ea231dc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - afdfa59b-67d4-4fc4-ade9-7c1f81697fed
+      X-Runtime:
+      - '0.382787'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
+        Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
+        CO 80227","phone":"(303) 601-0789"}}}'
+  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/users/1/friendships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"38aea1520306355eac78f1c739525f17"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4c81e2fe-59a5-41eb-82d7-82dc0a7265ce
+      X-Runtime:
+      - '0.009255'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"nicholas.cremin@roob.biz","google_id":"i45lhl0wuaq87qhaa43xe","google_image_url":"https://robohash.org/quialaboresunt.png?size=300x300\u0026set=set1","zip_code":"62274","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":1,"availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Jeanett
+        Kulas"}},{"id":"9","type":"user","attributes":{"email":"whitney.becker@rempel.com","google_id":"gqn0bba3tpct9emxqt29r","google_image_url":"https://robohash.org/eacorporisanimi.png?size=300x300\u0026set=set1","zip_code":"15677","summary":"Good
+        habits formed at youth make all the difference.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Rep.
+        Quincy Leuschke"}},{"id":"10","type":"user","attributes":{"email":"warner_pouros@bruen.io","google_id":"6l9olj7wygih8ao8p4dnd","google_image_url":"https://robohash.org/velitmolestiaeut.png?size=300x300\u0026set=set1","zip_code":"62857","summary":"The
+        virtue of justice consists in moderation, as regulated by wisdom.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Brice
+        Schumm"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"34f96396deb9f6a15e34efefcf8bd34e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0c0b9bcf-19ca-44d8-be6f-e01b70006c74
+      X-Runtime:
+      - '0.002670'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling
+        and Sons"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Mante,
+        Parker and Schaefer"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Kuhn-Price"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/users/1/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e22af02bd5eb6c805255ed5d470dc30b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9e66ef3a-7dab-4773-8fda-afde45f50a6f
+      X-Runtime:
+      - '0.004102'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.794Z","activity":"Rowing"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.797Z","activity":"Motor
+        sports"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-30T02:23:17.798Z","activity":"Scuba
+        diving"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"16754341873e7a97a3e33d860ea231dc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 46c91cf5-e2fb-4ab0-8a43-e59186fec375
+      X-Runtime:
+      - '0.576918'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
+        Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
+        CO 80227","phone":"(303) 601-0789"}}}'
+  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+- request:
+    method: post
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    body:
+      encoding: UTF-8
+      string: '{"user_id":"1","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}'
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a35a6f543caa3e5ed62b888eef4484a8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 49c3fb94-4420-43f6-9e18-4007bc8e006e
+      X-Runtime:
+      - '0.015198'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}}'
+  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/users/1/friendships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"38aea1520306355eac78f1c739525f17"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 80be4bf5-5013-4ae2-88f5-7d948a31a7f7
+      X-Runtime:
+      - '0.006954'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"nicholas.cremin@roob.biz","google_id":"i45lhl0wuaq87qhaa43xe","google_image_url":"https://robohash.org/quialaboresunt.png?size=300x300\u0026set=set1","zip_code":"62274","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":1,"availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Jeanett
+        Kulas"}},{"id":"9","type":"user","attributes":{"email":"whitney.becker@rempel.com","google_id":"gqn0bba3tpct9emxqt29r","google_image_url":"https://robohash.org/eacorporisanimi.png?size=300x300\u0026set=set1","zip_code":"15677","summary":"Good
+        habits formed at youth make all the difference.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Rep.
+        Quincy Leuschke"}},{"id":"10","type":"user","attributes":{"email":"warner_pouros@bruen.io","google_id":"6l9olj7wygih8ao8p4dnd","google_image_url":"https://robohash.org/velitmolestiaeut.png?size=300x300\u0026set=set1","zip_code":"62857","summary":"The
+        virtue of justice consists in moderation, as regulated by wisdom.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Brice
+        Schumm"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0a94c37d416a0034fa714055d9993f15"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2476b86e-8cd2-46c1-b376-9f82379f305d
+      X-Runtime:
+      - '0.006328'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling
+        and Sons"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Mante,
+        Parker and Schaefer"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Kuhn-Price"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/users/1/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e22af02bd5eb6c805255ed5d470dc30b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9165f279-b994-4559-84b2-2992edc644b4
+      X-Runtime:
+      - '0.010063'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.794Z","activity":"Rowing"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.797Z","activity":"Motor
+        sports"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-30T02:23:17.798Z","activity":"Scuba
+        diving"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+recorded_with: VCR 6.0.0

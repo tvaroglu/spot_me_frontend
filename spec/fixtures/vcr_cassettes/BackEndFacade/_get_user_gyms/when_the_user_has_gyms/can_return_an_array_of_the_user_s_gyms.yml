@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,21 +18,30 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 21:41:33 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bcf3a84341a26ee2ec78c37028a437a4"
+      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ce1f6a74-f2ad-424e-bc92-4e14e76c7ced
+      - 9cc477d8-167c-4c12-ab25-7491b4b1fcec
       X-Runtime:
-      - '0.006091'
+      - '1.029480'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Graham-Gulgowski"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Rodriguez-Walter"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Rolfson,
-        Kilback and Satterfield"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:30 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}]}'
+  recorded_at: Wed, 22 Sep 2021 21:41:33 GMT
 recorded_with: VCR 6.0.0

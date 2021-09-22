@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,32 +18,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 21:41:34 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"61fdcd94390cfb04645684bfe7061e17"
+      - W/"e5d4c85be9ee8c0b391198780ada2924"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 502e8cea-94ba-42b5-83d8-a6f16267a777
+      - 52086662-7a4a-4222-b3cf-1d09d73b50d5
       X-Runtime:
-      - '0.004035'
+      - '0.006039'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"marvella_stamm@haag.name","google_id":"52v8c1cthqnbt6lu5n0j9","google_image_url":"https://robohash.org/rerumnesciuntperspiciatis.png?size=300x300\u0026set=set1","zip_code":"37887","summary":"Rhetoric
-        is the art of ruling the minds of men.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Arnita
-        Schoen"}},{"id":"9","type":"user","attributes":{"email":"jeremy_kilback@luettgen-stracke.com","google_id":"oumfn1nh9yekh9rsk6f4n","google_image_url":"https://robohash.org/magnametenim.png?size=300x300\u0026set=set1","zip_code":"15163","summary":"Philosophy
-        is the highest music.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Reid
-        Bradtke"}},{"id":"10","type":"user","attributes":{"email":"nola.schumm@upton-nikolaus.info","google_id":"pa1xcg7phxu32ed4yb1k4","google_image_url":"https://robohash.org/rerumaliquidest.png?size=300x300\u0026set=set1","zip_code":"65769","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Increase
-        Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Cayla
-        Predovic DDS"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:30 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"9","type":"user","attributes":{"email":"mara.terry@fay-bauch.net","google_id":"jmoyy4j8ohld8dpos6r9j","google_image_url":"https://robohash.org/estharumut.png?size=300x300\u0026set=set1","zip_code":"45298","summary":"Quality
+        is not an act, it is a habit.","goal":null,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eddy
+        Renner"}},{"id":"10","type":"user","attributes":{"email":"danette@wehner.net","google_id":"4gj14p8aqry0jnjwjw2qp","google_image_url":"https://robohash.org/earumdoloremin.png?size=300x300\u0026set=set1","zip_code":"62006","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
+        Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
+        Murazik IV"}}]}'
+  recorded_at: Wed, 22 Sep 2021 21:41:35 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -59,26 +67,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 21:41:34 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bcf3a84341a26ee2ec78c37028a437a4"
+      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a422f75d-7993-4f9c-afc1-039a4e11679a
+      - 49366ac3-fa1a-42b7-89c8-21f2b6b7a558
       X-Runtime:
-      - '0.002898'
+      - '0.005794'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Graham-Gulgowski"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Rodriguez-Walter"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Rolfson,
-        Kilback and Satterfield"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:30 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}]}'
+  recorded_at: Wed, 22 Sep 2021 21:41:35 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -94,35 +111,42 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 21:41:35 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b0fdf3814d73484ffe153e0fa0fdfab"
+      - W/"276f22141581c9ca49cf58c1a077268c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3dd3a68f-06bd-4620-b5e4-69c04c34503c
+      - 52bc5476-17da-4b00-be2e-f749d74b9e24
       X-Runtime:
-      - '0.006174'
+      - '0.008999'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-28T19:35:01.213Z","activity":"Taekwondo"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Arnita
-        Schoen"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-10-02T19:35:01.218Z","activity":"Soapmaking"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Man
-        Boehm"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-23T19:35:01.220Z","activity":"Yoga"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Mrs.
-        Valerie Anderson"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"marvella_stamm@haag.name","google_id":"52v8c1cthqnbt6lu5n0j9","google_image_url":"https://robohash.org/rerumnesciuntperspiciatis.png?size=300x300\u0026set=set1","zip_code":"37887","summary":"Rhetoric
-        is the art of ruling the minds of men.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Arnita
-        Schoen"}},{"id":"4","type":"user","attributes":{"email":"marylyn_sipes@christiansen.name","google_id":"1lfzy6vjosm7n5q6dalgt","google_image_url":"https://robohash.org/maximesolutaeius.png?size=300x300\u0026set=set1","zip_code":"81564","summary":"Philosophy
-        is the highest music.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Man
-        Boehm"}},{"id":"7","type":"user","attributes":{"email":"fletcher_kuhn@gulgowski.com","google_id":"x8aigsj3q4kpjl9cpmbv5","google_image_url":"https://robohash.org/voluptatumipsamassumenda.png?size=300x300\u0026set=set1","zip_code":"89560","summary":"The
-        mind is not a vessel to be filled but a fire to be kindled.","goal":"Maintain
-        Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Mrs.
-        Valerie Anderson"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:30 GMT
+      string: '{"data":[{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
+        diving"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Isobel
+        Huels"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
+        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Monty
+        Beer"}}}}],"included":[{"id":"4","type":"user","attributes":{"email":"cordell_doyle@williamson.net","google_id":"5zfwrgzcm0xx6wxwqd07d","google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300\u0026set=set1","zip_code":"96808","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Isobel
+        Huels"}},{"id":"7","type":"user","attributes":{"email":"venetta@kilback.io","google_id":"mun5m26nj31nfi6jc4xf7","google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300\u0026set=set1","zip_code":"48703","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":"Increase
+        Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Monty
+        Beer"}}]}'
+  recorded_at: Wed, 22 Sep 2021 21:41:36 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -138,6 +162,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 21:41:36 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -145,11 +175,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cb56e7f0-7769-490b-b6f1-4beb89713675
+      - fad46e65-8afa-45c6-8c95-9106bcbdffc3
       X-Runtime:
-      - '0.616817'
+      - '0.454245'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
@@ -193,5 +225,5 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:31 GMT
+  recorded_at: Wed, 22 Sep 2021 21:41:36 GMT
 recorded_with: VCR 6.0.0

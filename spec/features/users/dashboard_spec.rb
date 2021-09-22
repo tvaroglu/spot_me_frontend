@@ -175,23 +175,6 @@ RSpec.describe 'user dashboard' do
         end
       end
 
-      it 'displays my upcoming workouts', :vcr do
-        expect(page).to have_css('#upcoming-workouts')
-
-        within '#upcoming-workouts' do
-          expect(page).to have_content('Upcoming Workouts')
-
-          user_events.each do |event|
-            expect(page).to have_css("#event-#{event.id}")
-
-            within "#event-#{event.id}" do
-              expect(page).to have_content(event.activity)
-              expect(page).to have_link('Delete')
-            end
-          end
-        end
-      end
-
       it 'displays the gyms I am a member at', :vcr do
         expect(page).to have_css('#gyms')
 
@@ -224,6 +207,35 @@ RSpec.describe 'user dashboard' do
         end
 
         expect(page).to have_current_path("/gyms?zip_code=#{@user.zip_code}")
+      end
+
+      it 'displays my upcoming workouts', :vcr do
+        expect(page).to have_css('#upcoming-workouts')
+
+        within '#upcoming-workouts' do
+          expect(page).to have_content('Upcoming Workouts')
+
+          user_events.each do |event|
+            expect(page).to have_css("#event-#{event.id}")
+
+            within "#event-#{event.id}" do
+              expect(page).to have_content(event.activity)
+              expect(page).to have_link('Delete')
+            end
+          end
+        end
+      end
+
+      it 'displays a link to delete a workout', :vcr do
+        allow(BackEndService).to receive(:delete_event).and_return(204)
+        event = user_events.last
+
+        within "#event-#{event.id}" do
+          click_on 'Delete'
+        end
+
+        expect(page).to have_current_path(dashboard_path(@user.id))
+        expect(page).to have_content('Workout deleted')
       end
     end
   end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,27 +18,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 21:41:39 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"61fdcd94390cfb04645684bfe7061e17"
+      - W/"e5d4c85be9ee8c0b391198780ada2924"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e3b87dc3-2e5f-4aa7-99a4-e632dba5c9a0
+      - 77a21927-0809-4e67-ae1c-c133059328cc
       X-Runtime:
-      - '0.003780'
+      - '0.005989'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"marvella_stamm@haag.name","google_id":"52v8c1cthqnbt6lu5n0j9","google_image_url":"https://robohash.org/rerumnesciuntperspiciatis.png?size=300x300\u0026set=set1","zip_code":"37887","summary":"Rhetoric
-        is the art of ruling the minds of men.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Arnita
-        Schoen"}},{"id":"9","type":"user","attributes":{"email":"jeremy_kilback@luettgen-stracke.com","google_id":"oumfn1nh9yekh9rsk6f4n","google_image_url":"https://robohash.org/magnametenim.png?size=300x300\u0026set=set1","zip_code":"15163","summary":"Philosophy
-        is the highest music.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Reid
-        Bradtke"}},{"id":"10","type":"user","attributes":{"email":"nola.schumm@upton-nikolaus.info","google_id":"pa1xcg7phxu32ed4yb1k4","google_image_url":"https://robohash.org/rerumaliquidest.png?size=300x300\u0026set=set1","zip_code":"65769","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Increase
-        Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Cayla
-        Predovic DDS"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:31 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"9","type":"user","attributes":{"email":"mara.terry@fay-bauch.net","google_id":"jmoyy4j8ohld8dpos6r9j","google_image_url":"https://robohash.org/estharumut.png?size=300x300\u0026set=set1","zip_code":"45298","summary":"Quality
+        is not an act, it is a habit.","goal":null,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eddy
+        Renner"}},{"id":"10","type":"user","attributes":{"email":"danette@wehner.net","google_id":"4gj14p8aqry0jnjwjw2qp","google_image_url":"https://robohash.org/earumdoloremin.png?size=300x300\u0026set=set1","zip_code":"62006","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
+        Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
+        Murazik IV"}}]}'
+  recorded_at: Wed, 22 Sep 2021 21:41:40 GMT
 recorded_with: VCR 6.0.0

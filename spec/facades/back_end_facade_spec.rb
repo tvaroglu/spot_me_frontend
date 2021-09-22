@@ -39,7 +39,7 @@ RSpec.describe BackEndFacade do
     end
   end
 
-  describe'.get_user_events' do
+  describe '.get_user_events' do
     context 'when the user has events' do
       it "can return an array of the user's workouts", :vcr do
         events = BackEndFacade.get_user_events(1)

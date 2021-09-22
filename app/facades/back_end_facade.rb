@@ -11,6 +11,10 @@ class BackEndFacade
       BackEndService.create_user(params)
     end
 
+    def delete_event(params)
+      BackEndService.delete_event(params)
+    end
+
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
       return Array.new unless friends[:data]

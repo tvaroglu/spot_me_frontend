@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -18,30 +18,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 21:41:34 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b0fdf3814d73484ffe153e0fa0fdfab"
+      - W/"276f22141581c9ca49cf58c1a077268c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c26a6be8-515e-4a4b-a124-be476da27835
+      - 26ea996c-81ad-42f1-85ff-e8bbf7cb262b
       X-Runtime:
-      - '0.006214'
+      - '0.322081'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-28T19:35:01.213Z","activity":"Taekwondo"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Arnita
-        Schoen"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-10-02T19:35:01.218Z","activity":"Soapmaking"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Man
-        Boehm"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-23T19:35:01.220Z","activity":"Yoga"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Mrs.
-        Valerie Anderson"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"marvella_stamm@haag.name","google_id":"52v8c1cthqnbt6lu5n0j9","google_image_url":"https://robohash.org/rerumnesciuntperspiciatis.png?size=300x300\u0026set=set1","zip_code":"37887","summary":"Rhetoric
-        is the art of ruling the minds of men.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Arnita
-        Schoen"}},{"id":"4","type":"user","attributes":{"email":"marylyn_sipes@christiansen.name","google_id":"1lfzy6vjosm7n5q6dalgt","google_image_url":"https://robohash.org/maximesolutaeius.png?size=300x300\u0026set=set1","zip_code":"81564","summary":"Philosophy
-        is the highest music.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Man
-        Boehm"}},{"id":"7","type":"user","attributes":{"email":"fletcher_kuhn@gulgowski.com","google_id":"x8aigsj3q4kpjl9cpmbv5","google_image_url":"https://robohash.org/voluptatumipsamassumenda.png?size=300x300\u0026set=set1","zip_code":"89560","summary":"The
-        mind is not a vessel to be filled but a fire to be kindled.","goal":"Maintain
-        Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Mrs.
-        Valerie Anderson"}}]}'
-  recorded_at: Wed, 22 Sep 2021 19:39:30 GMT
+      string: '{"data":[{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
+        diving"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Isobel
+        Huels"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
+        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Monty
+        Beer"}}}}],"included":[{"id":"4","type":"user","attributes":{"email":"cordell_doyle@williamson.net","google_id":"5zfwrgzcm0xx6wxwqd07d","google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300\u0026set=set1","zip_code":"96808","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Isobel
+        Huels"}},{"id":"7","type":"user","attributes":{"email":"venetta@kilback.io","google_id":"mun5m26nj31nfi6jc4xf7","google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300\u0026set=set1","zip_code":"48703","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":"Increase
+        Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Monty
+        Beer"}}]}'
+  recorded_at: Wed, 22 Sep 2021 21:41:34 GMT
 recorded_with: VCR 6.0.0

@@ -28,6 +28,12 @@ class BackEndService
       )
     end
 
+    def delete_event(event_params)
+      db_conn.delete(
+        "/api/v1/users/#{event_params[:user_id]}/gym_memberships/#{event_params[:gym_membership_id]}/events/#{event_params[:id]}"
+      )
+    end
+
     def gyms_near_user(zip_code)
       response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")
 
@@ -37,8 +43,8 @@ class BackEndService
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500
-      'http://localhost:4500'
-      # 'https://spotme-app-api.herokuapp.com'
+      # 'http://localhost:4500'
+      'https://spotme-app-api.herokuapp.com'
     end
 
     def db_conn

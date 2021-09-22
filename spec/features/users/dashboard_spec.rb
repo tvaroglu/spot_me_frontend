@@ -245,7 +245,6 @@ end
 #  Features:
 #    - Friends Button Link Redirects: 'View Profile', 'Remove'
 #    - Gyms Button Link Redirects: 'View Gym', 'Remove'
-#    - Events Button Link Redirect: 'Delete'
 #   Edge Cases:
 #     - When I have no friends, it displays "You currently have no friends."
 #     - When I have no upcoming workouts, it displays "You currently have no upcoming workouts."

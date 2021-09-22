@@ -43,7 +43,7 @@
             <% @user_events.each do |event| %>
               <p id="event-<%= event.id%>">
                 <%= event.activity %>: <%= event.date_time %>
-                <%= link_to 'Delete', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+                <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-info btn-lg btn-outline-dark" %>
               </p>
             <% end %>
           <% end %>

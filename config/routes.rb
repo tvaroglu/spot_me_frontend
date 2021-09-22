@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   # get '/profile', to: 'users#profile'
   post '/profile/:user_id', to: 'users#update'
 
+  resources :events, only: [:create, :destroy]
+
   get '/gyms', to: 'search#index'
 end

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 22 Sep 2021 17:15:25 GMT
+      - Wed, 22 Sep 2021 21:41:39 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d4e30bd6-6b36-49a8-94e5-b9af0f59bb68
+      - 77a21927-0809-4e67-ae1c-c133059328cc
       X-Runtime:
-      - '0.012238'
+      - '0.005989'
       Transfer-Encoding:
       - chunked
       Via:
@@ -48,5 +48,5 @@ http_interactions:
         is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
         Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
         Murazik IV"}}]}'
-  recorded_at: Wed, 22 Sep 2021 17:15:25 GMT
+  recorded_at: Wed, 22 Sep 2021 21:41:40 GMT
 recorded_with: VCR 6.0.0

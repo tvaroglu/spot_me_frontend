@@ -28,6 +28,12 @@ class BackEndService
       )
     end
 
+    def delete_event(event_params)
+      db_conn.delete(
+        "/api/v1/users/#{event_params[:user_id]}/gym_memberships/#{event_params[:gym_membership_id]}/events/#{event_params[:id]}"
+      )
+    end
+
     def gyms_near_user(zip_code)
       response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")
 

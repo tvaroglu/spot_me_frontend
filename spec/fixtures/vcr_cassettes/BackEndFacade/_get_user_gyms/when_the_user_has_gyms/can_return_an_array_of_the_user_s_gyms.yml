@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 22 Sep 2021 17:15:20 GMT
+      - Wed, 22 Sep 2021 21:41:33 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d3ad3b2e-7ff6-451e-af85-cd4e38fc3089
+      - 9cc477d8-167c-4c12-ab25-7491b4b1fcec
       X-Runtime:
-      - '0.038439'
+      - '1.029480'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
         Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
         Community Yoga"}}]}'
-  recorded_at: Wed, 22 Sep 2021 17:15:21 GMT
+  recorded_at: Wed, 22 Sep 2021 21:41:33 GMT
 recorded_with: VCR 6.0.0

@@ -26,16 +26,3 @@ RSpec.describe 'gyms show page' do
     expect(page).to have_content("Rishi's Community Yoga")
   end
 end
-
-
-# As an authenticated user,
-# When I visit the Find Gyms index page
-# And I click on the gym name
-# It redirects me to the Gym Show page
-# And I see the following information:
-#
-#  Gym Name
-#  "Add Gym" Button
-#  Gym Address
-#  Gym Phone Number
-#  Number of Active Members

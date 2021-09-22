@@ -28,13 +28,6 @@ class BackEndFacade
       events[:data].map { |event| UserEvent.new(event) } if events[:data]
     end
 
-    # def searched_gyms(location)
-    #   gyms = BackEndService.gyms_near_user(location)
-    #   gyms[:businesses].map do |gym|
-    #     YelpGym.new(gym)
-    #   end
-    # end
-
     def get_gyms_near_user(zip_code)
       gyms = BackEndService.gyms_near_user(zip_code)
       gyms[:data].map do |gym|
@@ -46,6 +39,10 @@ class BackEndFacade
       gym = BackEndService.get_one_gym(yelp_gym_id)
       gym = gym[:data] if gym[:data]
       YelpGym.new(gym) if gym
+    end
+
+    def create_gym_membership(gym_membership_params)
+      BackEndService.post_gym_membership(gym_membership_params)
     end
   end
 end

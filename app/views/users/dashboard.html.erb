@@ -1,3 +1,72 @@
 <% if current_user %>
-  <%= render partial: 'profiles', locals: { view_type: 'dashboard' } %>
+  <table class="table table-sm table-borderless table-responsive align-middle">
+    <tr>
+      <td align="center">
+        <div id='profile'>
+          <img id="profile_pic" src="<%= current_user.google_image_url %>"><br>
+          <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-info btn-lg btn-outline-dark" %>
+        </div>
+
+        <br><br>
+
+        <div id='friends'>
+          <h2>My Friends:</h2>
+
+          <% if @user_friends.empty? %>
+            <p>You currently have no friends.</p>
+          <% else %>
+            <% @user_friends.each do |friend| %>
+            <p id="friend-<%= friend.id%>">
+              <%= friend.full_name %>
+              <%= link_to 'View Profile', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+              <%= link_to 'Remove', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+            </p>
+            <% end %>
+          <% end %>
+        </div>
+      </td>
+
+      <td>
+        <div id='profile-header'>
+          <h1 id="user_name"><%= current_user.full_name %></h1>
+          <h4 id="zip_code">Zip Code: <%= current_user.zip_code %></h4>
+        </div>
+
+        <br>
+
+        <div id='upcoming-workouts'>
+          <h2>Upcoming Workouts:</h2>
+
+          <% if @user_events.empty? %>
+            <p>You currently have no upcoming workouts.</p>
+          <% else %>
+            <% @user_events.each do |event| %>
+              <p id="event-<%= event.id%>">
+                <%= event.activity %>: <%= event.date_time %>
+                <%= link_to 'Delete', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+              </p>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div id='gyms'>
+          <h2>My Gyms:</h2>
+
+          <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-info btn-lg btn-outline-dark" %>
+
+          <% if @user_gyms.empty? %>
+            <p>You currently are not a member of any gyms.</p>
+          <% else %>
+            <% @user_gyms.each do |gym| %>
+              <p id="gym-<%= gym.yelp_gym_id%>">
+                <%= gym.name %>
+                <%= link_to 'View Gym', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+                <%= link_to 'Remove', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+              </p>
+            <% end %>
+          <% end %>
+        </div>
+      </td>
+    </tr>
+  </table>
 <% end %>

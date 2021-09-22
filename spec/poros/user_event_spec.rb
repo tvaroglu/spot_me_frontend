@@ -14,7 +14,7 @@ RSpec.describe UserEvent, type: :poro do
         user_id: user_id,
         gym_membership_id: gym_membership_id,
         date_time: date_time,
-        activity: activity,
+        activity: activity
       }
     }
 

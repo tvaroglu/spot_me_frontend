@@ -1,11 +1,12 @@
-<%= @gym.name %><br/>
-<%= @gym.address %><br/>
-<%= @gym.phone %>
+<h1><%= @gym.name %></h1><br/>
+<p><%= @gym.address %></p><br/>
+<p><%= @gym.phone %></p><br/>
+
+
 
 <%= form_with url: gyms_path, method: :post, local: true do |f|  %>
-<%= f.hidden_field :user_id, value: current_user.id %>
-<%= f.hidden_field :yelp_gym_id, value: @gym.yelp_gym_id %>
-<%= f.hidden_field :gym_name, value: @gym.name %>
-<%= f.submit 'Add Gym', class: "btn btn-info btn-sm btn-outline-dark" %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :yelp_gym_id, value: @gym.yelp_gym_id %>
+  <%= f.hidden_field :gym_name, value: @gym.name %>
+  <%= f.submit 'Add Gym', class: "btn btn-info btn-sm btn-outline-dark" %>
 <% end %>
-<!-- <%= button_to 'Add Gym', gyms_path, method: :post, params: { id: current_user.id, yelp_gym_id: @gym.yelp_gym_id, gym_name: @gym.name }  %> -->

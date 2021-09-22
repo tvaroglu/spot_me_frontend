@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,31 +18,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 17:15:23 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9c29c1e0e86668d8ece10e41783b6770"
+      - W/"e5d4c85be9ee8c0b391198780ada2924"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6ef7776b-189b-46ca-a9d5-c88a5aa13479
+      - 625a92c5-fe72-4057-b211-8b8b4a664e05
       X-Runtime:
-      - '0.004127'
+      - '0.013219'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"jimmy@okon.org","google_id":"w597ypmwi95dz5uu5ymu2","google_image_url":"https://robohash.org/facilisrationeofficia.png?size=300x300\u0026set=set1","zip_code":"97047","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Dr.
-        Charley McClure"}},{"id":"9","type":"user","attributes":{"email":"blake_huel@ondricka.com","google_id":"rbuhtxm0pbqfnb3kdsudd","google_image_url":"https://robohash.org/autidquia.png?size=300x300\u0026set=set1","zip_code":"13501","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":"Increase Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Miss
-        Abel Rogahn"}},{"id":"10","type":"user","attributes":{"email":"toney@bahringer.name","google_id":"7s6odo2cijcagr3zub15m","google_image_url":"https://robohash.org/sederrorfacere.png?size=300x300\u0026set=set1","zip_code":"52860","summary":"Pleasure
-        in the job puts perfection in the work.","goal":"Increase Flexibility","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Yasuko
-        Ondricka"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:23:37 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"9","type":"user","attributes":{"email":"mara.terry@fay-bauch.net","google_id":"jmoyy4j8ohld8dpos6r9j","google_image_url":"https://robohash.org/estharumut.png?size=300x300\u0026set=set1","zip_code":"45298","summary":"Quality
+        is not an act, it is a habit.","goal":null,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eddy
+        Renner"}},{"id":"10","type":"user","attributes":{"email":"danette@wehner.net","google_id":"4gj14p8aqry0jnjwjw2qp","google_image_url":"https://robohash.org/earumdoloremin.png?size=300x300\u0026set=set1","zip_code":"62006","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
+        Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
+        Murazik IV"}}]}'
+  recorded_at: Wed, 22 Sep 2021 17:15:24 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -58,27 +67,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 17:15:23 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f4402920703770d4406c32096441d4ca"
+      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '058917ab-705b-4f1a-854f-a16774e33bfd'
+      - 59d0755c-86a7-4946-bb0e-fbfb11588c5f
       X-Runtime:
-      - '0.002545'
+      - '0.005509'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Stanton
-        LLC"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Schinner-Cremin"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Auer,
-        Jones and McKenzie"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:23:37 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}]}'
+  recorded_at: Wed, 22 Sep 2021 17:15:24 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -94,22 +111,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 17:15:24 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b2c21428d6043a2efb423538089dff92"
+      - W/"f13e3738d0a6613bc27cf08bae619621"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dcafea9c-5fcb-4ba3-a966-b29e9c174adb
+      - 9809d81c-a5f9-4267-a08d-3136cc05a817
       X-Runtime:
-      - '0.003265'
+      - '0.014548'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-26T22:33:07.277Z","activity":"Digital
-        arts"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-22T22:33:07.279Z","activity":"Baton
-        twirling"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T22:33:07.281Z","activity":"Machining"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:23:37 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-22T21:41:28.289Z","activity":"Bodybuilding"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Mary
+        Ratke"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
+        diving"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Isobel
+        Huels"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
+        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Monty
+        Beer"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"4","type":"user","attributes":{"email":"cordell_doyle@williamson.net","google_id":"5zfwrgzcm0xx6wxwqd07d","google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300\u0026set=set1","zip_code":"96808","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Isobel
+        Huels"}},{"id":"7","type":"user","attributes":{"email":"venetta@kilback.io","google_id":"mun5m26nj31nfi6jc4xf7","google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300\u0026set=set1","zip_code":"48703","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":"Increase
+        Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Monty
+        Beer"}}]}'
+  recorded_at: Wed, 22 Sep 2021 17:15:24 GMT
 recorded_with: VCR 6.0.0

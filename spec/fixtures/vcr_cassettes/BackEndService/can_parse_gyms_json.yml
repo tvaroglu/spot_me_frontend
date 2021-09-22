@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,22 +18,30 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 17:15:24 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f4402920703770d4406c32096441d4ca"
+      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3adeb37f-a955-47ec-90f5-9b8f94d67514
+      - 04f85012-7676-4940-a218-df9524350529
       X-Runtime:
-      - '0.002513'
+      - '0.009914'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Stanton
-        LLC"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Schinner-Cremin"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Auer,
-        Jones and McKenzie"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:23:37 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}]}'
+  recorded_at: Wed, 22 Sep 2021 17:15:25 GMT
 recorded_with: VCR 6.0.0

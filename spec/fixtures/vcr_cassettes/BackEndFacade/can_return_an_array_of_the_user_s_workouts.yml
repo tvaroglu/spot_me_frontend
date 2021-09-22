@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -18,22 +18,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 17:15:20 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b2c21428d6043a2efb423538089dff92"
+      - W/"f13e3738d0a6613bc27cf08bae619621"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2f5a33da-f677-4044-8ea5-8f40e793e371
+      - e3d3b4dc-11c5-400f-b170-d22cd6c952d5
       X-Runtime:
-      - '0.025092'
+      - '0.037517'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-26T22:33:07.277Z","activity":"Digital
-        arts"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-22T22:33:07.279Z","activity":"Baton
-        twirling"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T22:33:07.281Z","activity":"Machining"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:23:37 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-22T21:41:28.289Z","activity":"Bodybuilding"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Mary
+        Ratke"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
+        diving"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Isobel
+        Huels"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
+        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Monty
+        Beer"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"4","type":"user","attributes":{"email":"cordell_doyle@williamson.net","google_id":"5zfwrgzcm0xx6wxwqd07d","google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300\u0026set=set1","zip_code":"96808","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Isobel
+        Huels"}},{"id":"7","type":"user","attributes":{"email":"venetta@kilback.io","google_id":"mun5m26nj31nfi6jc4xf7","google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300\u0026set=set1","zip_code":"48703","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":"Increase
+        Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Monty
+        Beer"}}]}'
+  recorded_at: Wed, 22 Sep 2021 17:15:21 GMT
 recorded_with: VCR 6.0.0

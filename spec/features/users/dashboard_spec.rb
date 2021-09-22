@@ -141,8 +141,7 @@ RSpec.describe 'user dashboard' do
       before { visit dashboard_path(@user.id) }
 
       it 'displays my name and zip code', :vcr do
-        save_and_open_page
-        expect(page).to have_css("#profile-header")
+        expect(page).to have_css('#profile-header')
 
         within '#profile-header' do
           expect(page).to have_content(@user.full_name)
@@ -177,7 +176,7 @@ RSpec.describe 'user dashboard' do
       end
 
       it 'displays my upcoming workouts', :vcr do
-        expect(page).to have_css("#upcoming-workouts")
+        expect(page).to have_css('#upcoming-workouts')
 
         within '#upcoming-workouts' do
           expect(page).to have_content('Upcoming Workouts')
@@ -230,7 +229,7 @@ RSpec.describe 'user dashboard' do
   end
 end
 
-# TODO:
+# TODO: Add tests for the following features/cases:
 #  Features:
 #    - Friends Button Link Redirects: 'View Profile', 'Remove'
 #    - Gyms Button Link Redirects: 'View Gym', 'Remove'

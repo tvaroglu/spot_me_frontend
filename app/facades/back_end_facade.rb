@@ -34,5 +34,12 @@ class BackEndFacade
     #     YelpGym.new(gym)
     #   end
     # end
+
+    def get_gyms_near_user(zip_code)
+      gyms = BackEndService.gyms_near_user(zip_code)
+      gyms[:data].map do |gym|
+        YelpGym.new(gym) if gyms[:data]
+      end
+    end
   end
 end

@@ -28,6 +28,12 @@ class BackEndService
       )
     end
 
+    def gyms_near_user(zip_code)
+      response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")
+
+      parse_json(response.body)
+    end
+
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500

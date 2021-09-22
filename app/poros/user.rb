@@ -28,6 +28,7 @@ class User
   end
 
   def self.goals_array
-    ['Gain Muscle', 'Lose Weight', 'Maintain Weight', 'Increase Flexibility', 'Increase Stamina']
+    ['Gain Muscle', 'Lose Weight', 'Maintain Weight', 'Increase Flexibility',
+     'Increase Stamina']
   end
 end

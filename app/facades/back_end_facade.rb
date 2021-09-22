@@ -11,7 +11,11 @@ class BackEndFacade
 
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
-      friends[:data].map { |friend| User.new(friend[:attributes]) } if friends[:data]
+      if friends[:data]
+        friends[:data].map do |friend|
+          User.new(friend[:attributes])
+        end
+      end
     end
 
     def get_user_gyms(user_id)

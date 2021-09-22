@@ -48,14 +48,14 @@ RSpec.describe UserEvent, type: :poro do
             user_id: user_id,
             gym_membership_id: gym_membership_id,
             date_time: date_time,
-            activity: activity,
+            activity: activity
           }
         }
 
         event = UserEvent.new(event_params)
         date_time = '2021-09-22T21:41:28.289Z'
 
-        expect(event.format_date(date_time)).to eq("Wednesday, Sep 22, 2021  9:41pm")
+        expect(event.format_date(date_time)).to eq('Wednesday, Sep 22, 2021  9:41pm')
       end
     end
   end

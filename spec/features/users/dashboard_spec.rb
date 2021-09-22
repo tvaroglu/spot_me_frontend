@@ -136,7 +136,7 @@ RSpec.describe 'user dashboard' do
     allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return(user_events)
   end
 
-  context 'as an authenticated user' do
+  context 'when I log in as an authenticated user' do
     context 'when I visit my user dashboard' do
       before { visit dashboard_path(@user.id) }
 

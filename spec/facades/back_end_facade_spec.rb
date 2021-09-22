@@ -12,7 +12,7 @@ RSpec.describe BackEndFacade do
     gyms = BackEndFacade.get_user_gyms(1)
 
     expect(gyms[0]).to be_an_instance_of(UserGym)
-    expect(gyms.count).to eq(3)
+    expect(gyms.count).to eq(4)
   end
 
   it "can return an array of the user's workouts", :vcr do

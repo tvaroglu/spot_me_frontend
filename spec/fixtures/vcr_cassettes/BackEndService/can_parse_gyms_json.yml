@@ -21,24 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 21 Sep 2021 21:35:33 GMT
+      - Wed, 22 Sep 2021 17:15:24 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 251c0b65-b29b-4feb-9b0b-7e757b4a6377
+      - 04f85012-7676-4940-a218-df9524350529
       X-Runtime:
-      - '0.015474'
+      - '0.009914'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"message":"your query could not be completed","errors":["Couldn''t
-        find User with ''id''=31"]}'
-  recorded_at: Tue, 21 Sep 2021 21:35:34 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}]}'
+  recorded_at: Wed, 22 Sep 2021 17:15:25 GMT
 recorded_with: VCR 6.0.0

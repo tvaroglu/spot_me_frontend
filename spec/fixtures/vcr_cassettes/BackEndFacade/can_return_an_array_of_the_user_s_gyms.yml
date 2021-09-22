@@ -21,27 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 21 Sep 2021 21:35:26 GMT
+      - Wed, 22 Sep 2021 17:15:20 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"628f96fdab79e67fafa64bc043c1479e"
+      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8f1cab27-895c-4b5b-a55d-8b6ecc093505
+      - d3ad3b2e-7ff6-451e-af85-cd4e38fc3089
       X-Runtime:
-      - '0.314871'
+      - '0.038439'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Jaskolski-Dare"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Dooley,
-        Robel and Ullrich"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Upton
-        LLC"}}]}'
-  recorded_at: Tue, 21 Sep 2021 21:35:26 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+        Community Yoga"}}]}'
+  recorded_at: Wed, 22 Sep 2021 17:15:21 GMT
 recorded_with: VCR 6.0.0

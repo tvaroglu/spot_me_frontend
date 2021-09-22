@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:08 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -25,20 +31,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - afdfa59b-67d4-4fc4-ade9-7c1f81697fed
+      - 90aef7d9-3bf1-4960-b26e-8cce47d7fa4f
       X-Runtime:
-      - '0.382787'
+      - '0.177011'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+  recorded_at: Wed, 22 Sep 2021 02:43:09 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -54,31 +62,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:09 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"38aea1520306355eac78f1c739525f17"
+      - W/"e5d4c85be9ee8c0b391198780ada2924"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4c81e2fe-59a5-41eb-82d7-82dc0a7265ce
+      - 2551c9de-38eb-46d8-b5ec-a390f5fde31a
       X-Runtime:
-      - '0.009255'
+      - '0.008046'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"nicholas.cremin@roob.biz","google_id":"i45lhl0wuaq87qhaa43xe","google_image_url":"https://robohash.org/quialaboresunt.png?size=300x300\u0026set=set1","zip_code":"62274","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":1,"availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Jeanett
-        Kulas"}},{"id":"9","type":"user","attributes":{"email":"whitney.becker@rempel.com","google_id":"gqn0bba3tpct9emxqt29r","google_image_url":"https://robohash.org/eacorporisanimi.png?size=300x300\u0026set=set1","zip_code":"15677","summary":"Good
-        habits formed at youth make all the difference.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Rep.
-        Quincy Leuschke"}},{"id":"10","type":"user","attributes":{"email":"warner_pouros@bruen.io","google_id":"6l9olj7wygih8ao8p4dnd","google_image_url":"https://robohash.org/velitmolestiaeut.png?size=300x300\u0026set=set1","zip_code":"62857","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Brice
-        Schumm"}}]}'
-  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"9","type":"user","attributes":{"email":"mara.terry@fay-bauch.net","google_id":"jmoyy4j8ohld8dpos6r9j","google_image_url":"https://robohash.org/estharumut.png?size=300x300\u0026set=set1","zip_code":"45298","summary":"Quality
+        is not an act, it is a habit.","goal":null,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eddy
+        Renner"}},{"id":"10","type":"user","attributes":{"email":"danette@wehner.net","google_id":"4gj14p8aqry0jnjwjw2qp","google_image_url":"https://robohash.org/earumdoloremin.png?size=300x300\u0026set=set1","zip_code":"62006","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
+        Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
+        Murazik IV"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:43:09 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -94,27 +111,34 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:09 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"34f96396deb9f6a15e34efefcf8bd34e"
+      - W/"7abc86b6b866f2151f35795eed9151b4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0c0b9bcf-19ca-44d8-be6f-e01b70006c74
+      - 1ab4d1d7-7bac-4e15-b8ae-ef9a6406c6f8
       X-Runtime:
-      - '0.002670'
+      - '0.005634'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling
-        and Sons"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Mante,
-        Parker and Schaefer"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Kuhn-Price"}}]}'
-  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:43:09 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -130,27 +154,45 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:09 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e22af02bd5eb6c805255ed5d470dc30b"
+      - W/"f13e3738d0a6613bc27cf08bae619621"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9e66ef3a-7dab-4773-8fda-afde45f50a6f
+      - f03bcca5-47f0-4485-96b4-7edafe09dd0b
       X-Runtime:
-      - '0.004102'
+      - '0.034234'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.794Z","activity":"Rowing"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.797Z","activity":"Motor
-        sports"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-30T02:23:17.798Z","activity":"Scuba
-        diving"}}]}'
-  recorded_at: Wed, 22 Sep 2021 02:25:36 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-22T21:41:28.289Z","activity":"Bodybuilding"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Mary
+        Ratke"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
+        diving"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Isobel
+        Huels"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
+        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Monty
+        Beer"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"4","type":"user","attributes":{"email":"cordell_doyle@williamson.net","google_id":"5zfwrgzcm0xx6wxwqd07d","google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300\u0026set=set1","zip_code":"96808","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Isobel
+        Huels"}},{"id":"7","type":"user","attributes":{"email":"venetta@kilback.io","google_id":"mun5m26nj31nfi6jc4xf7","google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300\u0026set=set1","zip_code":"48703","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":"Increase
+        Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Monty
+        Beer"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:43:09 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -166,6 +208,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:10 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -173,20 +221,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 46c91cf5-e2fb-4ab0-8a43-e59186fec375
+      - 9906aea8-9aec-484d-a8a6-8456e954b695
       X-Runtime:
-      - '0.576918'
+      - '0.156563'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+  recorded_at: Wed, 22 Sep 2021 02:43:10 GMT
 - request:
     method: post
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: UTF-8
       string: '{"user_id":"1","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
@@ -205,6 +255,12 @@ http_interactions:
       code: 201
       message: Created
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:10 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -212,19 +268,21 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 49c3fb94-4420-43f6-9e18-4007bc8e006e
+      - b64f86b2-b0d8-4c14-9d27-8039ae214e5f
       X-Runtime:
-      - '0.015198'
+      - '0.106088'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
         Community Yoga"}}}'
-  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+  recorded_at: Wed, 22 Sep 2021 02:43:10 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -240,31 +298,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:10 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"38aea1520306355eac78f1c739525f17"
+      - W/"e5d4c85be9ee8c0b391198780ada2924"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 80be4bf5-5013-4ae2-88f5-7d948a31a7f7
+      - 7213c8d2-8db9-4010-bebf-de7053f7fb8a
       X-Runtime:
-      - '0.006954'
+      - '0.007179'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"nicholas.cremin@roob.biz","google_id":"i45lhl0wuaq87qhaa43xe","google_image_url":"https://robohash.org/quialaboresunt.png?size=300x300\u0026set=set1","zip_code":"62274","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":1,"availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Jeanett
-        Kulas"}},{"id":"9","type":"user","attributes":{"email":"whitney.becker@rempel.com","google_id":"gqn0bba3tpct9emxqt29r","google_image_url":"https://robohash.org/eacorporisanimi.png?size=300x300\u0026set=set1","zip_code":"15677","summary":"Good
-        habits formed at youth make all the difference.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Rep.
-        Quincy Leuschke"}},{"id":"10","type":"user","attributes":{"email":"warner_pouros@bruen.io","google_id":"6l9olj7wygih8ao8p4dnd","google_image_url":"https://robohash.org/velitmolestiaeut.png?size=300x300\u0026set=set1","zip_code":"62857","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Brice
-        Schumm"}}]}'
-  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"9","type":"user","attributes":{"email":"mara.terry@fay-bauch.net","google_id":"jmoyy4j8ohld8dpos6r9j","google_image_url":"https://robohash.org/estharumut.png?size=300x300\u0026set=set1","zip_code":"45298","summary":"Quality
+        is not an act, it is a habit.","goal":null,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eddy
+        Renner"}},{"id":"10","type":"user","attributes":{"email":"danette@wehner.net","google_id":"4gj14p8aqry0jnjwjw2qp","google_image_url":"https://robohash.org/earumdoloremin.png?size=300x300\u0026set=set1","zip_code":"62006","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
+        Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
+        Murazik IV"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:43:10 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -280,28 +347,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:10 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0a94c37d416a0034fa714055d9993f15"
+      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2476b86e-8cd2-46c1-b376-9f82379f305d
+      - b4d2bccb-9dd3-4441-8c03-003236664884
       X-Runtime:
-      - '0.006328'
+      - '0.017137'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling
-        and Sons"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Mante,
-        Parker and Schaefer"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Kuhn-Price"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
+        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
         Community Yoga"}}]}'
-  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+  recorded_at: Wed, 22 Sep 2021 02:43:11 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -317,22 +391,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:11 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e22af02bd5eb6c805255ed5d470dc30b"
+      - W/"f13e3738d0a6613bc27cf08bae619621"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9165f279-b994-4559-84b2-2992edc644b4
+      - 58162190-7fe7-458e-9589-b7ea83558cc5
       X-Runtime:
-      - '0.010063'
+      - '0.010851'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.794Z","activity":"Rowing"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-30T02:23:17.797Z","activity":"Motor
-        sports"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-30T02:23:17.798Z","activity":"Scuba
-        diving"}}]}'
-  recorded_at: Wed, 22 Sep 2021 02:25:37 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-22T21:41:28.289Z","activity":"Bodybuilding"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Mary
+        Ratke"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
+        diving"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Isobel
+        Huels"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
+        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Monty
+        Beer"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"4","type":"user","attributes":{"email":"cordell_doyle@williamson.net","google_id":"5zfwrgzcm0xx6wxwqd07d","google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300\u0026set=set1","zip_code":"96808","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Isobel
+        Huels"}},{"id":"7","type":"user","attributes":{"email":"venetta@kilback.io","google_id":"mun5m26nj31nfi6jc4xf7","google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300\u0026set=set1","zip_code":"48703","summary":"Dignity
+        does not consist in possessing honors, but in deserving them.","goal":"Increase
+        Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Monty
+        Beer"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:43:11 GMT
 recorded_with: VCR 6.0.0

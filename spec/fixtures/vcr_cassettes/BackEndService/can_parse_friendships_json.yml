@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,26 +18,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 22 Sep 2021 02:43:15 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"955279e51db82e1da38dcec511de93e0"
+      - W/"e5d4c85be9ee8c0b391198780ada2924"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 59573542-6aae-442c-8d06-0e5df30e1bd3
+      - e7564f00-563c-4ce1-babf-1035f567d8ce
       X-Runtime:
-      - '0.005233'
+      - '0.032077'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"maxwell@willms.org","google_id":"48nbeemzf3n6s383cwu2v","google_image_url":"https://robohash.org/autaliasimpedit.png?size=300x300\u0026set=set1","zip_code":"21791","summary":"It
-        is impossible to begin to learn that which one thinks one already knows.","goal":1,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Natisha
-        Jacobs"}},{"id":"9","type":"user","attributes":{"email":"douglass@anderson-champlin.org","google_id":"1ql16sv34bahifhjhkmwk","google_image_url":"https://robohash.org/aspernatureased.png?size=300x300\u0026set=set1","zip_code":"62508","summary":"The
-        secret to humor is surprise.","goal":3,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eliseo
-        Gleason"}},{"id":"10","type":"user","attributes":{"email":"breann_jakubowski@howell.co","google_id":"cc87e5xxq9t5ygprjo8nk","google_image_url":"https://robohash.org/rerumautvel.png?size=300x300\u0026set=set1","zip_code":"90485","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":5,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Amb.
-        Burma Jones"}}]}'
-  recorded_at: Tue, 21 Sep 2021 23:16:07 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
+        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
+        Ratke"}},{"id":"9","type":"user","attributes":{"email":"mara.terry@fay-bauch.net","google_id":"jmoyy4j8ohld8dpos6r9j","google_image_url":"https://robohash.org/estharumut.png?size=300x300\u0026set=set1","zip_code":"45298","summary":"Quality
+        is not an act, it is a habit.","goal":null,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eddy
+        Renner"}},{"id":"10","type":"user","attributes":{"email":"danette@wehner.net","google_id":"4gj14p8aqry0jnjwjw2qp","google_image_url":"https://robohash.org/earumdoloremin.png?size=300x300\u0026set=set1","zip_code":"62006","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
+        Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
+        Murazik IV"}}]}'
+  recorded_at: Wed, 22 Sep 2021 02:43:15 GMT
 recorded_with: VCR 6.0.0

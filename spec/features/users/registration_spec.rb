@@ -22,17 +22,25 @@ RSpec.describe 'registration page' do
     end
 
     it 'can register a new user if all required attributes are provided', :vcr do
+      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+      
       visit registration_path
 
       allow(BackEndService).to receive(:create_user).and_return(201)
       allow(BackEndService).to receive(:get_user)
         .and_return(JSON.parse(user_blob, symbolize_names: true))
 
+      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+
       fill_in :full_name, with: 'Foo Bar'
       fill_in :email, with: 'test@testing.com'
       fill_in :zip_code, with: '80227'
       fill_in :summary, with: 'Hello World'
-      select 'Gain Weight', from: :goal
+      select 'Gain Muscle', from: :goal
       page.check :availability_morning
 
       click_on 'Register'
@@ -55,7 +63,7 @@ RSpec.describe 'registration page' do
       fill_in :email, with: 'test@testing.com'
       fill_in :zip_code, with: '80227'
       fill_in :summary, with: ''
-      select 'Gain Weight', from: :goal
+      select 'Gain Muscle', from: :goal
       page.check :availability_morning
 
       click_on 'Register'

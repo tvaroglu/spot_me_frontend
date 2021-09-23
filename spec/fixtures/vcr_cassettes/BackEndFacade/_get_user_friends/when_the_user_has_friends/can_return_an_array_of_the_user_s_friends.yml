@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 01:34:49 GMT
+      - Thu, 23 Sep 2021 01:34:45 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,11 +31,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ed959480-e5ca-4f36-b2ac-a9375d18c394
+      - 81ac8b4c-6726-4521-aa80-77a7933c5b10
       X-Runtime:
-      - '0.011949'
+      - '2.080228'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
@@ -47,5 +49,5 @@ http_interactions:
         how to listen, and you will profit even from those who talk badly.","goal":"Lose
         Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
         Gulgowski"}}]}'
-  recorded_at: Thu, 23 Sep 2021 01:34:49 GMT
+  recorded_at: Thu, 23 Sep 2021 01:34:46 GMT
 recorded_with: VCR 6.0.0

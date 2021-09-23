@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -18,126 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"cc7c04805bafb3321d12532894f8aa0b"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d285dec1-1aee-4d89-927d-28af38939f69
-      X-Runtime:
-      - '0.003873'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"carolin.block@welch.net","google_id":"4jmd8foknk939iqzodw49","google_image_url":"https://robohash.org/abquaeratquis.png?size=300x300\u0026set=set1","zip_code":"94643","summary":"Philosophy
-        is the highest music.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Ramiro
-        King"}},{"id":"9","type":"user","attributes":{"email":"macie_zemlak@volkman-gusikowski.net","google_id":"j1cc9ji0iokevysy0bg6r","google_image_url":"https://robohash.org/illumquisoccaecati.png?size=300x300\u0026set=set1","zip_code":"23530","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
-        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Albertha
-        Brekke"}},{"id":"10","type":"user","attributes":{"email":"coy.brekke@conroy-schmeler.name","google_id":"f9mtv6abwuxgdoqo5rvsk","google_image_url":"https://robohash.org/quidolornostrum.png?size=300x300\u0026set=set1","zip_code":"79301","summary":"It''s
-        not what happens to you, but how you react to it that matters.","goal":"Increase
-        Stamina","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Jackeline
-        Heller"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:46:11 GMT
-- request:
-    method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"bf3eb8c1d40aa9fe3195f93b1404d2c1"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 32e09cb2-1d69-4082-8518-61857139788d
-      X-Runtime:
-      - '0.003099'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Koss-Simonis"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"VonRueden-Kuphal"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Bechtelar-Bailey"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:46:11 GMT
-- request:
-    method: get
-    uri: http://localhost:4500/api/v1/users/1/events
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"ef2d426aee3f0e78e99106bd3c4b7545"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6cac9e3f-1490-4004-afa1-64a1a35ed924
-      X-Runtime:
-      - '0.007957'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-28T00:45:45.502Z","activity":"Sculling"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Ramiro
-        King"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-28T00:45:45.507Z","activity":"Letterboxing"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Pres.
-        Angelique Hoeger"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-27T00:45:45.510Z","activity":"Air
-        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Teodoro
-        Hammes"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"carolin.block@welch.net","google_id":"4jmd8foknk939iqzodw49","google_image_url":"https://robohash.org/abquaeratquis.png?size=300x300\u0026set=set1","zip_code":"94643","summary":"Philosophy
-        is the highest music.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Ramiro
-        King"}},{"id":"4","type":"user","attributes":{"email":"gonzalo_damore@douglas-bartoletti.org","google_id":"7lswf4if7pauoxcmaoe5m","google_image_url":"https://robohash.org/addolorepariatur.png?size=300x300\u0026set=set1","zip_code":"58141","summary":"There
-        was never a genius without a tincture of madness.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Pres.
-        Angelique Hoeger"}},{"id":"7","type":"user","attributes":{"email":"lashon_feil@lebsack.net","google_id":"9uuhi2qq232ewwwc2kjo2","google_image_url":"https://robohash.org/dignissimosdelectusest.png?size=300x300\u0026set=set1","zip_code":"26806","summary":"There
-        was never a genius without a tincture of madness.","goal":"Increase Flexibility","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Teodoro
-        Hammes"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:46:11 GMT
-- request:
-    method: get
-    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 01:34:48 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -145,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b69f7676-c59d-444a-a28f-c4db02c00e09
+      - 2153d736-8c3b-47a0-9866-dfbd6b30829b
       X-Runtime:
-      - '1.110483'
+      - '0.275046'
       Transfer-Encoding:
       - chunked
     body:
@@ -193,5 +79,5 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:46:12 GMT
+  recorded_at: Thu, 23 Sep 2021 01:34:48 GMT
 recorded_with: VCR 6.0.0

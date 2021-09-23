@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 01:34:49 GMT
+      - Wed, 22 Sep 2021 22:52:05 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,11 +31,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ed959480-e5ca-4f36-b2ac-a9375d18c394
+      - 4cbb6f1b-3549-4422-adf9-61dbe529ee00
       X-Runtime:
-      - '0.011949'
+      - '0.018987'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
@@ -47,5 +49,46 @@ http_interactions:
         how to listen, and you will profit even from those who talk badly.","goal":"Lose
         Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
         Gulgowski"}}]}'
-  recorded_at: Thu, 23 Sep 2021 01:34:49 GMT
+  recorded_at: Wed, 22 Sep 2021 22:52:05 GMT
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 00:15:58 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6380dc84-b67d-4653-aaef-367212571214
+      X-Runtime:
+      - '0.003764'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User"]}'
+  recorded_at: Thu, 23 Sep 2021 00:15:58 GMT
 recorded_with: VCR 6.0.0

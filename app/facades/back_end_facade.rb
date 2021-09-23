@@ -2,37 +2,49 @@ class BackEndFacade
   class << self
     def get_user(google_id)
       user = BackEndService.get_user(google_id)
-      user[:data].present? ? User.new(user[:data]) : nil
+      return unless user[:data]
+
+      User.new(user[:data])
     end
 
     def create_user(params)
       BackEndService.create_user(params)
     end
 
+    def delete_event(params)
+      BackEndService.delete_event(params)
+    end
+
+    def delete_gym_membership(params)
+      BackEndService.delete_gym_membership(params)
+    end
+
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
-      if friends[:data]
-        friends[:data].map do |friend|
-          User.new(friend[:attributes])
-        end
-      end
+      return Array.new unless friends[:data]
+
+      friends[:data].map { |friend| User.new(friend[:attributes]) }
     end
 
     def get_user_gyms(user_id)
       gyms = BackEndService.get_gyms(user_id)
-      gyms[:data].map { |gym| UserGym.new(gym[:attributes]) } if gyms[:data]
-    end
+      return Array.new unless gyms[:data]
 
-    def get_user_events(user_id)
-      events = BackEndService.get_events(user_id)
-      events[:data].map { |event| UserEvent.new(event) } if events[:data]
+      gyms[:data].map { |gym| GymMembership.new(gym[:attributes]) }
     end
 
     def get_gyms_near_user(zip_code)
       gyms = BackEndService.gyms_near_user(zip_code)
-      gyms[:data].map do |gym|
-        YelpGym.new(gym) if gyms[:data]
-      end
+      return Array.new unless gyms[:data]
+
+      gyms[:data].map { |gym| YelpGym.new(gym) }
+    end
+
+    def get_user_events(user_id)
+      events = BackEndService.get_events(user_id)
+      return Array.new unless events[:data]
+
+      events[:data].map { |event| UserEvent.new(event) }
     end
 
     def get_selected_gym(yelp_gym_id)

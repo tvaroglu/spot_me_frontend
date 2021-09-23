@@ -42,6 +42,14 @@ describe 'user profile page: current user', type: :feature do
       it 'displays an "Edit Profile" button' do
         expect(page).to have_link('Edit Profile')
       end
+
+      it 'displays add friend button' do
+        expect(page).to_not have_link('Add Friend')
+      end
+
+      it 'displays delete friend button' do
+        expect(page).to_not have_link('Remove Friend')
+      end
     end
   end
 end

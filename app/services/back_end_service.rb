@@ -58,6 +58,13 @@ class BackEndService
       parse_json(response.body)
     end
 
+    def create_friendship(user_id, followee_id)
+      db_conn.post("/api/v1/users/#{params[:user_id]}/friendships") do |req|
+        req.params['activity'] = params[:activity]
+        req.params['date_time'] = params[:date_time]
+      end
+    end
+
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500

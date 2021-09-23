@@ -58,8 +58,18 @@ describe 'user profile page: non-friend', type: :feature do
         end
       end
 
-      it 'displays an "Add Friend" button' do
+      it 'displays add friend button' do
         expect(page).to have_link('Add Friend')
+      end
+
+      it 'can add a friend' do
+        click_on 'Add Friend'
+
+        expect(current_path).to eq(dashboard_path)
+      end
+
+      it 'displays delete friend button' do
+        expect(page).to have_link('Remove Friend')
       end
     end
   end

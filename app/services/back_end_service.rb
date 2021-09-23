@@ -76,10 +76,9 @@ class BackEndService
 
     def delete_friend(friend_params)
       db_conn.delete(
-        "/api/v1/users/#{friend_params[:user_id]}/friendships/#{friend_params[:followee.id]}"
+        "/api/v1/users/#{friend_params[:user_id]}/friendships/#{friend_params[:id]}"
       )
     end
-    
 
     def gyms_near_user(zip_code)
       response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:15 GMT
+      - Thu, 23 Sep 2021 21:31:56 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cd00e0cc-3f72-4498-9346-b234cf016468
+      - 061d5bbd-703d-449c-bed6-170fe1eb09d4
       X-Runtime:
-      - '0.280283'
+      - '0.272931'
       Transfer-Encoding:
       - chunked
       Via:
@@ -81,7 +81,7 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Thu, 23 Sep 2021 21:02:15 GMT
+  recorded_at: Thu, 23 Sep 2021 21:31:57 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -103,7 +103,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:15 GMT
+      - Thu, 23 Sep 2021 21:31:57 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -113,9 +113,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '09df8ea1-476c-4628-8bdf-60c99e9707d6'
+      - 33033df4-4e25-4303-87e8-7c8bdee0adfb
       X-Runtime:
-      - '0.171852'
+      - '0.169823'
       Transfer-Encoding:
       - chunked
       Via:
@@ -125,7 +125,7 @@ http_interactions:
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:02:16 GMT
+  recorded_at: Thu, 23 Sep 2021 21:31:57 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
@@ -147,7 +147,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:16 GMT
+      - Thu, 23 Sep 2021 21:31:57 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -157,9 +157,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e225e32c-c86a-4436-92a0-8cb7397a8767
+      - 974f4c08-1de8-4b3c-a7df-403121fbc6f2
       X-Runtime:
-      - '0.009997'
+      - '0.013910'
       Transfer-Encoding:
       - chunked
       Via:
@@ -169,7 +169,7 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Feil,
         Sporer and Medhurst"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
         Mraz and Fadel"}}]}'
-  recorded_at: Thu, 23 Sep 2021 21:02:16 GMT
+  recorded_at: Thu, 23 Sep 2021 21:31:57 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -191,7 +191,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:15 GMT
+      - Thu, 23 Sep 2021 21:31:57 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -201,9 +201,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0b235541-cc93-4e8e-8348-94bc84dfbe6b
+      - 9a2e2569-5d44-4b6f-8ef2-fe6039034f0c
       X-Runtime:
-      - '0.006944'
+      - '0.011351'
       Transfer-Encoding:
       - chunked
       Via:
@@ -211,5 +211,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[],"meta":{"gym_member_count":0}}'
-  recorded_at: Thu, 23 Sep 2021 21:02:16 GMT
+  recorded_at: Thu, 23 Sep 2021 21:31:58 GMT
 recorded_with: VCR 6.0.0

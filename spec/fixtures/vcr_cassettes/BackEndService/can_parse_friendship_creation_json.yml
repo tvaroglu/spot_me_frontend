@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:21 GMT
+      - Thu, 23 Sep 2021 21:32:02 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 2414ded7-9e12-4a23-8d46-dff2105624f5
+      - cb59f941-67e1-48cc-99cd-71f2461092a7
       X-Runtime:
-      - '0.019931'
+      - '0.026645'
       Transfer-Encoding:
       - chunked
       Via:
@@ -42,5 +42,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"your record could not be saved","errors":["Followee has
         already been taken"]}'
-  recorded_at: Thu, 23 Sep 2021 21:02:21 GMT
+  recorded_at: Thu, 23 Sep 2021 21:32:02 GMT
 recorded_with: VCR 6.0.0

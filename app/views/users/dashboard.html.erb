@@ -20,8 +20,19 @@
             <% @user_friends.each do |friend| %>
               <p id="friend-<%= friend.id%>">
                 <%= friend.full_name %>
-                <%= link_to 'View Profile', profile_path(friend.id), class: "btn btn-info btn-lg btn-outline-dark" %>
-                <%= link_to 'Remove', friendship_path(current_user.id, {user_id: current_user.id, followee_id: friend.id}), method: :delete, class: "btn btn-info btn-lg btn-outline-dark" %>
+                <%= link_to 'View Profile', profile_path(
+                                              friend.id
+                                              ),
+                                              class: "btn btn-info btn-lg btn-outline-dark" %>
+                                              
+                <%= link_to 'Remove', friendship_path(
+                                        current_user.id,
+                                        {
+                                          user_id: current_user.id,
+                                          followee_id: friend.id
+                                        }),
+                                        method: :delete,
+                                        class: "btn btn-info btn-lg btn-outline-dark" %>
               </p>
             <% end %>
           <% end %>

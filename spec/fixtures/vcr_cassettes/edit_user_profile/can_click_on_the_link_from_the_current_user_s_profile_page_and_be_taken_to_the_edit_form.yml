@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:17 GMT
+      - Thu, 23 Sep 2021 21:31:58 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 76e97910-f5e5-4df3-a7f3-41110f1b48dc
+      - 6a0fd265-e338-411e-9483-75d114527481
       X-Runtime:
-      - '0.004028'
+      - '0.006262'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
         Swift"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:02:17 GMT
+  recorded_at: Thu, 23 Sep 2021 21:31:59 GMT
 recorded_with: VCR 6.0.0

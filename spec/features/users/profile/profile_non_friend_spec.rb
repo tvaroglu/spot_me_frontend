@@ -62,10 +62,10 @@ describe 'user profile page: non-friend', type: :feature do
         expect(page).to have_link('Add Friend')
       end
 
-      it 'can add a friend', :vcr do
+      it 'can add a new friend', :vcr do
         allow(BackEndService).to receive(:create_friendship).and_return(user1_params)
         allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-        
+
         click_on 'Add Friend'
 
         expect(current_path).to eq(dashboard_path(@user.id))

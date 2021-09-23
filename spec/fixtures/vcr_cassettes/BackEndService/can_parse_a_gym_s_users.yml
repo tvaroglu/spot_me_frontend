@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:21 GMT
+      - Thu, 23 Sep 2021 21:32:03 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2db5702f-4dd9-4d42-a988-4f5322b78a24
+      - 300e2b20-038b-42ad-aa77-d6628142d7f6
       X-Runtime:
-      - '0.008795'
+      - '0.014033'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,5 +41,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[],"meta":{"gym_member_count":0}}'
-  recorded_at: Thu, 23 Sep 2021 21:02:22 GMT
+  recorded_at: Thu, 23 Sep 2021 21:32:03 GMT
 recorded_with: VCR 6.0.0

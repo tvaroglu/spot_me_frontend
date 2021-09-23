@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:16 GMT
+      - Thu, 23 Sep 2021 21:31:58 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 74ffc8f9-7080-4be8-97a0-690cbd35ae35
+      - ab4698d5-4458-46f5-8787-2b96fc83b5b5
       X-Runtime:
-      - '0.008114'
+      - '0.003782'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":{"id":"10","type":"user","attributes":{"email":"loree.daniel@wehner.org","google_id":"gwpx2l1g4g7ye1qjvkadx","google_image_url":"https://robohash.org/eumetomnis.png?size=300x300\u0026set=set1","zip_code":"21221","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Lionel
         Sawayn"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:02:17 GMT
+  recorded_at: Thu, 23 Sep 2021 21:31:58 GMT
 recorded_with: VCR 6.0.0

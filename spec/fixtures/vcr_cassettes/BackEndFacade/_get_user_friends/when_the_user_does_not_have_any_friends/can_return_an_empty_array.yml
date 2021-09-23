@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=789
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -15,30 +15,31 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 16:38:38 GMT
+      - Thu, 23 Sep 2021 16:38:34 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dbdd778f-5662-4114-ac50-8d45e4d0b64c
+      - 28a373ef-3d0e-44a2-a48c-4e10cc5d48db
       X-Runtime:
-      - '0.004110'
+      - '0.012103'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"message":"your query could not be completed","errors":["Couldn''t
-        find User"]}'
-  recorded_at: Thu, 23 Sep 2021 16:38:39 GMT
+      string: '{"data":[]}'
+  recorded_at: Thu, 23 Sep 2021 16:38:34 GMT
 recorded_with: VCR 6.0.0

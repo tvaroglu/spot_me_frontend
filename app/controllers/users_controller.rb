@@ -20,26 +20,36 @@ class UsersController < ApplicationController
     @user_events = BackEndFacade.get_user_events(current_user.id)
   end
 
-  def profile; end
+  def profile
+    current_user_friends = BackEndFacade.get_user_friends(current_user.id)
+    @profile_user = BackEndFacade.get_profile_user(params[:user_id])
+    @user_friends = BackEndFacade.get_user_friends(@profile_user.id)
 
-  def edit;  end
-  
+    @user_type = if current_user.id.to_s == params[:user_id]
+                      :self
+                    elsif current_user_friends.any? do |friend|
+                            friend.id.to_s == params[:user_id]
+                          end
+                      :friend
+                    end
+  end
+
+  def edit; end
+
   def update
-    update_user = BackEndFacade.update_user(users_params, current_user.id)
-    # require "pry"; binding.pry
-    if update_user[:errors].present?
-      flash[:error] = "Could not update your profile please try again!"
+    updated_user = BackEndFacade.update_user(users_params, current_user.id)
+    if updated_user.id.nil?
+      flash[:error] = "Couldn't update your profile, please try again!"
       redirect_to profile_edit_path(current_user.id)
     else
-      flash[:success] = "Successfully updated your profile!"
+      flash[:success] = 'Your profile has been updated!'
       redirect_to profile_path(current_user.id)
     end
-    # TODO: write this method and create view
-    # BackEndFacade.update_user(params)
+  end
+
+  private
+
+  def users_params
+    params.permit(:full_name, :email, :zip_code, :summary, :goal, :availability_morning, :availability_afternoon, :availability_evening)
   end
 end
-
- private
- def users_params
-  params.permit(:full_name, :email, :zip_code, :summary, :goal, :availability_morning, :availability_afternoon, :availability_evening)
- end

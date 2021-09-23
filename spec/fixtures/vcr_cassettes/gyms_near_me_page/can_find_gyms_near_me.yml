@@ -2,153 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 00:43:03 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"c0edf40e2d8021495ead9997f2ff526e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a51041c2-5c68-4d92-9881-63a0c8f99a46
-      X-Runtime:
-      - '0.011780'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
-        unexamined life is not worth living.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Delaine
-        Veum"}},{"id":"9","type":"user","attributes":{"email":"roscoe@howell.info","google_id":"2lls7mm1nm8tmoonlrin4","google_image_url":"https://robohash.org/reprehenderitindolorem.png?size=300x300\u0026set=set1","zip_code":"22715","summary":"It''s
-        not what happens to you, but how you react to it that matters.","goal":"Increase
-        Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Dr.
-        Faustina Batz"}},{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
-        how to listen, and you will profit even from those who talk badly.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
-        Gulgowski"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:43:04 GMT
-- request:
-    method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 00:43:03 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"bcb72d02fd21738644ee0cd90577bc5e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 4b8773b8-5877-4906-b2d4-2cce8b139296
-      X-Runtime:
-      - '0.011256'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling-Wilkinson"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Konopelski,
-        Lowe and Haley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Funk
-        LLC"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:43:04 GMT
-- request:
-    method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 00:43:04 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"d47ef6712de36ef91898aff9c772a667"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 47ca8da2-c674-48a9-bc7e-74f6a24d1f93
-      X-Runtime:
-      - '0.011910'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-02T22:32:11.497Z","activity":"Sewing"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Delaine
-        Veum"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-27T22:32:11.534Z","activity":"Geocaching"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Sid
-        Pfannerstill"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-02T22:32:11.539Z","activity":"Calligraphy"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Gov.
-        Damion Becker"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
-        unexamined life is not worth living.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Delaine
-        Veum"}},{"id":"4","type":"user","attributes":{"email":"preston@ernser.net","google_id":"k0hovn8utyxqj7hy5snpi","google_image_url":"https://robohash.org/eaquetotamqui.png?size=300x300\u0026set=set1","zip_code":"06633","summary":"The
-        mind is not a vessel to be filled but a fire to be kindled.","goal":"Maintain
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Sid
-        Pfannerstill"}},{"id":"7","type":"user","attributes":{"email":"caridad_wilderman@wiza.info","google_id":"97rnjcwki4e2pzt9thghp","google_image_url":"https://robohash.org/atcommodiquae.png?size=300x300\u0026set=set1","zip_code":"31028","summary":"Know
-        how to listen, and you will profit even from those who talk badly.","goal":"Gain
-        Muscle","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
-        Damion Becker"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:43:04 GMT
-- request:
-    method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
@@ -168,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 00:43:05 GMT
+      - Thu, 23 Sep 2021 16:38:36 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -178,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a8faca1b-0dba-4c37-ba74-6dc9e1345031
+      - 8d28cb2b-ee97-4be3-914b-3feef50f7d53
       X-Runtime:
-      - '0.306226'
+      - '0.387599'
       Transfer-Encoding:
       - chunked
       Via:
@@ -228,5 +81,5 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Thu, 23 Sep 2021 00:43:05 GMT
+  recorded_at: Thu, 23 Sep 2021 16:38:36 GMT
 recorded_with: VCR 6.0.0

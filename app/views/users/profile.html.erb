@@ -1,3 +1,81 @@
 <% if current_user %>
-  <%= render partial: 'profiles', locals: { view_type: 'profile (self)' } %>
+  <table class="table table-sm table-borderless table-responsive align-top">
+    <tr>
+      <td align="center">
+        <div id='profile'>
+          <img id="profile_pic" src="<%= @profile_user.google_image_url %>" style="width:200px; height:auto;">
+          <br>
+          <br>
+          <% if @user_type == :self %>
+            <%= link_to 'Edit Profile', profile_edit_path(current_user.id), class: "btn btn-info btn-lg btn-outline-dark" %>
+          <% elsif @user_type == :friend %>
+            <%= link_to 'Remove Friend', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+          <% else %>
+            <%= link_to 'Add Friend', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+          <% end %>
+        </div>
+
+        <br>
+
+        <div id='goal'>
+          <h2>Goal:</h2>
+
+          <p>
+            <%= @profile_user.goal %>
+          </p>
+        </div>
+
+        <br>
+
+        <div id='availability'>
+          <h2>Availability:</h2>
+
+          <p>
+            <% if @profile_user.availability_morning %>
+              Morning<br>
+            <% end %>
+
+            <% if @profile_user.availability_afternoon %>
+              Afternoon<br>
+            <% end %>
+
+            <% if @profile_user.availability_evening %>
+              Evening<br>
+            <% end %>
+          </p>
+        </div>
+
+        <br>
+
+        <div id='friends'>
+          <h2>Friends (<%= @user_friends.size %> total):</h2>
+
+          <% if @user_friends.empty? %>
+            <p>No friends added.</p>
+          <% else %>
+            <% @user_friends.each do |friend| %>
+              <p id="friend-<%= friend.id%>">
+                <%= friend.full_name %>
+                <%= link_to 'View Profile', profile_path(friend.id), class: "btn btn-info btn-lg btn-outline-dark" %>
+                <%= link_to 'Remove', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+              </p>
+            <% end %>
+          <% end %>
+        </div>
+      </td>
+
+      <td>
+        <div id='profile-header'>
+          <h1 id="user_name"><%= @profile_user.full_name %></h1>
+          <h4 id="zip_code">Zip Code: <%= @profile_user.zip_code %></h4>
+        </div>
+
+        <div id='user-summary'>
+          <p>
+            <%= @profile_user.summary %>
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
 <% end %>

@@ -5,18 +5,23 @@ class BackEndService
       parse_json(response.body)
     end
 
+    def get_profile_user(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}")
+      parse_json(response.body)
+    end
+
     def get_friends(user_id)
       response = db_conn.get("/api/v1/users/#{user_id}/friendships")
       parse_json(response.body)
     end
 
-    def get_gyms(user_id)
-      response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
+    def get_events(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}/events")
       parse_json(response.body)
     end
 
-    def get_events(user_id)
-      response = db_conn.get("/api/v1/users/#{user_id}/events")
+    def get_gyms(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
       parse_json(response.body)
     end
 
@@ -29,12 +34,23 @@ class BackEndService
     end
 
     def update_user(user_params, user_id)
-      response = db_conn.patch(
+      db_conn.patch(
         "/api/v1/users/#{user_id}",
         user_params.to_json,
         'Content-Type' => 'application/json'
       )
-      parse_json(response.body)
+    end
+
+    def delete_event(event_params)
+      db_conn.delete(
+        "/api/v1/users/#{event_params[:user_id]}/gym_memberships/#{event_params[:gym_membership_id]}/events/#{event_params[:id]}"
+      )
+    end
+
+    def delete_gym_membership(gym_membership_params)
+      db_conn.delete(
+        "/api/v1/users/#{gym_membership_params[:user_id]}/gym_memberships/#{gym_membership_params[:id]}"
+      )
     end
 
     def gyms_near_user(zip_code)
@@ -56,13 +72,6 @@ class BackEndService
 
     def parse_json(response_body)
       JSON.parse(response_body, symbolize_names: true)
-    end
-
-    # TODO:  understand why we need this method?  BE is calling the API for us
-    def yelp_connection
-      Faraday.new(url: 'https://api.yelp.com/') do |faraday|
-        faraday.headers['Authorization'] = ENV['yelp_api_key']
-      end
     end
   end
 end

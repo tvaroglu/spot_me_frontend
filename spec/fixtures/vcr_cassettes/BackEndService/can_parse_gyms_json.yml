@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 01:14:30 GMT
+      - Thu, 23 Sep 2021 16:38:39 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -29,9 +29,9 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 74b2fbd9-558c-48d9-8c2c-3e9dac7fa0ca
+      - b1fee3a9-f17f-4f73-afc8-7d2248a173fd
       X-Runtime:
-      - '0.003873'
+      - '0.003431'
       Transfer-Encoding:
       - chunked
       Via:
@@ -40,5 +40,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User with ''id''=31"]}'
-  recorded_at: Thu, 23 Sep 2021 01:14:31 GMT
+  recorded_at: Thu, 23 Sep 2021 16:38:39 GMT
 recorded_with: VCR 6.0.0

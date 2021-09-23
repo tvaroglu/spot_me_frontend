@@ -22,12 +22,10 @@ class UsersController < ApplicationController
 
   def profile
     current_user_friends = BackEndFacade.get_user_friends(current_user.id)
-    @user = BackEndFacade.get_user(params[:user_id])
-    @user_friends = BackEndFacade.get_user_friends(@user.id)
-    @user_gyms = BackEndFacade.get_user_gyms(@user.id)
-    @user_events = BackEndFacade.get_user_events(@user.id)
+    @profile_user = BackEndFacade.get_profile_user(params[:user_id])
+    @user_friends = BackEndFacade.get_user_friends(@profile_user.id)
 
-    @user_profile = if current_user.id.to_s == params[:user_id]
+    @user_type = if current_user.id.to_s == params[:user_id]
                       :self
                     elsif current_user_friends.any? do |friend|
                             friend.id.to_s == params[:user_id]

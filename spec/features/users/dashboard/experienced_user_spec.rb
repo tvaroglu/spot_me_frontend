@@ -218,7 +218,7 @@ RSpec.describe 'experienced user dashboard' do
 
         before do
           allow(BackEndFacade).to receive(:get_user).with(first_friend.id.to_s).and_return(first_friend)
-          allow(BackEndFacade).to receive(:get_user_friends).with(first_friend.id).and_return([])
+          allow(BackEndFacade).to receive(:get_user_friends).with(first_friend.id.to_s).and_return([])
           allow(BackEndFacade).to receive(:get_user_gyms).with(first_friend.id).and_return([])
           allow(BackEndFacade).to receive(:get_user_events).with(first_friend.id).and_return([])
           within("#friend-#{first_friend.id}") { click_link 'View Profile' }

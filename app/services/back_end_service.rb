@@ -5,6 +5,11 @@ class BackEndService
       parse_json(response.body)
     end
 
+    def get_profile_user(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}")
+      parse_json(response.body)
+    end
+
     def get_friends(user_id)
       response = db_conn.get("/api/v1/users/#{user_id}/friendships")
       parse_json(response.body)
@@ -26,6 +31,13 @@ class BackEndService
         user_params.to_json,
         'Content-Type' => 'application/json'
       )
+    end
+
+    def create_event(params)
+      db_conn.post("/api/v1/users/#{params[:user_id]}/gym_memberships/#{params[:gym_membership_id]}/events") do |req|
+        req.params['activity'] = params[:activity]
+        req.params['date_time'] = params[:date_time]
+      end
     end
 
     def delete_event(event_params)

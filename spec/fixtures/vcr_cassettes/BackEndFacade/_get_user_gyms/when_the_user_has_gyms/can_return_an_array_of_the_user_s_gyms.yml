@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 03:55:28 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -25,17 +31,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e3c3a6d3-2714-4248-af54-0ec53079aaba
+      - 179e4b77-a48d-44e8-96a0-6cc53a40e117
       X-Runtime:
-      - '0.053291'
+      - '0.012965'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
-        Community Yoga"}},{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Tillman,
-        Hagenes and Fritsch"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Douglas,
-        Wolff and Sporer"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Collins,
-        Barrows and Buckridge"}}]}'
-  recorded_at: Thu, 23 Sep 2021 04:37:02 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling-Wilkinson"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Konopelski,
+        Lowe and Haley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Funk
+        LLC"}}]}'
+  recorded_at: Thu, 23 Sep 2021 03:55:28 GMT
 recorded_with: VCR 6.0.0

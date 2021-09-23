@@ -96,7 +96,7 @@ describe 'gyms show page: as a gym member', type: :feature do
       end
 
       it 'has a button to remove the gym', :vcr do
-        expect(page).to have_link('Remove Gym', href: gym_membership_path(gym_membership.id))
+        expect(page).to have_link('Remove Gym')
       end
 
       it 'displays my friends who are gym members' do

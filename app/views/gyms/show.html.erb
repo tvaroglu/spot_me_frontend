@@ -12,9 +12,12 @@
 
   <% if @user_gym_membership.present? %>
   <div align="center"><br/>
-    <%= link_to 'Remove Gym', gym_membership_path(@user_gym_membership.id),
+    <%= link_to 'Remove Gym', gym_membership_path(
+                                @user_gym_membership.id,
+                                { user_id: current_user.id }
+                              ),
                               method: :delete,
-                              class: "btn btn-sm btn-white navbar-custom btn-outline-dark"  %>
+                              class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
   </div><br/>
     <div align="center">
     <div id='my-friends' align="center" class="card navbar-brown" style="width: 30rem;">
@@ -26,9 +29,10 @@
                                             friend_id: friend.id,
                                             friend_name: friend.full_name,
                                             gym_membership_id: @user_gym_membership.id,
-                                            gym_name: @gym.name),
-                                          method: :post,
-                                          class: "btn btn-sm btn-white navbar-custom btn-outline-dark"   %>
+                                            gym_name: @gym.name
+                                        ),
+                                        method: :get,
+                                        class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
             <%= link_to 'View Profile', profile_path(friend.id),
                                         class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
           </p>
@@ -40,13 +44,13 @@
         <% @gym_non_friends.each do |non_friend| %>
           <p>
             <%= non_friend.full_name  %>
-            <%# Path for 'Add Friend': new_friendship_path(current_user.id, followee_id: non_friend.id) %>
             <%= link_to 'Add Friend', friendships_path(
                                         current_user.id,
                                         {
                                           user_id: current_user.id,
                                           followee_id: non_friend.id
-                                        }),
+                                        }
+                                      ),
                                       method: :post,
                                       class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
             <%= link_to 'View Profile', profile_path(non_friend.id),

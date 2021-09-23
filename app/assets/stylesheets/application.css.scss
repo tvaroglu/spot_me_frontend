@@ -14,25 +14,104 @@
  *= require_self
  */
 
-// @import url('https://fonts.googleapis.com/css?family=anaglyph');
+ @import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap');
 html, body {
+  background-image: image-url('/assets/potentialbackground.jpg');
+  height: 100%;
+width: 100%;
   display: flex;
-  min-height: 100vh;
+  // min-height: 100vh;
   flex-direction: column;
-  background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(193,193,255,1) 0%, rgba(78,205,255,1) 0%, rgba(45,208,255,1) 32%, rgba(184,227,236,1) 74%);
+  // background: rgb(2,0,36);
+  // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(193,193,255,1) 0%, rgba(78,205,255,1) 0%, rgba(45,208,255,1) 32%, rgba(184,227,236,1) 74%);
   margin: 0;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   font-family: 'Tahoma';
   font-size: 20px;
 }
 
 main {
-  // flex: 1;
+  flex: 1;
 }
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  align-self: baseline;
+  flex-direction: row;
+  background-color: #B9B5B475;
+  color: blacktext;
+  flex-grow: 0
+}
+
+navbar-nav.navbar-center {
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #205E6099;
+}
+
+.navbar-custom {
+	background-color: #ffffff75;
+}
+
+.navbar-red {
+  background-color: #D4A69E95
+}
+
+.navbar-brown {
+  background-color: #EFE7DA98;
+}
+
+.custom {
+	background-color: #ffffffa1;
+}
+
+.customblack {
+	background-color: #000000a1;
+}
+
+.blacktext {
+	color: black;
+}
+
+// html {
+//   background: image-url('/assets/wordpressrippp.jpg') no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+
+.center{
+  justify-content: center;
+}
+
+#secret{
+  display: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Quicksand';
+	text-align: center;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgba(255, 254, 254, 0.705);
+}
+
 
 footer {
   // display: flex;

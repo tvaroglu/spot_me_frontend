@@ -43,7 +43,7 @@ RSpec.describe 'new event page', type: :feature do
   end
 
   let(:gym1) do
-    YelpGym.new(
+    Gym.new(
       id: 'wxaw9m796t6wdnsk53uieh',
       type: 'gym',
       attributes: {

@@ -20,6 +20,10 @@ RSpec.describe 'gyms show page' do
     expect(page).to have_button('Add Gym')
   end
 
+  it 'doesnt have a remove gym button if youre not registered', :vcr do
+    expect(page).to_not have_button('Remove Gym')
+  end
+
   it 'adds the gym membership when you click that button', :vcr do
     visit dashboard_path(@user.id)
 
@@ -33,8 +37,25 @@ RSpec.describe 'gyms show page' do
     expect(page).to have_content("Rishi's Community Yoga")
   end
 
-
   it 'displays the number of active members', :vcr do
     expect(page).to have_content("Number of Active Members: 1")
   end
+
+  it 'has a button to remove the gym', :vcr do
+    expect(page).to have_button('Remove Gym')
+  end
+
+  it 'actually removes the gym', :vcr do
+    expect(page).to have_content("Rishi's Community Yoga")
+    click_on 'Remove Gym'
+
+    expect(current_path).to eq(gym_path('BJBXzKYxQAXZKb5W6HrRnA'))
+    expect(page).to_not have_content("Rishi's Community Yoga")
+  end
+
+# Gym Address
+# Gym Phone Number
+# Number of Active Members
+# A "My Friends at [Gym Name]" Section
+# A "Add New Friends from [Gym Name]" Section
 end

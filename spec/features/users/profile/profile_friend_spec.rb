@@ -21,9 +21,10 @@ describe 'user profile page: friend', type: :feature do
 
   let(:user10) { User.new(user1_params) }
 
-  context 'when I log in as an authenticated user' do
+  context 'when I log in as an authenticated user', :vcr do
     before do
-      allow(BackEndFacade).to receive(:get_user).with(user10.id.to_s).and_return(user10)
+      allow(BackEndFacade).to receive(:get_user).with(@user.id.to_s).and_return(@user)
+      allow(BackEndFacade).to receive(:get_profile_user).with(user10.id.to_s).and_return(user10)
       allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([user10])
       allow(BackEndFacade).to receive(:get_user_friends).with(user10.id).and_return([])
     end

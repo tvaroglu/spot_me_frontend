@@ -5,6 +5,11 @@ class BackEndService
       parse_json(response.body)
     end
 
+    def get_profile_user(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}")
+      parse_json(response.body)
+    end
+
     def get_friends(user_id)
       response = db_conn.get("/api/v1/users/#{user_id}/friendships")
       parse_json(response.body)

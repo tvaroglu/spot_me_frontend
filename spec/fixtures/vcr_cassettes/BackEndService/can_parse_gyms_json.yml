@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/31/gym_memberships
+    uri: http://localhost:4500/api/v1/users/31/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,27 +18,19 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 22 Sep 2021 02:43:16 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 23d94fb6-fa00-46e2-b5fd-629404a36e0c
+      - 4fe9481c-fad6-4c97-96e0-03a3804aa3cd
       X-Runtime:
-      - '0.003744'
+      - '0.004685'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User with ''id''=31"]}'
-  recorded_at: Wed, 22 Sep 2021 02:43:16 GMT
+  recorded_at: Thu, 23 Sep 2021 00:46:16 GMT
 recorded_with: VCR 6.0.0

@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ac501472e44f293b949cea2506322523"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a73202f7-08cb-456b-8844-6ee2b8d6f4cf
+      X-Runtime:
+      - '0.006408'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"cherri@murray.info","google_id":"zur35oxhdjulc0poxyv2t","google_image_url":"https://robohash.org/quisperferendisassumenda.png?size=300x300\u0026set=set1","zip_code":"07529","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Ahmad
+        Dooley Esq."}}],"meta":{"gym_member_count":1}}'
+  recorded_at: Thu, 23 Sep 2021 00:46:17 GMT
+recorded_with: VCR 6.0.0

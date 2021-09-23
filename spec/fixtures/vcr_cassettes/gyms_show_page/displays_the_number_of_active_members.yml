@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fc93c43f-0e72-41f0-ad59-423595e2e841
+      - ba105a43-b2ad-4688-83a9-c5396d767223
       X-Runtime:
-      - '0.285072'
+      - '0.293174'
       Transfer-Encoding:
       - chunked
     body:
@@ -35,7 +35,7 @@ http_interactions:
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Thu, 23 Sep 2021 00:46:14 GMT
+  recorded_at: Thu, 23 Sep 2021 00:46:15 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -57,19 +57,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
+      - W/"ac501472e44f293b949cea2506322523"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 638bb043-a294-4581-a7d4-9b8046d7e878
+      - 0e07681f-691f-4ff1-97fc-fe137a04c3bb
       X-Runtime:
-      - '0.005355'
+      - '0.005857'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[],"meta":{"gym_member_count":0}}'
-  recorded_at: Thu, 23 Sep 2021 00:46:14 GMT
+      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"cherri@murray.info","google_id":"zur35oxhdjulc0poxyv2t","google_image_url":"https://robohash.org/quisperferendisassumenda.png?size=300x300\u0026set=set1","zip_code":"07529","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Ahmad
+        Dooley Esq."}}],"meta":{"gym_member_count":1}}'
+  recorded_at: Thu, 23 Sep 2021 00:46:15 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -91,17 +93,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
+      - W/"ac501472e44f293b949cea2506322523"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fbbe0ae4-4423-4be6-a5d1-eb43d6f779fd
+      - 57df4ea6-ad5f-4db8-b1c0-dfa59e24b3b0
       X-Runtime:
-      - '0.008951'
+      - '0.005926'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[],"meta":{"gym_member_count":0}}'
-  recorded_at: Thu, 23 Sep 2021 00:46:14 GMT
+      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"cherri@murray.info","google_id":"zur35oxhdjulc0poxyv2t","google_image_url":"https://robohash.org/quisperferendisassumenda.png?size=300x300\u0026set=set1","zip_code":"07529","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Ahmad
+        Dooley Esq."}}],"meta":{"gym_member_count":1}}'
+  recorded_at: Thu, 23 Sep 2021 00:46:15 GMT
 recorded_with: VCR 6.0.0

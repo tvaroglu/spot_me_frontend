@@ -9,9 +9,23 @@
           <% if @user_type == :self %>
             <%= link_to 'Edit Profile', profile_edit_path(current_user.id), class: "btn btn-info btn-lg btn-outline-dark" %>
           <% elsif @user_type == :friend %>
-            <%= link_to 'Remove Friend', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+            <%= link_to 'Remove Friend', friendship_path(
+                                          current_user.id,
+                                          {
+                                            user_id: current_user.id,
+                                            followee_id: @profile_user.id
+                                          }),
+                                          method: :delete,
+                                          class: "btn btn-info btn-lg btn-outline-dark" %>
           <% else %>
-            <%= link_to 'Add Friend', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+            <%= link_to 'Add Friend', friendships_path(
+                                        current_user.id,
+                                        {
+                                          user_id: current_user.id,
+                                          followee_id: @profile_user.id
+                                        }),
+                                        method: :post,
+                                        class: "btn btn-info btn-lg btn-outline-dark" %>
           <% end %>
         </div>
 

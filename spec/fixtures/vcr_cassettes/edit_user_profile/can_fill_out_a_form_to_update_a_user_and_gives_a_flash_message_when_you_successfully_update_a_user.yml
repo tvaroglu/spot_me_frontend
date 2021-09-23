@@ -21,29 +21,29 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 20:19:00 GMT
+      - Thu, 23 Sep 2021 21:31:59 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8d8f713b6ea5b40a0968a477b8870540"
+      - W/"a3936c2804083afc197dcc24675b9318"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fd81d884-a012-449b-940d-e2b56883730f
+      - b5189afe-bbf3-4b66-810c-bc599a5f9551
       X-Runtime:
-      - '0.008393'
+      - '0.004289'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"willene@littel-glover.net","google_id":"wqkc6j4tngz9x26k2kdgd","google_image_url":"https://robohash.org/eaquenihilimpedit.png?size=300x300\u0026set=set1","zip_code":"80227","summary":"Hello
-        new summary","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Ms.
-        Hai Crist"}}}'
-  recorded_at: Thu, 23 Sep 2021 20:19:01 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
+        Swift"}}}'
+  recorded_at: Thu, 23 Sep 2021 21:31:59 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
@@ -65,27 +65,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 20:19:01 GMT
+      - Thu, 23 Sep 2021 21:31:59 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8d8f713b6ea5b40a0968a477b8870540"
+      - W/"a3936c2804083afc197dcc24675b9318"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f6f56722-60c5-44d3-80fa-3fae72f3646e
+      - 5a89caef-b0c1-4e66-b936-877a7d7ff749
       X-Runtime:
-      - '0.003645'
+      - '0.009500'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"willene@littel-glover.net","google_id":"wqkc6j4tngz9x26k2kdgd","google_image_url":"https://robohash.org/eaquenihilimpedit.png?size=300x300\u0026set=set1","zip_code":"80227","summary":"Hello
-        new summary","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Ms.
-        Hai Crist"}}}'
-  recorded_at: Thu, 23 Sep 2021 20:19:01 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
+        Swift"}}}'
+  recorded_at: Thu, 23 Sep 2021 21:31:59 GMT
 recorded_with: VCR 6.0.0

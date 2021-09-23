@@ -1,45 +1,46 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_members?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    method: post
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?followee_id=10
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v1.8.0
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 422
+      message: Unprocessable Entity
     headers:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:32:03 GMT
+      - Thu, 23 Sep 2021 21:32:02 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - a79b154c-776f-44b5-8a31-ec5bd97f025b
+      - cb59f941-67e1-48cc-99cd-71f2461092a7
       X-Runtime:
-      - '0.008676'
+      - '0.026645'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Thu, 23 Sep 2021 21:32:03 GMT
+      string: '{"message":"your record could not be saved","errors":["Followee has
+        already been taken"]}'
+  recorded_at: Thu, 23 Sep 2021 21:32:02 GMT
 recorded_with: VCR 6.0.0

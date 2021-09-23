@@ -21,27 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 20:18:55 GMT
+      - Thu, 23 Sep 2021 21:31:54 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bcb72d02fd21738644ee0cd90577bc5e"
+      - W/"d85ac187d4e93c4883b199bed13bf02d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cfcb5ac9-f634-4d32-80c9-dadeb56e62ad
+      - a0b33afa-e3c1-483d-a34e-638dbb10597b
       X-Runtime:
-      - '0.006629'
+      - '0.101415'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling-Wilkinson"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Konopelski,
-        Lowe and Haley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Funk
-        LLC"}}]}'
-  recorded_at: Thu, 23 Sep 2021 20:18:56 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Feil,
+        Sporer and Medhurst"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
+        Mraz and Fadel"}}]}'
+  recorded_at: Thu, 23 Sep 2021 21:31:54 GMT
 recorded_with: VCR 6.0.0

@@ -61,6 +61,16 @@ describe 'user profile page: friend', type: :feature do
       it 'displays a "Remove Friend" button' do
         expect(page).to have_link('Remove Friend')
       end
+
+      it 'can remove an existing friend', :vcr do
+        allow(BackEndService).to receive(:delete_friend).and_return(204)
+        allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
+
+        click_on 'Remove Friend'
+
+        expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
+        expect(page).to have_content 'Swolemate removed!'
+      end
     end
   end
 end

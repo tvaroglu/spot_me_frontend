@@ -25,7 +25,7 @@ describe 'gyms show page: as a non-gym member', type: :feature do
       type: 'gym',
       attributes: {
         gym_name: name,
-        yelp_gym_id: yelp_gym_id,
+        yelp_gym_id: yelp_gym_id
       }
     )
   end
@@ -52,7 +52,7 @@ describe 'gyms show page: as a non-gym member', type: :feature do
 
       it 'displays the number of active members', :vcr do
         within '#active-members' do
-          expect(page).to have_content("Number of Active Members: 2")
+          expect(page).to have_content('Number of Active Members: 2')
         end
       end
 

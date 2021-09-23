@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   # get '/profile', to: 'users#profile'
   post '/profile/:user_id', to: 'users#update'
 
+  # get '/users/:user_id/add_friend/:followee_id', to: 'friendships#create'
+
+  resources :friendships, only: [:create, :destroy]
   resources :events, only: [:create, :destroy, :new]
   resources :gyms, only: [:index, :show]
   resources :gym_memberships, only: [:create, :destroy]

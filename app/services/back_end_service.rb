@@ -74,6 +74,12 @@ class BackEndService
       )
     end
 
+    def delete_friend(friend_params)
+      db_conn.delete(
+        "/api/v1/users/#{friend_params[:user_id]}/friendships/#{friend_params[:id]}"
+      )
+    end
+
     def gyms_near_user(zip_code)
       response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")
       parse_json(response.body)
@@ -101,6 +107,13 @@ class BackEndService
     def get_non_friends_at_gym(params)
       response = db_conn.get("api/v1/users/#{params[:user_id]}/gym_members") do |req|
         req.params['yelp_gym_id'] = params[:yelp_gym_id]
+      end
+      parse_json(response.body)
+    end
+
+    def create_friendship(friendship_params)
+      response = db_conn.post("/api/v1/users/#{friendship_params[:user_id]}/friendships") do |req|
+        req.params['followee_id'] = friendship_params[:followee_id]
       end
       parse_json(response.body)
     end

@@ -27,7 +27,7 @@ RSpec.describe 'gyms near me page', :vcr do
       expect(page).to have_link("Rishi's Community Yoga")
       click_on "Rishi's Community Yoga"
     end
-      expect(current_path).to eq(gym_path('BJBXzKYxQAXZKb5W6HrRnA'))
+    expect(page).to have_current_path(gym_path('BJBXzKYxQAXZKb5W6HrRnA'), ignore_query: true)
       # expect(current_path).to eq('/gyms/BJBXzKYxQAXZKb5W6HrRnA')
   end
 end

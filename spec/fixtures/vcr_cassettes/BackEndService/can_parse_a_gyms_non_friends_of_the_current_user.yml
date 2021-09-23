@@ -21,25 +21,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:28:55 GMT
+      - Thu, 23 Sep 2021 21:54:00 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      - W/"d9c9a49812fd72e5faace9ccabb72676"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7ea01e46-8cd5-4264-adf4-0ba634992442
+      - 7e0ca078-2e7a-4467-86b6-9873ae2bd193
       X-Runtime:
-      - '0.006973'
+      - '0.039548'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Thu, 23 Sep 2021 21:28:56 GMT
+      string: '{"data":[{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80227","summary":"Lift
+        more!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}},{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"80227","summary":"HI!","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
+        Borecki"}}]}'
+  recorded_at: Thu, 23 Sep 2021 21:54:00 GMT
 recorded_with: VCR 6.0.0

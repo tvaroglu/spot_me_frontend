@@ -87,7 +87,7 @@ class BackEndFacade
 
       if users[:data]
         users[:data].map do |user|
-          GymUser.new(user)
+          User.new(user)
         end
       end
     end
@@ -103,7 +103,7 @@ class BackEndFacade
 
       if friends[:data]
         friends[:data].map do |friend|
-          GymUser.new(friend)
+          User.new(friend)
         end
       end
     end
@@ -112,7 +112,7 @@ class BackEndFacade
       non_friends = BackEndService.get_non_friends_at_gym(params)
       return unless non_friends[:data]
 
-      non_friends[:data].map { |friend| GymUser.new(non_friend) }
+      non_friends[:data].map { |friend| User.new(non_friend) }
     end
   end
 end

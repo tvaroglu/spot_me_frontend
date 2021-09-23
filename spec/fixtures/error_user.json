@@ -1,0 +1,6 @@
+{
+  :message=>"your query could not be completed",
+  :errors=>[
+    "Couldn't find User with 'id'=40"
+  ]
+}

@@ -7,14 +7,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    new_event = BackEndFacade.create_event(create_event_params)
-    if new_event.present?
-      flash[:alert] = 'Workout created! Now go get your swell on!'
-      redirect_to dashboard_path(current_user.id)
-    else
-      flash[:alert] = 'Error: Something went wrong!'
-      redirect_to URI(request.referer).path
-    end
+    BackEndFacade.create_event(create_event_params)
+    flash[:alert] = 'Workout created! Now go get your swole on!'
+    redirect_to dashboard_path(current_user.id)
   end
 
   def destroy

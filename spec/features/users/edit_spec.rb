@@ -100,7 +100,7 @@ RSpec.describe 'edit user profile' do
   let(:user) { ApplicationRecord.user_stub }
   let(:user_friends) { [User.new(user1_params), User.new(user2_params)] }
   let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params)] }
-  let(:user_events) { [UserEvent.new(event1_params), UserEvent.new(event2_params)] }
+  let(:user_events) { [Event.new(event1_params), Event.new(event2_params)] }
 
   before do
     allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return(user_friends)

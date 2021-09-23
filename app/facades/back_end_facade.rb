@@ -27,10 +27,7 @@ class BackEndFacade
     end
 
     def create_event(params)
-      json = BackEndService.create_event(params)
-      return unless json[:data]
-
-      Event.new(json[:data])
+      BackEndService.create_event(params)
     end
 
     def delete_event(params)

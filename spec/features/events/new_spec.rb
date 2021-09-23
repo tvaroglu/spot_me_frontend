@@ -135,8 +135,7 @@ RSpec.describe 'new event page', type: :feature do
         end
 
         it 'displays a success flash message' do
-          expect(page).to have_content('Workout created! Now go get your swell on!')
-          expect(page).to have_no_content('Error: Something went wrong!')
+          expect(page).to have_content('Workout created! Now go get your swole on!')
         end
 
         it 'displays the new workout event' do

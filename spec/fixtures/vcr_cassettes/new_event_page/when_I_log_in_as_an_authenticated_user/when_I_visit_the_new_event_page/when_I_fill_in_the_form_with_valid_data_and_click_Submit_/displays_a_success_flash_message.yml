@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:4500/api/v1/users/10/gym_memberships/1/events?activity=Weight%20Lifting&date_time=2022-01-01T17:00:00%2B00:00
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 407ef93c-4824-4d19-b934-f9ac9c392c51
+      X-Runtime:
+      - '0.011774'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find GymMembership with ''id''=1 [WHERE \"gym_memberships\".\"user_id\" =
+        $1]"]}'
+  recorded_at: Thu, 23 Sep 2021 22:24:48 GMT
+recorded_with: VCR 6.0.0

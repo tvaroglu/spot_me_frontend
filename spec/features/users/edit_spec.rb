@@ -37,24 +37,6 @@ RSpec.describe 'edit user profile' do
     }
   end
 
-  let(:user3_params) do
-    {
-      id: 30,
-      attributes: {
-        email: '345@test.com',
-        full_name: 'Jane Doe',
-        google_id: 345,
-        google_image_url: 'pretty face',
-        zip_code: '80227',
-        summary: 'Muy guesta gimnasios',
-        goal: 'Gain Weight',
-        availability_morning: false,
-        availability_afternoon: false,
-        availability_evening: true
-      }
-    }
-  end
-
   let(:gym_membership1_params) do
     {
       id: '1',
@@ -75,18 +57,6 @@ RSpec.describe 'edit user profile' do
         user_id: 1,
         yelp_gym_id: '6x10s0lbnry4ivkzcjpilk',
         gym_name: 'Konopelski, Lowe and Haley'
-      }
-    }
-  end
-
-  let(:gym_membership3_params) do
-    {
-      id: '17',
-      type: 'gym_membership',
-      attributes: {
-        user_id: 1,
-        yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
-        gym_name: 'Funk LLC'
       }
     }
   end
@@ -115,18 +85,6 @@ RSpec.describe 'edit user profile' do
     }
   end
 
-  let(:event3_params) do
-    {
-      id: '3',
-      attributes: {
-        user_id: 20,
-        gym_membership_id: 3,
-        date_time: '2022-09-22T21:41:28.289Z',
-        activity: 'Stretching'
-      }
-    }
-  end
-
   let!(:user_blob) do
     {
       'full_name' => 'Joe Shmoe',
@@ -140,9 +98,9 @@ RSpec.describe 'edit user profile' do
     }
   end
   let(:user) { ApplicationRecord.user_stub }
-  let(:user_friends) { [User.new(user1_params), User.new(user2_params), User.new(user3_params)] }
-  let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params), GymMembership.new(gym_membership3_params)] }
-  let(:user_events) { [UserEvent.new(event1_params), UserEvent.new(event2_params), UserEvent.new(event3_params)] }
+  let(:user_friends) { [User.new(user1_params), User.new(user2_params)] }
+  let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params)] }
+  let(:user_events) { [UserEvent.new(event1_params), UserEvent.new(event2_params)] }
 
   before do
     allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return(user_friends)
@@ -153,18 +111,17 @@ RSpec.describe 'edit user profile' do
   it "can click on the link from the current user's profile page and be taken to the edit form", :vcr do
     allow(BackEndFacade).to receive(:get_user_friends).with(user.id.to_s).and_return(user_friends)
 
-    visit "/profile/#{@user.id}"
-    # save_and_open_page
+    visit profile_path(@user.id)
     click_on 'Edit Profile'
 
-    expect(page).to have_current_path("/profile/#{@user.id}/edit")
+    expect(page).to have_current_path(profile_edit_path(@user.id))
   end
 
   it 'can fill out a form to update a user and gives a flash message when you successfully update a user', :vcr do
     allow(BackEndFacade).to receive(:get_user_friends).with(user.id.to_s).and_return(user_friends)
     allow(BackEndService).to receive(:update_user).with(user_blob, @user.id).and_return(user)
 
-    visit "/profile/#{@user.id}/edit"
+    visit profile_edit_path(@user.id)
 
     expect(page).to have_field(:full_name, with: "#{@user.full_name}")
     expect(page).to have_field(:email, with: "#{@user.email}")

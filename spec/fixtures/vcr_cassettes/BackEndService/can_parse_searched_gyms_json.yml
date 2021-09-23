@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 16:55:09 GMT
+      - Thu, 23 Sep 2021 17:14:33 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 82b88529-dee4-4ff6-a577-9277c805886d
+      - '01896087-41f3-43b6-abc5-a7d5caf43912'
       X-Runtime:
-      - '1.025906'
+      - '0.269415'
       Transfer-Encoding:
       - chunked
       Via:
@@ -81,5 +81,5 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Thu, 23 Sep 2021 16:55:09 GMT
+  recorded_at: Thu, 23 Sep 2021 17:14:33 GMT
 recorded_with: VCR 6.0.0

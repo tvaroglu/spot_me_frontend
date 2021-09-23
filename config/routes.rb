@@ -11,10 +11,8 @@ Rails.application.routes.draw do
   post '/registration', to: 'users#create'
   get '/dashboard/:user_id', to: 'users#dashboard', as: '/dashboard'
   get '/profile/:user_id', to: 'users#profile', as: '/profile'
-  # get '/profile', to: 'users#profile'
   post '/profile/:user_id', to: 'users#update'
 
   resources :events, only: [:create, :destroy]
-
-  get '/gyms', to: 'search#index'
+  resources :gyms, only: [:index, :show, :create, :destroy], controller: :gyms
 end

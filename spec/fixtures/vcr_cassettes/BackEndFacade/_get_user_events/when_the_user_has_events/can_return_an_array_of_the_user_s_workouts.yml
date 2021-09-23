@@ -21,34 +21,36 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 22 Sep 2021 21:41:34 GMT
+      - Thu, 23 Sep 2021 01:34:47 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"276f22141581c9ca49cf58c1a077268c"
+      - W/"d47ef6712de36ef91898aff9c772a667"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 26ea996c-81ad-42f1-85ff-e8bbf7cb262b
+      - 884fee89-982a-4c26-9e36-72a8ed010dfc
       X-Runtime:
-      - '0.322081'
+      - '0.174466'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-23T21:41:28.387Z","activity":"Scuba
-        diving"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Isobel
-        Huels"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T21:41:28.399Z","activity":"Board
-        sports"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Monty
-        Beer"}}}}],"included":[{"id":"4","type":"user","attributes":{"email":"cordell_doyle@williamson.net","google_id":"5zfwrgzcm0xx6wxwqd07d","google_image_url":"https://robohash.org/rationesitdeleniti.png?size=300x300\u0026set=set1","zip_code":"96808","summary":"Beware
-        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Isobel
-        Huels"}},{"id":"7","type":"user","attributes":{"email":"venetta@kilback.io","google_id":"mun5m26nj31nfi6jc4xf7","google_image_url":"https://robohash.org/aliquidexreprehenderit.png?size=300x300\u0026set=set1","zip_code":"48703","summary":"Dignity
-        does not consist in possessing honors, but in deserving them.","goal":"Increase
-        Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Monty
-        Beer"}}]}'
-  recorded_at: Wed, 22 Sep 2021 21:41:34 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-02T22:32:11.497Z","activity":"Sewing"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Delaine
+        Veum"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-27T22:32:11.534Z","activity":"Geocaching"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Sid
+        Pfannerstill"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-02T22:32:11.539Z","activity":"Calligraphy"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Gov.
+        Damion Becker"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
+        unexamined life is not worth living.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Delaine
+        Veum"}},{"id":"4","type":"user","attributes":{"email":"preston@ernser.net","google_id":"k0hovn8utyxqj7hy5snpi","google_image_url":"https://robohash.org/eaquetotamqui.png?size=300x300\u0026set=set1","zip_code":"06633","summary":"The
+        mind is not a vessel to be filled but a fire to be kindled.","goal":"Maintain
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Sid
+        Pfannerstill"}},{"id":"7","type":"user","attributes":{"email":"caridad_wilderman@wiza.info","google_id":"97rnjcwki4e2pzt9thghp","google_image_url":"https://robohash.org/atcommodiquae.png?size=300x300\u0026set=set1","zip_code":"31028","summary":"Know
+        how to listen, and you will profit even from those who talk badly.","goal":"Gain
+        Muscle","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
+        Damion Becker"}}]}'
+  recorded_at: Thu, 23 Sep 2021 01:34:47 GMT
 recorded_with: VCR 6.0.0

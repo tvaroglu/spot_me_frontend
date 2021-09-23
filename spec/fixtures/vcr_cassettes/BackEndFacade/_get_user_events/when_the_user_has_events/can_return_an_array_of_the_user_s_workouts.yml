@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -21,21 +21,23 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 03:55:29 GMT
+      - Thu, 23 Sep 2021 18:34:15 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3c9752c3c9242076a0be641b6cceb683"
+      - W/"d47ef6712de36ef91898aff9c772a667"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e868e34d-16ea-4abd-8fdf-dac98e6c9edb
+      - da7a9764-0a79-48ca-b241-b70da2ad7932
       X-Runtime:
-      - '0.017930'
+      - '0.045385'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-02T22:32:11.497Z","activity":"Sewing"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Delaine
@@ -50,5 +52,5 @@ http_interactions:
         how to listen, and you will profit even from those who talk badly.","goal":"Gain
         Muscle","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
         Damion Becker"}}]}'
-  recorded_at: Thu, 23 Sep 2021 03:55:29 GMT
+  recorded_at: Thu, 23 Sep 2021 18:34:16 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/2/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 03:55:27 GMT
+      - Thu, 23 Sep 2021 18:34:14 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,13 +31,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 63327392-ab6f-4659-8559-8214a34c3ad4
+      - ccb23fb2-938d-4711-95aa-ba7ce73f1a49
       X-Runtime:
-      - '0.013518'
+      - '0.005240'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Thu, 23 Sep 2021 03:55:28 GMT
+  recorded_at: Thu, 23 Sep 2021 18:34:15 GMT
 recorded_with: VCR 6.0.0

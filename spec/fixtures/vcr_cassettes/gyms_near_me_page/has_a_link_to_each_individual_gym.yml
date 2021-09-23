@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 18:34:17 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -25,11 +31,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d738c10b-ff56-4be4-b77e-78c6d47c37b9
+      - a87a6086-781b-45bb-868d-fa1c18aa80f4
       X-Runtime:
-      - '1.132335'
+      - '0.334558'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
@@ -73,10 +81,10 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Thu, 23 Sep 2021 04:37:05 GMT
+  recorded_at: Thu, 23 Sep 2021 18:34:17 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -92,6 +100,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 18:34:17 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -99,20 +113,22 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 37dbabe6-c68b-460e-a66d-bd1b336b413a
+      - dbb59c97-eb1c-4fc9-aa5a-53c63987c27c
       X-Runtime:
-      - '1.611286'
+      - '0.219288'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Thu, 23 Sep 2021 04:37:06 GMT
+  recorded_at: Thu, 23 Sep 2021 18:34:18 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -128,28 +144,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 18:34:18 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"904f0b54ec7739d633fdbf994c111059"
+      - W/"bcb72d02fd21738644ee0cd90577bc5e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e2b63689-d276-417b-a7f6-07b02c5e6caf
+      - 2c667ae7-7746-4fd5-b8ba-8834cf292a43
       X-Runtime:
-      - '0.010478'
+      - '0.005397'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"kari@monahan.biz","google_id":"htgl5wjp5bl6ffdl6eitr","google_image_url":"https://robohash.org/repellenduseumnisi.png?size=300x300\u0026set=set1","zip_code":"84834","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Hans
-        Cruickshank"}}],"meta":{"gym_member_count":1}}'
-  recorded_at: Thu, 23 Sep 2021 04:37:06 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling-Wilkinson"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Konopelski,
+        Lowe and Haley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Funk
+        LLC"}}]}'
+  recorded_at: Thu, 23 Sep 2021 18:34:18 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -165,185 +188,28 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 18:34:18 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"904f0b54ec7739d633fdbf994c111059"
+      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 67c38c7b-2cb3-48fe-9a81-bee111ca47d1
+      - b9ce2bbd-9ab7-4f09-b331-b230ab1bab52
       X-Runtime:
-      - '0.006176'
+      - '0.013928'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"kari@monahan.biz","google_id":"htgl5wjp5bl6ffdl6eitr","google_image_url":"https://robohash.org/repellenduseumnisi.png?size=300x300\u0026set=set1","zip_code":"84834","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Hans
-        Cruickshank"}}],"meta":{"gym_member_count":1}}'
-  recorded_at: Thu, 23 Sep 2021 04:37:06 GMT
-- request:
-    method: get
-    uri: http://localhost:4500/api/v1/gym_memberships?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Request-Id:
-      - 979e7d16-687e-4262-a273-e048162cda0e
-      X-Runtime:
-      - '0.003764'
-      Content-Length:
-      - '4543'
-    body:
-      encoding: UTF-8
-      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
-        No route matches [GET] \"/api/v1/gym_memberships\"\u003e","traces":{"Application
-        Trace":[],"Framework Trace":[{"id":0,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in
-        `call''"},{"id":1,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:135:in
-        `call_app''"},{"id":2,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:30:in
-        `block in call''"},{"id":3,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:20:in
-        `catch''"},{"id":4,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:20:in
-        `call''"},{"id":5,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in
-        `call''"},{"id":6,"trace":"railties (5.2.6) lib/rails/rack/logger.rb:38:in
-        `call_app''"},{"id":7,"trace":"railties (5.2.6) lib/rails/rack/logger.rb:26:in
-        `block in call''"},{"id":8,"trace":"activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in
-        `block in tagged''"},{"id":9,"trace":"activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in
-        `tagged''"},{"id":10,"trace":"activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in
-        `tagged''"},{"id":11,"trace":"railties (5.2.6) lib/rails/rack/logger.rb:26:in
-        `call''"},{"id":12,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in
-        `call''"},{"id":13,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in
-        `call''"},{"id":14,"trace":"rack (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":15,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":16,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":18,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":19,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":20,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":21,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":22,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":23,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":24,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call''"},{"id":1,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:135:in `call_app''"},{"id":2,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:30:in `block in call''"},{"id":3,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `catch''"},{"id":4,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `call''"},{"id":5,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":6,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":7,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":8,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":9,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":10,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":11,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":12,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":13,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":14,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":15,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":16,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":18,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":19,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":20,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":21,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":22,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":23,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":24,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 23 Sep 2021 04:37:06 GMT
-- request:
-    method: get
-    uri: http://localhost:4500/api/v1/gym_memberships?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Request-Id:
-      - dd9c0545-9240-407c-b096-9b3d335dd2c7
-      X-Runtime:
-      - '0.004986'
-      Content-Length:
-      - '4543'
-    body:
-      encoding: UTF-8
-      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
-        No route matches [GET] \"/api/v1/gym_memberships\"\u003e","traces":{"Application
-        Trace":[],"Framework Trace":[{"id":0,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in
-        `call''"},{"id":1,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:135:in
-        `call_app''"},{"id":2,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:30:in
-        `block in call''"},{"id":3,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:20:in
-        `catch''"},{"id":4,"trace":"web-console (3.7.0) lib/web_console/middleware.rb:20:in
-        `call''"},{"id":5,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in
-        `call''"},{"id":6,"trace":"railties (5.2.6) lib/rails/rack/logger.rb:38:in
-        `call_app''"},{"id":7,"trace":"railties (5.2.6) lib/rails/rack/logger.rb:26:in
-        `block in call''"},{"id":8,"trace":"activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in
-        `block in tagged''"},{"id":9,"trace":"activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in
-        `tagged''"},{"id":10,"trace":"activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in
-        `tagged''"},{"id":11,"trace":"railties (5.2.6) lib/rails/rack/logger.rb:26:in
-        `call''"},{"id":12,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in
-        `call''"},{"id":13,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in
-        `call''"},{"id":14,"trace":"rack (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":15,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":16,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":18,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":19,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":20,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":21,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":22,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":23,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":24,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call''"},{"id":1,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:135:in `call_app''"},{"id":2,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:30:in `block in call''"},{"id":3,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `catch''"},{"id":4,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `call''"},{"id":5,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":6,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":7,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":8,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":9,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":10,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":11,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":12,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":13,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":14,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":15,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":16,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":18,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":19,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":20,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":21,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":22,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":23,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":24,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 23 Sep 2021 04:37:06 GMT
+      string: '{"data":[],"meta":{"gym_member_count":0}}'
+  recorded_at: Thu, 23 Sep 2021 18:34:19 GMT
 recorded_with: VCR 6.0.0

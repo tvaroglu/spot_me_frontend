@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -18,26 +18,28 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 18:30:21 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6413c978e87e1e1c37831c9e5747573e"
+      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5ab48732-8640-4b78-a31a-4f8efdfa51fe
+      - 765caed1-1eac-4184-b9e1-31af1a26c9d9
       X-Runtime:
-      - '0.004666'
+      - '0.006352'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"kari@monahan.biz","google_id":"htgl5wjp5bl6ffdl6eitr","google_image_url":"https://robohash.org/repellenduseumnisi.png?size=300x300\u0026set=set1","zip_code":"84834","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Hans
-        Cruickshank"}},{"id":"1","type":"user","attributes":{"email":"kari@monahan.biz","google_id":"htgl5wjp5bl6ffdl6eitr","google_image_url":"https://robohash.org/repellenduseumnisi.png?size=300x300\u0026set=set1","zip_code":"84834","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Hans
-        Cruickshank"}}],"meta":{"gym_member_count":2}}'
-  recorded_at: Thu, 23 Sep 2021 04:37:13 GMT
+      string: '{"data":[],"meta":{"gym_member_count":0}}'
+  recorded_at: Thu, 23 Sep 2021 18:30:21 GMT
 recorded_with: VCR 6.0.0

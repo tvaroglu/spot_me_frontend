@@ -18,34 +18,26 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 17:14:26 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a387c48066ae251b85f5bc623538f971"
+      - W/"afc3ce1ba31b461b5cbf294da097edd0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3b3f1f89-cc34-45e3-baea-c42da69809f6
+      - 9f59e070-c452-40f5-ac93-675aebb11831
       X-Runtime:
-      - '2.795305'
+      - '0.100644'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
-        unexamined life is not worth living.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Delaine
-        Veum"}},{"id":"9","type":"user","attributes":{"email":"roscoe@howell.info","google_id":"2lls7mm1nm8tmoonlrin4","google_image_url":"https://robohash.org/reprehenderitindolorem.png?size=300x300\u0026set=set1","zip_code":"22715","summary":"It''s
-        not what happens to you, but how you react to it that matters.","goal":"Increase
-        Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Dr.
-        Faustina Batz"}},{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
-        how to listen, and you will profit even from those who talk badly.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
-        Gulgowski"}}]}'
-  recorded_at: Thu, 23 Sep 2021 17:14:27 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"jim_sipes@howell.org","google_id":"1tl1xvjw1slzqvib7hf0o","google_image_url":"https://robohash.org/doloremqueminimaconsectetur.png?size=300x300\u0026set=set1","zip_code":"73259","summary":"Pleasure
+        in the job puts perfection in the work.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Prof.
+        Mel Hamill"}},{"id":"9","type":"user","attributes":{"email":"cecila.paucek@mohr-mccullough.io","google_id":"oglr504c7pw8fj1wnycsu","google_image_url":"https://robohash.org/autdelenitivoluptatem.png?size=300x300\u0026set=set1","zip_code":"27376","summary":"Beware
+        the barrenness of a busy life.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Dillon
+        Klocko"}},{"id":"10","type":"user","attributes":{"email":"shila@gusikowski.io","google_id":"dnw3hvo6ajwzh4yhqzuly","google_image_url":"https://robohash.org/veniamundeneque.png?size=300x300\u0026set=set1","zip_code":"57696","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Antony
+        Vandervort"}}]}'
+  recorded_at: Thu, 23 Sep 2021 20:27:32 GMT
 recorded_with: VCR 6.0.0

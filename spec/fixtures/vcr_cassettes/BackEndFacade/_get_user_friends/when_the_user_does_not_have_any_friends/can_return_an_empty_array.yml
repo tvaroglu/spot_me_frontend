@@ -18,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 17:14:27 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -31,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 81e793ea-a684-496f-bcea-96870f1e6a2a
+      - 7c9d889b-4840-49aa-9ae6-cb448ca493b3
       X-Runtime:
-      - '0.006471'
+      - '0.003920'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Thu, 23 Sep 2021 17:14:27 GMT
+  recorded_at: Thu, 23 Sep 2021 20:27:32 GMT
 recorded_with: VCR 6.0.0

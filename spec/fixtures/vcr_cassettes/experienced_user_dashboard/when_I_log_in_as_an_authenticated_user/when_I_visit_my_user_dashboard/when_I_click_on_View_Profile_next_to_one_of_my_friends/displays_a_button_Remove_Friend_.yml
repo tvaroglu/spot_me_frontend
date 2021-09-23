@@ -18,29 +18,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 17:14:30 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4eac5b8e3ac67af17ae45edea6ee6dc5"
+      - W/"48f8b246744906239e02241b5fa60660"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4b73586e-1ac0-4f9e-8033-014ee6133cc6
+      - 274cd736-6a67-4b91-9829-88bdb10fc6c9
       X-Runtime:
-      - '0.004395'
+      - '0.002429'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
-        how to listen, and you will profit even from those who talk badly.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
-        Gulgowski"}}}'
-  recorded_at: Thu, 23 Sep 2021 17:14:30 GMT
+      string: '{"data":{"id":"10","type":"user","attributes":{"email":"shila@gusikowski.io","google_id":"dnw3hvo6ajwzh4yhqzuly","google_image_url":"https://robohash.org/veniamundeneque.png?size=300x300\u0026set=set1","zip_code":"57696","summary":"Beware
+        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Antony
+        Vandervort"}}}'
+  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
 recorded_with: VCR 6.0.0

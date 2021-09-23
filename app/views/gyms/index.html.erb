@@ -1,6 +1,7 @@
 <h1>Gyms Near <%= current_user.zip_code %></h1>
 
 <div id="gyms">
+<% require "pry"; binding.pry %>
   <% @gyms.each do |gym| %>
     <div id="<%= gym.yelp_gym_id %>">
       <%= gym.name %>

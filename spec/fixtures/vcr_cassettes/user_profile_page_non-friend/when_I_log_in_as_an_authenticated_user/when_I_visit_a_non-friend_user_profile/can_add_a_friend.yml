@@ -2,42 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"f4402920703770d4406c32096441d4ca"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - d9d2b740-8c30-4134-b0a0-ad02ff3ea0e4
-      X-Runtime:
-      - '0.049360'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Stanton
-        LLC"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Schinner-Cremin"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Auer,
-        Jones and McKenzie"}}]}'
-  recorded_at: Thu, 23 Sep 2021 18:45:02 GMT
-- request:
-    method: get
     uri: http://localhost:4500/api/v1/users/1/events
     body:
       encoding: US-ASCII
@@ -57,24 +21,28 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"943598cbaadcb5fcd92a230d378d3f49"
+      - W/"a7acd7ad23cca93be21ff6f88f56370d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 20236d41-8471-4df0-a4a5-74d590caf6df
+      - 6ad0ec7c-fa13-4e23-8092-fdb029999161
       X-Runtime:
-      - '0.010578'
+      - '0.007134'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-26T22:33:07.277Z","activity":"Digital
-        arts"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Dr.
-        Charley McClure"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-01T22:33:07.281Z","activity":"Machining"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Fredrick
-        Kutch"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"jimmy@okon.org","google_id":"w597ypmwi95dz5uu5ymu2","google_image_url":"https://robohash.org/facilisrationeofficia.png?size=300x300\u0026set=set1","zip_code":"97047","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Dr.
-        Charley McClure"}},{"id":"7","type":"user","attributes":{"email":"bradford.parker@kuhlman.net","google_id":"42svgi6dhm5aeoz0td6jz","google_image_url":"https://robohash.org/etrepudiandaeut.png?size=300x300\u0026set=set1","zip_code":"52047","summary":"Quality
-        is not an act, it is a habit.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Fredrick
-        Kutch"}}]}'
-  recorded_at: Thu, 23 Sep 2021 18:45:02 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-01T20:11:31.856Z","activity":"Painting"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Prof.
+        Mel Hamill"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-24T20:11:31.864Z","activity":"Gunsmithing"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Mrs.
+        Shirlee Jenkins"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-28T20:11:31.867Z","activity":"Tai
+        chi"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Marcie
+        Sauer"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"jim_sipes@howell.org","google_id":"1tl1xvjw1slzqvib7hf0o","google_image_url":"https://robohash.org/doloremqueminimaconsectetur.png?size=300x300\u0026set=set1","zip_code":"73259","summary":"Pleasure
+        in the job puts perfection in the work.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Prof.
+        Mel Hamill"}},{"id":"4","type":"user","attributes":{"email":"yi.king@ritchie.org","google_id":"wxcybbmmr8ime482e5lun","google_image_url":"https://robohash.org/similiqueomnisquo.png?size=300x300\u0026set=set1","zip_code":"79624","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Mrs.
+        Shirlee Jenkins"}},{"id":"7","type":"user","attributes":{"email":"francina.bednar@oconnell-flatley.co","google_id":"6b5w4ob2l40aw3rwj1ohc","google_image_url":"https://robohash.org/voluptateetaut.png?size=300x300\u0026set=set1","zip_code":"70901","summary":"The
+        secret to humor is surprise.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Marcie
+        Sauer"}}]}'
+  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
 recorded_with: VCR 6.0.0

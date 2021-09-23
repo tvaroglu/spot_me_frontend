@@ -123,17 +123,17 @@ RSpec.describe 'edit user profile' do
 
     visit profile_edit_path(@user.id)
 
-    expect(page).to have_field(:full_name, with: "#{@user.full_name}")
-    expect(page).to have_field(:email, with: "#{@user.email}")
-    expect(page).to have_field(:zip_code, with: "#{@user.zip_code}")
-    expect(page).to have_field(:summary, with: "#{@user.summary}")
-    expect(page).to have_field(:goal, with: "#{@user.goal}")
+    expect(page).to have_field(:full_name, with: @user.full_name.to_s)
+    expect(page).to have_field(:email, with: @user.email.to_s)
+    expect(page).to have_field(:zip_code, with: @user.zip_code.to_s)
+    expect(page).to have_field(:summary, with: @user.summary.to_s)
+    expect(page).to have_field(:goal, with: @user.goal.to_s)
 
     fill_in :summary, with: 'Joe Mama'
 
     click_on 'Update Profile'
 
-    expect(current_path).to eq("/profile/#{@user.id}")
+    expect(page).to have_current_path("/profile/#{@user.id}", ignore_query: true)
     expect(page).to have_content('Your profile has been updated!')
   end
 end

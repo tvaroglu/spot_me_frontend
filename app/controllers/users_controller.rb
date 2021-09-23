@@ -26,12 +26,12 @@ class UsersController < ApplicationController
     @user_friends = BackEndFacade.get_user_friends(@profile_user.id)
 
     @user_type = if current_user.id.to_s == params[:user_id]
-                      :self
-                    elsif current_user_friends.any? do |friend|
-                            friend.id.to_s == params[:user_id]
-                          end
-                      :friend
-                    end
+                   :self
+                 elsif current_user_friends.any? do |friend|
+                         friend.id.to_s == params[:user_id]
+                       end
+                   :friend
+                 end
   end
 
   def edit; end
@@ -45,6 +45,7 @@ class UsersController < ApplicationController
   private
 
   def users_params
-    params.permit(:full_name, :email, :zip_code, :summary, :goal, :availability_morning, :availability_afternoon, :availability_evening)
+    params.permit(:full_name, :email, :zip_code, :summary, :goal,
+                  :availability_morning, :availability_afternoon, :availability_evening)
   end
 end

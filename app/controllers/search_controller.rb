@@ -5,6 +5,8 @@ class SearchController < ApplicationController
 
   def show
     @gym = BackEndFacade.get_selected_gym(params[:id])
+    @gym_users = BackEndFacade.get_gym_users(params[:id])
+    @gym_users_count = BackEndFacade.get_gym_users_count(params[:id])
   end
 
   def create

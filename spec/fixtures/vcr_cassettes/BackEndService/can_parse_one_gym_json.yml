@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -18,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 22 Sep 2021 02:43:17 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -31,17 +25,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7d187890-d8e2-43f8-8524-4c2ab6fc8cb5
+      - f87afda8-75bf-47e0-9c24-0d983e3975c0
       X-Runtime:
-      - '0.189602'
+      - '0.292388'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Wed, 22 Sep 2021 02:43:17 GMT
+  recorded_at: Thu, 23 Sep 2021 00:46:17 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -18,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 22 Sep 2021 02:43:08 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -31,17 +25,83 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f7f46fca-e4c5-4893-ba97-e29401fcd3f8
+      - 29b1bea6-5145-400c-8694-040c1f6e10b2
       X-Runtime:
-      - '0.169915'
+      - '0.267406'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Wed, 22 Sep 2021 02:43:08 GMT
+  recorded_at: Thu, 23 Sep 2021 00:46:14 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5e0be80e-063e-4a3d-8ee2-4505548d0309
+      X-Runtime:
+      - '0.006956'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"meta":{"gym_member_count":0}}'
+  recorded_at: Thu, 23 Sep 2021 00:46:14 GMT
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ccbb1f73-1272-4c48-8628-cc8da216cc41
+      X-Runtime:
+      - '0.005172'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"meta":{"gym_member_count":0}}'
+  recorded_at: Thu, 23 Sep 2021 00:46:14 GMT
 recorded_with: VCR 6.0.0

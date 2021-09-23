@@ -39,22 +39,28 @@ class BackEndService
       parse_json(response.body)
     end
 
-    def post_gym_membership(gym_membership_params)
-      db_conn.post("/api/v1/users/#{gym_membership_params[:user_id]}/gym_memberships", gym_membership_params.to_json,'Content-Type' => 'application/json')
+    def post_gym_membership(gym_mem_params)
+      db_conn.post("/api/v1/users/#{gym_mem_params[:user_id]}/gym_memberships",
+        gym_mem_params.to_json,'Content-Type' => 'application/json')
+    end
+
+    def get_gym_users(yelp_gym_id)
+      response = db_conn.get("api/v1/gym_memberships/users") do |req|
+        req.params['yelp_gym_id'] = yelp_gym_id
+      end
+      parse_json(response.body)
     end
 
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500
-      # 'http://localhost:4500'
-      'https://spotme-app-api.herokuapp.com'
+      'http://localhost:4500'
+      # 'https://spotme-app-api.herokuapp.com'
     end
 
     def db_conn
       Faraday.new(base_url)
     end
-
-
 
     def parse_json(response_body)
       JSON.parse(response_body, symbolize_names: true)

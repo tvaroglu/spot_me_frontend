@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
+    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -18,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Wed, 22 Sep 2021 02:43:16 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -31,13 +25,11 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 98b375d8-a7cd-4ec5-8dfe-22bc67e14c9a
+      - d4e87a86-3eaf-4425-9e4a-0805c7031eec
       X-Runtime:
-      - '0.366476'
+      - '0.552593'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
@@ -81,5 +73,5 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Wed, 22 Sep 2021 02:43:16 GMT
+  recorded_at: Thu, 23 Sep 2021 00:46:17 GMT
 recorded_with: VCR 6.0.0

@@ -47,14 +47,17 @@ class BackEndService
     end
 
     def get_gym_memberships(user_id)
-      response = db_conn.get("/api/v1/users/#{user_id.to_s}/gym_memberships")
+      response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
 
       parse_json(response.body)
     end
 
     def post_gym_membership(gym_mem_params)
-      db_conn.post("/api/v1/users/#{gym_mem_params[:user_id]}/gym_memberships",
-        gym_mem_params.to_json,'Content-Type' => 'application/json')
+      db_conn.post(
+        "/api/v1/users/#{gym_mem_params[:user_id]}/gym_memberships",
+        gym_mem_params.to_json,
+        'Content-Type' => 'application/json'
+      )
     end
 
     def delete_gym_membership(gym_membership_params)
@@ -74,7 +77,7 @@ class BackEndService
     end
 
     def get_gym_users(yelp_gym_id)
-      response = db_conn.get("api/v1/gym_memberships/users") do |req|
+      response = db_conn.get('api/v1/gym_memberships/users') do |req|
         req.params['yelp_gym_id'] = yelp_gym_id
       end
       parse_json(response.body)

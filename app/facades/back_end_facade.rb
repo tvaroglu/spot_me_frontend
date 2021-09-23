@@ -34,9 +34,9 @@ class BackEndFacade
       return unless response[:data]
 
       gym_memberships = response[:data].map { |data| GymMembership.new(data) }
-      gym_memberships.select do |gym_membership|
+      gym_memberships.find do |gym_membership|
         gym_membership.yelp_gym_id == params[:yelp_gym_id]
-      end.first
+      end
     end
 
     def create_gym_membership(gym_membership_params)
@@ -49,28 +49,28 @@ class BackEndFacade
 
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
-      return Array.new unless friends[:data]
+      return [] unless friends[:data]
 
       friends[:data].map { |friend| User.new(friend) }
     end
 
     def get_user_gyms(user_id)
       gyms = BackEndService.get_gyms(user_id)
-      return Array.new unless gyms[:data]
+      return [] unless gyms[:data]
 
       gyms[:data].map { |gym| GymMembership.new(gym) }
     end
 
     def get_gyms_near_user(zip_code)
       gyms = BackEndService.gyms_near_user(zip_code)
-      return Array.new unless gyms[:data]
+      return [] unless gyms[:data]
 
       gyms[:data].map { |gym| Gym.new(gym) }
     end
 
     def get_user_events(user_id)
       events = BackEndService.get_events(user_id)
-      return Array.new unless events[:data]
+      return [] unless events[:data]
 
       events[:data].map { |event| Event.new(event) }
     end
@@ -107,7 +107,7 @@ class BackEndFacade
       non_friends = BackEndService.get_non_friends_at_gym(params)
       return unless non_friends[:data]
 
-      non_friends[:data].map { |friend| User.new(non_friend) }
+      non_friends[:data].map { |non_friend| User.new(non_friend) }
     end
   end
 end

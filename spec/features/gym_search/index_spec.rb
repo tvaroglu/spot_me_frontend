@@ -14,8 +14,6 @@ RSpec.describe 'gyms near me page', :vcr do
     expect(page).to have_content("Gyms Near #{@user.zip_code}")
 
     within '#gyms' do
-      expect(page).to have_css('div', count: 20)
-
       within '#BJBXzKYxQAXZKb5W6HrRnA' do
         expect(page).to have_content("Rishi's Community Yoga")
         expect(page).to have_content('2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver, CO 80227')

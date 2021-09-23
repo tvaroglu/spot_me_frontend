@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:32:03 GMT
+      - Thu, 23 Sep 2021 21:53:59 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e04efd65-db9d-48b0-a89a-5fa7ebbae400
+      - 9b2a6734-558a-4155-ab30-ca7b94ea72ba
       X-Runtime:
-      - '0.174554'
+      - '0.149359'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:32:03 GMT
+  recorded_at: Thu, 23 Sep 2021 21:53:59 GMT
 recorded_with: VCR 6.0.0

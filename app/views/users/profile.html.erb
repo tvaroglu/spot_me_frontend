@@ -1,5 +1,5 @@
 <% if current_user %>
-  <table class="table table-sm table-borderless table-responsive align-top">
+  <table class="table table-sm table-borderless table-responsive navbar-brown align-top">
     <tr>
       <td align="center">
         <div id='profile'>
@@ -7,7 +7,7 @@
           <br>
           <br>
           <% if @user_type == :self %>
-            <%= link_to 'Edit Profile', profile_edit_path(current_user.id), class: "btn btn-info btn-lg btn-outline-dark" %>
+            <%= link_to 'Edit Profile', profile_edit_path(current_user.id), class: "btn btn-med btn-info navbar-custom btn-outline-dark" %>
           <% elsif @user_type == :friend %>
             <%= link_to 'Remove Friend', friendship_path(
                                           current_user.id,
@@ -17,7 +17,7 @@
                                           }
                                          ),
                                          method: :delete,
-                                         class: "btn btn-info btn-lg btn-outline-dark" %>
+                                         class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
           <% else %>
             <%= link_to 'Add Friend', friendships_path(
                                         current_user.id,
@@ -27,7 +27,7 @@
                                         }
                                       ),
                                       method: :post,
-                                      class: "btn btn-info btn-lg btn-outline-dark" %>
+                                      class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
           <% end %>
         </div>
 
@@ -81,14 +81,15 @@
       </td>
 
       <td>
-        <div id='profile-header'>
-          <h1 id="user_name"><%= @profile_user.full_name %></h1>
-          <h4 id="zip_code">Zip Code: <%= @profile_user.zip_code %></h4>
+        <div align="center" id='profile-header'>
+          <h1 align="center" id="user_name"><%= @profile_user.full_name %></h1>
+          <h6 align="center" id="zip_code">Zip Code: <%= @profile_user.zip_code %></h6>
         </div>
 
-        <div id='user-summary'>
+        <div align="center" id='user-summary'>
           <h2>Summary:</h2>
           <p>
+            <u>Profile Summary</u><br/>
             <%= @profile_user.summary %>
           </p>
         </div>

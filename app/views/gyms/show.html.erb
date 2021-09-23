@@ -1,27 +1,27 @@
 <% if current_user %>
-  <div id="gym-details">
-    <h1><%= @gym.name %></h1><br>
-    <p><%= @gym.address %></p><br>
-    <p><%= @gym.phone %></p><br>
-  </div>
-
-  <div id='active-members'>
-    <p>
-      Number of Active Members: <%= @gym_users_count.gym_member_count %>
-    </p><br>
+  <div id="gym-details" align="center" class="card navbar-brown" style="width: flex;">
+    <h1><%= @gym.name %></h1><br/>
+    <p><%= @gym.address %></p><br/>
+    <p><%= @gym.phone %></p><br/>
+</div><br/>
+  <div align="center">
+    <div id='active-members' align="center" class="card navbar-brown" style="width: 30rem;">
+      <p>Number of Active Members: <%= @gym_users_count.gym_member_count %></p>
+    </div>
   </div>
 
   <% if @user_gym_membership.present? %>
-
+  <div align="center"><br/>
     <%= link_to 'Remove Gym', gym_membership_path(
                                 @user_gym_membership.id,
                                 { user_id: current_user.id }
                               ),
                               method: :delete,
-                              class: "btn btn-info btn-lg btn-outline-dark" %>
-
-    <div id='my-friends'>
-      <h2>My Friends at <%= @gym.name %></h2>
+                              class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+  </div><br/>
+    <div align="center">
+    <div id='my-friends' align="center" class="card navbar-brown" style="width: 30rem;">
+      <h6>My Friends at <%= @gym.name %></h6>
         <% @gym_friends.each do |friend| %>
           <p>
             <%= friend.full_name  %>
@@ -32,15 +32,15 @@
                                             gym_name: @gym.name
                                         ),
                                         method: :get,
-                                        class: "btn btn-info btn-sm btn-outline-dark" %>
+                                        class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
             <%= link_to 'View Profile', profile_path(friend.id),
-                                        class: "btn btn-info btn-sm btn-outline-dark" %>
+                                        class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
           </p>
       <% end %>
-    </div>
-
-    <div id='non-friends'>
-      <h2>Add New Friends at <%= @gym.name %></h2>
+    </div></div><br/><br/>
+    <div align="center">
+    <div id='non-friends' align="center" class="card navbar-brown" style="width: 30rem;">
+      <h6>Add New Friends at <%= @gym.name %></h6>
         <% @gym_non_friends.each do |non_friend| %>
           <p>
             <%= non_friend.full_name  %>
@@ -52,19 +52,21 @@
                                         }
                                       ),
                                       method: :post,
-                                      class: "btn btn-info btn-lg btn-outline-dark" %>
+                                      class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
             <%= link_to 'View Profile', profile_path(non_friend.id),
-                                        class: "btn btn-info btn-sm btn-outline-dark" %>
+                                        class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
           </p>
         <% end %>
-    </div>
+    </div></div>
 
 
-  <% else %>
+  <% else %><br/>
+    <div align="center">
     <%= link_to 'Add Gym', gym_memberships_path(user_id: current_user.id,
                                                 yelp_gym_id: @gym.yelp_gym_id,
                                                 gym_name: @gym.name),
                            method: :post,
-                           class: "btn btn-info btn-sm btn-outline-dark" %>
+                           class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+   </div>
   <% end %>
 <% end %>

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:31:54 GMT
+      - Thu, 23 Sep 2021 21:53:51 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a0b33afa-e3c1-483d-a34e-638dbb10597b
+      - a0ac176f-fc6c-46a1-9760-c2076a052037
       X-Runtime:
-      - '0.101415'
+      - '0.010687'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Feil,
         Sporer and Medhurst"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
         Mraz and Fadel"}}]}'
-  recorded_at: Thu, 23 Sep 2021 21:31:54 GMT
+  recorded_at: Thu, 23 Sep 2021 21:53:52 GMT
 recorded_with: VCR 6.0.0

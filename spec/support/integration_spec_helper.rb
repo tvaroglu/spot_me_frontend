@@ -1,6 +1,8 @@
 module IntegrationSpecHelper
   def login_with_oauth(_service = :google_oauth2)
-    click_on 'Sign in with Google'
+    if page.has_link?('Sign in with Google')
+      page.click_link('Sign in with Google')
+    end
     # visit "/auth/#{_service}"
   end
 end

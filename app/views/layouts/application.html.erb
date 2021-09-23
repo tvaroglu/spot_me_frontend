@@ -16,12 +16,16 @@
 
   <body>
     <%= render partial: 'welcome/header', locals: { placeholder: ''} %>
-    <br><br>
+    <br><br><br/>
+
     <% flash.each do |type, msg| %>
-      <div class="alert alert-info">
-        <%= msg %>
-      </div>
-    <% end %>
+  <div align="center">
+    <div class="alert alert-dark alert-dismissible btn btn-lg navbar-custom">
+      <%= msg  %>
+    </div>
+  </div>
+  <% end %>
+
     <div class='container'>
       <br>
       <%= yield %>

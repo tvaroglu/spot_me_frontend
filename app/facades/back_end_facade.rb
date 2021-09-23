@@ -22,7 +22,7 @@ class BackEndFacade
       json = BackEndService.create_event(params)
       return unless json[:data]
 
-      UserEvent.new(json[:data])
+      Event.new(json[:data])
     end
 
     def delete_event(params)
@@ -72,7 +72,7 @@ class BackEndFacade
       events = BackEndService.get_events(user_id)
       return Array.new unless events[:data]
 
-      events[:data].map { |event| UserEvent.new(event) }
+      events[:data].map { |event| Event.new(event) }
     end
 
     def get_selected_gym(yelp_gym_id)

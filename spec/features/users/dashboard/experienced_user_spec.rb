@@ -165,7 +165,7 @@ RSpec.describe 'experienced user dashboard' do
   let(:user_friends) { [User.new(user1_params), User.new(user2_params), User.new(user3_params)] }
   let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params), GymMembership.new(gym_membership3_params)] }
   let(:searched_gyms) { [YelpGym.new(yelp_gym1_params), YelpGym.new(yelp_gym2_params), YelpGym.new(yelp_gym3_params)] }
-  let(:user_events) { [UserEvent.new(event1_params), UserEvent.new(event2_params), UserEvent.new(event3_params)] }
+  let(:user_events) { [Event.new(event1_params), Event.new(event2_params), Event.new(event3_params)] }
 
   before do
     allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return(user_friends)

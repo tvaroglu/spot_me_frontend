@@ -1,4 +1,4 @@
-class UserEvent
+class Event
   attr_reader :id, :user_id, :gym_membership_id, :date_time, :activity
 
   def initialize(info)

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UserEvent, type: :poro do
+RSpec.describe Event, type: :poro do
   it 'can initialize from event params' do
     id = '1'
     user_id = 1
@@ -18,9 +18,9 @@ RSpec.describe UserEvent, type: :poro do
       }
     }
 
-    event = UserEvent.new(event_params)
+    event = Event.new(event_params)
 
-    expect(event).to be_an_instance_of(UserEvent)
+    expect(event).to be_an_instance_of(Event)
     expect(event.id).to eq(id)
     expect(event.id).to be_a String
     expect(event.user_id).to eq(user_id)
@@ -52,7 +52,7 @@ RSpec.describe UserEvent, type: :poro do
           }
         }
 
-        event = UserEvent.new(event_params)
+        event = Event.new(event_params)
         date_time = '2021-09-22T21:41:28.289Z'
 
         expect(event.format_date(date_time)).to eq('Wednesday, Sep 22, 2021  9:41pm')

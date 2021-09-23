@@ -94,7 +94,7 @@ RSpec.describe 'new event page', type: :feature do
         let(:minutes) { '00' }
 
         let(:new_event) do
-          UserEvent.new(
+          Event.new(
             id: '1',
             attributes: {
               user_id: friend.id,

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -18,27 +18,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:02:17 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8606b6ca3ce5a46bf6aac22b3f7cd158"
+      - W/"a3936c2804083afc197dcc24675b9318"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0d2a1392-502a-4dbf-809e-705d70b49af5
+      - b1e3117f-3998-47de-8227-ac093753ae31
       X-Runtime:
-      - '0.002437'
+      - '0.004650'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"teodora_reinger@carter-koepp.co","google_id":"snujwchdoh663cnw2mjys","google_image_url":"https://robohash.org/impeditvoluptatemaspernatur.png?size=300x300\u0026set=set1","zip_code":"19025","summary":"Most
-        people would rather give than get affection.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Albina
-        Harber"}}}'
-  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
+        Swift"}}}'
+  recorded_at: Thu, 23 Sep 2021 21:02:18 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -54,22 +62,30 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:02:18 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8606b6ca3ce5a46bf6aac22b3f7cd158"
+      - W/"a3936c2804083afc197dcc24675b9318"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e05c1135-7ac7-41b6-bcee-638779f5ee58
+      - e0cde178-e8c5-4c04-80f7-8dbd861a56eb
       X-Runtime:
-      - '0.002596'
+      - '0.019882'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"teodora_reinger@carter-koepp.co","google_id":"snujwchdoh663cnw2mjys","google_image_url":"https://robohash.org/impeditvoluptatemaspernatur.png?size=300x300\u0026set=set1","zip_code":"19025","summary":"Most
-        people would rather give than get affection.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Albina
-        Harber"}}}'
-  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
+        Swift"}}}'
+  recorded_at: Thu, 23 Sep 2021 21:02:18 GMT
 recorded_with: VCR 6.0.0

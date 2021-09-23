@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,26 +18,34 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:02:12 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"afc3ce1ba31b461b5cbf294da097edd0"
+      - W/"b5a431878f9e053deec868177e4af68c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9f59e070-c452-40f5-ac93-675aebb11831
+      - fa02c1f5-a660-4313-9961-47fb6e5c7c9d
       X-Runtime:
-      - '0.100644'
+      - '0.036387'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"jim_sipes@howell.org","google_id":"1tl1xvjw1slzqvib7hf0o","google_image_url":"https://robohash.org/doloremqueminimaconsectetur.png?size=300x300\u0026set=set1","zip_code":"73259","summary":"Pleasure
-        in the job puts perfection in the work.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Prof.
-        Mel Hamill"}},{"id":"9","type":"user","attributes":{"email":"cecila.paucek@mohr-mccullough.io","google_id":"oglr504c7pw8fj1wnycsu","google_image_url":"https://robohash.org/autdelenitivoluptatem.png?size=300x300\u0026set=set1","zip_code":"27376","summary":"Beware
-        the barrenness of a busy life.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Dillon
-        Klocko"}},{"id":"10","type":"user","attributes":{"email":"shila@gusikowski.io","google_id":"dnw3hvo6ajwzh4yhqzuly","google_image_url":"https://robohash.org/veniamundeneque.png?size=300x300\u0026set=set1","zip_code":"57696","summary":"Beware
-        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Antony
-        Vandervort"}}]}'
-  recorded_at: Thu, 23 Sep 2021 20:27:32 GMT
+      string: '{"data":[{"id":"9","type":"user","attributes":{"email":"dario.carter@wintheiser.net","google_id":"85prfo95zbvtuik27upid","google_image_url":"https://robohash.org/similiqueenimarchitecto.png?size=300x300\u0026set=set1","zip_code":"18881","summary":"Rhetoric
+        is the art of ruling the minds of men.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Carrie
+        O''Reilly"}},{"id":"10","type":"user","attributes":{"email":"loree.daniel@wehner.org","google_id":"gwpx2l1g4g7ye1qjvkadx","google_image_url":"https://robohash.org/eumetomnis.png?size=300x300\u0026set=set1","zip_code":"21221","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Lionel
+        Sawayn"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
+        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
+        Elliot Hills"}}]}'
+  recorded_at: Thu, 23 Sep 2021 21:02:12 GMT
 recorded_with: VCR 6.0.0

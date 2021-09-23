@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:02:12 GMT
+      - Thu, 23 Sep 2021 21:02:22 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3f6797c4-0a6e-4a3b-8042-0fb2198dc095
+      - 4dd4ab56-28eb-4044-88e1-850c3744331d
       X-Runtime:
-      - '0.015638'
+      - '0.013205'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,5 +41,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Thu, 23 Sep 2021 21:02:13 GMT
+  recorded_at: Thu, 23 Sep 2021 21:02:22 GMT
 recorded_with: VCR 6.0.0

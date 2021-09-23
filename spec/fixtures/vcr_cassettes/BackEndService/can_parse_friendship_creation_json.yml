@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:4500/api/v1/users/1/friendships?followee_id=10
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?followee_id=10
     body:
       encoding: UTF-8
       string: ''
@@ -20,19 +20,27 @@ http_interactions:
       code: 422
       message: Unprocessable Entity
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:02:21 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 4d22eed3-b35c-4c9b-9187-c3c4925b2ab8
+      - 2414ded7-9e12-4a23-8d46-dff2105624f5
       X-Runtime:
-      - '0.208492'
+      - '0.019931'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"your record could not be saved","errors":["Followee has
         already been taken"]}'
-  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
+  recorded_at: Thu, 23 Sep 2021 21:02:21 GMT
 recorded_with: VCR 6.0.0

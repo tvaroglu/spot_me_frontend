@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -18,31 +18,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:02:18 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a7acd7ad23cca93be21ff6f88f56370d"
+      - W/"268bc95f8322859805c892f3b3ee0558"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6ad0ec7c-fa13-4e23-8092-fdb029999161
+      - 5c8a434e-6f53-4aee-bab1-1d6d033fa7f8
       X-Runtime:
-      - '0.007134'
+      - '0.020647'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-01T20:11:31.856Z","activity":"Painting"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Prof.
-        Mel Hamill"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-24T20:11:31.864Z","activity":"Gunsmithing"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Mrs.
-        Shirlee Jenkins"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-09-28T20:11:31.867Z","activity":"Tai
-        chi"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Marcie
-        Sauer"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"jim_sipes@howell.org","google_id":"1tl1xvjw1slzqvib7hf0o","google_image_url":"https://robohash.org/doloremqueminimaconsectetur.png?size=300x300\u0026set=set1","zip_code":"73259","summary":"Pleasure
-        in the job puts perfection in the work.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Prof.
-        Mel Hamill"}},{"id":"4","type":"user","attributes":{"email":"yi.king@ritchie.org","google_id":"wxcybbmmr8ime482e5lun","google_image_url":"https://robohash.org/similiqueomnisquo.png?size=300x300\u0026set=set1","zip_code":"79624","summary":"It
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T20:38:23.187Z","activity":"Mushroom
+        hunting"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Gov.
+        Elliot Hills"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-29T20:38:23.421Z","activity":"Foraging"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Malcom
+        Langworth"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T20:38:23.430Z","activity":"Knife
+        making"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Valentin
+        Bergnaum IV"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
+        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
+        Elliot Hills"}},{"id":"4","type":"user","attributes":{"email":"edison.sanford@veum.org","google_id":"m4i6jg9qgkb4uox143iyx","google_image_url":"https://robohash.org/velametomnis.png?size=300x300\u0026set=set1","zip_code":"12919","summary":"A
+        few vices are sufficient to darken many virtues.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Malcom
+        Langworth"}},{"id":"7","type":"user","attributes":{"email":"rolando.nikolaus@jones-cassin.info","google_id":"ummu458qvzj7jxme3quds","google_image_url":"https://robohash.org/voluptatemexcepturivoluptas.png?size=300x300\u0026set=set1","zip_code":"19596","summary":"It
         is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Mrs.
-        Shirlee Jenkins"}},{"id":"7","type":"user","attributes":{"email":"francina.bednar@oconnell-flatley.co","google_id":"6b5w4ob2l40aw3rwj1ohc","google_image_url":"https://robohash.org/voluptateetaut.png?size=300x300\u0026set=set1","zip_code":"70901","summary":"The
-        secret to humor is surprise.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Marcie
-        Sauer"}}]}'
-  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Valentin
+        Bergnaum IV"}}]}'
+  recorded_at: Thu, 23 Sep 2021 21:02:18 GMT
 recorded_with: VCR 6.0.0

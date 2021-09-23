@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -15,134 +15,71 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:02:20 GMT
+      Connection:
+      - keep-alive
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json; charset=utf-8
+      Etag:
+      - W/"babf5b282861cdb1624d2f485de1dbad"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 254cfa30-b81d-459d-9cde-f13cc4986d48
+      - 7be452b3-6a0f-4b3b-823d-c289ab3681c3
       X-Runtime:
-      - '0.142336'
-      Content-Length:
-      - '10802'
+      - '0.509871'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cNoMethodError:
-        undefined method `map'' for nil:NilClass\u003e","traces":{"Application Trace":[{"id":0,"trace":"app/serializers/gym_serializer.rb:5:in
-        `format_gyms''"},{"id":1,"trace":"app/controllers/api/v1/gym_search_controller.rb:7:in
-        `index''"}],"Framework Trace":[{"id":2,"trace":"actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in
-        `send_action''"},{"id":3,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:194:in
-        `process_action''"},{"id":4,"trace":"actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in
-        `process_action''"},{"id":5,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in
-        `block in process_action''"},{"id":6,"trace":"activesupport (5.2.6) lib/active_support/callbacks.rb:98:in
-        `run_callbacks''"},{"id":7,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in
-        `process_action''"},{"id":8,"trace":"actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in
-        `process_action''"},{"id":9,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in
-        `block in process_action''"},{"id":10,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
-        `block in instrument''"},{"id":11,"trace":"activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in
-        `instrument''"},{"id":12,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
-        `instrument''"},{"id":13,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in
-        `process_action''"},{"id":14,"trace":"actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in
-        `process_action''"},{"id":15,"trace":"activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in
-        `process_action''"},{"id":16,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:134:in
-        `process''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:191:in
-        `dispatch''"},{"id":18,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:252:in
-        `dispatch''"},{"id":19,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in
-        `dispatch''"},{"id":20,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in
-        `serve''"},{"id":21,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in
-        `block in serve''"},{"id":22,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
-        `each''"},{"id":23,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
-        `serve''"},{"id":24,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in
-        `call''"},{"id":25,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":26,"trace":"rack
-        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":27,"trace":"rack
-        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":28,"trace":"activerecord (5.2.6)
-        lib/active_record/migration.rb:559:in `call''"},{"id":29,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":30,"trace":"activesupport
-        (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":31,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":32,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":33,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":34,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:135:in `call_app''"},{"id":35,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:30:in `block in call''"},{"id":36,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `catch''"},{"id":37,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `call''"},{"id":38,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":39,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":40,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":41,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":42,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":43,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":44,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":49,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":50,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/serializers/gym_serializer.rb:5:in
-        `format_gyms''"},{"id":1,"trace":"app/controllers/api/v1/gym_search_controller.rb:7:in
-        `index''"},{"id":2,"trace":"actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in
-        `send_action''"},{"id":3,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:194:in
-        `process_action''"},{"id":4,"trace":"actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in
-        `process_action''"},{"id":5,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in
-        `block in process_action''"},{"id":6,"trace":"activesupport (5.2.6) lib/active_support/callbacks.rb:98:in
-        `run_callbacks''"},{"id":7,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in
-        `process_action''"},{"id":8,"trace":"actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in
-        `process_action''"},{"id":9,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in
-        `block in process_action''"},{"id":10,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
-        `block in instrument''"},{"id":11,"trace":"activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in
-        `instrument''"},{"id":12,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
-        `instrument''"},{"id":13,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in
-        `process_action''"},{"id":14,"trace":"actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in
-        `process_action''"},{"id":15,"trace":"activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in
-        `process_action''"},{"id":16,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:134:in
-        `process''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:191:in
-        `dispatch''"},{"id":18,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:252:in
-        `dispatch''"},{"id":19,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in
-        `dispatch''"},{"id":20,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in
-        `serve''"},{"id":21,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in
-        `block in serve''"},{"id":22,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
-        `each''"},{"id":23,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
-        `serve''"},{"id":24,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in
-        `call''"},{"id":25,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":26,"trace":"rack
-        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":27,"trace":"rack
-        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":28,"trace":"activerecord (5.2.6)
-        lib/active_record/migration.rb:559:in `call''"},{"id":29,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":30,"trace":"activesupport
-        (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":31,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":32,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":33,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":34,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:135:in `call_app''"},{"id":35,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:30:in `block in call''"},{"id":36,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `catch''"},{"id":37,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `call''"},{"id":38,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":39,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":40,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":41,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":42,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":43,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":44,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":49,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":50,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
+      string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
+        Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
+        CO 80227","phone":"(303) 601-0789"}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
+        Fitness","address":"3265 S Wadsworth Blvd, Lakewood, CO 80227","phone":"(303)
+        985-8888"}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
+        Boot Camp - Bear Creek","address":"3333 S Wadsworth Blvd, Unit A-111, Lakewood,
+        CO 80227","phone":"(720) 920-9746"}},{"id":"R0KoJs345Zxga1CnrGn8tw","type":"gym","attributes":{"name":"Rocky
+        Mountain Karate Association","address":"3234 S Wadsworth Blvd, Unit K, Lakewood,
+        CO 80227","phone":"(303) 989-4328"}},{"id":"xTWx3zsFHim7sbPfCMjX8Q","type":"gym","attributes":{"name":"Arthur
+        Murray Dance Studio","address":"3355 S Yarrow, Ste E-125, Lakewood, CO 80227","phone":"(303)
+        987-2444"}},{"id":"mwVz1h_a-q6HYKFGWr-ezA","type":"gym","attributes":{"name":"The
+        Sanctuary Brazilian JiuJitsu and Fitness","address":"3355 S Wadsworth Blvd,
+        Unit F109, Lakewood, CO 80227","phone":"(720) 383-1617"}},{"id":"AlUJKAnzTr3ww3158hiexQ","type":"gym","attributes":{"name":"Colorado
+        Krav Maga","address":"1957 S Wadsworth, Lakewood, CO 80227","phone":"(303)
+        984-1957"}},{"id":"zDCVsjiiEfN5sP7hNT_6tA","type":"gym","attributes":{"name":"Denver
+        Karate Academy","address":"7857 W Jewell Ave, Lakewood, CO 80232","phone":"(303)
+        934-2988"}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
+        Winds and Hands","address":"9150 W Jewell Ave, Ste 118, Lakewood, CO 80232","phone":"(720)
+        939-1723"}},{"id":"yniujIwHCBfraVGz349TTg","type":"gym","attributes":{"name":"Prestige
+        Fitness - Lakewood","address":"7777 W Jewell Ave, Lakewood, CO 80232","phone":"(303)
+        989-7900"}},{"id":"5bDgDRasg-0EdO2UPnWuEw","type":"gym","attributes":{"name":"Flo
+        Life BJJ+","address":"9191 W Jewell Ave, Lakewood, CO 80232","phone":"(720)
+        665-4035"}},{"id":"w5EyHSLwz_aTaofpT9Gl9Q","type":"gym","attributes":{"name":"Pilates
+        Plus","address":"2598 S Lewis Way, Unit A, Lakewood, CO 80227","phone":"(303)
+        989-4100"}},{"id":"GEY_itNFmyT124gj24JjnA","type":"gym","attributes":{"name":"Shane
+        Keri Dance","address":"1466 S Wadsworth Blvd, Lakewood, CO 80232","phone":"(720)
+        299-1228"}},{"id":"guYn9HMe-RCThlEB2fVTRg","type":"gym","attributes":{"name":"For
+        Them Gainz Fitness","address":"1125 17th St, Ste B, Denver, CO 80202","phone":"(720)
+        495-0025"}},{"id":"CORIddkNzPMqpaV6wAO2Qg","type":"gym","attributes":{"name":"5280
+        Karate Academy","address":"10815 W Jewell Ave, Ste G, Lakewood, CO 80232","phone":"(303)
+        986-5468"}},{"id":"m2r-plZskJ9h_ln6dnIrLg","type":"gym","attributes":{"name":"VASA
+        Fitness - Denver","address":"1955 S Sheridan Blvd, Denver, CO 80227","phone":"(303)
+        985-8272"}},{"id":"3CIO2aJshjn1IBcbWcn8Vw","type":"gym","attributes":{"name":"TIS
+        Fitness Systems","address":"6100 W Mansfield Ave, Ste 31, Denver, CO 80235","phone":"(815)
+        904-0133"}},{"id":"mRjQmf7JNkTGgcJXySftSg","type":"gym","attributes":{"name":"Body
+        \u0026 Brain Yoga Tai Chi - Lakewood","address":"1535 S Kipling Pkwy, Unit
+        M, Lakewood, CO 80232","phone":"(303) 948-5500"}},{"id":"tlXokHTl53TZci9jBRHJRA","type":"gym","attributes":{"name":"Southwest-Chatfield
+        Branch YMCA","address":"5181 W Kenyon Ave, Denver, CO 80236","phone":"(303)
+        761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
+        Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
+        568-9192"}}]}'
+  recorded_at: Thu, 23 Sep 2021 21:02:21 GMT
 recorded_with: VCR 6.0.0

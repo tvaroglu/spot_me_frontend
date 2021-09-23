@@ -20,5 +20,6 @@ Rails.application.routes.draw do
 
   resources :friendships, only: [:create, :destroy]
   resources :events, only: [:create, :destroy, :new]
-  resources :gyms, only: [:index, :show, :create, :destroy], controller: :gyms
+  resources :gyms, only: [:index, :show]
+  resources :gym_memberships, only: [:create, :destroy]
 end

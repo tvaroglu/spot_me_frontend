@@ -71,10 +71,6 @@ describe 'user profile page: non-friend', type: :feature do
         expect(current_path).to eq(dashboard_path(@user.id))
         expect(page).to have_content("go get them gains!!")
       end
-
-      it 'displays delete friend button' do
-        expect(page).to have_link('Remove Friend')
-      end
     end
   end
 end

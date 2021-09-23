@@ -54,6 +54,20 @@ class BackEndService
       )
     end
 
+    def get_gym_memberships(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
+
+      parse_json(response.body)
+    end
+
+    def post_gym_membership(gym_mem_params)
+      db_conn.post(
+        "/api/v1/users/#{gym_mem_params[:user_id]}/gym_memberships",
+        gym_mem_params.to_json,
+        'Content-Type' => 'application/json'
+      )
+    end
+
     def delete_gym_membership(gym_membership_params)
       db_conn.delete(
         "/api/v1/users/#{gym_membership_params[:user_id]}/gym_memberships/#{gym_membership_params[:id]}"
@@ -69,7 +83,32 @@ class BackEndService
 
     def gyms_near_user(zip_code)
       response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")
+      parse_json(response.body)
+    end
 
+    def get_one_gym(yelp_gym_id)
+      response = db_conn.get("/api/v1/gym_search/#{yelp_gym_id}")
+      parse_json(response.body)
+    end
+
+    def get_gym_users(yelp_gym_id)
+      response = db_conn.get('api/v1/gym_memberships/users') do |req|
+        req.params['yelp_gym_id'] = yelp_gym_id
+      end
+      parse_json(response.body)
+    end
+
+    def get_friends_at_gym(yelp_gym_id, current_user_id)
+      response = db_conn.get("api/v1/users/#{current_user_id}/friendships") do |req|
+        req.params['yelp_gym_id'] = yelp_gym_id
+      end
+      parse_json(response.body)
+    end
+
+    def get_non_friends_at_gym(params)
+      response = db_conn.get("api/v1/users/#{params[:user_id]}/gym_members") do |req|
+        req.params['yelp_gym_id'] = params[:yelp_gym_id]
+      end
       parse_json(response.body)
     end
 
@@ -83,8 +122,8 @@ class BackEndService
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500
-      'http://localhost:4500'
-      # 'https://spotme-app-api.herokuapp.com'
+      # 'http://localhost:4500'
+      'https://spotme-app-api.herokuapp.com'
     end
 
     def db_conn

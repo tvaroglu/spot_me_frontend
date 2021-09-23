@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/10
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/10
     body:
       encoding: US-ASCII
       string: ''
@@ -18,22 +18,30 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 21:02:16 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"48f8b246744906239e02241b5fa60660"
+      - W/"afb3193388f200150f8a1a219aeddd33"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dcaaf227-a49c-4843-a339-2195cf687be3
+      - 7e7a8ffa-e268-4c64-b09a-208588165b88
       X-Runtime:
-      - '0.003939'
+      - '0.008440'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"user","attributes":{"email":"shila@gusikowski.io","google_id":"dnw3hvo6ajwzh4yhqzuly","google_image_url":"https://robohash.org/veniamundeneque.png?size=300x300\u0026set=set1","zip_code":"57696","summary":"Beware
-        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Antony
-        Vandervort"}}}'
-  recorded_at: Thu, 23 Sep 2021 20:27:33 GMT
+      string: '{"data":{"id":"10","type":"user","attributes":{"email":"loree.daniel@wehner.org","google_id":"gwpx2l1g4g7ye1qjvkadx","google_image_url":"https://robohash.org/eumetomnis.png?size=300x300\u0026set=set1","zip_code":"21221","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Lionel
+        Sawayn"}}}'
+  recorded_at: Thu, 23 Sep 2021 21:02:17 GMT
 recorded_with: VCR 6.0.0

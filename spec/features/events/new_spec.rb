@@ -54,30 +54,6 @@ RSpec.describe 'new event page', type: :feature do
     )
   end
 
-  # let(:user_friends) { [User.new(user1_params), User.new(user2_params), User.new(user3_params)] }
-  # let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params), GymMembership.new(gym_membership3_params)] }
-  # let(:searched_gyms) { [YelpGym.new(yelp_gym1_params), YelpGym.new(yelp_gym2_params), YelpGym.new(yelp_gym3_params)] }
-  # let(:user_events) { [UserEvent.new(event1_params), UserEvent.new(event2_params), UserEvent.new(event3_params)] }
-
-  # before do
-    # allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return(empty_arr)
-    # allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return(empty_arr)
-    # allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return(empty_arr)
-    # allow(BackEndFacade).to receive(:get_gyms_near_user).with(@user.zip_code).and_return(empty_arr)
-  # end
-
-  # To create a new event, need the following info (table columns):
-  #  - user_id (of friend user)
-  #  - gym_membership_id (of current_user)
-  #  - date_time
-  #  - activity
-  #
-  # Need the following information from Gym Show page:
-  #  - `gym_membership_id`: from gym_membership info [Endpoint: None, just send in params];        params[:gym_membership_id]
-  #    - display: `gym_name`: from gym_membership info;                                            params[:gym_name]
-  #  - friend user `user_id`: from clicking on their button [Endpoint: None, just send in params]; params[:friend_id]
-  #    - display: friend user `name`: from clicking on their button;                               params[:friend_name]
-  #
   context 'when I log in as an authenticated user' do
     context 'when I visit the new event page' do
       let(:create_params) do
@@ -164,7 +140,6 @@ RSpec.describe 'new event page', type: :feature do
         end
 
         it 'displays the new workout event' do
-          save_and_open_page
           within '#upcoming-workouts' do
             expect(page).to have_content(new_event.activity)
           end

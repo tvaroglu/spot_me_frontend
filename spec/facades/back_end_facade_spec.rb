@@ -25,7 +25,7 @@ RSpec.describe BackEndFacade do
       it "can return an array of the user's gyms", :vcr do
         gyms = BackEndFacade.get_user_gyms(1)
 
-        expect(gyms[0]).to be_an_instance_of(UserGym)
+        expect(gyms[0]).to be_an_instance_of(GymMembership)
         expect(gyms).not_to be_empty
       end
     end

@@ -21,27 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 22 Sep 2021 21:41:33 GMT
+      - Thu, 23 Sep 2021 01:34:46 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4ef34aff1c9a31537c8dbcaf0e976446"
+      - W/"bcb72d02fd21738644ee0cd90577bc5e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9cc477d8-167c-4c12-ab25-7491b4b1fcec
+      - 5e2b61fb-720d-4a91-9df5-d301465fe6d2
       X-Runtime:
-      - '1.029480'
+      - '0.092723'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Murray,
-        Rempel and Aufderhar"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"DuBuque-Dooley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Roob-Dickinson"}},{"id":"20","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA","gym_name":"Rishi''s
-        Community Yoga"}}]}'
-  recorded_at: Wed, 22 Sep 2021 21:41:33 GMT
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling-Wilkinson"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Konopelski,
+        Lowe and Haley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Funk
+        LLC"}}]}'
+  recorded_at: Thu, 23 Sep 2021 01:34:46 GMT
 recorded_with: VCR 6.0.0

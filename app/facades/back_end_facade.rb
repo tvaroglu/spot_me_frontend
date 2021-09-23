@@ -15,6 +15,10 @@ class BackEndFacade
       BackEndService.delete_event(params)
     end
 
+    def delete_gym_membership(params)
+      BackEndService.delete_gym_membership(params)
+    end
+
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
       return Array.new unless friends[:data]
@@ -26,14 +30,7 @@ class BackEndFacade
       gyms = BackEndService.get_gyms(user_id)
       return Array.new unless gyms[:data]
 
-      gyms[:data].map { |gym| UserGym.new(gym[:attributes]) }
-    end
-
-    def get_user_events(user_id)
-      events = BackEndService.get_events(user_id)
-      return Array.new unless events[:data]
-
-      events[:data].map { |event| UserEvent.new(event) }
+      gyms[:data].map { |gym| GymMembership.new(gym[:attributes]) }
     end
 
     def get_gyms_near_user(zip_code)
@@ -41,6 +38,13 @@ class BackEndFacade
       return Array.new unless gyms[:data]
 
       gyms[:data].map { |gym| YelpGym.new(gym) }
+    end
+
+    def get_user_events(user_id)
+      events = BackEndService.get_events(user_id)
+      return Array.new unless events[:data]
+
+      events[:data].map { |event| UserEvent.new(event) }
     end
   end
 end

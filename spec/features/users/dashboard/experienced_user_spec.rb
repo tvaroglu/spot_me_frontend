@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe 'user dashboard' do
+RSpec.describe 'experienced user dashboard' do
   let(:user1_params) do
     {
       id: 10,
@@ -54,36 +54,72 @@ RSpec.describe 'user dashboard' do
     }
   end
 
-  let(:gym1_params) do
+  let(:gym_membership1_params) do
+    {
+      id: '1',
+      type: 'gym_membership',
+      attributes: {
+        user_id: 1,
+        yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
+        gym_name: 'Kling-Wilkinson'
+      }
+    }
+  end
+
+  let(:gym_membership2_params) do
+    {
+      id: '7',
+      type: 'gym_membership',
+      attributes: {
+        user_id: 1,
+        yelp_gym_id: '6x10s0lbnry4ivkzcjpilk',
+        gym_name: 'Konopelski, Lowe and Haley'
+      }
+    }
+  end
+
+  let(:gym_membership3_params) do
+    {
+      id: '17',
+      type: 'gym_membership',
+      attributes: {
+        user_id: 1,
+        yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
+        gym_name: 'Funk LLC'
+      }
+    }
+  end
+
+  let(:yelp_gym1_params) do
     {
       id: '1',
       type: 'gym',
       attributes: {
-        name: 'gym1',
+        name: 'Planet Fitness',
         address: 'address1',
         phone: '123-123-1234'
       }
     }
   end
 
-  let(:gym2_params) do
+  let(:yelp_gym2_params) do
     {
       id: '2',
       type: 'gym',
       attributes: {
-        name: 'gym2',
+        name: 'Golds Gym',
         address: 'address2',
         phone: '234-234-2345'
       }
     }
   end
 
-  let(:gym3_params) do
+  let(:yelp_gym3_params) do
     {
       id: '3',
       type: 'gym',
       attributes: {
-        name: 'gym3',
+        name: '24Hour Fitness',
         address: 'address3',
         phone: '345-345-3456'
       }
@@ -127,13 +163,15 @@ RSpec.describe 'user dashboard' do
   end
 
   let(:user_friends) { [User.new(user1_params), User.new(user2_params), User.new(user3_params)] }
-  let(:user_gyms) { [YelpGym.new(gym1_params), YelpGym.new(gym2_params), YelpGym.new(gym3_params)] }
+  let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params), GymMembership.new(gym_membership3_params)] }
+  let(:searched_gyms) { [YelpGym.new(yelp_gym1_params), YelpGym.new(yelp_gym2_params), YelpGym.new(yelp_gym3_params)] }
   let(:user_events) { [UserEvent.new(event1_params), UserEvent.new(event2_params), UserEvent.new(event3_params)] }
 
   before do
     allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return(user_friends)
     allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return(user_gyms)
     allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return(user_events)
+    allow(BackEndFacade).to receive(:get_gyms_near_user).with(@user.zip_code).and_return(searched_gyms)
   end
 
   context 'when I log in as an authenticated user' do
@@ -195,25 +233,7 @@ RSpec.describe 'user dashboard' do
         end
       end
 
-      it 'displays the gyms I am a member at', :vcr do
-        expect(page).to have_css('#gyms')
-
-        within '#gyms' do
-          expect(page).to have_content('My Gyms')
-
-          user_gyms.each do |gym|
-            expect(page).to have_css("#gym-#{gym.yelp_gym_id}")
-
-            within "#gym-#{gym.yelp_gym_id}" do
-              expect(page).to have_content(gym.name)
-              expect(page).to have_link('View Gym')
-              expect(page).to have_link('Remove')
-            end
-          end
-        end
-      end
-
-      it 'has a Find Gyms Near me button', :vcr do
+      it 'has a Find Gyms Near Me button', :vcr do
         expect(page).to have_css('#gyms')
 
         within '#gyms' do
@@ -227,6 +247,37 @@ RSpec.describe 'user dashboard' do
         end
 
         expect(page).to have_current_path("/gyms?zip_code=#{@user.zip_code}")
+      end
+
+      it 'displays the gyms I am a member at', :vcr do
+        expect(page).to have_css('#gyms')
+
+        within '#gyms' do
+          expect(page).to have_content('My Gyms')
+
+          user_gyms.each do |gym|
+            expect(page).to have_css("#gym-#{gym.yelp_gym_id}")
+
+            within "#gym-#{gym.yelp_gym_id}" do
+              expect(page).to have_content(gym.gym_name)
+              expect(page).to have_link('View Gym')
+              expect(page).to have_link('Remove')
+            end
+          end
+        end
+      end
+
+      it 'displays a link to delete a gym', :vcr do
+        # stub so we don't actually delete a gym.. VCR will hit this route while recording a cassette
+        allow(BackEndService).to receive(:delete_gym_membership).and_return(204)
+        gym = user_gyms.last
+
+        within "#gym-#{gym.yelp_gym_id}" do
+          click_on 'Remove'
+        end
+
+        expect(page).to have_current_path(dashboard_path(@user.id))
+        expect(page).to have_content('Gym removed')
       end
 
       it 'displays my upcoming workouts', :vcr do
@@ -247,6 +298,7 @@ RSpec.describe 'user dashboard' do
       end
 
       it 'displays a link to delete a workout', :vcr do
+        # stub so we don't actually delete an event.. VCR will hit this route while recording a cassette
         allow(BackEndService).to receive(:delete_event).and_return(204)
         event = user_events.last
 
@@ -264,8 +316,4 @@ end
 # TODO: Add tests for the following features/cases:
 #  Features:
 #    - Friends Button Link Redirects: 'View Profile', 'Remove'
-#    - Gyms Button Link Redirects: 'View Gym', 'Remove'
-#   Edge Cases:
-#     - When I have no friends, it displays "You currently have no friends."
-#     - When I have no upcoming workouts, it displays "You currently have no upcoming workouts."
-#     - When I have no gyms, it displays "You currently are not a member of any gyms."
+#    - Gyms Button Link Redirects: 'View Gym'

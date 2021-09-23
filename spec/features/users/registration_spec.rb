@@ -32,6 +32,10 @@ RSpec.describe 'registration page' do
       allow(BackEndService).to receive(:get_user)
         .and_return(JSON.parse(user_blob, symbolize_names: true))
 
+      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+
       fill_in :full_name, with: 'Foo Bar'
       fill_in :email, with: 'test@testing.com'
       fill_in :zip_code, with: '80227'

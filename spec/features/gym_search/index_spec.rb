@@ -5,6 +5,7 @@ RSpec.describe 'gyms near me page', :vcr do
     allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
     allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
     allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+
     visit dashboard_path(@user.id)
     within('#gyms') { click_on 'Find Gyms Near Me' }
   end

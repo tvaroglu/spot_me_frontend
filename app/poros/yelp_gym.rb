@@ -1,10 +1,12 @@
 class YelpGym
   attr_reader :yelp_gym_id, :name, :address, :phone
 
-  def initialize(info)
-    @yelp_gym_id = info[:id]
-    @name = info[:attributes][:name]
-    @address = info[:attributes][:address]
-    @phone = info[:attributes][:phone]
+  def initialize(data)
+    @yelp_gym_id = data[:id]
+    return unless data[:attributes]
+
+    @name = data[:attributes][:name]
+    @address = data[:attributes][:address]
+    @phone = data[:attributes][:phone]
   end
 end

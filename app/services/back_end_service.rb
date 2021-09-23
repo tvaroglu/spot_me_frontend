@@ -10,13 +10,13 @@ class BackEndService
       parse_json(response.body)
     end
 
-    def get_gyms(user_id)
-      response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
+    def get_events(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}/events")
       parse_json(response.body)
     end
 
-    def get_events(user_id)
-      response = db_conn.get("/api/v1/users/#{user_id}/events")
+    def get_gyms(user_id)
+      response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
       parse_json(response.body)
     end
 
@@ -31,6 +31,12 @@ class BackEndService
     def delete_event(event_params)
       db_conn.delete(
         "/api/v1/users/#{event_params[:user_id]}/gym_memberships/#{event_params[:gym_membership_id]}/events/#{event_params[:id]}"
+      )
+    end
+
+    def delete_gym_membership(gym_membership_params)
+      db_conn.delete(
+        "/api/v1/users/#{gym_membership_params[:user_id]}/gym_memberships/#{gym_membership_params[:id]}"
       )
     end
 

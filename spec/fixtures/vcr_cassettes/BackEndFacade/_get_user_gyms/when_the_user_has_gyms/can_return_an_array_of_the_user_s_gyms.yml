@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 17:14:27 GMT
+      - Thu, 23 Sep 2021 20:18:55 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2d677b62-4229-417b-b4ab-be3db08d4f8b
+      - cfcb5ac9-f634-4d32-80c9-dadeb56e62ad
       X-Runtime:
-      - '0.069339'
+      - '0.006629'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Kling-Wilkinson"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Konopelski,
         Lowe and Haley"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Funk
         LLC"}}]}'
-  recorded_at: Thu, 23 Sep 2021 17:14:27 GMT
+  recorded_at: Thu, 23 Sep 2021 20:18:56 GMT
 recorded_with: VCR 6.0.0

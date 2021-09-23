@@ -44,7 +44,7 @@ RSpec.describe BackEndFacade do
       it "can return an array of the user's workouts", :vcr do
         events = BackEndFacade.get_user_events(1)
 
-        expect(events[0]).to be_an_instance_of(UserEvent)
+        expect(events[0]).to be_an_instance_of(Event)
         expect(events).not_to be_empty
       end
     end
@@ -60,7 +60,7 @@ RSpec.describe BackEndFacade do
 
   # it 'can find gyms near a user' do
   #   gyms = BackEndFacade.searched_gyms(30340)
-  #   expect(gyms[0]).to be_an_instance_of(YelpGym)
+  #   expect(gyms[0]).to be_an_instance_of(Gym)
   #   expect(gyms.count).to eq(20)
   # end
 end

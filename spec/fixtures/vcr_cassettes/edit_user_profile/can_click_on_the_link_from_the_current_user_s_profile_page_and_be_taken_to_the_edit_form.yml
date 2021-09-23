@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 17:14:30 GMT
+      - Thu, 23 Sep 2021 20:19:00 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6fb838f1-8a26-4573-8172-10cb39bf4606
+      - 9c9b27d3-ce80-4ad1-8602-956be7482c51
       X-Runtime:
-      - '0.004195'
+      - '0.004686'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"willene@littel-glover.net","google_id":"wqkc6j4tngz9x26k2kdgd","google_image_url":"https://robohash.org/eaquenihilimpedit.png?size=300x300\u0026set=set1","zip_code":"80227","summary":"Hello
         new summary","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Ms.
         Hai Crist"}}}'
-  recorded_at: Thu, 23 Sep 2021 17:14:30 GMT
+  recorded_at: Thu, 23 Sep 2021 20:19:00 GMT
 recorded_with: VCR 6.0.0

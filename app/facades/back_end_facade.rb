@@ -51,14 +51,14 @@ class BackEndFacade
       friends = BackEndService.get_friends(user_id)
       return Array.new unless friends[:data]
 
-      friends[:data].map { |friend| User.new(friend[:attributes]) }
+      friends[:data].map { |friend| User.new(friend) }
     end
 
     def get_user_gyms(user_id)
       gyms = BackEndService.get_gyms(user_id)
       return Array.new unless gyms[:data]
 
-      gyms[:data].map { |gym| GymMembership.new(gym[:attributes]) }
+      gyms[:data].map { |gym| GymMembership.new(gym) }
     end
 
     def get_gyms_near_user(zip_code)
@@ -84,12 +84,9 @@ class BackEndFacade
 
     def get_gym_users(yelp_api_key)
       users = BackEndService.get_gym_users(yelp_api_key)
+      return [] unless users[:data]
 
-      if users[:data]
-        users[:data].map do |user|
-          User.new(user)
-        end
-      end
+      users[:data].map { |user| User.new(user) }
     end
 
     def get_gym_users_count(yelp_api_key)
@@ -101,12 +98,9 @@ class BackEndFacade
 
     def get_friends_at_gym(yelp_gym_id, current_user_id)
       friends = BackEndService.get_friends_at_gym(yelp_gym_id, current_user_id)
+      return [] unless friends[:data]
 
-      if friends[:data]
-        friends[:data].map do |friend|
-          User.new(friend)
-        end
-      end
+      friends[:data].map { |friend| User.new(friend) }
     end
 
     def get_non_friends_at_gym(params)

@@ -16,14 +16,14 @@ class FriendshipsController < ApplicationController
   def create_friendship_params
     {
       user_id: params[:user_id],
-      followee_id: params[:followee_id],
+      followee_id: params[:followee_id]
     }
   end
 
   def destroy_friendship_params
     {
       user_id: params[:user_id],
-      id: params[:followee_id],
+      id: params[:followee_id]
     }
   end
 end

@@ -45,11 +45,11 @@ RSpec.describe BackEndService do
   it 'can parse friendship creation json', :vcr do
     params = {
       user_id: 1,
-      followee_id: 10,
+      followee_id: 10
     }
     expect(BackEndService.create_friendship(params).class).to eq(Hash)
-  end 
-  
+  end
+
   it 'can parse one gym json', :vcr do
     result = BackEndService.get_one_gym('BJBXzKYxQAXZKb5W6HrRnA')
     expect(result.class).to eq(Hash)
@@ -64,11 +64,11 @@ RSpec.describe BackEndService do
   end
 
   it "can parse a gym's users", :vcr do
-    expect(BackEndService.get_gym_users("BJBXzKYxQAXZKb5W6HrRnA")).to be_a(Hash)
+    expect(BackEndService.get_gym_users('BJBXzKYxQAXZKb5W6HrRnA')).to be_a(Hash)
   end
 
   it 'can parse a gyms friends of the current user', :vcr do
-    expect(BackEndService.get_friends_at_gym("BJBXzKYxQAXZKb5W6HrRnA", 1)).to be_a(Hash)
+    expect(BackEndService.get_friends_at_gym('BJBXzKYxQAXZKb5W6HrRnA', 1)).to be_a(Hash)
   end
 
   it 'can parse a gyms non friends of the current user', :vcr do

@@ -44,11 +44,11 @@ describe 'user profile page: current user', type: :feature do
       end
 
       it 'displays add friend button' do
-        expect(page).to_not have_link('Add Friend')
+        expect(page).not_to have_link('Add Friend')
       end
 
       it 'displays delete friend button' do
-        expect(page).to_not have_link('Remove Friend')
+        expect(page).not_to have_link('Remove Friend')
       end
     end
   end

@@ -33,6 +33,10 @@ class BackEndFacade
       BackEndService.delete_gym_membership(params)
     end
 
+    def delete_friend(params)
+      BackEndService.delete_friend(params)
+    end
+
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
       return Array.new unless friends[:data]

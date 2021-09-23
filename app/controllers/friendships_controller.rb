@@ -5,6 +5,13 @@ class FriendshipsController < ApplicationController
     redirect_to dashboard_path(current_user.id)
   end
 
+  def destroy
+    BackEndFacade.delete_friend(friendship_params)
+    redirect_to dashboard_path(current_user.id)
+    flash[:alert] =
+      'Friend removed!'
+  end
+
   private
 
   def friendship_params

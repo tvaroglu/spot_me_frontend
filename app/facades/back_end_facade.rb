@@ -60,5 +60,24 @@ class BackEndFacade
 
       GymUserCount.new(users[:meta]) if users[:meta]
     end
+
+    def get_friends_at_gym(yelp_api_key)
+      friends = BackEndService.get_friends_at_gym(yelp_api_key)
+
+      if friends[:data]
+        friends[:data].map do |friend|
+          GymUser.new(friend)
+        end
+      end
+
+    def get_non_friends_at_gym(yelp_api_key)
+      non_friends = BackEndService.get_non_friends_at_gym(yelp_api_key)
+
+      if non_friends[:data]
+        non_friends[:data].map do |friend|
+          GymUser.new(non_friend)
+        end
+      end
+    end
   end
 end

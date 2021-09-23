@@ -63,15 +63,15 @@ class BackEndService
       parse_json(response.body)
     end
 
-    def get_friends_at_gym(yelp_gym_id)
-      response = db_conn.get("api/v1/gym_memberships") do |req|
+    def get_friends_at_gym(yelp_gym_id, current_user)
+      response = db_conn.get("api/v1/users/#{current_user.id}/friendships") do |req|
         req.params['yelp_gym_id'] = yelp_gym_id
       end
       parse_json(response.body)
     end
 
-    def get_non_friends_at_gym(yelp_gym_id)
-      esponse = db_conn.get("api/v1/gym_memberships") do |req|
+    def get_non_friends_at_gym(yelp_gym_id, currrent_user)
+      response = db_conn.get("api/v1/gym_memberships") do |req|
         req.params['yelp_gym_id'] = yelp_gym_id
       end
       parse_json(response.body)

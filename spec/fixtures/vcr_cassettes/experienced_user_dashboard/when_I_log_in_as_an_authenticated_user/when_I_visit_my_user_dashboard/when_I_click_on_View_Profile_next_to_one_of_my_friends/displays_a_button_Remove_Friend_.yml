@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/10
+    uri: http://localhost:4500/api/v1/users/10
     body:
       encoding: US-ASCII
       string: ''
@@ -18,31 +18,22 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 03:55:31 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"91536ebf5e21137685b4bf0885247aa3"
+      - W/"4eac5b8e3ac67af17ae45edea6ee6dc5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 58d96324-cc5b-4bed-bedb-9f8f0de1c935
+      - 5ad19912-68f9-4f9d-bdb5-a2b765f1ca30
       X-Runtime:
-      - '0.009880'
+      - '0.002483'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
-        how to listen, and you will profit even from those who talk badly.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
-        Gulgowski"}}}'
-  recorded_at: Thu, 23 Sep 2021 03:55:31 GMT
+      string: '{"data":{"id":"10","type":"user","attributes":{"email":"toney@bahringer.name","google_id":"7s6odo2cijcagr3zub15m","google_image_url":"https://robohash.org/sederrorfacere.png?size=300x300\u0026set=set1","zip_code":"52860","summary":"Pleasure
+        in the job puts perfection in the work.","goal":"Increase Flexibility","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Yasuko
+        Ondricka"}}}'
+  recorded_at: Thu, 23 Sep 2021 18:47:15 GMT
 recorded_with: VCR 6.0.0

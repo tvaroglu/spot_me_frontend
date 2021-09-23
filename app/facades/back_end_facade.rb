@@ -61,8 +61,11 @@ class BackEndFacade
       events[:data].map { |event| UserEvent.new(event) }
     end
 
-    def add_friend(user_id, followee_id)
-      friendships = BackEndService.create_friendship(user_id, followee_id)
+    def add_friend(params)
+      json = BackEndService.create_friendship(params)
+      return unless json[:data]
+
+      User.new(json[:data])
     end
   end
 end

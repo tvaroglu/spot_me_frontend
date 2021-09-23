@@ -1,36 +1,38 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: http://localhost:4500/api/v1/users/find?google_id=789
+    method: post
+    uri: http://localhost:4500/api/v1/users/1/friendships?followee_id=10
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
       User-Agent:
       - Faraday v1.8.0
+      Content-Length:
+      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 422
+      message: Unprocessable Entity
     headers:
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 93dd236b-1a50-471d-87aa-32b0ab624a0b
+      - 102dacaa-f8b7-4d2a-8af4-3f7b19dd106c
       X-Runtime:
-      - '0.003748'
+      - '0.009316'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"message":"your query could not be completed","errors":["Couldn''t
-        find User"]}'
-  recorded_at: Thu, 23 Sep 2021 18:47:15 GMT
+      string: '{"message":"your record could not be saved","errors":["Followee has
+        already been taken"]}'
+  recorded_at: Thu, 23 Sep 2021 18:49:54 GMT
 recorded_with: VCR 6.0.0

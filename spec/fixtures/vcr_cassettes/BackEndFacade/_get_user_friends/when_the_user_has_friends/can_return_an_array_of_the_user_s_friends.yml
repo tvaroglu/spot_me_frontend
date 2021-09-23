@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
+    uri: http://localhost:4500/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,36 +18,28 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 03:55:28 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c0edf40e2d8021495ead9997f2ff526e"
+      - W/"a387c48066ae251b85f5bc623538f971"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3098fbf8-2cc6-445d-960f-96aa1908b049
+      - a72000a3-7c93-4758-82c4-8407c09ddd38
       X-Runtime:
-      - '0.010483'
+      - '0.008205'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
-        unexamined life is not worth living.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Delaine
-        Veum"}},{"id":"9","type":"user","attributes":{"email":"roscoe@howell.info","google_id":"2lls7mm1nm8tmoonlrin4","google_image_url":"https://robohash.org/reprehenderitindolorem.png?size=300x300\u0026set=set1","zip_code":"22715","summary":"It''s
-        not what happens to you, but how you react to it that matters.","goal":"Increase
-        Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Dr.
-        Faustina Batz"}},{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
-        how to listen, and you will profit even from those who talk badly.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
-        Gulgowski"}}]}'
-  recorded_at: Thu, 23 Sep 2021 03:55:28 GMT
+      string: '{"data":[{"id":"11","type":"user","attributes":{"email":"ezzowafai@gmail.com","google_id":"117200267189958170451","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GhteOcMfxr_sJFpdMfQ6Kv1JfrW_EljpL0pW7AhGA=s96-c","zip_code":"38134","summary":"lift","goal":"Increase
+        Flexibility","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Ezz
+        Waf"}},{"id":"3","type":"user","attributes":{"email":"jimmy@okon.org","google_id":"w597ypmwi95dz5uu5ymu2","google_image_url":"https://robohash.org/facilisrationeofficia.png?size=300x300\u0026set=set1","zip_code":"97047","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Dr.
+        Charley McClure"}},{"id":"9","type":"user","attributes":{"email":"blake_huel@ondricka.com","google_id":"rbuhtxm0pbqfnb3kdsudd","google_image_url":"https://robohash.org/autidquia.png?size=300x300\u0026set=set1","zip_code":"13501","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Increase Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Miss
+        Abel Rogahn"}},{"id":"10","type":"user","attributes":{"email":"toney@bahringer.name","google_id":"7s6odo2cijcagr3zub15m","google_image_url":"https://robohash.org/sederrorfacere.png?size=300x300\u0026set=set1","zip_code":"52860","summary":"Pleasure
+        in the job puts perfection in the work.","goal":"Increase Flexibility","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Yasuko
+        Ondricka"}}]}'
+  recorded_at: Thu, 23 Sep 2021 18:47:13 GMT
 recorded_with: VCR 6.0.0

@@ -41,4 +41,12 @@ RSpec.describe BackEndService do
   it 'can parse searched gyms json', :vcr do
     expect(BackEndService.gyms_near_user('80227').class).to eq(Hash)
   end
+
+  it 'can parse friendship creation json', :vcr do
+    params = {
+      user_id: 1,
+      followee_id: 10,
+    }
+    expect(BackEndService.create_friendship(params).class).to eq(Hash)
+  end
 end

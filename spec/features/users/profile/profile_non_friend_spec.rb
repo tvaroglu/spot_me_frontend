@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'user profile page: non-friend', type: :feature do
   let(:user1_params) do
     {
-      id: 10,
+      id: 11,
       attributes: {
         email: '123@test.com',
         full_name: 'Joe Shmoe',
@@ -62,10 +62,14 @@ describe 'user profile page: non-friend', type: :feature do
         expect(page).to have_link('Add Friend')
       end
 
-      it 'can add a friend' do
+      it 'can add a friend', :vcr do
+        allow(BackEndService).to receive(:create_friendship).and_return(user1_params)
+        allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
+        
         click_on 'Add Friend'
 
-        expect(current_path).to eq(dashboard_path)
+        expect(current_path).to eq(dashboard_path(@user.id))
+        expect(page).to have_content("go get them gains!!")
       end
 
       it 'displays delete friend button' do

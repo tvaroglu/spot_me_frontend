@@ -2,6 +2,42 @@
 http_interactions:
 - request:
     method: get
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f4402920703770d4406c32096441d4ca"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d9d2b740-8c30-4134-b0a0-ad02ff3ea0e4
+      X-Runtime:
+      - '0.049360'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Stanton
+        LLC"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Schinner-Cremin"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Auer,
+        Jones and McKenzie"}}]}'
+  recorded_at: Thu, 23 Sep 2021 18:45:02 GMT
+- request:
+    method: get
     uri: http://localhost:4500/api/v1/users/1/events
     body:
       encoding: US-ASCII
@@ -25,9 +61,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 06d7986f-1f3d-4035-8c7a-a576677d2bd6
+      - 20236d41-8471-4df0-a4a5-74d590caf6df
       X-Runtime:
-      - '0.011671'
+      - '0.010578'
       Transfer-Encoding:
       - chunked
     body:
@@ -40,5 +76,5 @@ http_interactions:
         Charley McClure"}},{"id":"7","type":"user","attributes":{"email":"bradford.parker@kuhlman.net","google_id":"42svgi6dhm5aeoz0td6jz","google_image_url":"https://robohash.org/etrepudiandaeut.png?size=300x300\u0026set=set1","zip_code":"52047","summary":"Quality
         is not an act, it is a habit.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Fredrick
         Kutch"}}]}'
-  recorded_at: Thu, 23 Sep 2021 18:47:14 GMT
+  recorded_at: Thu, 23 Sep 2021 18:45:02 GMT
 recorded_with: VCR 6.0.0

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
+    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -18,12 +18,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Thu, 23 Sep 2021 01:34:48 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -31,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2153d736-8c3b-47a0-9866-dfbd6b30829b
+      - 60d2b8d6-05aa-411b-8f2d-18d54f2b2762
       X-Runtime:
-      - '0.275046'
+      - '0.569349'
       Transfer-Encoding:
       - chunked
     body:
@@ -79,5 +73,5 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
-  recorded_at: Thu, 23 Sep 2021 01:34:48 GMT
+  recorded_at: Thu, 23 Sep 2021 04:37:04 GMT
 recorded_with: VCR 6.0.0

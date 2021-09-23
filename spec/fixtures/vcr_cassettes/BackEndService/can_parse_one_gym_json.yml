@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f87afda8-75bf-47e0-9c24-0d983e3975c0
+      - fb2923ba-3b0b-414f-b56f-d6ee541f452e
       X-Runtime:
-      - '0.292388'
+      - '0.451879'
       Transfer-Encoding:
       - chunked
     body:
@@ -35,5 +35,5 @@ http_interactions:
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Thu, 23 Sep 2021 00:46:17 GMT
+  recorded_at: Thu, 23 Sep 2021 04:37:13 GMT
 recorded_with: VCR 6.0.0

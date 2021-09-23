@@ -21,19 +21,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ac501472e44f293b949cea2506322523"
+      - W/"6413c978e87e1e1c37831c9e5747573e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a73202f7-08cb-456b-8844-6ee2b8d6f4cf
+      - 5ab48732-8640-4b78-a31a-4f8efdfa51fe
       X-Runtime:
-      - '0.006408'
+      - '0.004666'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"cherri@murray.info","google_id":"zur35oxhdjulc0poxyv2t","google_image_url":"https://robohash.org/quisperferendisassumenda.png?size=300x300\u0026set=set1","zip_code":"07529","summary":"Beware
-        the barrenness of a busy life.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Ahmad
-        Dooley Esq."}}],"meta":{"gym_member_count":1}}'
-  recorded_at: Thu, 23 Sep 2021 00:46:17 GMT
+      string: '{"data":[{"id":"1","type":"user","attributes":{"email":"kari@monahan.biz","google_id":"htgl5wjp5bl6ffdl6eitr","google_image_url":"https://robohash.org/repellenduseumnisi.png?size=300x300\u0026set=set1","zip_code":"84834","summary":"The
+        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Hans
+        Cruickshank"}},{"id":"1","type":"user","attributes":{"email":"kari@monahan.biz","google_id":"htgl5wjp5bl6ffdl6eitr","google_image_url":"https://robohash.org/repellenduseumnisi.png?size=300x300\u0026set=set1","zip_code":"84834","summary":"The
+        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Hans
+        Cruickshank"}}],"meta":{"gym_member_count":2}}'
+  recorded_at: Thu, 23 Sep 2021 04:37:13 GMT
 recorded_with: VCR 6.0.0

@@ -25,7 +25,21 @@ class UsersController < ApplicationController
   def edit;  end
   
   def update
+    update_user = BackEndFacade.update_user(users_params, current_user.id)
+    # require "pry"; binding.pry
+    if update_user[:errors].present?
+      flash[:error] = "Could not update your profile please try again!"
+      redirect_to profile_edit_path(current_user.id)
+    else
+      flash[:success] = "Successfully updated your profile!"
+      redirect_to profile_path(current_user.id)
+    end
     # TODO: write this method and create view
     # BackEndFacade.update_user(params)
   end
 end
+
+ private
+ def users_params
+  params.permit(:full_name, :email, :zip_code, :summary, :goal, :availability_morning, :availability_afternoon, :availability_evening)
+ end

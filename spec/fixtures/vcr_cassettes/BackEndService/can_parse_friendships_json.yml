@@ -21,32 +21,33 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Wed, 22 Sep 2021 17:15:25 GMT
+      - Thu, 23 Sep 2021 01:14:29 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e5d4c85be9ee8c0b391198780ada2924"
+      - W/"c0edf40e2d8021495ead9997f2ff526e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d4e30bd6-6b36-49a8-94e5-b9af0f59bb68
+      - 7cbe8db6-3fc2-46ef-8d84-2fa3373c5de9
       X-Runtime:
-      - '0.012238'
+      - '0.105100'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"virgen@mueller-mraz.io","google_id":"nig89a1duzt9e6228mxea","google_image_url":"https://robohash.org/dolorumestalias.png?size=300x300\u0026set=set1","zip_code":"12378","summary":"The
-        secret to humor is surprise.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Mary
-        Ratke"}},{"id":"9","type":"user","attributes":{"email":"mara.terry@fay-bauch.net","google_id":"jmoyy4j8ohld8dpos6r9j","google_image_url":"https://robohash.org/estharumut.png?size=300x300\u0026set=set1","zip_code":"45298","summary":"Quality
-        is not an act, it is a habit.","goal":null,"availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Eddy
-        Renner"}},{"id":"10","type":"user","attributes":{"email":"danette@wehner.net","google_id":"4gj14p8aqry0jnjwjw2qp","google_image_url":"https://robohash.org/earumdoloremin.png?size=300x300\u0026set=set1","zip_code":"62006","summary":"It
-        is impossible to begin to learn that which one thinks one already knows.","goal":"Increase
-        Stamina","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Camille
-        Murazik IV"}}]}'
-  recorded_at: Wed, 22 Sep 2021 17:15:25 GMT
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
+        unexamined life is not worth living.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Delaine
+        Veum"}},{"id":"9","type":"user","attributes":{"email":"roscoe@howell.info","google_id":"2lls7mm1nm8tmoonlrin4","google_image_url":"https://robohash.org/reprehenderitindolorem.png?size=300x300\u0026set=set1","zip_code":"22715","summary":"It''s
+        not what happens to you, but how you react to it that matters.","goal":"Increase
+        Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Dr.
+        Faustina Batz"}},{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
+        how to listen, and you will profit even from those who talk badly.","goal":"Lose
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
+        Gulgowski"}}]}'
+  recorded_at: Thu, 23 Sep 2021 01:14:30 GMT
 recorded_with: VCR 6.0.0

@@ -1,38 +1,40 @@
-<h1>Register</h1>
-<% require "pry"; binding.pry %>
-<%= form_with url: registration_path(google_id: params[:google_id], google_token: params[:google_token], google_image_url: params[:google_image_url]), local: true do |f| %>
+<h1>Edit User Profile</h1>
+
+<%= form_with url: profile_update_path(current_user.id), local: true do |f| %>
   <%= f.label :full_name, 'Name' %>
   <br>
-  <%= f.text_field :full_name, value: params[:full_name], id: :full_name %>
+  <%= f.text_field :full_name, value: current_user.full_name, id: :full_name %>
   <br>
   <%= f.label :email, 'Email' %>
   <br>
-  <%= f.text_field :email, value: params[:email], readonly: true, id: :email %>
+  <%= f.text_field :email, value: current_user.email, readonly: true, id: :email %>
   <br>
   <%= f.label :zip_code, 'Zip Code' %>
   <br>
-  <%= f.text_field :zip_code, id: :zip_code %>
+  <%= f.text_field :zip_code, value: current_user.zip_code, id: :zip_code %>
   <br>
   <%= f.label :summary, 'Summary' %>
   <br>
-  <%= f.text_area :summary, cols: 40, id: :summary %>
+  <%= f.text_area :summary, value: current_user.summary, cols: 40, id: :summary %>
   <br>
   <%= f.label :goal, 'Goals' %>
   <br>
-  <%= f.select :goal, ['Gain Weight', 'Lose Weight', 'Increase Flexibility', 'Increase Stamina'], include_blank: 'Select your motivation', id: :goal %>
+  <%= f.select :goal, User.goals_array, value: current_user.goal, id: :goal %>
   <br>
   <br>
   <h4>Availability</h4>
   <%= f.label :availability_morning, 'Morning' %>
-  <%= f.check_box :availability_morning, id: :availability_morning %>
+  <%= f.check_box :availability_morning, checked: current_user.availability_morning, id: :availability_morning %>
   <br>
   <%= f.label :availability_afternoon, 'Afternoon' %>
-  <%= f.check_box :availability_afternoon, id: :availability_afternoon %>
+  <%= f.check_box :availability_afternoon, checked: current_user.availability_afternoon ,id: :availability_afternoon %>
   <br>
   <%= f.label :availability_evening, 'Evening' %>
-  <%= f.check_box :availability_evening, id: :availability_evening %>
+  <%= f.check_box :availability_evening, checked: current_user.availability_evening ,id: :availability_evening %>
   <br>
   <br>
-  <%= f.submit 'Register', class: 'btn btn-primary' %>
+  <%= f.submit 'Update Profile', class: 'btn btn-primary' %>
 <% end %>
 <br>
+
+

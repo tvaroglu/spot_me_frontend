@@ -13,28 +13,44 @@ RSpec.describe 'Edit and update a current users profile by clicking a link on a 
   end
 
   it 'can fill out a form to update a user and gives a flash message when you successfully update a user' do
-    save_and_open_page
-    expect(page).to have_content("Costco")
-    click_link("update #{@merchant1.name}")
+    json_response = File.read('./spec/fixtures/user.json')
+    expect(page).to have_field('Name', with: "#{@user.full_name}")
+    expect(page).to have_field('Email', with: "#{@user.email}")
+    expect(page).to have_field('Zip Code', with: "#{@user.zip_code}")
+    expect(page).to have_field('Summary', with: "#{@user.summary}")
+    expect(page).to have_field('Goals', with: "#{@user.goal}")
 
-    fill_in("Name", with: "Kostco")
+    fill_in("Summary", with: "Joe Mama")
 
-    click_button("Update #{@merchant1.name}")
+    allow(BackEndService).to receive(:update_user).and_return(JSON.parse(json_response, symbolize_names: true))
 
-    expect(page).to have_content("Merchant Successfully updated!")
-    expect(current_path).to eq("/admin/merchants/#{@merchant1.id}")
-    expect(page).to have_content("Kostco")
-    expect(page).to_not have_content("Costco")
+    click_button("Update Profile")
+
+    expect(current_path).to eq("/profile/#{@user.id}")
+    expect(page).to have_content("Successfully updated your profile!")
   end
 
-  xit 'gives a flash message when you do not successfully update a merchant' do
-    expect(page).to_not have_content("Error: Name can't be blank")
-    click_link("update #{@merchant1.name}")
+  it 'can fill out a form to update a user and gives a flash message when you successfully update a user' do
+    expect(page).to have_field('Name', with: "#{@user.full_name}")
+    expect(page).to have_field('Email', with: "#{@user.email}")
+    expect(page).to have_field('Zip Code', with: "#{@user.zip_code}")
+    expect(page).to have_field('Summary', with: "#{@user.summary}")
+    expect(page).to have_field('Goals', with: "#{@user.goal}")
 
-    fill_in("Name", with: "")
+    fill_in("Summary", with: "")
 
-    click_button("Update #{@merchant1.name}")
+    error_response = {                        
+                      :message=>"your query could not be completed",
+                      :errors=>[
+                      "Couldn't find User with 'id'=40"
+                                ]
+                      }
 
-    expect(page).to have_content("Error: Name can't be blank")
+    allow(BackEndService).to receive(:update_user).and_return(error_response)
+
+    click_button("Update Profile")
+
+    expect(current_path).to eq(profile_edit_path(@user.id))
+    expect(page).to have_content("Could not update your profile please try again!")
   end
 end

@@ -11,7 +11,7 @@ class ApplicationRecord < ActiveRecord::Base
                  google_image_url: 'pretty face',
                  zip_code: '80227',
                  summary: 'Muy guesta gimnasios',
-                 goal: 'Gain Weight',
+                 goal: 'Gain Muscle',
                  availability_morning: true,
                  availability_afternoon: true,
                  availability_evening: false

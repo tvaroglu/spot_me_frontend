@@ -28,6 +28,15 @@ class BackEndService
       )
     end
 
+    def update_user(user_params, user_id)
+      response = db_conn.patch(
+        "/api/v1/users/#{user_id}",
+        user_params.to_json,
+        'Content-Type' => 'application/json'
+      )
+      parse_json(response.body)
+    end
+
     def gyms_near_user(zip_code)
       response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")
 

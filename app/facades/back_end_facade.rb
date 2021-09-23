@@ -9,6 +9,10 @@ class BackEndFacade
       BackEndService.create_user(params)
     end
 
+    def update_user(params, user_id)
+      BackEndService.update_user(params, user_id)
+    end
+
     def get_user_friends(user_id)
       friends = BackEndService.get_friends(user_id)
       if friends[:data]

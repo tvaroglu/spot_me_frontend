@@ -1,6 +1,10 @@
-<h1><%= @gym.name %></h1><br/>
-<p><%= @gym.address %></p><br/>
-<p><%= @gym.phone %></p><br/>
+<div id="gym_attributes">
+  <h1><%= @gym.name %></h1><br/>
+  <p><%= @gym.address %></p><br/>
+  <p><%= @gym.phone %></p><br/>
+</div>
+
+<p>Number of Active Members: <%= @gym_users_count.gym_member_count %></p><br/>
 
 
 

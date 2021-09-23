@@ -18,6 +18,15 @@ http_interactions:
       code: 200
       message: OK
     headers:
+<<<<<<< HEAD
+=======
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 17:14:29 GMT
+      Connection:
+      - keep-alive
+>>>>>>> 51de2549389f414584e4bde1913394a3ee71e9f5
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -25,9 +34,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
+<<<<<<< HEAD
       - 7ef3331d-52b7-4509-b849-644dae3ef4c6
       X-Runtime:
       - '0.503797'
+=======
+      - 447df417-5ff3-45d4-9029-5f2f6d5d9e5f
+      X-Runtime:
+      - '0.399784'
+>>>>>>> 51de2549389f414584e4bde1913394a3ee71e9f5
       Transfer-Encoding:
       - chunked
     body:
@@ -73,5 +88,9 @@ http_interactions:
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
         568-9192"}}]}'
+<<<<<<< HEAD
   recorded_at: Thu, 23 Sep 2021 18:47:14 GMT
+=======
+  recorded_at: Thu, 23 Sep 2021 17:14:29 GMT
+>>>>>>> 51de2549389f414584e4bde1913394a3ee71e9f5
 recorded_with: VCR 6.0.0

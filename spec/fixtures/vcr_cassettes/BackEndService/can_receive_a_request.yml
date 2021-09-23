@@ -18,19 +18,25 @@ http_interactions:
       code: 404
       message: Not Found
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 17:14:30 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 93dd236b-1a50-471d-87aa-32b0ab624a0b
+      - febc0f91-6756-4097-97a3-e76cb6c16bfb
       X-Runtime:
-      - '0.003748'
+      - '0.004875'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User"]}'
-  recorded_at: Thu, 23 Sep 2021 18:47:15 GMT
+  recorded_at: Thu, 23 Sep 2021 17:14:31 GMT
 recorded_with: VCR 6.0.0

@@ -33,6 +33,14 @@ class BackEndService
       )
     end
 
+    def update_user(user_params, user_id)
+      db_conn.patch(
+        "/api/v1/users/#{user_id}",
+        user_params.to_json,
+        'Content-Type' => 'application/json'
+      )
+    end
+
     def create_event(params)
       db_conn.post("/api/v1/users/#{params[:user_id]}/gym_memberships/#{params[:gym_membership_id]}/events") do |req|
         req.params['activity'] = params[:activity]

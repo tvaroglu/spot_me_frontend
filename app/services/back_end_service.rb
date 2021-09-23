@@ -33,6 +33,13 @@ class BackEndService
       )
     end
 
+    def create_event(params)
+      db_conn.post("/api/v1/users/#{params[:user_id]}/gym_memberships/#{params[:gym_membership_id]}/events") do |req|
+        req.params['activity'] = params[:activity]
+        req.params['date_time'] = params[:date_time]
+      end
+    end
+
     def delete_event(event_params)
       db_conn.delete(
         "/api/v1/users/#{event_params[:user_id]}/gym_memberships/#{event_params[:gym_membership_id]}/events/#{event_params[:id]}"

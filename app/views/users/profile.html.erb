@@ -3,7 +3,7 @@
     <tr>
       <td align="center">
         <div id='profile'>
-          <img id="profile_pic" src="<%= @profile_user.google_image_url %>" style="width:200px; height:auto;">
+          <img id="profile_pic" src="<%= @profile_user.google_image_url %>" style="border-radius:50px; width:200px; height:auto;">
           <br>
           <br>
           <% if @user_type == :self %>
@@ -73,7 +73,7 @@
               <p id="friend-<%= friend.id%>">
                 <%= friend.full_name %>
                 <%= link_to 'View Profile', profile_path(friend.id),
-                                            class: "btn btn-info btn-lg btn-outline-dark" %>
+                                            class: "btn btn-med btn-info navbar-custom btn-outline-dark" %>
               </p>
             <% end %>
           <% end %>

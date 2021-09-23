@@ -6,7 +6,8 @@ class GymsController < ApplicationController
   def destroy
     BackEndFacade.delete_gym_membership(gym_membership_destroy_params)
     redirect_to dashboard_path(current_user.id)
-    flash[:alert] = 'Gym removed... but you should probably join a new one ASAP if you want those gains!'
+    flash[:alert] =
+      'Gym removed... but you should probably join a new one ASAP if you want those gains!'
   end
 
   private

@@ -1,0 +1,34 @@
+<h1>Create a New Workout</h1>
+
+<%= form_with url: events_path(user_id: @friend_id, gym_membership_id: @gym_membership_id), method: :post, local: true do |form| %>
+  <table>
+    <tr>
+      <th><%= form.label :gym_name, 'Gym Name' %></th>
+      <th><%= form.label :gym_name, @gym_name %></th>
+    </tr>
+
+    <tr>
+      <th><%= form.label :friend_name, 'Friend Name' %></th>
+      <th><%= form.label :friend_name, @friend_name %></th>
+    </tr>
+
+    <tr>
+      <th><%= form.label :activity, 'Activity' %></th>
+      <td><%= form.text_field :activity %></td>
+    </tr>
+
+    <tr>
+      <th><%= form.label :when, 'Day' %></th>
+      <td><%= form.date_select :when, prefix: :date %></td>
+    </tr>
+
+    <tr>
+      <th><%= form.label :start_time, 'Start Time' %></th>
+      <td><%= form.time_select :start_time, prefix: :time %></td>
+    </tr>
+
+    <tr>
+      <td colspan='2'><%= form.submit 'Submit', class: "btn btn-info btn-lg btn-outline-dark" %></td>
+    </tr>
+  </table>
+<% end %>

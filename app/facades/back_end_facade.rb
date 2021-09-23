@@ -18,6 +18,13 @@ class BackEndFacade
       BackEndService.create_user(params)
     end
 
+    def create_event(params)
+      json = BackEndService.create_event(params)
+      return unless json[:data]
+
+      UserEvent.new(json[:data])
+    end
+
     def delete_event(params)
       BackEndService.delete_event(params)
     end

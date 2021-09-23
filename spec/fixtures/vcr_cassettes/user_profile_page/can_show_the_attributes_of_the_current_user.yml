@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 00:26:56 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c0edf40e2d8021495ead9997f2ff526e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2cb21efb-4c53-49ec-ad25-7ce62a205b16
+      X-Runtime:
+      - '0.361676'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"fabian.blick@kohler.net","google_id":"4687is9qj96q8tv0uy5le","google_image_url":"https://robohash.org/earumiureexpedita.png?size=300x300\u0026set=set1","zip_code":"64540","summary":"The
+        unexamined life is not worth living.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Delaine
+        Veum"}},{"id":"9","type":"user","attributes":{"email":"roscoe@howell.info","google_id":"2lls7mm1nm8tmoonlrin4","google_image_url":"https://robohash.org/reprehenderitindolorem.png?size=300x300\u0026set=set1","zip_code":"22715","summary":"It''s
+        not what happens to you, but how you react to it that matters.","goal":"Increase
+        Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Dr.
+        Faustina Batz"}},{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
+        how to listen, and you will profit even from those who talk badly.","goal":"Lose
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
+        Gulgowski"}}]}'
+  recorded_at: Thu, 23 Sep 2021 00:26:57 GMT
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/find?google_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 23 Sep 2021 00:26:56 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 4d8a8bd5-e081-4f43-bd8c-c6bbcf3323db
+      X-Runtime:
+      - '0.011095'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User"]}'
+  recorded_at: Thu, 23 Sep 2021 00:26:57 GMT
+recorded_with: VCR 6.0.0

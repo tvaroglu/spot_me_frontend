@@ -1,6 +1,6 @@
 class GymsController < ApplicationController
   def index
-    @gyms = BackEndFacade.get_gyms_near_user(params['zip_code'])
+    @gyms = BackEndFacade.get_gyms_near_user(params[:zip_code])
   end
 
   def show

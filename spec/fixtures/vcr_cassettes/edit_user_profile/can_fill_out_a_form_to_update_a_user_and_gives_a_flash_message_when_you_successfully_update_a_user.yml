@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 16:38:37 GMT
+      - Thu, 23 Sep 2021 16:55:05 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 731ab775-65ab-4cfc-be3a-81dddab2cd13
+      - 22e8f303-9b45-4a97-b88e-05f56652ff27
       X-Runtime:
-      - '0.004630'
+      - '0.011030'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,7 +43,7 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"willene@littel-glover.net","google_id":"wqkc6j4tngz9x26k2kdgd","google_image_url":"https://robohash.org/eaquenihilimpedit.png?size=300x300\u0026set=set1","zip_code":"80227","summary":"Hello
         new summary","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Ms.
         Hai Crist"}}}'
-  recorded_at: Thu, 23 Sep 2021 16:38:37 GMT
+  recorded_at: Thu, 23 Sep 2021 16:55:06 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
@@ -65,7 +65,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 16:38:37 GMT
+      - Thu, 23 Sep 2021 16:55:05 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -75,9 +75,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 782a6393-ae1c-4263-a33b-ca83ac838af9
+      - 1938c7bf-0f88-40ee-a2cf-5d87f4c9d8a2
       X-Runtime:
-      - '0.007436'
+      - '0.008837'
       Transfer-Encoding:
       - chunked
       Via:
@@ -87,5 +87,5 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"willene@littel-glover.net","google_id":"wqkc6j4tngz9x26k2kdgd","google_image_url":"https://robohash.org/eaquenihilimpedit.png?size=300x300\u0026set=set1","zip_code":"80227","summary":"Hello
         new summary","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Ms.
         Hai Crist"}}}'
-  recorded_at: Thu, 23 Sep 2021 16:38:38 GMT
+  recorded_at: Thu, 23 Sep 2021 16:55:06 GMT
 recorded_with: VCR 6.0.0

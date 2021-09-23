@@ -37,14 +37,9 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    updated_user = BackEndFacade.update_user(users_params, current_user.id)
-    if updated_user.id.nil?
-      flash[:error] = "Couldn't update your profile, please try again!"
-      redirect_to profile_edit_path(current_user.id)
-    else
-      flash[:success] = 'Your profile has been updated!'
-      redirect_to profile_path(current_user.id)
-    end
+    BackEndFacade.update_user(users_params, current_user.id)
+    flash[:success] = 'Your profile has been updated!'
+    redirect_to profile_path(current_user.id)
   end
 
   private

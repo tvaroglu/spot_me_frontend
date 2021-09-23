@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 01:34:47 GMT
+      - Thu, 23 Sep 2021 03:55:29 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 884fee89-982a-4c26-9e36-72a8ed010dfc
+      - e868e34d-16ea-4abd-8fdf-dac98e6c9edb
       X-Runtime:
-      - '0.174466'
+      - '0.017930'
       Transfer-Encoding:
       - chunked
       Via:
@@ -52,5 +52,5 @@ http_interactions:
         how to listen, and you will profit even from those who talk badly.","goal":"Gain
         Muscle","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
         Damion Becker"}}]}'
-  recorded_at: Thu, 23 Sep 2021 01:34:47 GMT
+  recorded_at: Thu, 23 Sep 2021 03:55:29 GMT
 recorded_with: VCR 6.0.0

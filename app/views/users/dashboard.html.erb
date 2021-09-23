@@ -1,13 +1,15 @@
 <% if current_user %>
-  <table class="table table-sm table-borderless table-responsive align-middle">
+  <table class="table table-sm table-borderless table-responsive align-top">
     <tr>
       <td align="center">
         <div id='profile'>
-          <img id="profile_pic" src="<%= current_user.google_image_url %>"><br>
+          <img id="profile_pic" src="<%= current_user.google_image_url %>" style="width:200px; height:auto;">
+          <br>
+          <br>
           <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-info btn-lg btn-outline-dark" %>
         </div>
 
-        <br><br>
+        <br>
 
         <div id='friends'>
           <h2>My Friends:</h2>
@@ -48,11 +50,9 @@
             <% end %>
           <% end %>
         </div>
-
+        <br>
         <div id='gyms'>
           <h2>My Gyms:</h2>
-
-          <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-info btn-lg btn-outline-dark" %>
 
           <% if @user_gyms.empty? %>
             <p>You currently are not a member of any gyms.</p>
@@ -65,6 +65,7 @@
               </p>
             <% end %>
           <% end %>
+          <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-info btn-sm btn-outline-dark" %>
         </div>
       </td>
     </tr>

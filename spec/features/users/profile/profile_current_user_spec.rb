@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 describe 'user profile page: current user', type: :feature do
-  context 'when I log in as an authenticated user' do
+  context 'when I log in as an authenticated user', :vcr do
     before do
       allow(BackEndFacade).to receive(:get_user).with(@user.id.to_s).and_return(@user)
+      allow(BackEndFacade).to receive(:get_profile_user).with(@user.id.to_s).and_return(@user)
       allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
       allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
       allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])

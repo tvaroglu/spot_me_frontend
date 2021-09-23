@@ -22,6 +22,6 @@ class GymUser
     @google_image_url = info[:attributes][:google_image_url]
     @summary = info[:attributes][:summary]
     @zip_code = info[:attributes][:zip_code]
-    @id = info[:attributes][:id]
+    @id = info[:id]
   end
 end

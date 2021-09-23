@@ -18,7 +18,7 @@
 html, body {
   background-image: image-url('/assets/potentialbackground.jpg');
   height: 100%;
-width: 100%;
+  width: 100%;
   display: flex;
   // min-height: 100vh;
   flex-direction: column;
@@ -110,11 +110,4 @@ h1, h2, h3 {
 a:hover {
   text-decoration: none;
   color: rgba(255, 254, 254, 0.705);
-}
-
-
-footer {
-  // display: flex;
-  // align-self: baseline;
-  // flex-direction: row;
 }

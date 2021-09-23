@@ -44,6 +44,13 @@ class BackEndService
         gym_mem_params.to_json,'Content-Type' => 'application/json')
     end
 
+    def get_gym_users(yelp_gym_id)
+      response = db_conn.get("api/v1/gym_memberships/users") do |req|
+        req.params['yelp_gym_id'] = yelp_gym_id
+      end
+      parse_json(response.body)
+    end
+
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500

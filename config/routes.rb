@@ -15,4 +15,5 @@ Rails.application.routes.draw do
 
   resources :events, only: [:create, :destroy, :new]
   resources :gyms, only: [:index, :show, :create, :destroy], controller: :gyms
+  resources :gym_memberships, only: [:create, :destroy]
 end

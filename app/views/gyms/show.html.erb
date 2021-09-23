@@ -1,35 +1,59 @@
-<div id="gym_attributes">
-  <h1><%= @gym.name %></h1><br/>
-  <p><%= @gym.address %></p><br/>
-  <p><%= @gym.phone %></p><br/>
-</div>
+<% if current_user %>
+  <div id="gym-details">
+    <h1><%= @gym.name %></h1><br/>
+    <p><%= @gym.address %></p><br/>
+    <p><%= @gym.phone %></p><br/>
+  </div>
 
-<p>Number of Active Members: <%= @gym_users_count.gym_member_count %></p><br/>
+  <div id='active-members'>
+    <p>Number of Active Members: <%= @gym_users_count %></p><br/>
+  </div>
 
-<% if @gym_users.include?(current_user) %>
+  <% if @user_gym_membership.present? %>
 
-  <p>My Friends at this <%= @gym.name %><br/></p>
-    <% @gym_friends.each do |friend| %>
-      <%= friend.name  %> <% button_to 'Create Event', '/post this shit', method: :post, params: { friend_id: friend.id, user_id: current_user.id, gym_id: @gym.yelp_gym_id } %>
-      <% link_to 'View Profile', '/get this shit', method: :get, params: { non_friend_id: non_friend.id } %>
-    <% end %><br/>
+    <%= link_to 'Remove Gym', gym_membership_path(@user_gym_membership.id),
+                              method: :delete,
+                              class: "btn btn-info btn-sm btn-outline-dark"  %>
 
-  <p>Add New Friends at <%= @gym.name %><br/>
-    <% @gym_non_friends.each do |non_friend| %>
-      <%= non_friend.name  %>
-        <% button_to 'Add Friend', '/post this shit', method: :post, params: { non_friend_id: non_friend.id, user_id: current_user.id, gym_id: @gym.yelp_gym_id } %>
-        <% link_to 'View Profile', '/get this shit', method: :get, params: { non_friend_id: non_friend.id } %>
-      <% end %><br/>
+    <div id='my-friends'>
+      <h2>My Friends at <%= @gym.name %></h2>
+        <% @gym_friends.each do |friend| %>
+          <p>
+            <%= friend.full_name  %>
+            <%= link_to 'Create Event', new_event_path(
+                                            friend_id: friend.id,
+                                            friend_name: friend.full_name,
+                                            gym_membership_id: @user_gym_membership.id,
+                                            gym_name: @gym.name),
+                                          method: :post,
+                                          class: "btn btn-info btn-sm btn-outline-dark"   %>
+            <%= link_to 'View Profile', profile_path(friend.id),
+                                        class: "btn btn-info btn-sm btn-outline-dark" %>
+          </p>
+      <% end %>
+    </div>
 
-  <%= button_to 'Delete Gym', '/', method: :delete, params: { user_id: current_user.id, gym_membership_id: @gym.id }  %>
+    <div id='non-friends'>
+      <h2>Add New Friends at <%= @gym.name %></h2>
+        <% @gym_non_friends.each do |non_friend| %>
+          <p>
+            <%= non_friend.full_name  %>
+            <!-- Path for 'Add Friend': new_friendship_path(current_user.id, followee_id: non_friend.id) -->
+            <%= link_to 'Add Friend', '#',
+                                      method: :post,
+                                      class: "btn btn-info btn-sm btn-outline-dark" %>
+            <%= link_to 'View Profile', profile_path(non_friend.id),
+                                        class: "btn btn-info btn-sm btn-outline-dark" %>
+          </p>
+        <% end %>
+    </div>
 
-<% else %>
 
-  <%= form_with url: gyms_path, method: :post, local: true do |f|  %>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.hidden_field :yelp_gym_id, value: @gym.yelp_gym_id %>
-    <%= f.hidden_field :gym_name, value: @gym.name %>
-    <%= f.submit 'Add Gym', class: "btn btn-info btn-sm btn-outline-dark" %>
+  <% else %>
+    <%= link_to 'Add Gym', gym_memberships_path(user_id: current_user.id,
+                                                yelp_gym_id: @gym.yelp_gym_id,
+                                                gym_name: @gym.name),
+                           method: :post,
+                           class: "btn btn-info btn-sm btn-outline-dark" %>
   <% end %>
-
 <% end %>

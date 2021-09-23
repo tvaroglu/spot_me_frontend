@@ -60,10 +60,11 @@ RSpec.describe BackEndService do
   end
 
   it 'can parse a gyms friends of the current user', :vcr do
-    expect(BackEndService.get_friends_at_gym("BJBXzKYxQAXZKb5W6HrRnA")).to be_a(Hash)
+    expect(BackEndService.get_friends_at_gym("BJBXzKYxQAXZKb5W6HrRnA", 1)).to be_a(Hash)
   end
 
   it 'can parse a gyms non friends of the current user', :vcr do
-    expect(BackEndService.get_non_friends_at_gym("BJBXzKYxQAXZKb5W6HrRnA")).to be_a(Hash)
+    params = { yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA', user_id: 1 }
+    expect(BackEndService.get_non_friends_at_gym(params)).to be_a(Hash)
   end
 end

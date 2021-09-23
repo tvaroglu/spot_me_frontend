@@ -29,6 +29,20 @@ class BackEndFacade
       BackEndService.delete_event(params)
     end
 
+    def get_gym_membership(params)
+      response = BackEndService.get_gym_memberships(params[:user_id])
+      return unless response[:data]
+
+      gym_memberships = response[:data].map { |data| GymMembership.new(data) }
+      gym_memberships.select do |gym_membership|
+        gym_membership.yelp_gym_id == params[:yelp_gym_id]
+      end.first
+    end
+
+    def create_gym_membership(gym_membership_params)
+      BackEndService.post_gym_membership(gym_membership_params)
+    end
+
     def delete_gym_membership(params)
       BackEndService.delete_gym_membership(params)
     end
@@ -63,12 +77,9 @@ class BackEndFacade
 
     def get_selected_gym(yelp_gym_id)
       gym = BackEndService.get_one_gym(yelp_gym_id)
-      gym = gym[:data] if gym[:data]
-      YelpGym.new(gym) if gym
-    end
+      return unless gym[:data]
 
-    def create_gym_membership(gym_membership_params)
-      BackEndService.post_gym_membership(gym_membership_params)
+      YelpGym.new(gym[:data])
     end
 
     def get_gym_users(yelp_api_key)
@@ -87,8 +98,8 @@ class BackEndFacade
       GymUserCount.new(users[:meta]) if users[:meta]
     end
 
-    def get_friends_at_gym(yelp_api_key, current_user)
-      friends = BackEndService.get_friends_at_gym(yelp_api_key, current_user)
+    def get_friends_at_gym(yelp_gym_id, current_user_id)
+      friends = BackEndService.get_friends_at_gym(yelp_gym_id, current_user_id)
 
       if friends[:data]
         friends[:data].map do |friend|
@@ -97,14 +108,11 @@ class BackEndFacade
       end
     end
 
-    def get_non_friends_at_gym(yelp_api_key)
-      non_friends = BackEndService.get_non_friends_at_gym(yelp_api_key)
+    def get_non_friends_at_gym(params)
+      non_friends = BackEndService.get_non_friends_at_gym(params)
+      return unless non_friends[:data]
 
-      if non_friends[:data]
-        non_friends[:data].map do |friend|
-          GymUser.new(non_friend)
-        end
-      end
+      non_friends[:data].map { |friend| GymUser.new(non_friend) }
     end
   end
 end

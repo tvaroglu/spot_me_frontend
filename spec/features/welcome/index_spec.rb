@@ -12,6 +12,10 @@ RSpec.describe 'welcome page' do
   end
 
   it 'can log in and out of the application with a valid Google token', :vcr do
+    allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+    
     visit root_path
 
     allow(BackEndService).to receive(:get_user)

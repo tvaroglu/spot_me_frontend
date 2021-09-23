@@ -16,11 +16,11 @@
             <p>You currently have no friends.</p>
           <% else %>
             <% @user_friends.each do |friend| %>
-            <p id="friend-<%= friend.id%>">
-              <%= friend.full_name %>
-              <%= link_to 'View Profile', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
-              <%= link_to 'Remove', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
-            </p>
+              <p id="friend-<%= friend.id%>">
+                <%= friend.full_name %>
+                <%= link_to 'View Profile', profile_path(friend.id), class: "btn btn-info btn-lg btn-outline-dark" %>
+                <%= link_to 'Remove', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
+              </p>
             <% end %>
           <% end %>
         </div>

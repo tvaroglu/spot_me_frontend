@@ -2,7 +2,7 @@ require 'rails_helper'
 RSpec.describe 'user dashboard' do
   let(:user1_params) do
     {
-      id: 1,
+      id: 10,
       attributes: {
         email: '123@test.com',
         full_name: 'Joe Shmoe',
@@ -20,7 +20,7 @@ RSpec.describe 'user dashboard' do
 
   let(:user2_params) do
     {
-      id: 2,
+      id: 20,
       attributes: {
         email: '234@test.com',
         full_name: 'John Doe',
@@ -38,7 +38,7 @@ RSpec.describe 'user dashboard' do
 
   let(:user3_params) do
     {
-      id: 3,
+      id: 30,
       attributes: {
         email: '345@test.com',
         full_name: 'Jane Doe',
@@ -94,7 +94,7 @@ RSpec.describe 'user dashboard' do
     {
       id: '1',
       attributes: {
-        user_id: 2,
+        user_id: 20,
         gym_membership_id: 1,
         activity: 'Bodybuilding',
         date_time: '2022-07-22T21:41:28.289Z'
@@ -106,7 +106,7 @@ RSpec.describe 'user dashboard' do
     {
       id: '2',
       attributes: {
-        user_id: 3,
+        user_id: 30,
         gym_membership_id: 2,
         date_time: '2022-08-22T21:41:28.289Z',
         activity: 'Running'
@@ -118,7 +118,7 @@ RSpec.describe 'user dashboard' do
     {
       id: '3',
       attributes: {
-        user_id: 2,
+        user_id: 20,
         gym_membership_id: 3,
         date_time: '2022-09-22T21:41:28.289Z',
         activity: 'Stretching'
@@ -172,6 +172,26 @@ RSpec.describe 'user dashboard' do
               expect(page).to have_link('Remove')
             end
           end
+        end
+      end
+
+      context 'when I click on "View Profile" next to one of my friends' do
+        let(:first_friend) { user_friends.first }
+
+        before do
+          allow(BackEndFacade).to receive(:get_user).with(first_friend.id.to_s).and_return(first_friend)
+          allow(BackEndFacade).to receive(:get_user_friends).with(first_friend.id).and_return([])
+          allow(BackEndFacade).to receive(:get_user_gyms).with(first_friend.id).and_return([])
+          allow(BackEndFacade).to receive(:get_user_events).with(first_friend.id).and_return([])
+          within("#friend-#{first_friend.id}") { click_link 'View Profile' }
+        end
+
+        it 'redirects me to my friends profile page', :vcr do
+          expect(current_path).to eq(profile_path(first_friend.id))
+        end
+
+        it 'displays a button "Remove Friend"', :vcr do
+          expect(page).to have_link('Remove Friend')
         end
       end
 

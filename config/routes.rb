@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post '/registration', to: 'users#create'
   get '/dashboard/:user_id', to: 'users#dashboard', as: '/dashboard'
   get '/profile/:user_id', to: 'users#profile', as: '/profile'
+  get '/profile/:user_id/edit', to: 'users#edit', as: '/profile/edit'
+  patch '/profile/:user_id', to: 'users#update', as: '/profile/update'
+  # get '/profile', to: 'users#profile'
   post '/profile/:user_id', to: 'users#update'
 
   resources :events, only: [:create, :destroy, :new]

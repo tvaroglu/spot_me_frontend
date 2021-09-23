@@ -225,7 +225,7 @@ RSpec.describe 'experienced user dashboard' do
         end
 
         it 'redirects me to my friends profile page', :vcr do
-          expect(current_path).to eq(profile_path(first_friend.id))
+          expect(page).to have_current_path(profile_path(first_friend.id), ignore_query: true)
         end
 
         it 'displays a button "Remove Friend"', :vcr do

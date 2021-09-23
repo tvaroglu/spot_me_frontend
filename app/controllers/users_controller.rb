@@ -34,8 +34,18 @@ class UsersController < ApplicationController
                  end
   end
 
+  def edit; end
+
   def update
-    # TODO: write this method and create view
-    # BackEndFacade.update_user(params)
+    BackEndFacade.update_user(users_params, current_user.id)
+    flash[:success] = 'Your profile has been updated!'
+    redirect_to profile_path(current_user.id)
+  end
+
+  private
+
+  def users_params
+    params.permit(:full_name, :email, :zip_code, :summary, :goal,
+                  :availability_morning, :availability_afternoon, :availability_evening)
   end
 end

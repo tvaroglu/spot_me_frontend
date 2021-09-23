@@ -18,6 +18,14 @@ class BackEndFacade
       BackEndService.create_user(params)
     end
 
+    def update_user(params, user_id)
+      BackEndService.update_user(params, user_id)
+      user = BackEndService.get_profile_user(user_id)
+      return unless user[:data]
+
+      User.new(user[:data])
+    end
+
     def create_event(params)
       json = BackEndService.create_event(params)
       return unless json[:data]

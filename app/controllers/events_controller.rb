@@ -20,7 +20,8 @@ class EventsController < ApplicationController
   def destroy
     BackEndFacade.delete_event(event_destroy_params)
     redirect_to dashboard_path(current_user.id)
-    flash[:alert] = 'Workout deleted... but you should schedule a new one ASAP if you want those gains!'
+    flash[:alert] =
+      'Workout deleted... but you should schedule a new one ASAP if you want those gains!'
   end
 
   private

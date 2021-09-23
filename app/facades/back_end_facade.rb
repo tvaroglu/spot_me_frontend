@@ -94,8 +94,9 @@ class BackEndFacade
 
     def get_gym_users_count(yelp_api_key)
       users = BackEndService.get_gym_users(yelp_api_key)
+      return unless users[:meta]
 
-      GymUserCount.new(users[:meta]) if users[:meta]
+      GymUserCount.new(users[:meta])
     end
 
     def get_friends_at_gym(yelp_gym_id, current_user_id)

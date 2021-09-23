@@ -66,13 +66,15 @@ describe 'gyms show page: as a gym member', type: :feature do
     )
   end
 
+  let(:gym_user_count) { GymUserCount.new(gym_member_count: 2) }
+
   describe 'as an authenticated user' do
     context 'when I visit the gym show page as a gym member' do
       before do
         allow(BackEndFacade).to receive(:get_selected_gym).with(yelp_gym_id).and_return(gym)
         allow(BackEndFacade).to receive(:get_gym_membership).with(yelp_gym_id: yelp_gym_id, user_id: current_user_id).and_return(gym_membership)
         allow(BackEndFacade).to receive(:get_gym_users).with(yelp_gym_id).and_return([friend, non_friend])
-        allow(BackEndFacade).to receive(:get_gym_users_count).with(yelp_gym_id).and_return(2)
+        allow(BackEndFacade).to receive(:get_gym_users_count).with(yelp_gym_id).and_return(gym_user_count)
         allow(BackEndFacade).to receive(:get_friends_at_gym).with(yelp_gym_id, current_user_id).and_return([friend])
         allow(BackEndFacade).to receive(:get_non_friends_at_gym).with(yelp_gym_id: yelp_gym_id, user_id: current_user_id).and_return([non_friend])
 

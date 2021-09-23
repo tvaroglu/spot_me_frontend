@@ -6,7 +6,7 @@
   </div>
 
   <div id='active-members'>
-    <p>Number of Active Members: <%= @gym_users_count %></p><br/>
+    <p>Number of Active Members: <%= @gym_users_count.gym_member_count %></p><br/>
   </div>
 
   <% if @user_gym_membership.present? %>

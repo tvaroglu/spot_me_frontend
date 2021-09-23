@@ -33,8 +33,6 @@ class UsersController < ApplicationController
                             friend.id.to_s == params[:user_id]
                           end
                       :friend
-                    else
-                      :non_friend
                     end
   end
 

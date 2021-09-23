@@ -20,7 +20,21 @@ class UsersController < ApplicationController
     @user_events = BackEndFacade.get_user_events(current_user.id)
   end
 
-  def profile; end
+  def profile
+    current_user_friends = BackEndFacade.get_user_friends(current_user.id)
+    @user = BackEndFacade.get_user(params[:user_id])
+    @user_friends = BackEndFacade.get_user_friends(@user.id)
+    @user_gyms = BackEndFacade.get_user_gyms(@user.id)
+    @user_events = BackEndFacade.get_user_events(@user.id)
+
+    @user_profile = if current_user.id.to_s == params[:user_id]
+                      :self
+                    elsif current_user_friends.any? do |friend|
+                            friend.id.to_s == params[:user_id]
+                          end
+                      :friend
+                    end
+  end
 
   def update
     # TODO: write this method and create view

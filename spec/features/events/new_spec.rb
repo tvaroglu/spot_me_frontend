@@ -43,7 +43,7 @@ RSpec.describe 'new event page', type: :feature do
   end
 
   let(:gym1) do
-    YelpGym.new(
+    Gym.new(
       id: 'wxaw9m796t6wdnsk53uieh',
       type: 'gym',
       attributes: {
@@ -94,7 +94,7 @@ RSpec.describe 'new event page', type: :feature do
         let(:minutes) { '00' }
 
         let(:new_event) do
-          UserEvent.new(
+          Event.new(
             id: '1',
             attributes: {
               user_id: friend.id,
@@ -107,10 +107,10 @@ RSpec.describe 'new event page', type: :feature do
 
         let(:create_event_params) do
           {
-            "user_id"=>"10",
-            "gym_membership_id"=>"1",
-            "activity"=>"Weight Lifting",
-            "date_time"=>'Sat, 01 Jan 2022 17:00:00 +0000'
+            'user_id' => '10',
+            'gym_membership_id' => '1',
+            'activity' => 'Weight Lifting',
+            'date_time' => 'Sat, 01 Jan 2022 17:00:00 +0000'
           }
         end
 
@@ -131,7 +131,7 @@ RSpec.describe 'new event page', type: :feature do
         end
 
         it 'redirects me to the User Dashboard page' do
-          expect(current_path).to eq(dashboard_path(@user.id))
+          expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
         end
 
         it 'displays a success flash message' do

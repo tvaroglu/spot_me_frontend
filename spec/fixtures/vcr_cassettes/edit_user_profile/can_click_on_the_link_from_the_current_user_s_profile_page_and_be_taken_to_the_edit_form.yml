@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/10
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -27,21 +27,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"afb3193388f200150f8a1a219aeddd33"
+      - W/"a3936c2804083afc197dcc24675b9318"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dbb0b5dc-29cf-4cc2-a6ea-bb15c576008a
+      - a23530b3-e3d8-4bae-a0a7-2627beb46fcd
       X-Runtime:
-      - '0.003629'
+      - '0.005521'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"user","attributes":{"email":"loree.daniel@wehner.org","google_id":"gwpx2l1g4g7ye1qjvkadx","google_image_url":"https://robohash.org/eumetomnis.png?size=300x300\u0026set=set1","zip_code":"21221","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Lionel
-        Sawayn"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:28:52 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
+        Swift"}}}'
+  recorded_at: Thu, 23 Sep 2021 21:28:53 GMT
 recorded_with: VCR 6.0.0

@@ -7,7 +7,7 @@
           <br>
           <br>
           <% if @user_type == :self %>
-            <%= link_to 'Edit Profile', '#', class: "btn btn-med btn-info navbar-custom btn-outline-dark" %>
+            <%= link_to 'Edit Profile', profile_edit_path(current_user.id), class: "btn btn-med btn-info navbar-custom btn-outline-dark" %>
           <% elsif @user_type == :friend %>
             <%= link_to 'Remove Friend', '#', class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
           <% else %>

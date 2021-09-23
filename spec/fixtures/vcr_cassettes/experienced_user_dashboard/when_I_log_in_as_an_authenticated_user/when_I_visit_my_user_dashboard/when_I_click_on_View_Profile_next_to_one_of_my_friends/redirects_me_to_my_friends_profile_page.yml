@@ -21,28 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 03:55:30 GMT
+      - Thu, 23 Sep 2021 21:28:52 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"91536ebf5e21137685b4bf0885247aa3"
+      - W/"afb3193388f200150f8a1a219aeddd33"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3bc7092a-329d-4859-96ca-005391fdda10
+      - 9b1a4dcb-31d0-4d0b-b678-b832010e4bd5
       X-Runtime:
-      - '0.009210'
+      - '0.005168'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"user","attributes":{"email":"rick.rohan@fay-ondricka.name","google_id":"3c1uoubjm1fv7h34r0ekr","google_image_url":"https://robohash.org/atquenihilautem.png?size=300x300\u0026set=set1","zip_code":"87389","summary":"Know
-        how to listen, and you will profit even from those who talk badly.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Chuck
-        Gulgowski"}}}'
-  recorded_at: Thu, 23 Sep 2021 03:55:31 GMT
+      string: '{"data":{"id":"10","type":"user","attributes":{"email":"loree.daniel@wehner.org","google_id":"gwpx2l1g4g7ye1qjvkadx","google_image_url":"https://robohash.org/eumetomnis.png?size=300x300\u0026set=set1","zip_code":"21221","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Lionel
+        Sawayn"}}}'
+  recorded_at: Thu, 23 Sep 2021 21:28:52 GMT
 recorded_with: VCR 6.0.0

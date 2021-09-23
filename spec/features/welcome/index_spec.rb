@@ -8,14 +8,13 @@ RSpec.describe 'welcome page' do
 
     expect(page).to have_content 'SpotMe'
     expect(page).to have_content 'Mission'
-    expect(page).to have_link 'Sign in with Google'
   end
 
-  it 'can log in and out of the application with a valid Google token', :vcr do
+  it 'can log in and out of the application with a valid Google token', :aggregate_failures, :vcr do
     allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
     allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
     allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
-    
+
     visit root_path
 
     allow(BackEndService).to receive(:get_user)
@@ -27,8 +26,9 @@ RSpec.describe 'welcome page' do
 
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock
+
     login_with_oauth
-    expect(page).to have_current_path(dashboard_path(1), ignore_query: true)
+    expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
 
     expect(page).to have_link 'Dashboard'
     expect(page).to have_button 'Find Gyms Near Me'

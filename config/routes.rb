@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   post '/profile/:user_id', to: 'users#update'
 
   resources :events, only: [:create, :destroy, :new]
-  resources :gyms, only: [:index, :show, :create, :destroy], controller: :gyms
+  resources :gyms, only: [:index, :show], controller: :gyms
   resources :gym_memberships, only: [:create, :destroy]
 end

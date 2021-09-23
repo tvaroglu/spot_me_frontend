@@ -61,7 +61,7 @@
               <p id="gym-<%= gym.yelp_gym_id%>">
                 <%= gym.gym_name %>
                 <%= link_to 'View Gym', '#', class: "btn btn-info btn-lg btn-outline-dark" %>
-                <%= link_to 'Remove', gym_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-info btn-lg btn-outline-dark" %>
+                <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-info btn-lg btn-outline-dark" %>
               </p>
             <% end %>
           <% end %>

@@ -8,7 +8,7 @@ describe 'gyms show page: as a gym member', type: :feature do
   let(:phone) { '123-123-1234' }
 
   let(:gym) do
-    YelpGym.new(
+    Gym.new(
       id: yelp_gym_id,
       type: 'gym',
       attributes: {

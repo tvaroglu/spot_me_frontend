@@ -1,4 +1,4 @@
-class YelpGym
+class Gym
   attr_reader :yelp_gym_id, :name, :address, :phone
 
   def initialize(data)

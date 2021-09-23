@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe YelpGym, type: :poro do
+RSpec.describe Gym, type: :poro do
   describe 'object creation' do
     it 'initialize from given parameters params' do
       yelp_gym_id = '1'
@@ -18,9 +18,9 @@ RSpec.describe YelpGym, type: :poro do
         }
       }
 
-      gym = YelpGym.new(gym_params)
+      gym = Gym.new(gym_params)
 
-      expect(gym).to be_an_instance_of(YelpGym)
+      expect(gym).to be_an_instance_of(Gym)
       expect(gym.yelp_gym_id).to eq(yelp_gym_id)
       expect(gym.yelp_gym_id).to be_a String
       expect(gym.name).to eq(name)

@@ -65,7 +65,7 @@ class BackEndFacade
       gyms = BackEndService.gyms_near_user(zip_code)
       return Array.new unless gyms[:data]
 
-      gyms[:data].map { |gym| YelpGym.new(gym) }
+      gyms[:data].map { |gym| Gym.new(gym) }
     end
 
     def get_user_events(user_id)
@@ -79,7 +79,7 @@ class BackEndFacade
       gym = BackEndService.get_one_gym(yelp_gym_id)
       return unless gym[:data]
 
-      YelpGym.new(gym[:data])
+      Gym.new(gym[:data])
     end
 
     def get_gym_users(yelp_api_key)

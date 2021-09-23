@@ -24,6 +24,12 @@ class BackEndFacade
       return unless user[:data]
 
       User.new(user[:data])
+
+    def create_event(params)
+      json = BackEndService.create_event(params)
+      return unless json[:data]
+
+      UserEvent.new(json[:data])
     end
 
     def delete_event(params)

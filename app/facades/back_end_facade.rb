@@ -44,5 +44,21 @@ class BackEndFacade
     def create_gym_membership(gym_membership_params)
       BackEndService.post_gym_membership(gym_membership_params)
     end
+
+    def get_gym_users(yelp_api_key)
+      users = BackEndService.get_gym_users(yelp_api_key)
+
+      if users[:data]
+        users[:data].map do |user|
+          GymUser.new(user)
+        end
+      end
+    end
+
+    def get_gym_users_count(yelp_api_key)
+      users = BackEndService.get_gym_users(yelp_api_key)
+
+      GymUserCount.new(users[:meta]) if users[:meta]
+    end
   end
 end

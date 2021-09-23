@@ -66,6 +66,7 @@ class BackEndService
       parse_json(response.body)
     end
 
+    #test
     def base_url
       # NOTE: base_url needs to be localhost if you want to auth in during development
       # Open your BE server via $ rails s --port 4500

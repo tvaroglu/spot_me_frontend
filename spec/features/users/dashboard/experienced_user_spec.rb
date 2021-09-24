@@ -268,7 +268,6 @@ RSpec.describe 'experienced user dashboard' do
       end
 
       it 'displays a link to delete a gym', :vcr do
-        # stub so we don't actually delete a gym.. VCR will hit this route while recording a cassette
         allow(BackEndService).to receive(:delete_gym_membership).and_return(204)
         gym = user_gyms.last
 
@@ -298,7 +297,6 @@ RSpec.describe 'experienced user dashboard' do
       end
 
       it 'displays a link to delete a workout', :vcr do
-        # stub so we don't actually delete an event.. VCR will hit this route while recording a cassette
         allow(BackEndService).to receive(:delete_event).and_return(204)
         event = user_events.last
 
@@ -312,8 +310,3 @@ RSpec.describe 'experienced user dashboard' do
     end
   end
 end
-
-# TODO: Add tests for the following features/cases:
-#  Features:
-#    - Friends Button Link Redirects: 'View Profile', 'Remove'
-#    - Gyms Button Link Redirects: 'View Gym'

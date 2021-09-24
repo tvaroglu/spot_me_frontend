@@ -57,10 +57,4 @@ RSpec.describe BackEndFacade do
       end
     end
   end
-
-  # it 'can find gyms near a user' do
-  #   gyms = BackEndFacade.searched_gyms(30340)
-  #   expect(gyms[0]).to be_an_instance_of(Gym)
-  #   expect(gyms.count).to eq(20)
-  # end
 end

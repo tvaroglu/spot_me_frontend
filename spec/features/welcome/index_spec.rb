@@ -26,7 +26,6 @@ RSpec.describe 'welcome page' do
 
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock
-
     login_with_oauth
     expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
 

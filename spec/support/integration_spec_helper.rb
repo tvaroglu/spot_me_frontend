@@ -3,6 +3,5 @@ module IntegrationSpecHelper
     if page.has_link?('Sign in with Google')
       page.click_link('Sign in with Google')
     end
-    # visit "/auth/#{_service}"
   end
 end

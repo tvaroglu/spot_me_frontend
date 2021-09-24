@@ -202,11 +202,11 @@ The following section displays a comparison of our vision and how our vision cam
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134611529-ee566f26-c37a-40a0-a085-37fbe6e2047a.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134611529-ee566f26-c37a-40a0-a085-37fbe6e2047a.png" style="width:50%;">
   </td>
 
   <td style = 'width:50%;'>
-    <img src="https://user-images.githubusercontent.com/77654906/134611661-b627cf0e-618e-4ea7-8227-591f8a58934a.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134611661-b627cf0e-618e-4ea7-8227-591f8a58934a.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -222,10 +222,10 @@ The following section displays a comparison of our vision and how our vision cam
 
 <tr align = 'center'>
   <td style = 'width:50%;'>
-    <img src="https://user-images.githubusercontent.com/77654906/134607507-63b9ab1a-c6ba-4065-914c-7c6aff1cc3c7.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134607507-63b9ab1a-c6ba-4065-914c-7c6aff1cc3c7.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>
-    <img src="https://user-images.githubusercontent.com/77654906/134611060-aa275111-6c36-4cfe-a05a-155c6474c8dc.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134611060-aa275111-6c36-4cfe-a05a-155c6474c8dc.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -240,10 +240,10 @@ The following section displays a comparison of our vision and how our vision cam
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607569-50fb42c1-2361-4f72-8f93-2204e63fba9f.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134607569-50fb42c1-2361-4f72-8f93-2204e63fba9f.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134611300-cdfa5f95-2d3f-460f-9765-210fd783598a.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134611300-cdfa5f95-2d3f-460f-9765-210fd783598a.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -259,10 +259,10 @@ When you visit your own profile
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607641-450aa4ea-2deb-4ae8-ae66-bd124b0c64ff.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134607641-450aa4ea-2deb-4ae8-ae66-bd124b0c64ff.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134685865-5c38fb57-30bb-427e-86f7-74a39ca2339d.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134685865-5c38fb57-30bb-427e-86f7-74a39ca2339d.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -278,10 +278,10 @@ When you visit the profile of as user you follow.
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607730-1497a446-dba2-4759-92bc-1d91bc3120f3.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134607730-1497a446-dba2-4759-92bc-1d91bc3120f3.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134688744-c81d6347-4d54-4c5c-9543-288d3f76c2a1.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134688744-c81d6347-4d54-4c5c-9543-288d3f76c2a1.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -297,10 +297,10 @@ When you visit the profile of as user you do not follow.
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607784-46b4bfb3-c68a-4369-a9e7-e90ee35a9b51.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134607784-46b4bfb3-c68a-4369-a9e7-e90ee35a9b51.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134685011-94e18d9f-2e60-4911-bb03-9196bc8d57a4.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134685011-94e18d9f-2e60-4911-bb03-9196bc8d57a4.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -315,10 +315,10 @@ When you visit the profile of as user you do not follow.
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134609165-8ee83942-3411-4664-a80e-8091afe88300.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134609165-8ee83942-3411-4664-a80e-8091afe88300.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134687195-73906d6c-8377-4c22-b59d-e7af281381d6.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134687195-73906d6c-8377-4c22-b59d-e7af281381d6.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -333,10 +333,10 @@ When you visit the profile of as user you do not follow.
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607849-9990b284-5624-4665-8c94-e31be71f5f1c.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134607849-9990b284-5624-4665-8c94-e31be71f5f1c.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134686403-c8ecca65-b1c5-482d-b6c1-277f42c9e39d.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134686403-c8ecca65-b1c5-482d-b6c1-277f42c9e39d.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -352,10 +352,10 @@ When you are not a member of the gym.
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607940-77263a9c-5619-4b15-811f-f1dd2a685a88.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134607940-77263a9c-5619-4b15-811f-f1dd2a685a88.png" style="width:50%;"">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134686841-830dcb13-8f85-4a1e-ba46-3d2ea085d6a1.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134686841-830dcb13-8f85-4a1e-ba46-3d2ea085d6a1.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -371,10 +371,10 @@ When you are a member of the gym.
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134608630-a4574498-e543-4368-a9b7-120443d9a56d.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134608630-a4574498-e543-4368-a9b7-120443d9a56d.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134685377-23a5d15f-1d56-4d7e-bd26-a08da8479927.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134685377-23a5d15f-1d56-4d7e-bd26-a08da8479927.png" style="width:50%;">
   </td>
 </tr>
 </table>
@@ -389,10 +389,10 @@ When you are a member of the gym.
 
 <tr align = 'center'>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134608670-0e265185-1d2f-4dcc-8e61-21b012ab46de.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/77654906/134608670-0e265185-1d2f-4dcc-8e61-21b012ab46de.png" style="width:50%;">
   </td>
   <td style = 'width:50%;'>  
-    <img src="https://user-images.githubusercontent.com/79381792/134689936-4ea9fa1f-0c75-4dd2-a389-faf389250aa7.png" style="width:75%;">
+    <img src="https://user-images.githubusercontent.com/79381792/134689936-4ea9fa1f-0c75-4dd2-a389-faf389250aa7.png" style="width:50%;">
   </td>
 </tr>
 </table>

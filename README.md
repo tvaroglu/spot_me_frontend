@@ -392,7 +392,7 @@ When you are a member of the gym.
     <img src="https://user-images.githubusercontent.com/77654906/134608670-0e265185-1d2f-4dcc-8e61-21b012ab46de.png" style="height:200px">
   </td>
   <td>
-    <img src="https://user-images.githubusercontent.com/77654906/134687628-7727eb7b-9de7-43ee-99d6-ebad9aea1bb2.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/79381792/134689936-4ea9fa1f-0c75-4dd2-a389-faf389250aa7.png" style="height:200px">
   </td>
 </tr>
 </table>

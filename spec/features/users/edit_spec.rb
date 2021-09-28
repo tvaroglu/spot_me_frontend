@@ -106,13 +106,13 @@ describe 'edit user profile', type: :feature do
   let(:user_events) { [Event.new(event1_params), Event.new(event2_params)] }
 
   before do
-    allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return(user_friends)
-    allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return(user_gyms)
-    allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return(user_events)
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gyms)
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
   end
 
   it "can click on the link from the current user's profile page and be taken to the edit form", :vcr do
-    allow(BackEndFacade).to receive(:get_user_friends).with(user.id.to_s).and_return(user_friends)
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id.to_s).and_return(user_friends)
 
     visit profile_path(user.id)
     click_on 'Edit Profile'
@@ -121,8 +121,8 @@ describe 'edit user profile', type: :feature do
   end
 
   it 'can fill out a form to update a user and gives a flash message when you successfully update a user', :vcr do
-    allow(BackEndFacade).to receive(:get_user_friends).with(user.id.to_s).and_return(user_friends)
-    allow(BackEndService).to receive(:update_user).with(user_blob, user.id).and_return(user)
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id.to_s).and_return(user_friends)
+    allow(UserService).to receive(:update_user).with(user_blob, user.id).and_return(user)
 
     visit edit_profile_path(user.id)
 

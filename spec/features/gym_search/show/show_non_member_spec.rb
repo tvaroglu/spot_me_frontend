@@ -38,9 +38,9 @@ describe 'gyms show page: as a non-gym member', type: :feature do
 
     context 'when I visit the gym show page that I am not a member of' do
       before do
-        allow(BackEndFacade).to receive(:get_selected_gym).with(yelp_gym_id).and_return(gym)
-        allow(BackEndFacade).to receive(:get_gym_membership).with(yelp_gym_id: yelp_gym_id, user_id: current_user_id).and_return(nil)
-        allow(BackEndFacade).to receive(:get_gym_users_count).with(yelp_gym_id).and_return(gym_user_count)
+        allow(GymFacade).to receive(:get_gym).with(yelp_gym_id).and_return(gym)
+        allow(GymMembershipFacade).to receive(:get_gym_membership).with(yelp_gym_id: yelp_gym_id, user_id: current_user_id).and_return(nil)
+        allow(GymFacade).to receive(:get_gym_users_count).with(yelp_gym_id).and_return(gym_user_count)
 
         visit gym_path(yelp_gym_id)
       end

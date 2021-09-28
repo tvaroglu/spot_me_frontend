@@ -6,11 +6,11 @@ describe 'user profile page: current user', type: :feature do
     include_context 'logged in as authenticated user'
 
     before do
-      allow(BackEndFacade).to receive(:get_user).with(user.id).and_return(user)
-      allow(BackEndFacade).to receive(:get_profile_user).with(user.id.to_s).and_return(user)
-      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
+      allow(UserFacade).to receive(:get_user).with(user.id).and_return(user)
+      allow(UserFacade).to receive(:get_profile_user).with(user.id.to_s).and_return(user)
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
     end
 
     context 'when I visit my user profile' do

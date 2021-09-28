@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 28 Sep 2021 16:38:23 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"010985d72831120c07882872d17da411"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0fc3f85d-4be1-4bb1-8d7c-6d15b7be4efe
+      X-Runtime:
+      - '0.334641'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
+        Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
+        CO 80227","phone":"(303) 601-0789"}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
+        Fitness","address":"3265 S Wadsworth Blvd, Lakewood, CO 80227","phone":"(303)
+        985-8888"}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
+        Boot Camp - Bear Creek","address":"3333 S Wadsworth Blvd, Unit A-111, Lakewood,
+        CO 80227","phone":"(720) 920-9746"}},{"id":"R0KoJs345Zxga1CnrGn8tw","type":"gym","attributes":{"name":"Rocky
+        Mountain Karate Association","address":"3234 S Wadsworth Blvd, Unit K, Lakewood,
+        CO 80227","phone":"(303) 989-4328"}},{"id":"xTWx3zsFHim7sbPfCMjX8Q","type":"gym","attributes":{"name":"Arthur
+        Murray Dance Studio","address":"3355 S Yarrow, Ste E-125, Lakewood, CO 80227","phone":"(303)
+        987-2444"}},{"id":"mwVz1h_a-q6HYKFGWr-ezA","type":"gym","attributes":{"name":"The
+        Sanctuary Brazilian JiuJitsu and Fitness","address":"3355 S Wadsworth Blvd,
+        Unit F109, Lakewood, CO 80227","phone":"(720) 383-1617"}},{"id":"AlUJKAnzTr3ww3158hiexQ","type":"gym","attributes":{"name":"Colorado
+        Krav Maga","address":"1957 S Wadsworth, Lakewood, CO 80227","phone":"(303)
+        984-1957"}},{"id":"zDCVsjiiEfN5sP7hNT_6tA","type":"gym","attributes":{"name":"Denver
+        Karate Academy","address":"7857 W Jewell Ave, Lakewood, CO 80232","phone":"(303)
+        934-2988"}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
+        Winds and Hands","address":"9150 W Jewell Ave, Ste 118, Lakewood, CO 80232","phone":"(720)
+        939-1723"}},{"id":"yniujIwHCBfraVGz349TTg","type":"gym","attributes":{"name":"Prestige
+        Fitness - Lakewood","address":"7777 W Jewell Ave, Lakewood, CO 80232","phone":"(303)
+        989-7900"}},{"id":"5bDgDRasg-0EdO2UPnWuEw","type":"gym","attributes":{"name":"Flo
+        Life BJJ+","address":"9191 W Jewell Ave, Lakewood, CO 80232","phone":"(720)
+        665-4035"}},{"id":"GEY_itNFmyT124gj24JjnA","type":"gym","attributes":{"name":"Shane
+        Keri Dance","address":"1466 S Wadsworth Blvd, Lakewood, CO 80232","phone":"(720)
+        299-1228"}},{"id":"CORIddkNzPMqpaV6wAO2Qg","type":"gym","attributes":{"name":"5280
+        Karate Academy","address":"10815 W Jewell Ave, Ste G, Lakewood, CO 80232","phone":"(303)
+        986-5468"}},{"id":"m2r-plZskJ9h_ln6dnIrLg","type":"gym","attributes":{"name":"VASA
+        Fitness - Denver","address":"1955 S Sheridan Blvd, Denver, CO 80227","phone":"(303)
+        985-8272"}},{"id":"3CIO2aJshjn1IBcbWcn8Vw","type":"gym","attributes":{"name":"TIS
+        Fitness Systems","address":"6100 W Mansfield Ave, Ste 31, Denver, CO 80235","phone":"(815)
+        904-0133"}},{"id":"mRjQmf7JNkTGgcJXySftSg","type":"gym","attributes":{"name":"Body
+        \u0026 Brain Yoga Tai Chi - Lakewood","address":"1535 S Kipling Pkwy, Unit
+        M, Lakewood, CO 80232","phone":"(303) 948-5500"}},{"id":"tlXokHTl53TZci9jBRHJRA","type":"gym","attributes":{"name":"Southwest-Chatfield
+        Branch YMCA","address":"5181 W Kenyon Ave, Denver, CO 80236","phone":"(303)
+        761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
+        Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
+        568-9192"}},{"id":"UfB0UTkQiJAOGO8ZeN71hQ","type":"gym","attributes":{"name":"iLoveKickboxing-
+        Lakewood","address":"650 S Wadsworth Blvd, Lakewood, CO 80226","phone":"(303)
+        935-7159"}},{"id":"J51EDNPrWHJsTOhih_ELzg","type":"gym","attributes":{"name":"Orangetheory
+        Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","phone":"(720)
+        402-3888"}}]}'
+  recorded_at: Tue, 28 Sep 2021 16:38:24 GMT
+recorded_with: VCR 6.0.0

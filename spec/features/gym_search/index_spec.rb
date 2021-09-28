@@ -5,9 +5,9 @@ describe 'gyms near me page', :vcr, type: :feature do
   include_context 'logged in as authenticated user'
 
   before do
-    allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
 
     visit dashboard_index_path
     within('#gyms') { click_on 'Find Gyms Near Me' }

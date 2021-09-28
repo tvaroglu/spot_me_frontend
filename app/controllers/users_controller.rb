@@ -2,8 +2,8 @@ class UsersController < ApplicationController
   def new; end
 
   def create
-    BackEndFacade.create_user(params)
-    found_user = BackEndFacade.get_user(params[:google_id])
+    UserFacade.create_user(params)
+    found_user = UserFacade.get_user(params[:google_id])
     if found_user.present?
       session[:google_token] = params[:google_token]
       session[:google_id] = params[:google_id]
@@ -16,9 +16,9 @@ class UsersController < ApplicationController
 
   # User Profile
   def show
-    current_user_friends = BackEndFacade.get_user_friends(current_user.id)
-    @profile_user = BackEndFacade.get_profile_user(params[:id])
-    @user_friends = BackEndFacade.get_user_friends(@profile_user.id)
+    current_user_friends = FriendshipFacade.get_friends(current_user.id)
+    @profile_user = UserFacade.get_profile_user(params[:id])
+    @user_friends = FriendshipFacade.get_friends(@profile_user.id)
 
     @user_type = if current_user.id.to_s == params[:id]
                    :self
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
-    BackEndFacade.update_user(users_params, current_user.id)
+    UserFacade.update_user(users_params, current_user.id)
     flash[:success] = 'Your profile has been updated!'
     redirect_to profile_path(current_user.id)
   end

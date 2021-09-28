@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:53:54 GMT
+      - Tue, 28 Sep 2021 16:38:17 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"babf5b282861cdb1624d2f485de1dbad"
+      - W/"010985d72831120c07882872d17da411"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 58c40b6a-147c-45ad-b814-04c963fe9bfc
+      - d7c60e5e-4849-4d06-8ad7-4c5b1ed02a8a
       X-Runtime:
-      - '0.268264'
+      - '0.342082'
       Transfer-Encoding:
       - chunked
       Via:
@@ -62,13 +62,9 @@ http_interactions:
         Fitness - Lakewood","address":"7777 W Jewell Ave, Lakewood, CO 80232","phone":"(303)
         989-7900"}},{"id":"5bDgDRasg-0EdO2UPnWuEw","type":"gym","attributes":{"name":"Flo
         Life BJJ+","address":"9191 W Jewell Ave, Lakewood, CO 80232","phone":"(720)
-        665-4035"}},{"id":"w5EyHSLwz_aTaofpT9Gl9Q","type":"gym","attributes":{"name":"Pilates
-        Plus","address":"2598 S Lewis Way, Unit A, Lakewood, CO 80227","phone":"(303)
-        989-4100"}},{"id":"GEY_itNFmyT124gj24JjnA","type":"gym","attributes":{"name":"Shane
+        665-4035"}},{"id":"GEY_itNFmyT124gj24JjnA","type":"gym","attributes":{"name":"Shane
         Keri Dance","address":"1466 S Wadsworth Blvd, Lakewood, CO 80232","phone":"(720)
-        299-1228"}},{"id":"guYn9HMe-RCThlEB2fVTRg","type":"gym","attributes":{"name":"For
-        Them Gainz Fitness","address":"1125 17th St, Ste B, Denver, CO 80202","phone":"(720)
-        495-0025"}},{"id":"CORIddkNzPMqpaV6wAO2Qg","type":"gym","attributes":{"name":"5280
+        299-1228"}},{"id":"CORIddkNzPMqpaV6wAO2Qg","type":"gym","attributes":{"name":"5280
         Karate Academy","address":"10815 W Jewell Ave, Ste G, Lakewood, CO 80232","phone":"(303)
         986-5468"}},{"id":"m2r-plZskJ9h_ln6dnIrLg","type":"gym","attributes":{"name":"VASA
         Fitness - Denver","address":"1955 S Sheridan Blvd, Denver, CO 80227","phone":"(303)
@@ -80,8 +76,12 @@ http_interactions:
         Branch YMCA","address":"5181 W Kenyon Ave, Denver, CO 80236","phone":"(303)
         761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","phone":"(303)
-        568-9192"}}]}'
-  recorded_at: Thu, 23 Sep 2021 21:53:54 GMT
+        568-9192"}},{"id":"UfB0UTkQiJAOGO8ZeN71hQ","type":"gym","attributes":{"name":"iLoveKickboxing-
+        Lakewood","address":"650 S Wadsworth Blvd, Lakewood, CO 80226","phone":"(303)
+        935-7159"}},{"id":"J51EDNPrWHJsTOhih_ELzg","type":"gym","attributes":{"name":"Orangetheory
+        Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","phone":"(720)
+        402-3888"}}]}'
+  recorded_at: Tue, 28 Sep 2021 16:38:17 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -103,7 +103,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:53:54 GMT
+      - Tue, 28 Sep 2021 16:38:17 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -113,9 +113,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 15650f85-22df-465a-a7e8-6a329d1a33d5
+      - a3bc1ba4-377a-48e4-8748-0ca3f122b666
       X-Runtime:
-      - '0.166000'
+      - '0.295925'
       Transfer-Encoding:
       - chunked
       Via:
@@ -125,7 +125,7 @@ http_interactions:
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:53:55 GMT
+  recorded_at: Tue, 28 Sep 2021 16:38:18 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
@@ -147,7 +147,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:53:55 GMT
+      - Tue, 28 Sep 2021 16:38:17 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -157,9 +157,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9ac5c258-825b-4134-b9d6-3a1902be2de1
+      - 8a88ec95-df49-4f07-8755-e4f5eed5f680
       X-Runtime:
-      - '0.006060'
+      - '0.014351'
       Transfer-Encoding:
       - chunked
       Via:
@@ -169,7 +169,7 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Feil,
         Sporer and Medhurst"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
         Mraz and Fadel"}}]}'
-  recorded_at: Thu, 23 Sep 2021 21:53:55 GMT
+  recorded_at: Tue, 28 Sep 2021 16:38:18 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -191,28 +191,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:53:55 GMT
+      - Tue, 28 Sep 2021 16:38:18 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9bde4ecd0382c9edb9f71056b58a2492"
+      - W/"6d2355bfad402a9d3ac4aa6687806626"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d7f2516d-ce79-430d-8f9b-a29bfc2aa124
+      - 2e7b4b14-4b49-4cff-b488-f7f34426f9d1
       X-Runtime:
-      - '0.007788'
+      - '0.112290'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80227","summary":"Lift
-        more!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}},{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"80227","summary":"HI!","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
-        Borecki"}}],"meta":{"gym_member_count":2}}'
-  recorded_at: Thu, 23 Sep 2021 21:53:56 GMT
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
+        I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
+        B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
+        EVEN more!!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}}],"meta":{"gym_member_count":2}}'
+  recorded_at: Tue, 28 Sep 2021 16:38:18 GMT
 recorded_with: VCR 6.0.0

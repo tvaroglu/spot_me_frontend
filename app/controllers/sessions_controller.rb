@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   # skip_before_action :verify_authenticity_token, only: :create
 
   def create
-    found_user = BackEndFacade.get_user(helper_hash[:google_id])
+    found_user = UserFacade.get_user(helper_hash[:google_id])
     if found_user.present?
       session[:google_token] = helper_hash[:google_token]
       session[:google_id] = helper_hash[:google_id]

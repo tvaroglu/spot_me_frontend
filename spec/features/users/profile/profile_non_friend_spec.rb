@@ -26,10 +26,10 @@ describe 'user profile page: non-friend', type: :feature do
     include_context 'logged in as authenticated user'
 
     before do
-      allow(BackEndFacade).to receive(:get_user).with(user.id).and_return(user)
-      allow(BackEndFacade).to receive(:get_profile_user).with(user10.id.to_s).and_return(user10)
-      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_friends).with(user10.id).and_return([])
+      allow(UserFacade).to receive(:get_user).with(user.id).and_return(user)
+      allow(UserFacade).to receive(:get_profile_user).with(user10.id.to_s).and_return(user10)
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+      allow(FriendshipFacade).to receive(:get_friends).with(user10.id).and_return([])
     end
 
     context 'when I visit a non-friend user profile' do
@@ -66,8 +66,8 @@ describe 'user profile page: non-friend', type: :feature do
       end
 
       it 'can add a new friend', :vcr do
-        allow(BackEndService).to receive(:create_friendship).and_return(user10_params)
-        allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
+        allow(FriendshipService).to receive(:add_friend).and_return(user10_params)
+        allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
 
         click_on 'Add Friend'
 

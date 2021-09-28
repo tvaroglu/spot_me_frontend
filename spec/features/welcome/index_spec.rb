@@ -13,18 +13,18 @@ describe 'welcome page', type: :feature do
   end
 
   it 'can log in and out of the application with a valid Google token', :aggregate_failures, :vcr do
-    allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
 
     visit root_path
 
-    allow(BackEndService).to receive(:get_user)
+    allow(UserService).to receive(:get_user)
       .and_return(JSON.parse(user_blob, symbolize_names: true))
 
-    allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
 
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock
@@ -46,7 +46,7 @@ describe 'welcome page', type: :feature do
     it 'will redirect to registration page if new user' do
       visit root_path
 
-      allow(BackEndService).to receive(:get_user)
+      allow(UserService).to receive(:get_user)
         .and_return(JSON.parse(empty_user), symbolize_names: true)
 
       login_with_oauth

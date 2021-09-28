@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:53:57 GMT
+      - Tue, 28 Sep 2021 16:38:19 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6d1d1d5c-58ef-48dc-8d45-50448564bc4c
+      - f160b072-1075-49ad-ab94-7f4fc7080b3f
       X-Runtime:
-      - '0.015544'
+      - '0.005545'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,7 +43,7 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
         Swift"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:53:57 GMT
+  recorded_at: Tue, 28 Sep 2021 16:38:20 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
@@ -65,7 +65,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Thu, 23 Sep 2021 21:53:57 GMT
+      - Tue, 28 Sep 2021 16:38:19 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -75,9 +75,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 04f0c7da-e064-4ebe-a5ad-878519dab529
+      - e671fe46-e1bf-465a-bcfb-1d77558ef30a
       X-Runtime:
-      - '0.080081'
+      - '0.008810'
       Transfer-Encoding:
       - chunked
       Via:
@@ -87,5 +87,5 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
         Swift"}}}'
-  recorded_at: Thu, 23 Sep 2021 21:53:57 GMT
+  recorded_at: Tue, 28 Sep 2021 16:38:20 GMT
 recorded_with: VCR 6.0.0

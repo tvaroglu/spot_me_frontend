@@ -8,10 +8,10 @@ describe 'new user dashboard', type: :feature do
     let(:empty_arr) { [] }
 
     before do
-      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return(empty_arr)
-      allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return(empty_arr)
-      allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return(empty_arr)
-      allow(BackEndFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(empty_arr)
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(empty_arr)
+      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(empty_arr)
+      allow(EventFacade).to receive(:get_events).with(user.id).and_return(empty_arr)
+      allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(empty_arr)
     end
 
     context 'when I visit my user dashboard' do

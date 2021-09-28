@@ -25,19 +25,19 @@ describe 'registration page', type: :feature do
     end
 
     it 'can register a new user if all required attributes are provided', :vcr do
-      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
 
       visit new_registration_path
 
-      allow(BackEndService).to receive(:create_user).and_return(201)
-      allow(BackEndService).to receive(:get_user)
+      allow(UserService).to receive(:create_user).and_return(201)
+      allow(UserService).to receive(:get_user)
         .and_return(JSON.parse(user_blob, symbolize_names: true))
 
-      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
 
       fill_in :full_name, with: 'Foo Bar'
       fill_in :email, with: 'test@testing.com'
@@ -58,8 +58,8 @@ describe 'registration page', type: :feature do
     it "can't register a new user if all required attributes aren't provided", :vcr do
       visit new_registration_path
 
-      allow(BackEndService).to receive(:create_user).and_return(422)
-      allow(BackEndService).to receive(:get_user)
+      allow(UserService).to receive(:create_user).and_return(422)
+      allow(UserService).to receive(:get_user)
         .and_return(JSON.parse(empty_user), symbolize_names: true)
 
       fill_in :full_name, with: 'Foo Bar'

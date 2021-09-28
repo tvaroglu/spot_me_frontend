@@ -173,10 +173,10 @@ describe 'experienced user dashboard', type: :feature do
     let(:user_events) { [Event.new(event1_params), Event.new(event2_params), Event.new(event3_params)] }
 
     before do
-      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return(user_friends)
-      allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return(user_gyms)
-      allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return(user_events)
-      allow(BackEndFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(searched_gyms)
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
+      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gyms)
+      allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
+      allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(searched_gyms)
     end
 
     context 'when I visit my user dashboard' do
@@ -221,10 +221,10 @@ describe 'experienced user dashboard', type: :feature do
         let(:first_friend) { user_friends.first }
 
         before do
-          allow(BackEndFacade).to receive(:get_user).with(first_friend.id.to_s).and_return(first_friend)
-          allow(BackEndFacade).to receive(:get_user_friends).with(first_friend.id.to_s).and_return([])
-          allow(BackEndFacade).to receive(:get_user_gyms).with(first_friend.id).and_return([])
-          allow(BackEndFacade).to receive(:get_user_events).with(first_friend.id).and_return([])
+          allow(UserFacade).to receive(:get_user).with(first_friend.id.to_s).and_return(first_friend)
+          allow(FriendshipFacade).to receive(:get_friends).with(first_friend.id.to_s).and_return([])
+          allow(GymMembershipFacade).to receive(:get_gym_memberships).with(first_friend.id).and_return([])
+          allow(EventFacade).to receive(:get_events).with(first_friend.id).and_return([])
           within("#friend-#{first_friend.id}") { click_link 'View Profile' }
         end
 
@@ -272,7 +272,7 @@ describe 'experienced user dashboard', type: :feature do
       end
 
       it 'displays a link to delete a gym', :vcr do
-        allow(BackEndService).to receive(:delete_gym_membership).and_return(204)
+        allow(GymMembershipService).to receive(:delete_gym_membership).and_return(204)
         gym = user_gyms.last
 
         within "#gym-#{gym.yelp_gym_id}" do
@@ -301,7 +301,7 @@ describe 'experienced user dashboard', type: :feature do
       end
 
       it 'displays a link to delete a workout', :vcr do
-        allow(BackEndService).to receive(:delete_event).and_return(204)
+        allow(EventService).to receive(:delete_event).and_return(204)
         event = user_events.last
 
         within "#event-#{event.id}" do

@@ -7,13 +7,13 @@ class EventsController < ApplicationController
   end
 
   def create
-    BackEndFacade.create_event(create_event_params)
+    EventFacade.create_event(create_event_params)
     flash[:alert] = 'Workout created! Now go get your swole on!'
     redirect_to dashboard_index_path
   end
 
   def destroy
-    BackEndFacade.delete_event(event_destroy_params)
+    EventFacade.delete_event(event_destroy_params)
     redirect_to dashboard_index_path
     flash[:alert] =
       'Workout deleted... but you should schedule a new one ASAP if you want those gains!'

@@ -8,7 +8,8 @@ class GymMembershipsController < ApplicationController
     GymMembershipFacade.delete_gym_membership(gym_membership_destroy_params)
     redirect_to dashboard_index_path
     flash[:alert] =
-      'Gym removed... but you should probably join a new one ASAP if you want those gains!'
+      'Gym removed... but you should probably join a new one ASAP if you want'\
+      ' those gains!'
   end
 
   private

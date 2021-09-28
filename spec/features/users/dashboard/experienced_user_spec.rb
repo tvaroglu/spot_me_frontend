@@ -175,7 +175,7 @@ describe 'experienced user dashboard', type: :feature do
     before do
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
       allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gyms)
-      allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
+      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(user_events)
       allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(searched_gyms)
     end
 
@@ -224,7 +224,7 @@ describe 'experienced user dashboard', type: :feature do
           allow(UserFacade).to receive(:get_user).with(first_friend.id.to_s).and_return(first_friend)
           allow(FriendshipFacade).to receive(:get_friends).with(first_friend.id.to_s).and_return([])
           allow(GymMembershipFacade).to receive(:get_gym_memberships).with(first_friend.id).and_return([])
-          allow(EventFacade).to receive(:get_events).with(first_friend.id).and_return([])
+          allow(EventFacade).to receive(:get_upcoming_events).with(first_friend.id).and_return([])
           within("#friend-#{first_friend.id}") { click_link 'View Profile' }
         end
 

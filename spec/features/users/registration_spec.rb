@@ -27,7 +27,7 @@ describe 'registration page', type: :feature do
     it 'can register a new user if all required attributes are provided', :vcr do
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
       allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
-      allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
       visit new_registration_path
 
@@ -37,7 +37,7 @@ describe 'registration page', type: :feature do
 
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
       allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
-      allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
       fill_in :full_name, with: 'Foo Bar'
       fill_in :email, with: 'test@testing.com'

@@ -10,7 +10,7 @@ describe 'user profile page: current user', type: :feature do
       allow(UserFacade).to receive(:get_profile_user).with(user.id.to_s).and_return(user)
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
       allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
-      allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
     end
 
     context 'when I visit my user profile' do

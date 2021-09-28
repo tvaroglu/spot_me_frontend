@@ -10,7 +10,7 @@ describe 'new user dashboard', type: :feature do
     before do
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(empty_arr)
       allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(empty_arr)
-      allow(EventFacade).to receive(:get_events).with(user.id).and_return(empty_arr)
+      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(empty_arr)
       allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(empty_arr)
     end
 

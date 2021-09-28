@@ -1,6 +1,6 @@
 class EventFacade
-  def self.get_events(user_id)
-    events = EventService.get_events(user_id)
+  def self.get_upcoming_events(user_id)
+    events = EventService.get_upcoming_events(user_id)
     return [] unless events[:data]
 
     events[:data].map { |event| Event.new(event) }

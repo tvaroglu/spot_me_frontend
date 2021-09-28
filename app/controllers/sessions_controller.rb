@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:google_id] = helper_hash[:google_id]
       redirect_to dashboard_path(found_user.id)
     else
-      redirect_to registration_path(helper_hash)
+      redirect_to new_registration_path(helper_hash)
     end
   end
 

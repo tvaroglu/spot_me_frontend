@@ -8,7 +8,7 @@ describe 'registration page', type: :feature do
     let(:user_blob) { File.read('./spec/fixtures/user.json') }
 
     it 'is on the correct page' do
-      visit registration_path
+      visit new_registration_path
 
       expect(page).to have_field(:full_name)
       expect(page).to have_field(:email)
@@ -29,7 +29,7 @@ describe 'registration page', type: :feature do
       allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
       allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
 
-      visit registration_path
+      visit new_registration_path
 
       allow(BackEndService).to receive(:create_user).and_return(201)
       allow(BackEndService).to receive(:get_user)
@@ -56,7 +56,7 @@ describe 'registration page', type: :feature do
     let(:empty_user) { File.read('./spec/fixtures/empty_user.json') }
 
     it "can't register a new user if all required attributes aren't provided", :vcr do
-      visit registration_path
+      visit new_registration_path
 
       allow(BackEndService).to receive(:create_user).and_return(422)
       allow(BackEndService).to receive(:get_user)

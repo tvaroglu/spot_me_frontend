@@ -1,7 +1,7 @@
 <div align="center" class="card navbar-brown" style="width: flex;">
   <h1>Register</h1>
 
-  <%= form_with url: registration_path(google_id: params[:google_id], google_token: params[:google_token], google_image_url: params[:google_image_url]), local: true do |f| %>
+  <%= form_with url: registration_index_path(google_id: params[:google_id], google_token: params[:google_token], google_image_url: params[:google_image_url]), local: true do |f| %>
     <%= f.label :full_name, 'Name' %>
     <br>
     <%= f.text_field :full_name, value: params[:full_name], id: :full_name, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>

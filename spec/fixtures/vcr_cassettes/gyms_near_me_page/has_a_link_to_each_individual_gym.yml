@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 16:38:17 GMT
+      - Tue, 28 Sep 2021 18:31:41 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d7c60e5e-4849-4d06-8ad7-4c5b1ed02a8a
+      - b162116f-3d9a-4e0a-8633-9cc6e5f80251
       X-Runtime:
-      - '0.342082'
+      - '0.285691'
       Transfer-Encoding:
       - chunked
       Via:
@@ -81,7 +81,7 @@ http_interactions:
         935-7159"}},{"id":"J51EDNPrWHJsTOhih_ELzg","type":"gym","attributes":{"name":"Orangetheory
         Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","phone":"(720)
         402-3888"}}]}'
-  recorded_at: Tue, 28 Sep 2021 16:38:17 GMT
+  recorded_at: Tue, 28 Sep 2021 18:31:41 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -103,7 +103,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 16:38:17 GMT
+      - Tue, 28 Sep 2021 18:31:42 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -113,9 +113,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a3bc1ba4-377a-48e4-8748-0ca3f122b666
+      - caaa751c-a73a-43a0-b5ae-6929a6ebd116
       X-Runtime:
-      - '0.295925'
+      - '0.159541'
       Transfer-Encoding:
       - chunked
       Via:
@@ -125,7 +125,7 @@ http_interactions:
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","phone":"(303) 601-0789"}}}'
-  recorded_at: Tue, 28 Sep 2021 16:38:18 GMT
+  recorded_at: Tue, 28 Sep 2021 18:31:42 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
@@ -147,7 +147,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 16:38:17 GMT
+      - Tue, 28 Sep 2021 18:31:41 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -157,9 +157,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8a88ec95-df49-4f07-8755-e4f5eed5f680
+      - ecfcebb4-e662-457f-b16d-29f8e2011abc
       X-Runtime:
-      - '0.014351'
+      - '0.006782'
       Transfer-Encoding:
       - chunked
       Via:
@@ -169,7 +169,7 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Feil,
         Sporer and Medhurst"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
         Mraz and Fadel"}}]}'
-  recorded_at: Tue, 28 Sep 2021 16:38:18 GMT
+  recorded_at: Tue, 28 Sep 2021 18:31:42 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -191,7 +191,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 16:38:18 GMT
+      - Tue, 28 Sep 2021 18:31:42 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -201,9 +201,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2e7b4b14-4b49-4cff-b488-f7f34426f9d1
+      - 792c37e7-4315-44cc-a18b-0ff430577dc6
       X-Runtime:
-      - '0.112290'
+      - '0.010194'
       Transfer-Encoding:
       - chunked
       Via:
@@ -214,5 +214,5 @@ http_interactions:
         I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
         B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
         EVEN more!!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}}],"meta":{"gym_member_count":2}}'
-  recorded_at: Tue, 28 Sep 2021 16:38:18 GMT
+  recorded_at: Tue, 28 Sep 2021 18:31:42 GMT
 recorded_with: VCR 6.0.0

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe BackEndService, type: :service do
+describe BackEndService, :vcr, type: :service do
   describe 'class methods' do
     describe '.db_conn' do
       subject(:connection) { BackEndService.db_conn }
@@ -17,7 +17,7 @@ describe BackEndService, type: :service do
       let(:user_id) { '1' }
       let(:response) { BackEndService.db_conn.get("/api/v1/users/#{user_id}") }
 
-      it 'returns the json response body', :vcr do
+      it 'returns the json response body' do
 
         expect(parsed_json).to be_a Hash
         expect(parsed_json[:data][:id]).to eq(user_id)

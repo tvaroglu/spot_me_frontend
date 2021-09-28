@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 16:38:23 GMT
+      - Tue, 28 Sep 2021 18:23:45 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0fc3f85d-4be1-4bb1-8d7c-6d15b7be4efe
+      - 385e49d1-755d-4c15-9a61-22ea7f77d23d
       X-Runtime:
-      - '0.334641'
+      - '0.476518'
       Transfer-Encoding:
       - chunked
       Via:
@@ -81,5 +81,5 @@ http_interactions:
         935-7159"}},{"id":"J51EDNPrWHJsTOhih_ELzg","type":"gym","attributes":{"name":"Orangetheory
         Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","phone":"(720)
         402-3888"}}]}'
-  recorded_at: Tue, 28 Sep 2021 16:38:24 GMT
+  recorded_at: Tue, 28 Sep 2021 18:23:45 GMT
 recorded_with: VCR 6.0.0

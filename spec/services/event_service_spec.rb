@@ -8,7 +8,7 @@ describe EventService, :vcr, type: :service do
 
         let(:user_id) { 1 }
 
-        it "returns the user's upcoming events" do
+        it "returns a hash with the user's upcoming events" do
           expect(user_events).to be_a Hash
           expect(user_events).to have_key(:data)
           expect(user_events[:data]).to be_an Array

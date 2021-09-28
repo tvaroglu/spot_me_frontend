@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/auth/:provider/callback', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
 
+  resources :dashboard, only: [:index]
   resources :events, only: [:create, :destroy, :new]
   resources :friendships, only: [:create, :destroy]
   resources :gym_memberships, only: [:create, :destroy]
   resources :gyms, only: [:index, :show]
+  resources :logout, only: [:destroy], controller: 'sessions'
   resources :profile, only: [:edit, :show, :update], controller: 'users'
   resources :registration, only: [:new, :create], controller: 'users'
-  resources :dashboard, only: [:index]
 end

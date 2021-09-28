@@ -15,7 +15,7 @@ class FriendshipFacade
 
   def self.get_non_friends_at_gym(params)
     non_friends = FriendshipService.get_non_friends_at_gym(params)
-    return unless non_friends[:data]
+    return [] unless non_friends[:data]
 
     non_friends[:data].map { |non_friend| User.new(non_friend) }
   end

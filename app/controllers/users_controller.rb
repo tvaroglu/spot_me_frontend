@@ -20,15 +20,16 @@ class UsersController < ApplicationController
     @user_events = BackEndFacade.get_user_events(current_user.id)
   end
 
-  def profile
+  # User Profile
+  def show
     current_user_friends = BackEndFacade.get_user_friends(current_user.id)
-    @profile_user = BackEndFacade.get_profile_user(params[:user_id])
+    @profile_user = BackEndFacade.get_profile_user(params[:id])
     @user_friends = BackEndFacade.get_user_friends(@profile_user.id)
 
-    @user_type = if current_user.id.to_s == params[:user_id]
+    @user_type = if current_user.id.to_s == params[:id]
                    :self
                  elsif current_user_friends.any? do |friend|
-                         friend.id.to_s == params[:user_id]
+                         friend.id.to_s == params[:id]
                        end
                    :friend
                  end

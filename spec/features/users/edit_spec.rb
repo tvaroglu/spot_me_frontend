@@ -117,14 +117,14 @@ describe 'edit user profile', type: :feature do
     visit profile_path(user.id)
     click_on 'Edit Profile'
 
-    expect(page).to have_current_path(profile_edit_path(user.id))
+    expect(page).to have_current_path(edit_profile_path(user.id))
   end
 
   it 'can fill out a form to update a user and gives a flash message when you successfully update a user', :vcr do
     allow(BackEndFacade).to receive(:get_user_friends).with(user.id.to_s).and_return(user_friends)
     allow(BackEndService).to receive(:update_user).with(user_blob, user.id).and_return(user)
 
-    visit profile_edit_path(user.id)
+    visit edit_profile_path(user.id)
 
     expect(page).to have_field(:full_name, with: user.full_name.to_s)
     expect(page).to have_field(:email, with: user.email.to_s)

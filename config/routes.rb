@@ -7,14 +7,11 @@ Rails.application.routes.draw do
 
   get '/dashboard/:user_id', to: 'users#dashboard', as: '/dashboard'
 
-  get '/profile/:user_id', to: 'users#profile', as: '/profile'
-  get '/profile/:user_id/edit', to: 'users#edit', as: '/profile/edit'
-  patch '/profile/:user_id', to: 'users#update', as: '/profile/update'
-  post '/profile/:user_id', to: 'users#update'
 
   resources :events, only: [:create, :destroy, :new]
   resources :friendships, only: [:create, :destroy]
   resources :gym_memberships, only: [:create, :destroy]
   resources :gyms, only: [:index, :show]
+  resources :profile, only: [:edit, :show, :update], controller: 'users'
   resources :registration, only: [:new, :create], controller: 'users'
 end

@@ -1,4 +1,4 @@
-class GymService  < BackEndService
+class GymService < BackEndService
   def self.get_gyms_near_user(zip_code)
     response = db_conn.get("/api/v1/gym_search?zip_code=#{zip_code}")
     parse_json(response)

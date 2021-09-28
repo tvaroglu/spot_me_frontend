@@ -1,4 +1,4 @@
-class UserService  < BackEndService
+class UserService < BackEndService
   def self.get_user(google_id)
     response = db_conn.get("/api/v1/users/find?google_id=#{google_id}")
     parse_json(response)

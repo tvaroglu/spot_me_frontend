@@ -1,4 +1,4 @@
-class GymMembershipService  < BackEndService
+class GymMembershipService < BackEndService
   def self.get_gym_memberships(user_id)
     response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
 

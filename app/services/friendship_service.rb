@@ -1,4 +1,4 @@
-class FriendshipService  < BackEndService
+class FriendshipService < BackEndService
   def self.get_friends(user_id)
     response = db_conn.get("/api/v1/users/#{user_id}/friendships")
     parse_json(response)

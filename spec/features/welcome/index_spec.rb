@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe 'welcome page', type: :feature do
+  include_context 'logged in as authenticated user'
+
   let(:user_blob) { File.read('./spec/fixtures/user.json') }
 
   it 'is on the correct page' do
@@ -11,23 +13,23 @@ describe 'welcome page', type: :feature do
   end
 
   it 'can log in and out of the application with a valid Google token', :aggregate_failures, :vcr do
-    allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
 
     visit root_path
 
     allow(BackEndService).to receive(:get_user)
       .and_return(JSON.parse(user_blob, symbolize_names: true))
 
-    allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
+    allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
 
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock
     login_with_oauth
-    expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
+    expect(page).to have_current_path(dashboard_path(user.id), ignore_query: true)
 
     expect(page).to have_link 'Dashboard'
     expect(page).to have_button 'Find Gyms Near Me'

@@ -1,74 +1,76 @@
 require 'rails_helper'
 
 describe 'gyms show page: as a gym member', type: :feature do
-  let(:current_user_id) { @user.id }
-  let(:yelp_gym_id) { 'BJBXzKYxQAXZKb5W6HrRnA' }
-  let(:name) { 'Planet Fitness' }
-  let(:address) { '123 Main St' }
-  let(:phone) { '123-123-1234' }
-
-  let(:gym) do
-    Gym.new(
-      id: yelp_gym_id,
-      type: 'gym',
-      attributes: {
-        name: name,
-        address: address,
-        phone: phone
-      }
-    )
-  end
-
-  let(:gym_membership) do
-    GymMembership.new(
-      id: 1,
-      type: 'gym',
-      attributes: {
-        gym_name: name,
-        yelp_gym_id: yelp_gym_id
-      }
-    )
-  end
-
-  let(:friend) do
-    User.new(
-      id: 10,
-      attributes: {
-        email: '123@test.com',
-        full_name: 'Joe Shmoe',
-        google_id: 123,
-        google_image_url: 'pretty face',
-        zip_code: '80227',
-        summary: 'Muy guesta gimnasios',
-        goal: 'Gain Weight',
-        availability_morning: true,
-        availability_afternoon: true,
-        availability_evening: false
-      }
-    )
-  end
-
-  let(:non_friend) do
-    User.new(
-      id: 20,
-      attributes: {
-        email: '234@test.com',
-        full_name: 'John Doe',
-        google_id: 234,
-        google_image_url: 'pretty face',
-        zip_code: '80227',
-        summary: 'Muy guesta gimnasios',
-        goal: 'Gain Weight',
-        availability_morning: true,
-        availability_afternoon: false,
-        availability_evening: true
-      }
-    )
-  end
-
-  let(:gym_user_count) { GymUserCount.new(gym_member_count: 2) }
-
   describe 'as an authenticated user' do
+    include_context 'logged in as authenticated user'
+
+    let(:current_user_id) { user.id }
+    let(:yelp_gym_id) { 'BJBXzKYxQAXZKb5W6HrRnA' }
+    let(:name) { 'Planet Fitness' }
+    let(:address) { '123 Main St' }
+    let(:phone) { '123-123-1234' }
+
+    let(:gym) do
+      Gym.new(
+        id: yelp_gym_id,
+        type: 'gym',
+        attributes: {
+          name: name,
+          address: address,
+          phone: phone
+        }
+      )
+    end
+
+    let(:gym_membership) do
+      GymMembership.new(
+        id: 1,
+        type: 'gym',
+        attributes: {
+          gym_name: name,
+          yelp_gym_id: yelp_gym_id
+        }
+      )
+    end
+
+    let(:friend) do
+      User.new(
+        id: 10,
+        attributes: {
+          email: '123@test.com',
+          full_name: 'Joe Shmoe',
+          google_id: 123,
+          google_image_url: 'pretty face',
+          zip_code: '80227',
+          summary: 'Muy guesta gimnasios',
+          goal: 'Gain Weight',
+          availability_morning: true,
+          availability_afternoon: true,
+          availability_evening: false
+        }
+      )
+    end
+
+    let(:non_friend) do
+      User.new(
+        id: 20,
+        attributes: {
+          email: '234@test.com',
+          full_name: 'John Doe',
+          google_id: 234,
+          google_image_url: 'pretty face',
+          zip_code: '80227',
+          summary: 'Muy guesta gimnasios',
+          goal: 'Gain Weight',
+          availability_morning: true,
+          availability_afternoon: false,
+          availability_evening: true
+        }
+      )
+    end
+
+    let(:gym_user_count) { GymUserCount.new(gym_member_count: 2) }
+
     context 'when I visit the gym show page as a gym member' do
       before do
         allow(BackEndFacade).to receive(:get_selected_gym).with(yelp_gym_id).and_return(gym)

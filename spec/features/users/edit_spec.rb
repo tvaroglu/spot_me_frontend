@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe 'edit user profile', type: :feature do
+  include_context 'logged in as authenticated user'
+
   let(:user1_params) do
     {
       id: 10,
@@ -97,43 +99,43 @@ describe 'edit user profile', type: :feature do
       'availability_evening' => '0'
     }
   end
-  let(:user) { ApplicationRecord.user_stub }
+
   let(:user_friends) { [User.new(user1_params), User.new(user2_params)] }
   let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params)] }
   let(:user_events) { [Event.new(event1_params), Event.new(event2_params)] }
 
   before do
-    allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return(user_friends)
-    allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return(user_gyms)
-    allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return(user_events)
+    allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return(user_friends)
+    allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return(user_gyms)
+    allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return(user_events)
   end
 
   it "can click on the link from the current user's profile page and be taken to the edit form", :vcr do
     allow(BackEndFacade).to receive(:get_user_friends).with(user.id.to_s).and_return(user_friends)
 
-    visit profile_path(@user.id)
+    visit profile_path(user.id)
     click_on 'Edit Profile'
 
-    expect(page).to have_current_path(profile_edit_path(@user.id))
+    expect(page).to have_current_path(profile_edit_path(user.id))
   end
 
   it 'can fill out a form to update a user and gives a flash message when you successfully update a user', :vcr do
     allow(BackEndFacade).to receive(:get_user_friends).with(user.id.to_s).and_return(user_friends)
-    allow(BackEndService).to receive(:update_user).with(user_blob, @user.id).and_return(user)
+    allow(BackEndService).to receive(:update_user).with(user_blob, user.id).and_return(user)
 
-    visit profile_edit_path(@user.id)
+    visit profile_edit_path(user.id)
 
-    expect(page).to have_field(:full_name, with: @user.full_name.to_s)
-    expect(page).to have_field(:email, with: @user.email.to_s)
-    expect(page).to have_field(:zip_code, with: @user.zip_code.to_s)
-    expect(page).to have_field(:summary, with: @user.summary.to_s)
-    expect(page).to have_field(:goal, with: @user.goal.to_s)
+    expect(page).to have_field(:full_name, with: user.full_name.to_s)
+    expect(page).to have_field(:email, with: user.email.to_s)
+    expect(page).to have_field(:zip_code, with: user.zip_code.to_s)
+    expect(page).to have_field(:summary, with: user.summary.to_s)
+    expect(page).to have_field(:goal, with: user.goal.to_s)
 
     fill_in :summary, with: 'Joe Mama'
 
     click_on 'Update Profile'
 
-    expect(page).to have_current_path("/profile/#{@user.id}", ignore_query: true)
+    expect(page).to have_current_path("/profile/#{user.id}", ignore_query: true)
     expect(page).to have_content('Your profile has been updated!')
   end
 end

@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe 'registration page', type: :feature do
+  include_context 'logged in as authenticated user'
+
   describe 'happy path' do
     let(:user_blob) { File.read('./spec/fixtures/user.json') }
 
@@ -22,9 +24,9 @@ describe 'registration page', type: :feature do
     end
 
     it 'can register a new user if all required attributes are provided', :vcr do
-      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
 
       visit registration_path
 
@@ -32,9 +34,9 @@ describe 'registration page', type: :feature do
       allow(BackEndService).to receive(:get_user)
         .and_return(JSON.parse(user_blob, symbolize_names: true))
 
-      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_friends).with(user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_gyms).with(user.id).and_return([])
+      allow(BackEndFacade).to receive(:get_user_events).with(user.id).and_return([])
 
       fill_in :full_name, with: 'Foo Bar'
       fill_in :email, with: 'test@testing.com'

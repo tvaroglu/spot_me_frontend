@@ -1,24 +1,27 @@
 require 'rails_helper'
 
 describe BackEndService, type: :service do
-  it 'can parse json' do
-    json_blob = File.read('./spec/fixtures/user.json')
+  describe 'class methods' do
+    describe '.db_conn' do
+      subject(:connection) { BackEndService.db_conn }
 
-    expect(BackEndService.parse_json(json_blob).class).to eq(Hash)
-  end
+      it 'establishes a connection with the database endpoint' do
+        expect(connection).to be_a(Faraday::Connection)
+        expect(connection.url_prefix.to_s).to eq('https://spotme-app-api.herokuapp.com/')
+      end
+    end
 
-  it 'can send a json body' do
-    json_response = File.read('./spec/fixtures/user.json')
-    allow(UserService).to receive(:create_user).and_return(JSON.parse(json_response, symbolize_names: true))
+    describe '.parse_json' do
+      subject(:parsed_json) { BackEndService.parse_json(response) }
 
-    expect(UserService.create_user(json_response).class).to eq(Hash)
-  end
+      let(:user_id) { '1' }
+      let(:response) { BackEndService.db_conn.get("/api/v1/users/#{user_id}") }
 
-  it 'can receive a request', :vcr do
-    json_response = File.read('./spec/fixtures/user.json')
-    allow(BackEndService).to receive(:parse_json)
-      .and_return(JSON.parse(json_response, symbolize_names: true))
+      it 'returns the json response body', :vcr do
 
-    expect(UserService.get_user(789).class).to eq(Hash)
+        expect(parsed_json).to be_a Hash
+        expect(parsed_json[:data][:id]).to eq(user_id)
+      end
+    end
   end
 end

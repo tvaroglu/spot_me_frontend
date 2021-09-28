@@ -1,7 +1,7 @@
 class EventService  < BackEndService
   def self.get_events(user_id)
     response = db_conn.get("/api/v1/users/#{user_id}/events")
-    parse_json(response.body)
+    parse_json(response)
   end
 
   def self.create_event(params)

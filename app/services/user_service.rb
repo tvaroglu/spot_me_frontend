@@ -1,12 +1,12 @@
 class UserService  < BackEndService
   def self.get_user(google_id)
     response = db_conn.get("/api/v1/users/find?google_id=#{google_id}")
-    parse_json(response.body)
+    parse_json(response)
   end
 
   def self.get_profile_user(user_id)
     response = db_conn.get("/api/v1/users/#{user_id}")
-    parse_json(response.body)
+    parse_json(response)
   end
 
   def self.create_user(user_params)

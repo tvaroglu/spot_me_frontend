@@ -2,7 +2,7 @@ class GymMembershipService  < BackEndService
   def self.get_gym_memberships(user_id)
     response = db_conn.get("/api/v1/users/#{user_id}/gym_memberships")
 
-    parse_json(response.body)
+    parse_json(response)
   end
 
   def self.create_gym_membership(gym_mem_params)

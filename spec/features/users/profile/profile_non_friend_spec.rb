@@ -22,6 +22,7 @@ describe 'user profile page: non-friend', type: :feature do
   let(:user10) { User.new(user10_params) }
 
   context 'when I log in as an authenticated user', :vcr do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
     include_context 'logged in as authenticated user'
 
     before do

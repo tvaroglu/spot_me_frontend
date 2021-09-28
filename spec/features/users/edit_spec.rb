@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe 'edit user profile', type: :feature do
+  # See spec/shared_contexts/features/current_user_shared_context.rb for context
   include_context 'logged in as authenticated user'
 
   let(:user1_params) do

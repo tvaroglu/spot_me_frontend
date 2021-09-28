@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'user profile page: current user', type: :feature do
   context 'when I log in as an authenticated user', :vcr do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
     include_context 'logged in as authenticated user'
 
     before do

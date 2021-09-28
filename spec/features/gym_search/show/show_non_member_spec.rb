@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'gyms show page: as a non-gym member', type: :feature do
   describe 'as an authenticated user' do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
     include_context 'logged in as authenticated user'
 
     let(:current_user_id) { user.id }

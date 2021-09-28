@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'experienced user dashboard', type: :feature do
   context 'when I log in as an authenticated user' do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
     include_context 'logged in as authenticated user'
 
     let(:user1_params) do

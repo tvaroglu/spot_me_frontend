@@ -55,6 +55,7 @@ RSpec.describe 'new event page', type: :feature do
   end
 
   context 'when I log in as an authenticated user' do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
     include_context 'logged in as authenticated user'
 
     context 'when I visit the new event page' do

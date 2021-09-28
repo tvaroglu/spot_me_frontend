@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe 'gyms near me page', :vcr, type: :feature do
+  # See spec/shared_contexts/features/current_user_shared_context.rb for context
   include_context 'logged in as authenticated user'
 
   before do

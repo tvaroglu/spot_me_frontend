@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe 'registration page', type: :feature do
+  # See spec/shared_contexts/features/current_user_shared_context.rb for context
   include_context 'logged in as authenticated user'
 
   describe 'happy path' do

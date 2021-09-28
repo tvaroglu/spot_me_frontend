@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'registration page' do
+describe 'registration page', type: :feature do
   describe 'happy path' do
     let(:user_blob) { File.read('./spec/fixtures/user.json') }
 

@@ -1,5 +1,6 @@
 require 'rails_helper'
-RSpec.describe 'experienced user dashboard' do
+
+describe 'experienced user dashboard', type: :feature do
   let(:user1_params) do
     {
       id: 10,

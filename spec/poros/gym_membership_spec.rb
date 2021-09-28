@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe GymMembership, type: :poro do
+describe GymMembership, type: :poro do
   describe 'object creation' do
     it 'initialize from given parameters params' do
       gym_membership_id = '1'

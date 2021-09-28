@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'gyms near me page', :vcr do
+describe 'gyms near me page', type: :feature, :vcr do
   before do
     allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
     allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])

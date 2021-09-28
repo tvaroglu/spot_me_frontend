@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe GymUserCount, type: :poro do
+describe GymUserCount, type: :poro do
   describe 'object creation' do
     it 'initialize from given parameters params' do
       count = 15

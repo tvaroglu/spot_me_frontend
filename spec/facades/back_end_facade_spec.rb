@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe BackEndFacade do
+describe BackEndFacade, type: :facade do
   describe '.get_user_friends' do
     context 'when the user has friends' do
       it "can return an array of the user's friends", :vcr do

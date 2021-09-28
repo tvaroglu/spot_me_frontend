@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'welcome page' do
+describe 'welcome page', type: :feature do
   let(:user_blob) { File.read('./spec/fixtures/user.json') }
 
   it 'is on the correct page' do

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'edit user profile' do
+describe 'edit user profile', type: :feature do
   let(:user1_params) do
     {
       id: 10,

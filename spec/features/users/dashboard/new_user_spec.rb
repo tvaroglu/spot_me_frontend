@@ -1,5 +1,6 @@
 require 'rails_helper'
-RSpec.describe 'new user dashboard' do
+
+describe 'new user dashboard', type: :feature do
   let(:empty_arr) { [] }
 
   before do

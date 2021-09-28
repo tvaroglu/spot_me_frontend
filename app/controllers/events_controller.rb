@@ -29,10 +29,6 @@ class EventsController < ApplicationController
     }
   end
 
-  def new_event_params
-    params.permit(:friend_id, :friend_name, :gym_membership_id, :gym_name)
-  end
-
   def create_event_params
     params[:date_time] = DateTime.civil(
       params[:date]['when(1i)'].to_i,

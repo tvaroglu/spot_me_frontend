@@ -71,7 +71,7 @@ describe 'user profile page: non-friend', type: :feature do
 
         click_on 'Add Friend'
 
-        expect(page).to have_current_path(dashboard_path(user.id), ignore_query: true)
+        expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
         expect(page).to have_content('go get them gains!!')
       end
     end

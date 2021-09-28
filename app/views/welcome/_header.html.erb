@@ -8,7 +8,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <% if current_user && session[:google_token].present? %>
           <li class="nav-item" style="padding-right:10px; padding-top:2px;">
-            <%= link_to "Dashboard", dashboard_path(current_user.id), class: "btn btn-sm btn-danger navbar-custom btn-outline-dark" %>
+            <%= link_to "Dashboard", dashboard_index_path, class: "btn btn-sm btn-danger navbar-custom btn-outline-dark" %>
           </li>
           <li class="nav-item" style="padding-right:10px; padding-top:2px;">
             <%= button_to "Find Gyms Near Me", gyms_path, method: :get, params: { zip_code: current_user.zip_code }, class: "btn btn-sm btn-danger navbar-custom btn-outline-dark" %>

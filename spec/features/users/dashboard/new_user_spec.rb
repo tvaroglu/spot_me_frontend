@@ -15,7 +15,7 @@ describe 'new user dashboard', type: :feature do
     end
 
     context 'when I visit my user dashboard' do
-      before { visit dashboard_path(user.id) }
+      before { visit dashboard_index_path }
 
       context "when I don't have any friends" do
         it 'displays "You currently have no friends."', :vcr do

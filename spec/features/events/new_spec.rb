@@ -134,7 +134,7 @@ RSpec.describe 'new event page', type: :feature do
         end
 
         it 'redirects me to the User Dashboard page' do
-          expect(page).to have_current_path(dashboard_path(user.id), ignore_query: true)
+          expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
         end
 
         it 'displays a success flash message' do

@@ -1,0 +1,86 @@
+<% if current_user %>
+  <table class="table table-sm table-borderless table-responsive navbar-brown align-top">
+    <tr>
+      <td align="center">
+        <div id='profile'>
+          <img id="profile_pic" src="<%= current_user.google_image_url %>" style="border-radius:50px; width:200px; height:auto;">
+          <br>
+          <br>
+          <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+        </div>
+
+        <br>
+
+        <div id='friends'>
+          <h2>My Friends:</h2>
+
+          <% if @user_friends.empty? %>
+            <p>You currently have no friends.</p>
+          <% else %>
+            <% @user_friends.each do |friend| %>
+              <p id="friend-<%= friend.id%>">
+                <%= friend.full_name %>
+                <%= link_to 'View Profile', profile_path(
+                                              friend.id
+                                              ),
+                                              class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+
+                <%= link_to 'Remove', friendship_path(
+                                        current_user.id,
+                                        {
+                                          user_id: current_user.id,
+                                          followee_id: friend.id
+                                        }),
+                                        method: :delete,
+                                        class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+              </p>
+            <% end %>
+          <% end %>
+        </div>
+      </td>
+
+      <td>
+        <div align="center" id='profile-header'>
+          <h1 id="user_name"><%= current_user.full_name %></h1>
+          <h6 id="zip_code">Zip Code: <%= current_user.zip_code %></h6>
+        </div>
+
+        <br>
+
+        <div align="center" id='upcoming-workouts'>
+          <h2>Upcoming Workouts:</h2>
+
+          <% if @user_events.empty? %>
+            <p align="center" >You currently have no upcoming workouts.</p>
+          <% else %>
+            <% @user_events.each do |event| %>
+              <p id="event-<%= event.id%>">
+                <%= event.activity %>: <%= event.date_time %>
+                <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+              </p>
+            <% end %>
+          <% end %>
+        </div>
+        <br>
+        <div id='gyms'>
+          <h2>My Gyms:</h2>
+
+          <% if @user_gyms.empty? %>
+            <p align="center">You currently are not a member of any gyms.</p>
+          <% else %>
+            <% @user_gyms.each do |gym| %>
+              <p align="center" id="gym-<%= gym.yelp_gym_id%>">
+                <%= gym.gym_name %>
+                <%= link_to 'View Gym', gym_path(gym.yelp_gym_id), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+                <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+              </p>
+            <% end %>
+          <% end %>
+          <div align="center">
+          <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+<% end %>

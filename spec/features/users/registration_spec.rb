@@ -48,7 +48,7 @@ describe 'registration page', type: :feature do
 
       click_on 'Register'
 
-      expect(page).to have_current_path(dashboard_path(1), ignore_query: true)
+      expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
     end
   end
 

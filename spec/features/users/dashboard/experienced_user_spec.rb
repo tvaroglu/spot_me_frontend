@@ -180,7 +180,7 @@ describe 'experienced user dashboard', type: :feature do
     end
 
     context 'when I visit my user dashboard' do
-      before { visit dashboard_path(user.id) }
+      before { visit dashboard_index_path }
 
       it 'displays my name and zip code', :vcr do
         expect(page).to have_css('#profile-header')
@@ -279,7 +279,7 @@ describe 'experienced user dashboard', type: :feature do
           click_on 'Remove'
         end
 
-        expect(page).to have_current_path(dashboard_path(user.id))
+        expect(page).to have_current_path(dashboard_index_path)
         expect(page).to have_content('Gym removed')
       end
 
@@ -308,7 +308,7 @@ describe 'experienced user dashboard', type: :feature do
           click_on 'Delete'
         end
 
-        expect(page).to have_current_path(dashboard_path(user.id))
+        expect(page).to have_current_path(dashboard_index_path)
         expect(page).to have_content('Workout deleted')
       end
     end

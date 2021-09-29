@@ -1,31 +1,112 @@
 <% if current_user %>
-  <table class="table table-sm table-borderless table-responsive navbar-brown align-top">
-    <tr>
-      <td align="center">
-        <div id='profile'>
-          <img id="profile_pic" src="<%= current_user.google_image_url %>" style="border-radius:50px; width:200px; height:auto;">
-          <br>
-          <br>
-          <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
-        </div>
+  <div class="container navbar-brown padding mb-3">
+    <div class="row center-it-all">
+      <div class="col-lg">
+        <img id="profile_pic" src="<%= current_user.google_image_url %>" style="border-radius:80px; width:160px; height:auto;"><br><br>
 
-        <br>
+        <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+      </div>
 
-        <div id='friends'>
-          <h2>My Friends:</h2>
+      <div class="col-lg">
+        <h1>Welcome, <%= current_user.full_name %>!</h1>
+      </div>
+    </div>
+  </div>
 
-          <% if @user_friends.empty? %>
-            <p>You currently have no friends.</p>
-          <% else %>
-            <% @user_friends.each do |friend| %>
+  <div class="container navbar-brown padding mb-1">
+    <div class="row">
+      <h2>Upcoming Workouts</h2>
+    </div>
+  </div>
+
+  <div class="container navbar-brown padding mb-3">
+    <div class="row">
+      <div class="d-flex flex-wrap center-it-all">
+        <% if @user_events.empty? %>
+          <div class='col-lg-auto whitecard'>
+            <p align="center">You currently have no upcoming workouts.</p>
+          </div>
+        <% else %>
+
+          <% @user_events.each do |event| %>
+          <div class="col-md-3 whitecard">
+            <p id="event-<%= event.id%>">
+              <h4><%= event.activity %></h4>
+
+              <%= event.date_time %><br><br>
+              <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+            </p>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container navbar-brown padding mb-1">
+    <div class="row">
+      <h2>My Gyms</h2>
+    </div>
+  </div>
+
+  <div class="container navbar-brown padding mb-3">
+    <div class="row" id='gyms'>
+      <div class="d-flex flex-wrap center-it-all">
+        <% if @user_gyms.empty? %>
+          <div class='col-md-auto whitecard'>
+            <p align="center">You currently are not a member of any gyms.</p>
+          </div>
+        <% else %>
+          <% @user_gyms.each do |gym| %>
+            <div class='col-xl-3 whitecard'>
+              <p align="center" id="gym-<%= gym.yelp_gym_id%>">
+                <h4><%= gym.gym_name %></h4>
+
+                <%= link_to 'View', gym_path(gym.yelp_gym_id), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+                <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+              </p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div align="center">
+        <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container navbar-brown padding mb-1">
+    <div class="row" id='friends'>
+      <h2><%= @user_friends.size %> Following</h2>
+    </div>
+  </div>
+
+  <div class="container navbar-brown padding">
+    <div class="row" id='friends'>
+      <% if @user_friends.empty? %>
+        <p>You currently have no friends.</p>
+      <% else %>
+        <div class="d-flex flex-wrap center-it-all">
+
+          <% @user_friends.each do |friend| %>
+            <div class='col-xl-3 whitecard'>
+
               <p id="friend-<%= friend.id%>">
-                <%= friend.full_name %>
-                <%= link_to 'View Profile', profile_path(
+                <img id="profile_pic" src="<%= friend.google_image_url %>" style="border-radius:50%">
+                <h4><%= friend.full_name %></h4>
+
+                <%= friend.goal %><br><br>
+                <%= link_to 'View', profile_path(
                                               friend.id
                                               ),
                                               class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
 
-                <%= link_to 'Remove', friendship_path(
+                <%= link_to 'Unfollow', friendship_path(
                                         current_user.id,
                                         {
                                           user_id: current_user.id,
@@ -34,53 +115,13 @@
                                         method: :delete,
                                         class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
               </p>
-            <% end %>
+            </div>
           <% end %>
-        </div>
-      </td>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-      <td>
-        <div align="center" id='profile-header'>
-          <h1 id="user_name"><%= current_user.full_name %></h1>
-          <h6 id="zip_code">Zip Code: <%= current_user.zip_code %></h6>
-        </div>
+  <br><br>
 
-        <br>
-
-        <div align="center" id='upcoming-workouts'>
-          <h2>Upcoming Workouts:</h2>
-
-          <% if @user_events.empty? %>
-            <p align="center" >You currently have no upcoming workouts.</p>
-          <% else %>
-            <% @user_events.each do |event| %>
-              <p id="event-<%= event.id%>">
-                <%= event.activity %>: <%= event.date_time %>
-                <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
-              </p>
-            <% end %>
-          <% end %>
-        </div>
-        <br>
-        <div id='gyms'>
-          <h2>My Gyms:</h2>
-
-          <% if @user_gyms.empty? %>
-            <p align="center">You currently are not a member of any gyms.</p>
-          <% else %>
-            <% @user_gyms.each do |gym| %>
-              <p align="center" id="gym-<%= gym.yelp_gym_id%>">
-                <%= gym.gym_name %>
-                <%= link_to 'View Gym', gym_path(gym.yelp_gym_id), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
-                <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
-              </p>
-            <% end %>
-          <% end %>
-          <div align="center">
-          <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
-          </div>
-        </div>
-      </td>
-    </tr>
-  </table>
 <% end %>

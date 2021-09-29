@@ -1,6 +1,6 @@
 <% if current_user %>
-  <div class="container flex-wrap-reverse navbar-brown full-radius padding mb-3">
-    <div class="row center-it-all" id='profile-header'>
+  <div class="container flex-wrap-reverse gray full-radius padding mb-3">
+    <div class="row item-center center-it-all" id='profile-header'>
       <div class="col-lg">
         <img id="profile_pic" src="<%= current_user.google_image_url %>" style="border-radius:80px; width:160px; height:auto;"><br><br>
 
@@ -13,23 +13,23 @@
     </div>
   </div>
 
-  <div class="container navbar-brown top-radius padding mb-1">
+  <div class="container gray top-radius padding mb-1">
     <div class="row">
       <h2>Upcoming Workouts</h2>
     </div>
   </div>
 
-  <div class="container navbar-brown bottom-radius padding mb-3">
+  <div class="container gray bottom-radius padding mb-3">
     <div class="row" id='upcoming-workouts'>
       <div class="d-flex flex-wrap center-it-all">
         <% if @user_events.empty? %>
-          <div class='col-sm-3 whitecard'>
+          <div class='col-sm-3 card-display'>
             <p align="center">You currently have no upcoming workouts.</p>
           </div>
         <% else %>
 
           <% @user_events.each do |event| %>
-          <div class="col-md-3 whitecard" id="event-<%= event.id%>">
+          <div class="col-md-3 card-display" id="event-<%= event.id%>">
             <p>
               <h5><%= event.activity %></h5>
 
@@ -43,22 +43,22 @@
     </div>
   </div>
 
-  <div class="container navbar-brown top-radius padding mb-1">
+  <div class="container gray top-radius padding mb-1">
     <div class="row">
       <h2>My Gyms</h2>
     </div>
   </div>
 
-  <div class="container navbar-brown bottom-radius padding mb-3">
+  <div class="container gray bottom-radius padding mb-3">
     <div class="row" id='gyms'>
       <div class="d-flex flex-wrap center-it-all">
         <% if @user_gyms.empty? %>
-          <div class='col-md-auto whitecard'>
+          <div class='col-md-auto card-display'>
             <p align="center">You currently are not a member of any gyms.</p>
           </div>
         <% else %>
           <% @user_gyms.each do |gym| %>
-            <div class='col-xl-3 whitecard' id="gym-<%= gym.yelp_gym_id%>">
+            <div class='col-xl-3 card-display' id="gym-<%= gym.yelp_gym_id%>">
               <p align="center">
                 <h5><%= gym.gym_name %></h5>
 
@@ -80,13 +80,13 @@
     </div>
   </div>
 
-  <div class="container navbar-brown top-radius padding mb-1">
+  <div class="container gray top-radius padding mb-1">
     <div class="row">
       <h2><%= @user_friends.size %> Following</h2>
     </div>
   </div>
 
-  <div class="container navbar-brown bottom-radius padding">
+  <div class="container gray bottom-radius padding">
     <div class="row" id='friends'>
       <% if @user_friends.empty? %>
         <p>You currently have no friends.</p>
@@ -94,20 +94,28 @@
         <div class="d-flex flex-wrap center-it-all">
 
           <% @user_friends.each do |friend| %>
-            <div class='col-xl-3 whitecard' id="friend-<%= friend.id%>">
+            <div class='col-xl-3 card-display' id="friend-<%= friend.id%>">
 
               <p>
                 <img id="profile_pic" src="<%= friend.google_image_url %>" style="border-radius:50%">
-                <h5><%= friend.full_name %></h5>
+                <h5 class='mb-3'><%= friend.full_name %></h5>
 
-                <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                <%= friend.zip_code %><br>
+                <ul class='no-bullets'>
+                  <li>
+                    <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+                    &nbsp;<%= friend.zip_code %>
+                  </li>
 
-                <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-                <%= friend.goal %><br>
+                  <li>
+                    <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
+                    &nbsp;<%= friend.goal %>
+                  </li>
 
-                <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-                <%= friend.availability %><br>
+                  <li>
+                    <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
+                    &nbsp;<%= friend.availability %>
+                  </li>
+                </ul>
 
                 <br>
 

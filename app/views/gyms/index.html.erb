@@ -1,20 +1,36 @@
-<div align="center" class="card navbar-brown" style="width: flex;">
-  <h1 class="card-title">Gyms Near <%= current_user.zip_code %></h1>
+<div class="container gray top-radius padding mb-1" style="width: flex;">
+  <h1 class="card-title">Gyms Near My Zip Code: <%= current_user.zip_code %></h1>
 </div>
-<br/><br/>
 
-<div align="center" id="gyms">
-  <div class="card navbar-brown" style="width: 40rem;">
-    <% @gyms.each do |gym| %>
-    <div class="card-body">
-      <div id="<%= gym.yelp_gym_id %>">
-        <h5 class="card-title"><%= gym.name %></h5>
-        <h6 class="card-subtitle mb-2"><%= gym.address %></h6>
-        <h6 class="card-subtitle mb-2"><%= gym.phone %></h6>
-        <h6 class="card-subtitle mb-2"><%= link_to gym.name, gym_path(gym.yelp_gym_id), class: "btn btn-sm btn-danger navbar-custom btn-outline-dark" %>
-        </h6>
-      </div>
+<div class='container gray bottom-radius padding mb-3'>
+  <div class="row" id="gyms">
+    <div class="d-flex flex-wrap center-it-all">
+      <% @gyms.each do |gym| %>
+          <div class="col-xl-5 card-display flex-grow">
+            <div id="<%= gym.yelp_gym_id %>">
+              <ul class='no-bullets'>
+                <li>
+                  <%= embedded_svg('icons/basic_signs.svg', class: 'icon') %>
+                  &nbsp;<span class='title'><%= gym.name %></span>
+                </li>
+
+                <li>
+                  <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+                  &nbsp;<%= gym.address %>
+                </li>
+
+                <% if gym.phone.present? %>
+                <li>
+                  <%= embedded_svg('icons/basic_smartphone.svg', class: 'icon') %>
+                  &nbsp;<%= gym.phone %>
+                </li>
+                <% end %>
+              </ul>
+
+              <%= link_to 'View Gym', gym_path(gym.yelp_gym_id), class: "btn btn-sm btn-danger navbar-custom btn-outline-dark" %>
+            </div>
+          </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>

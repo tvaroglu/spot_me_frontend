@@ -14,7 +14,7 @@ describe 'gyms near me page', :vcr, type: :feature do
   end
 
   it 'can find gyms near me', :vcr do
-    expect(page).to have_content("Gyms Near #{user.zip_code}")
+    expect(page).to have_content("Gyms Near My Zip Code: #{user.zip_code}")
 
     within '#gyms' do
       within '#BJBXzKYxQAXZKb5W6HrRnA' do
@@ -27,8 +27,8 @@ describe 'gyms near me page', :vcr, type: :feature do
 
   it 'has a link to each individual gym', :vcr do
     within '#BJBXzKYxQAXZKb5W6HrRnA' do
-      expect(page).to have_link("Rishi's Community Yoga")
-      click_on "Rishi's Community Yoga"
+      expect(page).to have_link('View Gym')
+      click_on 'View Gym'
     end
 
     expect(page).to have_current_path(gym_path('BJBXzKYxQAXZKb5W6HrRnA'), ignore_query: true)

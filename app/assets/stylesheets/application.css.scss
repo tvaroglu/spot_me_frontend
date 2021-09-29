@@ -29,8 +29,8 @@ html, body {
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Tahoma';
-  font-size: 20px;
+  font-family: 'Verdana';
+  font-size: 0.875em;
 }
 
 main {
@@ -71,7 +71,7 @@ navbar-nav.navbar-center {
 }
 
 .navbar-brown {
-  background-color: #EFE7DA98;
+  background-color: #EFE7DAF5;
 }
 
 .custom {
@@ -102,12 +102,47 @@ navbar-nav.navbar-center {
   display: none;
 }
 
-h1, h2, h3 {
-  font-family: 'Quicksand';
+h1, h2, h3, h4, h5 {
+  font-family: 'Georgia';
 	text-align: center;
 }
 
 a:hover {
   text-decoration: none;
   color: rgba(255, 254, 254, 0.705);
+}
+
+.padding {
+  padding: 10px;
+}
+
+.margin {
+  margin: 10px;
+}
+
+.whitecard {
+  background: white;
+  padding: 20px 20px 10px;
+}
+
+.center-it-all {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 1em;
+  row-gap: 1em;
+  flex-flow: wrap;
+}
+
+.container {
+  width: 80%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
 }

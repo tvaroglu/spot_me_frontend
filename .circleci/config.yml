@@ -33,15 +33,9 @@ jobs:
       - run:
           name: Run Test Suite
           command: bundle exec rspec -fd
-
-worklows:
-  heroku_deploy:
-    jobs:
-      - heroku/deploy-via-git:
-          requires:
-            - build
-          filters:
-            branches:
-              only: main
-          post-steps:
-            - run: rails db:migrate
+  heroku/deploy-via-git:
+      filters:
+        branches:
+          only: main
+      post-steps:
+        - run: rails db:migrate

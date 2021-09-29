@@ -1,0 +1,35 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2
+
+jobs:
+  build:
+    parallelism: 3
+    docker:
+      - image: circleci/ruby:2.7.2
+      - image: circleci/postgres:9.6-alpine
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: spot_me_frontend_test
+    environment:
+      BUNDLE_PATH: vendor/bundle
+      BUNDLE_JOBS: 3
+      BUNDLE_RETRY: 3
+      PGHOST: 127.0.0.1
+      PGUSER: postgres
+      RAILS_ENV: test
+    executor: ruby/default
+    steps:
+      - checkout
+      - run: cp config/database.yml.ci config/database.yml
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install
+      - run: sudo apt install -y postgresql-client || true
+      - run:
+          name: Setup DB
+          command: bundle exec rails db:schema:load --trace
+      - run:
+          name: run test suite
+          command: bundle exec rspec -fd

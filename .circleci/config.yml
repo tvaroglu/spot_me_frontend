@@ -21,7 +21,6 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      # - run: cp config/database.yml.ci config/database.yml
       - run:
           name: Which bundler?
           command: bundle -v

@@ -1,18 +1,8 @@
 version: 2.1
 orbs:
   ruby: circleci/ruby@0.1.2
-  heroku: circleci/heroku@0.0.10
+  heroku: circleci/heroku@1.2.6
 
-worklows:
-  heroku_deploy:
-    jobs:
-      - build
-      - heroku/deploy-via-git:
-          requires:
-            - build
-          filters:
-            branches:
-              only: main
 jobs:
   build:
     parallelism: 1
@@ -41,5 +31,25 @@ jobs:
           name: Setup DB
           command: bundle exec rails db:schema:load --trace
       - run:
-          name: run test suite
+          name: Run Test Suite
           command: bundle exec rspec -fd
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - run:
+          command: >
+      - heroku_deploy
+      # - heroku/deploy-via-git
+
+worklows:
+  heroku_deploy:
+    jobs:
+      - deploy
+      - heroku/deploy-via-git:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main

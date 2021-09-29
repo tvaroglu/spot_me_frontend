@@ -1,8 +1,19 @@
 version: 2.1
+
 orbs:
   ruby: circleci/ruby@0.1.2
-  heroku: circleci/heroku@1.2.6
+  heroku: circleci/heroku@0.0.10
 
+workflows:
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
 jobs:
   build:
     parallelism: 1
@@ -29,11 +40,7 @@ jobs:
       - run: sudo apt install -y postgresql-client || true
       - run:
           name: Setup DB
-          command: bundle exec rails db:schema:load --trace
+          command: bundle exec rails db:create db:schema:load --trace
       - run:
           name: Run Test Suite
           command: bundle exec rspec -fd
-  heroku/deploy-via-git:
-      branch: main
-      steps:
-        - run: rails db:migrate

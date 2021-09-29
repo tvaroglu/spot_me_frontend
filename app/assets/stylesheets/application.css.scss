@@ -170,3 +170,38 @@ img {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.padding {
+  padding: 10px;
+}
+
+.margin {
+  margin: 10px;
+}
+
+.whitecard {
+  background: white;
+  padding: 20px 20px 10px;
+}
+
+.center-it-all {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 1em;
+  row-gap: 1em;
+  flex-flow: wrap;
+}
+
+.container {
+  width: 80%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
+}

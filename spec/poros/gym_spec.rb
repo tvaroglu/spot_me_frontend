@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Gym, type: :poro do
+describe Gym, type: :poro do
   describe 'object creation' do
     it 'initialize from given parameters params' do
       yelp_gym_id = '1'

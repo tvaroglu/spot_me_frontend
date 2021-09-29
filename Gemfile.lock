@@ -128,6 +128,10 @@ GEM
     jwt (2.2.3)
     launchy (2.4.3)
       addressable (~> 2.3)
+    libv8-node (15.14.0.1)
+    libv8-node (15.14.0.1-arm64-darwin-20)
+    libv8-node (15.14.0.1-x86_64-darwin-20)
+    libv8-node (15.14.0.1-x86_64-linux)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -141,6 +145,8 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.1)
     mini_portile2 (2.6.1)
+    mini_racer (0.4.0)
+      libv8-node (~> 15.14.0.0)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
@@ -357,6 +363,7 @@ DEPENDENCIES
   json
   launchy
   listen (>= 3.0.5, < 3.2)
+  mini_racer
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   orderly

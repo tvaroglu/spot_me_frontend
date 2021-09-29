@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :poro do
+describe User, type: :poro do
   it 'can initialize from user params' do
     user_params = {
       id: 1,

@@ -1,14 +1,16 @@
-- Changes Implemented:
-  - ...
-  - ...
+### Changes Implemented:
+  -
 
-- Quality Control Checklist:
+### Quality Control Checklist:
 
-  - [ ] Code adheres to Rubocop styling (if unavoidable infractions, please clarify below)
-  - [ ] 100% SimpleCov test coverage (if below, please clarify below)
+  - [ ] Code adheres to Rubocop styling.  If not, please clarify below:
+    -
+  - [ ] 100% SimpleCov test coverage.  If not, please clarify below:
+    -
   - [ ] Last commit has passing Travis build
 
+### Blockers (if applicable):
+  -
 
-- Blockers (if applicable):
-
-- Next Steps & Additional Notes:
+### Next Steps & Additional Notes:
+  -

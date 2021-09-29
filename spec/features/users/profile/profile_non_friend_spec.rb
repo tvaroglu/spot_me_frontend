@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'user profile page: non-friend', type: :feature do
-  let(:user1_params) do
+  let(:user10_params) do
     {
       id: 11,
       attributes: {
@@ -19,14 +19,17 @@ describe 'user profile page: non-friend', type: :feature do
     }
   end
 
-  let(:user10) { User.new(user1_params) }
+  let(:user10) { User.new(user10_params) }
 
   context 'when I log in as an authenticated user', :vcr do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
+    include_context 'logged in as authenticated user'
+
     before do
-      allow(BackEndFacade).to receive(:get_user).with(@user.id).and_return(@user)
-      allow(BackEndFacade).to receive(:get_profile_user).with(user10.id.to_s).and_return(user10)
-      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_friends).with(user10.id).and_return([])
+      allow(UserFacade).to receive(:get_user).with(user.id).and_return(user)
+      allow(UserFacade).to receive(:get_profile_user).with(user10.id.to_s).and_return(user10)
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+      allow(FriendshipFacade).to receive(:get_friends).with(user10.id).and_return([])
     end
 
     context 'when I visit a non-friend user profile' do
@@ -63,12 +66,12 @@ describe 'user profile page: non-friend', type: :feature do
       end
 
       it 'can add a new friend', :vcr do
-        allow(BackEndService).to receive(:create_friendship).and_return(user1_params)
-        allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
+        allow(FriendshipService).to receive(:add_friend).and_return(user10_params)
+        allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
 
         click_on 'Add Friend'
 
-        expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
+        expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
         expect(page).to have_content('go get them gains!!')
       end
     end

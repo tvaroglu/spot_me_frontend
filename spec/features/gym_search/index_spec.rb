@@ -1,17 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe 'gyms near me page', :vcr do
-  before do
-    allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+describe 'gyms near me page', :vcr, type: :feature do
+  # See spec/shared_contexts/features/current_user_shared_context.rb for context
+  include_context 'logged in as authenticated user'
 
-    visit dashboard_path(@user.id)
+  before do
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
+
+    visit dashboard_index_path
     within('#gyms') { click_on 'Find Gyms Near Me' }
   end
 
   it 'can find gyms near me', :vcr do
-    expect(page).to have_content("Gyms Near #{@user.zip_code}")
+    expect(page).to have_content("Gyms Near #{user.zip_code}")
 
     within '#gyms' do
       within '#BJBXzKYxQAXZKb5W6HrRnA' do
@@ -27,6 +30,7 @@ RSpec.describe 'gyms near me page', :vcr do
       expect(page).to have_link("Rishi's Community Yoga")
       click_on "Rishi's Community Yoga"
     end
+
     expect(page).to have_current_path(gym_path('BJBXzKYxQAXZKb5W6HrRnA'), ignore_query: true)
   end
 end

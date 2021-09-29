@@ -7,14 +7,14 @@ class EventsController < ApplicationController
   end
 
   def create
-    BackEndFacade.create_event(create_event_params)
+    EventFacade.create_event(create_event_params)
     flash[:alert] = 'Workout created! Now go get your swole on!'
-    redirect_to dashboard_path(current_user.id)
+    redirect_to dashboard_index_path
   end
 
   def destroy
-    BackEndFacade.delete_event(event_destroy_params)
-    redirect_to dashboard_path(current_user.id)
+    EventFacade.delete_event(event_destroy_params)
+    redirect_to dashboard_index_path
     flash[:alert] =
       'Workout deleted... but you should schedule a new one ASAP if you want those gains!'
   end
@@ -27,10 +27,6 @@ class EventsController < ApplicationController
       gym_membership_id: params[:gym_membership_id],
       id: params[:id]
     }
-  end
-
-  def new_event_params
-    params.permit(:friend_id, :friend_name, :gym_membership_id, :gym_name)
   end
 
   def create_event_params

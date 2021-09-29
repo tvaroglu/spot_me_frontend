@@ -3,20 +3,13 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/auth/:provider/callback', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
 
-  get '/registration', to: 'users#new'
-  post '/registration', to: 'users#create'
-
-  get '/dashboard/:user_id', to: 'users#dashboard', as: '/dashboard'
-
-  get '/profile/:user_id', to: 'users#profile', as: '/profile'
-  get '/profile/:user_id/edit', to: 'users#edit', as: '/profile/edit'
-  patch '/profile/:user_id', to: 'users#update', as: '/profile/update'
-  post '/profile/:user_id', to: 'users#update'
-
-  resources :friendships, only: [:create, :destroy]
+  resources :dashboard, only: [:index]
   resources :events, only: [:create, :destroy, :new]
-  resources :gyms, only: [:index, :show]
+  resources :friendships, only: [:create, :destroy]
   resources :gym_memberships, only: [:create, :destroy]
+  resources :gyms, only: [:index, :show]
+  resources :logout, only: [:destroy], controller: 'sessions'
+  resources :profile, only: [:edit, :show, :update], controller: 'users'
+  resources :registration, only: [:new, :create], controller: 'users'
 end

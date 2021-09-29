@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 28 Sep 2021 18:23:58 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a3936c2804083afc197dcc24675b9318"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - db03953c-295a-4e67-98b7-975df4ec41f6
+      X-Runtime:
+      - '0.003607'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
+        Swift"}}}'
+  recorded_at: Tue, 28 Sep 2021 18:23:58 GMT
+recorded_with: VCR 6.0.0

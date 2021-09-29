@@ -187,15 +187,14 @@ describe 'experienced user dashboard', type: :feature do
 
         within '#profile-header' do
           expect(page).to have_content(user.full_name)
-          expect(page).to have_content(user.zip_code)
         end
       end
 
       it 'displays a link to view my profile', :vcr do
-        expect(page).to have_css('#profile')
+        expect(page).to have_css('#profile-header')
 
-        within '#profile' do
-          expect(page).to have_link('View Profile')
+        within '#profile-header' do
+          expect(page).to have_link('View')
         end
       end
 
@@ -203,21 +202,19 @@ describe 'experienced user dashboard', type: :feature do
         expect(page).to have_css('#friends')
 
         within '#friends' do
-          expect(page).to have_content('My Friends')
-
           user_friends.each do |friend|
             expect(page).to have_css("#friend-#{friend.id}")
 
             within "#friend-#{friend.id}" do
               expect(page).to have_content(friend.full_name)
-              expect(page).to have_link('View Profile')
-              expect(page).to have_link('Remove')
+              expect(page).to have_link('View')
+              expect(page).to have_link('Unfollow')
             end
           end
         end
       end
 
-      context 'when I click on "View Profile" next to one of my friends' do
+      context 'when I click on "View" next to one of my friends' do
         let(:first_friend) { user_friends.first }
 
         before do
@@ -225,7 +222,7 @@ describe 'experienced user dashboard', type: :feature do
           allow(FriendshipFacade).to receive(:get_friends).with(first_friend.id.to_s).and_return([])
           allow(GymMembershipFacade).to receive(:get_gym_memberships).with(first_friend.id).and_return([])
           allow(EventFacade).to receive(:get_upcoming_events).with(first_friend.id).and_return([])
-          within("#friend-#{first_friend.id}") { click_link 'View Profile' }
+          within("#friend-#{first_friend.id}") { click_link 'View' }
         end
 
         it 'redirects me to my friends profile page', :vcr do
@@ -238,15 +235,15 @@ describe 'experienced user dashboard', type: :feature do
       end
 
       it 'has a Find Gyms Near Me button', :vcr do
-        expect(page).to have_css('#gyms')
+        expect(page).to have_css('#find-gyms')
 
-        within '#gyms' do
+        within '#find-gyms' do
           expect(page).to have_link('Find Gyms Near Me')
         end
       end
 
       it 'can find gyms near me', :vcr do
-        within '#gyms' do
+        within '#find-gyms' do
           click_on 'Find Gyms Near Me'
         end
 
@@ -257,14 +254,12 @@ describe 'experienced user dashboard', type: :feature do
         expect(page).to have_css('#gyms')
 
         within '#gyms' do
-          expect(page).to have_content('My Gyms')
-
           user_gyms.each do |gym|
             expect(page).to have_css("#gym-#{gym.yelp_gym_id}")
 
             within "#gym-#{gym.yelp_gym_id}" do
               expect(page).to have_content(gym.gym_name)
-              expect(page).to have_link('View Gym')
+              expect(page).to have_link('View')
               expect(page).to have_link('Remove')
             end
           end
@@ -287,8 +282,6 @@ describe 'experienced user dashboard', type: :feature do
         expect(page).to have_css('#upcoming-workouts')
 
         within '#upcoming-workouts' do
-          expect(page).to have_content('Upcoming Workouts')
-
           user_events.each do |event|
             expect(page).to have_css("#event-#{event.id}")
 

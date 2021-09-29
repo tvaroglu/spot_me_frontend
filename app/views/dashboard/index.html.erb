@@ -1,6 +1,6 @@
 <% if current_user %>
   <div class="container flex-wrap-reverse navbar-brown full-radius padding mb-3">
-    <div class="row center-it-all">
+    <div class="row center-it-all" id='profile-header'>
       <div class="col-lg">
         <img id="profile_pic" src="<%= current_user.google_image_url %>" style="border-radius:80px; width:160px; height:auto;"><br><br>
 
@@ -20,7 +20,7 @@
   </div>
 
   <div class="container navbar-brown bottom-radius padding mb-3">
-    <div class="row">
+    <div class="row" id='upcoming-workouts'>
       <div class="d-flex flex-wrap center-it-all">
         <% if @user_events.empty? %>
           <div class='col-sm-3 whitecard'>
@@ -29,8 +29,8 @@
         <% else %>
 
           <% @user_events.each do |event| %>
-          <div class="col-md-3 whitecard">
-            <p id="event-<%= event.id%>">
+          <div class="col-md-3 whitecard" id="event-<%= event.id%>">
+            <p>
               <h4><%= event.activity %></h4>
 
               <%= event.date_time %><br><br>
@@ -58,8 +58,8 @@
           </div>
         <% else %>
           <% @user_gyms.each do |gym| %>
-            <div class='col-xl-3 whitecard'>
-              <p align="center" id="gym-<%= gym.yelp_gym_id%>">
+            <div class='col-xl-3 whitecard' id="gym-<%= gym.yelp_gym_id%>">
+              <p align="center">
                 <h4><%= gym.gym_name %></h4>
 
                 <%= link_to 'View', gym_path(gym.yelp_gym_id), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
@@ -74,14 +74,14 @@
     <br>
 
     <div class="row">
-      <div align="center">
+      <div align="center" id='find-gyms'>
         <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
       </div>
     </div>
   </div>
 
   <div class="container navbar-brown top-radius padding mb-1">
-    <div class="row" id='friends'>
+    <div class="row">
       <h2><%= @user_friends.size %> Following</h2>
     </div>
   </div>
@@ -94,9 +94,9 @@
         <div class="d-flex flex-wrap center-it-all">
 
           <% @user_friends.each do |friend| %>
-            <div class='col-xl-3 whitecard'>
+            <div class='col-xl-3 whitecard' id="friend-<%= friend.id%>">
 
-              <p id="friend-<%= friend.id%>">
+              <p>
                 <img id="profile_pic" src="<%= friend.google_image_url %>" style="border-radius:50%">
                 <h4><%= friend.full_name %></h4>
 

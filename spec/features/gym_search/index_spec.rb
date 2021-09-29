@@ -10,7 +10,7 @@ describe 'gyms near me page', :vcr, type: :feature do
     allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
     visit dashboard_index_path
-    within('#gyms') { click_on 'Find Gyms Near Me' }
+    within('#find-gyms') { click_on 'Find Gyms Near Me' }
   end
 
   it 'can find gyms near me', :vcr do

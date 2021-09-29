@@ -5,9 +5,9 @@
 
   - [ ] Code adheres to Rubocop styling.  If not, please clarify below:
     -
-  - [ ] 100% SimpleCov test coverage.  If not, please clarify below:
+  - [ ] >90% SimpleCov test coverage.  If not, please clarify below:
     -
-  - [ ] Last commit has passing Travis build
+  - [ ] Last commit has passing CircleCI build
 
 ### Blockers (if applicable):
   -

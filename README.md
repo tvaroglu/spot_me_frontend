@@ -123,10 +123,11 @@
 
   * [API key configuration](https://github.com/laserlemon/figaro)
       ```bash
-      $ gem install figaro
       $ bundle exec figaro install
-      open the new hidden file application.yml
-      set yelp_api_key: Bearer [your v4 token]
+      ```
+      Add your API key to `config/application.yml`:
+      ```yml
+      yelp_api_key: 'Bearer <your v4 token>'
       ```
 
   * How to run the test suite
@@ -268,7 +269,7 @@ When you visit your own profile
 </table>
 
 #### User Profile No. 2
-When you visit the profile of as user you follow.
+When you visit the profile of a user you follow
 
 <table>
 <tr>
@@ -287,7 +288,7 @@ When you visit the profile of as user you follow.
 </table>
 
 #### User Profile No. 3
-When you visit the profile of as user you do not follow.
+When you visit the profile of a user you do not follow
 
 <table>
 <tr>
@@ -342,7 +343,7 @@ When you visit the profile of as user you do not follow.
 </table>
 
 ### Gym Show Page No. 1
-When you are not a member of the gym.
+When you are not a member of the gym
 
 <table>
 <tr>
@@ -361,7 +362,7 @@ When you are not a member of the gym.
 </table>
 
 ### Gym Show Page No. 2
-When you are a member of the gym.
+When you are a member of the gym
 
 <table>
 <tr>

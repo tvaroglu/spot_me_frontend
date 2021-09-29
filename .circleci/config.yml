@@ -15,7 +15,7 @@ workflows:
             branches:
               only: main
           post-steps:
-            - run: rake db:migrate
+            - run: rails db:migrate
 jobs:
   build:
     parallelism: 1

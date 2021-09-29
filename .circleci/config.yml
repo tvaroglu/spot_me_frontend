@@ -37,5 +37,5 @@ jobs:
       filters:
         branches:
           only: main
-      post-steps:
+      steps:
         - run: rails db:migrate

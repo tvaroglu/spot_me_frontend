@@ -15,7 +15,7 @@ workflows:
             branches:
               only: main
           post-steps:
-            - run: heroku run rails db:migrate
+            - run: heroku run rails db:migrate --app spotme-app
 jobs:
   build:
     parallelism: 1

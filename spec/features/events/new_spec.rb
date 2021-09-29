@@ -55,6 +55,9 @@ RSpec.describe 'new event page', type: :feature do
   end
 
   context 'when I log in as an authenticated user' do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
+    include_context 'logged in as authenticated user'
+
     context 'when I visit the new event page' do
       let(:create_params) do
         {
@@ -115,10 +118,10 @@ RSpec.describe 'new event page', type: :feature do
         end
 
         before do
-          allow(BackEndFacade).to receive(:create_event).with(create_event_params).and_return(new_event)
-          allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([friend])
-          allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([current_user_gym_membership])
-          allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([new_event])
+          allow(EventFacade).to receive(:create_event).with(create_event_params).and_return(new_event)
+          allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([friend])
+          allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([current_user_gym_membership])
+          allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([new_event])
 
           fill_in 'activity', with: activity
           select year, from: 'date[when(1i)]'
@@ -131,7 +134,7 @@ RSpec.describe 'new event page', type: :feature do
         end
 
         it 'redirects me to the User Dashboard page' do
-          expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
+          expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
         end
 
         it 'displays a success flash message' do

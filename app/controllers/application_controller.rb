@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    BackEndFacade.get_user(session[:google_id]) if session[:google_id]
+    UserFacade.get_user(session[:google_id]) if session[:google_id]
   end
 end

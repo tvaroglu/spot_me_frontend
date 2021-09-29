@@ -1,6 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'welcome page' do
+describe 'welcome page', type: :feature do
+  include_context 'logged in as authenticated user'
+
   let(:user_blob) { File.read('./spec/fixtures/user.json') }
 
   it 'is on the correct page' do
@@ -11,23 +13,23 @@ RSpec.describe 'welcome page' do
   end
 
   it 'can log in and out of the application with a valid Google token', :aggregate_failures, :vcr do
-    allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
     visit root_path
 
-    allow(BackEndService).to receive(:get_user)
+    allow(UserService).to receive(:get_user)
       .and_return(JSON.parse(user_blob, symbolize_names: true))
 
-    allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-    allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock
     login_with_oauth
-    expect(page).to have_current_path(dashboard_path(@user.id), ignore_query: true)
+    expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
 
     expect(page).to have_link 'Dashboard'
     expect(page).to have_button 'Find Gyms Near Me'
@@ -44,11 +46,11 @@ RSpec.describe 'welcome page' do
     it 'will redirect to registration page if new user' do
       visit root_path
 
-      allow(BackEndService).to receive(:get_user)
+      allow(UserService).to receive(:get_user)
         .and_return(JSON.parse(empty_user), symbolize_names: true)
 
       login_with_oauth
-      expect(page).to have_current_path(registration_path, ignore_query: true)
+      expect(page).to have_current_path(new_registration_path, ignore_query: true)
     end
   end
 end

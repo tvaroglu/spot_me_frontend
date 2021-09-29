@@ -1,11 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe 'registration page' do
+describe 'registration page', type: :feature do
+  # See spec/shared_contexts/features/current_user_shared_context.rb for context
+  include_context 'logged in as authenticated user'
+
   describe 'happy path' do
     let(:user_blob) { File.read('./spec/fixtures/user.json') }
 
     it 'is on the correct page' do
-      visit registration_path
+      visit new_registration_path
 
       expect(page).to have_field(:full_name)
       expect(page).to have_field(:email)
@@ -22,19 +25,19 @@ RSpec.describe 'registration page' do
     end
 
     it 'can register a new user if all required attributes are provided', :vcr do
-      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
-      visit registration_path
+      visit new_registration_path
 
-      allow(BackEndService).to receive(:create_user).and_return(201)
-      allow(BackEndService).to receive(:get_user)
+      allow(UserService).to receive(:create_user).and_return(201)
+      allow(UserService).to receive(:get_user)
         .and_return(JSON.parse(user_blob, symbolize_names: true))
 
-      allow(BackEndFacade).to receive(:get_user_friends).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_gyms).with(@user.id).and_return([])
-      allow(BackEndFacade).to receive(:get_user_events).with(@user.id).and_return([])
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
+      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
       fill_in :full_name, with: 'Foo Bar'
       fill_in :email, with: 'test@testing.com'
@@ -45,7 +48,7 @@ RSpec.describe 'registration page' do
 
       click_on 'Register'
 
-      expect(page).to have_current_path(dashboard_path(1), ignore_query: true)
+      expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
     end
   end
 
@@ -53,10 +56,10 @@ RSpec.describe 'registration page' do
     let(:empty_user) { File.read('./spec/fixtures/empty_user.json') }
 
     it "can't register a new user if all required attributes aren't provided", :vcr do
-      visit registration_path
+      visit new_registration_path
 
-      allow(BackEndService).to receive(:create_user).and_return(422)
-      allow(BackEndService).to receive(:get_user)
+      allow(UserService).to receive(:create_user).and_return(422)
+      allow(UserService).to receive(:get_user)
         .and_return(JSON.parse(empty_user), symbolize_names: true)
 
       fill_in :full_name, with: 'Foo Bar'

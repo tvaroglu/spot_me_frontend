@@ -13,6 +13,7 @@ worklows:
           filters:
             branches:
               only: main
+
 jobs:
   build:
     parallelism: 3
@@ -43,13 +44,3 @@ jobs:
       - run:
           name: run test suite
           command: bundle exec rspec -fd
-  deploy:
-    executor: heroku/default
-    steps:
-      - checkout
-      - heroku/install
-      - run:
-          command: >
-            echo "The command above installs Heroku, the command below deploys.
-            What you do inbetween is up to you!"
-      - heroku/deploy-via-git

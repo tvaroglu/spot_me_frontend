@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Event, type: :poro do
+describe Event, type: :poro do
   it 'can initialize from event params' do
     id = '1'
     user_id = 1

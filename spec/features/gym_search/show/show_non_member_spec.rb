@@ -1,43 +1,46 @@
 require 'rails_helper'
 
 describe 'gyms show page: as a non-gym member', type: :feature do
-  let(:current_user_id) { @user.id }
-  let(:yelp_gym_id) { 'BJBXzKYxQAXZKb5W6HrRnA' }
-  let(:name) { 'Planet Fitness' }
-  let(:address) { '123 Main St' }
-  let(:phone) { '123-123-1234' }
-
-  let(:gym) do
-    Gym.new(
-      id: yelp_gym_id,
-      type: 'gym',
-      attributes: {
-        name: name,
-        address: address,
-        phone: phone
-      }
-    )
-  end
-
-  let(:gym_membership) do
-    GymMembership.new(
-      id: 1,
-      type: 'gym',
-      attributes: {
-        gym_name: name,
-        yelp_gym_id: yelp_gym_id
-      }
-    )
-  end
-
-  let(:gym_user_count) { GymUserCount.new(gym_member_count: 2) }
-
   describe 'as an authenticated user' do
+    # See spec/shared_contexts/features/current_user_shared_context.rb for context
+    include_context 'logged in as authenticated user'
+
+    let(:current_user_id) { user.id }
+    let(:yelp_gym_id) { 'BJBXzKYxQAXZKb5W6HrRnA' }
+    let(:name) { 'Planet Fitness' }
+    let(:address) { '123 Main St' }
+    let(:phone) { '123-123-1234' }
+
+    let(:gym) do
+      Gym.new(
+        id: yelp_gym_id,
+        type: 'gym',
+        attributes: {
+          name: name,
+          address: address,
+          phone: phone
+        }
+      )
+    end
+
+    let(:gym_membership) do
+      GymMembership.new(
+        id: 1,
+        type: 'gym',
+        attributes: {
+          gym_name: name,
+          yelp_gym_id: yelp_gym_id
+        }
+      )
+    end
+
+    let(:gym_user_count) { GymUserCount.new(gym_member_count: 2) }
+
     context 'when I visit the gym show page that I am not a member of' do
       before do
-        allow(BackEndFacade).to receive(:get_selected_gym).with(yelp_gym_id).and_return(gym)
-        allow(BackEndFacade).to receive(:get_gym_membership).with(yelp_gym_id: yelp_gym_id, user_id: current_user_id).and_return(nil)
-        allow(BackEndFacade).to receive(:get_gym_users_count).with(yelp_gym_id).and_return(gym_user_count)
+        allow(GymFacade).to receive(:get_gym).with(yelp_gym_id).and_return(gym)
+        allow(GymMembershipFacade).to receive(:get_gym_membership).with(yelp_gym_id: yelp_gym_id, user_id: current_user_id).and_return(nil)
+        allow(GymFacade).to receive(:get_gym_users_count).with(yelp_gym_id).and_return(gym_user_count)
 
         visit gym_path(yelp_gym_id)
       end

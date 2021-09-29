@@ -1,7 +1,18 @@
 version: 2.1
 orbs:
   ruby: circleci/ruby@0.1.2
+  heroku: circleci/heroku@0.0.10.
 
+worklows:
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
 jobs:
   build:
     parallelism: 3
@@ -32,3 +43,13 @@ jobs:
       - run:
           name: run test suite
           command: bundle exec rspec -fd
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - run:
+          command: >
+            echo "The command above installs Heroku, the command below deploys.
+            What you do inbetween is up to you!"
+      - heroku/deploy-via-git

@@ -31,7 +31,7 @@
           <% @user_events.each do |event| %>
           <div class="col-md-3 whitecard" id="event-<%= event.id%>">
             <p>
-              <h4><%= event.activity %></h4>
+              <h5><%= event.activity %></h5>
 
               <%= event.date_time %><br><br>
               <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
@@ -60,7 +60,7 @@
           <% @user_gyms.each do |gym| %>
             <div class='col-xl-3 whitecard' id="gym-<%= gym.yelp_gym_id%>">
               <p align="center">
-                <h4><%= gym.gym_name %></h4>
+                <h5><%= gym.gym_name %></h5>
 
                 <%= link_to 'View', gym_path(gym.yelp_gym_id), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
                 <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
@@ -98,9 +98,19 @@
 
               <p>
                 <img id="profile_pic" src="<%= friend.google_image_url %>" style="border-radius:50%">
-                <h4><%= friend.full_name %></h4>
+                <h5><%= friend.full_name %></h5>
 
-                <%= friend.goal %><br><br>
+                <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+                <%= friend.zip_code %><br>
+
+                <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
+                <%= friend.goal %><br>
+
+                <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
+                <%= friend.availability %><br>
+
+                <br>
+
                 <%= link_to 'View', profile_path(
                                               friend.id
                                               ),

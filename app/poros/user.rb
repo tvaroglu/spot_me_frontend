@@ -34,4 +34,13 @@ class User
       'Increase Stamina'
     ]
   end
+
+  def availability
+    availability = []
+    availability << 'Morning' if availability_morning
+    availability << 'Afternoon' if availability_afternoon
+    availability << 'Evening' if availability_evening
+
+    availability.join(', ')
+  end
 end

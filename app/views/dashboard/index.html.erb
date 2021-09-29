@@ -1,5 +1,5 @@
 <% if current_user %>
-  <div class="container navbar-brown padding mb-3">
+  <div class="container flex-wrap-reverse navbar-brown full-radius padding mb-3">
     <div class="row center-it-all">
       <div class="col-lg">
         <img id="profile_pic" src="<%= current_user.google_image_url %>" style="border-radius:80px; width:160px; height:auto;"><br><br>
@@ -13,17 +13,17 @@
     </div>
   </div>
 
-  <div class="container navbar-brown padding mb-1">
+  <div class="container navbar-brown top-radius padding mb-1">
     <div class="row">
       <h2>Upcoming Workouts</h2>
     </div>
   </div>
 
-  <div class="container navbar-brown padding mb-3">
+  <div class="container navbar-brown bottom-radius padding mb-3">
     <div class="row">
       <div class="d-flex flex-wrap center-it-all">
         <% if @user_events.empty? %>
-          <div class='col-lg-auto whitecard'>
+          <div class='col-sm-3 whitecard'>
             <p align="center">You currently have no upcoming workouts.</p>
           </div>
         <% else %>
@@ -43,13 +43,13 @@
     </div>
   </div>
 
-  <div class="container navbar-brown padding mb-1">
+  <div class="container navbar-brown top-radius padding mb-1">
     <div class="row">
       <h2>My Gyms</h2>
     </div>
   </div>
 
-  <div class="container navbar-brown padding mb-3">
+  <div class="container navbar-brown bottom-radius padding mb-3">
     <div class="row" id='gyms'>
       <div class="d-flex flex-wrap center-it-all">
         <% if @user_gyms.empty? %>
@@ -80,13 +80,13 @@
     </div>
   </div>
 
-  <div class="container navbar-brown padding mb-1">
+  <div class="container navbar-brown top-radius padding mb-1">
     <div class="row" id='friends'>
       <h2><%= @user_friends.size %> Following</h2>
     </div>
   </div>
 
-  <div class="container navbar-brown padding">
+  <div class="container navbar-brown bottom-radius padding">
     <div class="row" id='friends'>
       <% if @user_friends.empty? %>
         <p>You currently have no friends.</p>

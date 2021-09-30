@@ -1,4 +1,7 @@
 module ApplicationHelper
+  # This helper method allows us to display SVG images in the views.
+  # See this reference for an explanation of the helper method:
+  #   https://blog.cloud66.com/using-svgs-in-a-rails-stack/
   def embedded_svg(filename, options = {})
     assets = Rails.application.assets
     asset = assets.find_asset(filename)

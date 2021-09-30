@@ -42,7 +42,7 @@ describe Event, type: :poro do
 
   describe 'instance methods' do
     describe '#format_date' do
-      it 'returns the formatted date as [this format]' do
+      it 'returns the formatted date as "Wednesday, Sep 22, 2021  9:41pm"' do
         id = '1'
         user_id = 1
         gym_membership_id = 1
@@ -71,6 +71,9 @@ describe Event, type: :poro do
 
         expect(event.format_date).to eq('Wednesday, Sep 22, 2021  9:41pm')
       end
+    end
+
+    describe '#format_date_short' do
     end
   end
 end

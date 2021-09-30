@@ -10,10 +10,12 @@ class Event
     @activity          = data[:attributes][:activity]
   end
 
+  # TODO: Update method to handle different timezones
   def format_date
     DateTime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000').strftime('%A, %b %d, %Y %l:%M%P')
   end
 
+  # TODO: Update method to handle different timezones
   def format_date_short
     DateTime.strptime(date_time, '%Y-%m-%dT%H:%M:%S.000').strftime('%a %m/%d/%y %l:%M%P')
   end

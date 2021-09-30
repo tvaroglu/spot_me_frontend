@@ -19,6 +19,11 @@ describe 'user profile page: current user', type: :feature do
       it 'displays my name and zip code' do
         within '#profile-header' do
           expect(page).to have_content(user.full_name)
+        end
+      end
+
+      it 'displays my zip code' do
+        within '#zip-code' do
           expect(page).to have_content(user.zip_code)
         end
       end

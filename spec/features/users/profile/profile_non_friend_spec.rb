@@ -42,6 +42,12 @@ describe 'user profile page: non-friend', type: :feature do
         end
       end
 
+      it 'displays their zip code' do
+        within '#zip-code' do
+          expect(page).to have_content(user10.zip_code)
+        end
+      end
+
       it 'displays their summary' do
         within '#user-summary' do
           expect(page).to have_content(user10.summary)

@@ -27,8 +27,8 @@ describe 'gyms near me page', :vcr, type: :feature do
 
   it 'has a link to each individual gym', :vcr do
     within '#BJBXzKYxQAXZKb5W6HrRnA' do
-      expect(page).to have_link('View Gym')
-      click_on 'View Gym'
+      expect(page).to have_link("Rishi's Community Yoga")
+      click_on "Rishi's Community Yoga"
     end
 
     expect(page).to have_current_path(gym_path('BJBXzKYxQAXZKb5W6HrRnA'), ignore_query: true)

@@ -38,6 +38,11 @@ describe 'user profile page: friend', type: :feature do
       it 'displays my friends name and zip code' do
         within '#profile-header' do
           expect(page).to have_content(user10.full_name)
+        end
+      end
+
+      it 'displays my friends zip code' do
+        within '#zip-code' do
           expect(page).to have_content(user10.zip_code)
         end
       end

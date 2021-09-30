@@ -207,7 +207,7 @@ describe 'experienced user dashboard', type: :feature do
 
             within "#friend-#{friend.id}" do
               expect(page).to have_content(friend.full_name)
-              expect(page).to have_link('View')
+              expect(page).to have_link(friend.full_name)
               expect(page).to have_link('Unfollow')
             end
           end
@@ -222,7 +222,7 @@ describe 'experienced user dashboard', type: :feature do
           allow(FriendshipFacade).to receive(:get_friends).with(first_friend.id.to_s).and_return([])
           allow(GymMembershipFacade).to receive(:get_gym_memberships).with(first_friend.id).and_return([])
           allow(EventFacade).to receive(:get_upcoming_events).with(first_friend.id).and_return([])
-          within("#friend-#{first_friend.id}") { click_link 'View' }
+          within("#friend-#{first_friend.id}") { click_link first_friend.full_name }
         end
 
         it 'redirects me to my friends profile page', :vcr do
@@ -259,7 +259,7 @@ describe 'experienced user dashboard', type: :feature do
 
             within "#gym-#{gym.yelp_gym_id}" do
               expect(page).to have_content(gym.gym_name)
-              expect(page).to have_link('View')
+              expect(page).to have_link(gym.gym_name)
               expect(page).to have_link('Remove')
             end
           end

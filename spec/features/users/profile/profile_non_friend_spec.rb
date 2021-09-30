@@ -68,14 +68,14 @@ describe 'user profile page: non-friend', type: :feature do
       end
 
       it 'displays add friend button' do
-        expect(page).to have_link('Add Friend')
+        expect(page).to have_link('Follow')
       end
 
       it 'can add a new friend', :vcr do
         allow(FriendshipService).to receive(:add_friend).and_return(user10_params)
         allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
 
-        click_on 'Add Friend'
+        click_on 'Follow'
 
         expect(page).to have_current_path(profile_path(user10.id), ignore_query: true)
         expect(page).to have_content('go get them gains!!')

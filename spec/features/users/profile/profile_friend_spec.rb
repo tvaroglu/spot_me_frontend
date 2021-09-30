@@ -67,14 +67,14 @@ describe 'user profile page: friend', type: :feature do
       end
 
       it 'displays a "Remove Friend" button' do
-        expect(page).to have_link('Remove Friend')
+        expect(page).to have_link('Unfollow')
       end
 
       it 'can remove an existing friend', :vcr do
         allow(FriendshipService).to receive(:delete_friend).and_return(204)
         allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
 
-        click_on 'Remove Friend'
+        click_on 'Unfollow'
 
         expect(page).to have_current_path(profile_path(user10.id), ignore_query: true)
         expect(page).to have_content('SwoleMate removed!')

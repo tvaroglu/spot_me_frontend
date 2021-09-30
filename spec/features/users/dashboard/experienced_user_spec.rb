@@ -251,7 +251,7 @@ describe 'experienced user dashboard', type: :feature do
         end
 
         it 'displays a button "Remove Friend"', :vcr do
-          expect(page).to have_link('Remove Friend')
+          expect(page).to have_link('Unfollow')
         end
       end
 

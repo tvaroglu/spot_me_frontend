@@ -81,8 +81,22 @@
           <div class="col-md-3 card-display" id="event-<%= event.id%>">
             <p>
               <h5><%= event.activity %></h5>
+              <div class="row center no-pad">
+                <div class="fit-content no-pad">
+                  <ul class='no-bullets'>
+                    <li>
+                      <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
+                      &nbsp;<%= event.format_date_short %>
+                    </li>
+                    
+                    <li>
+                      <%= embedded_svg('icons/basic_star.svg', class: 'icon') %>
+                      &nbsp;With: <%= link_to event.invitee_name, profile_path(event.user_id) %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
-              <%= event.date_time %><br><br>
               <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
             </p>
           </div>
@@ -108,11 +122,20 @@
         <% else %>
           <% @user_gyms.each do |gym| %>
             <div class='col-xl-3 card-display' id="gym-<%= gym.yelp_gym_id%>">
-              <p align="center">
-                <h5 class='mb-3'><%= link_to gym.gym_name, gym_path(gym.yelp_gym_id) %></h5>
+              <h5 class='mb-3'><%= link_to gym.gym_name, gym_path(gym.yelp_gym_id) %></h5>
 
-                <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
-              </p>
+              <div class="row center no-pad">
+                <div class="fit-content no-pad">
+                  <ul class='no-bullets'>
+                    <li>
+                      <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+                      &nbsp;Gym Address
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
             </div>
           <% end %>
         <% end %>

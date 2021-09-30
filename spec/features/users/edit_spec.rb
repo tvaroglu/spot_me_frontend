@@ -4,8 +4,8 @@ describe 'edit user profile', type: :feature do
   # See spec/shared_contexts/features/current_user_shared_context.rb for context
   include_context 'logged in as authenticated user'
 
-  let(:user1_params) do
-    {
+  let(:user1) do
+    User.new(
       id: 10,
       attributes: {
         email: '123@test.com',
@@ -19,11 +19,11 @@ describe 'edit user profile', type: :feature do
         availability_afternoon: true,
         availability_evening: false
       }
-    }
+    )
   end
 
-  let(:user2_params) do
-    {
+  let(:user2) do
+    User.new(
       id: 20,
       attributes: {
         email: '234@test.com',
@@ -37,11 +37,11 @@ describe 'edit user profile', type: :feature do
         availability_afternoon: false,
         availability_evening: true
       }
-    }
+    )
   end
 
-  let(:gym_membership1_params) do
-    {
+  let(:gym_membership1) do
+    GymMembership.new(
       id: '1',
       type: 'gym_membership',
       attributes: {
@@ -49,11 +49,11 @@ describe 'edit user profile', type: :feature do
         yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
         gym_name: 'Kling-Wilkinson'
       }
-    }
+    )
   end
 
-  let(:gym_membership2_params) do
-    {
+  let(:gym_membership2) do
+    GymMembership.new(
       id: '7',
       type: 'gym_membership',
       attributes: {
@@ -61,31 +61,45 @@ describe 'edit user profile', type: :feature do
         yelp_gym_id: '6x10s0lbnry4ivkzcjpilk',
         gym_name: 'Konopelski, Lowe and Haley'
       }
-    }
+    )
   end
 
-  let(:event1_params) do
-    {
+  let(:event1) do
+    Event.new(
       id: '1',
       attributes: {
         user_id: 20,
         gym_membership_id: 1,
         activity: 'Bodybuilding',
-        date_time: '2022-07-22T21:41:28.289Z'
+        date_time: '2022-07-22T21:41:28.000Z'
+      },
+      relationships: {
+        user: {
+          meta: {
+            full_name: user2.full_name
+          }
+        }
       }
-    }
+    )
   end
 
-  let(:event2_params) do
-    {
+  let(:event2) do
+    Event.new(
       id: '2',
       attributes: {
         user_id: 30,
         gym_membership_id: 2,
-        date_time: '2022-08-22T21:41:28.289Z',
+        date_time: '2022-08-22T21:41:28.000Z',
         activity: 'Running'
+      },
+      relationships: {
+        user: {
+          meta: {
+            full_name: user1.full_name
+          }
+        }
       }
-    }
+    )
   end
 
   let!(:user_blob) do
@@ -101,9 +115,9 @@ describe 'edit user profile', type: :feature do
     }
   end
 
-  let(:user_friends) { [User.new(user1_params), User.new(user2_params)] }
-  let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params)] }
-  let(:user_events) { [Event.new(event1_params), Event.new(event2_params)] }
+  let(:user_friends) { [user1, user2] }
+  let(:user_gyms) { [gym_membership1, gym_membership2] }
+  let(:user_events) { [event1, event2] }
 
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)

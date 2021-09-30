@@ -89,12 +89,7 @@ describe 'gyms show page: as a gym member', type: :feature do
           expect(page).to have_content(name)
           expect(page).to have_content(address)
           expect(page).to have_content(phone)
-        end
-      end
-
-      it 'displays the number of active members', :vcr do
-        within '#active-members' do
-          expect(page).to have_content('Number of Active Members: 2')
+          expect(page).to have_content('2 Active Members')
         end
       end
 
@@ -105,16 +100,16 @@ describe 'gyms show page: as a gym member', type: :feature do
       it 'displays my friends who are gym members' do
         within '#my-friends' do
           expect(page).to have_content(friend.full_name)
-          expect(page).to have_link('Create Event')
-          expect(page).to have_link('View Profile')
+          expect(page).to have_link(friend.full_name)
+          expect(page).to have_link('Schedule Workout')
         end
       end
 
       it 'displays gym members who are not my friend' do
         within '#non-friends' do
           expect(page).to have_content(non_friend.full_name)
-          expect(page).to have_link('Add Friend')
-          expect(page).to have_link('View Profile')
+          expect(page).to have_link(non_friend.full_name)
+          expect(page).to have_link('Follow')
         end
       end
     end

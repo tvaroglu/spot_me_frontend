@@ -21,6 +21,8 @@
 $font-family-body: 'Verdana';
 $font-family-headers: 'Georgia';
 
+$alert-text-color: #8e0613;
+
 $button-bg-color: #ffffff75;
 $link-color: #13525f;
 $navbar-bg-color: #99D3DFBD;
@@ -158,6 +160,11 @@ img {
   flex-grow: 1;
 }
 
+.no-border-sides {
+  border-left: 0;
+  border-right: 0;
+}
+
 // PADDING, MARGINS, ETC.
 
 .padding {
@@ -225,4 +232,10 @@ ul.no-bullets {
   align-items: center;
   margin-bottom: 0.5em;
   width: fit-content;
+}
+
+// TEXT FORMATTING
+
+.alert-text {
+  color: $alert-text-color;
 }

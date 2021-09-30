@@ -50,12 +50,7 @@ describe 'gyms show page: as a non-gym member', type: :feature do
           expect(page).to have_content(name)
           expect(page).to have_content(address)
           expect(page).to have_content(phone)
-        end
-      end
-
-      it 'displays the number of active members', :vcr do
-        within '#active-members' do
-          expect(page).to have_content('Number of Active Members: 2')
+          expect(page).to have_content('2 Active Members')
         end
       end
 

@@ -5,8 +5,8 @@ describe 'experienced user dashboard', type: :feature do
     # See spec/shared_contexts/features/current_user_shared_context.rb for context
     include_context 'logged in as authenticated user'
 
-    let(:user1_params) do
-      {
+    let(:user1) do
+      User.new(
         id: 10,
         attributes: {
           email: '123@test.com',
@@ -20,11 +20,11 @@ describe 'experienced user dashboard', type: :feature do
           availability_afternoon: true,
           availability_evening: false
         }
-      }
+      )
     end
 
-    let(:user2_params) do
-      {
+    let(:user2) do
+      User.new(
         id: 20,
         attributes: {
           email: '234@test.com',
@@ -38,11 +38,11 @@ describe 'experienced user dashboard', type: :feature do
           availability_afternoon: false,
           availability_evening: true
         }
-      }
+      )
     end
 
-    let(:user3_params) do
-      {
+    let(:user3) do
+      User.new(
         id: 30,
         attributes: {
           email: '345@test.com',
@@ -56,11 +56,11 @@ describe 'experienced user dashboard', type: :feature do
           availability_afternoon: false,
           availability_evening: true
         }
-      }
+      )
     end
 
-    let(:gym_membership1_params) do
-      {
+    let(:gym_membership1) do
+      GymMembership.new(
         id: '1',
         type: 'gym_membership',
         attributes: {
@@ -68,11 +68,11 @@ describe 'experienced user dashboard', type: :feature do
           yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
           gym_name: 'Kling-Wilkinson'
         }
-      }
+      )
     end
 
-    let(:gym_membership2_params) do
-      {
+    let(:gym_membership2) do
+      GymMembership.new(
         id: '7',
         type: 'gym_membership',
         attributes: {
@@ -80,11 +80,11 @@ describe 'experienced user dashboard', type: :feature do
           yelp_gym_id: '6x10s0lbnry4ivkzcjpilk',
           gym_name: 'Konopelski, Lowe and Haley'
         }
-      }
+      )
     end
 
-    let(:gym_membership3_params) do
-      {
+    let(:gym_membership3) do
+      GymMembership.new(
         id: '17',
         type: 'gym_membership',
         attributes: {
@@ -92,11 +92,11 @@ describe 'experienced user dashboard', type: :feature do
           yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
           gym_name: 'Funk LLC'
         }
-      }
+      )
     end
 
-    let(:yelp_gym1_params) do
-      {
+    let(:yelp_gym1) do
+      Gym.new(
         id: '1',
         type: 'gym',
         attributes: {
@@ -104,11 +104,11 @@ describe 'experienced user dashboard', type: :feature do
           address: 'address1',
           phone: '123-123-1234'
         }
-      }
+      )
     end
 
-    let(:yelp_gym2_params) do
-      {
+    let(:yelp_gym2) do
+      Gym.new(
         id: '2',
         type: 'gym',
         attributes: {
@@ -116,11 +116,11 @@ describe 'experienced user dashboard', type: :feature do
           address: 'address2',
           phone: '234-234-2345'
         }
-      }
+      )
     end
 
-    let(:yelp_gym3_params) do
-      {
+    let(:yelp_gym3) do
+      Gym.new(
         id: '3',
         type: 'gym',
         attributes: {
@@ -128,49 +128,70 @@ describe 'experienced user dashboard', type: :feature do
           address: 'address3',
           phone: '345-345-3456'
         }
-      }
+      )
     end
 
-    let(:event1_params) do
-      {
+    let(:event1) do
+      Event.new(
         id: '1',
         attributes: {
           user_id: 20,
           gym_membership_id: 1,
           activity: 'Bodybuilding',
-          date_time: '2022-07-22T21:41:28.289Z'
+          date_time: '2022-07-22T21:41:28.000Z'
+        },
+        relationships: {
+          user: {
+            meta: {
+              full_name: user2.full_name
+            }
+          }
         }
-      }
+      )
     end
 
-    let(:event2_params) do
-      {
+    let(:event2) do
+      Event.new(
         id: '2',
         attributes: {
           user_id: 30,
           gym_membership_id: 2,
-          date_time: '2022-08-22T21:41:28.289Z',
+          date_time: '2022-08-22T21:41:28.000Z',
           activity: 'Running'
+        },
+        relationships: {
+          user: {
+            meta: {
+              full_name: user3.full_name
+            }
+          }
         }
-      }
+      )
     end
 
-    let(:event3_params) do
-      {
+    let(:event3) do
+      Event.new(
         id: '3',
         attributes: {
           user_id: 20,
           gym_membership_id: 3,
-          date_time: '2022-09-22T21:41:28.289Z',
+          date_time: '2022-09-22T21:41:28.000Z',
           activity: 'Stretching'
+        },
+        relationships: {
+          user: {
+            meta: {
+              full_name: user2.full_name
+            }
+          }
         }
-      }
+      )
     end
 
-    let(:user_friends) { [User.new(user1_params), User.new(user2_params), User.new(user3_params)] }
-    let(:user_gyms) { [GymMembership.new(gym_membership1_params), GymMembership.new(gym_membership2_params), GymMembership.new(gym_membership3_params)] }
-    let(:searched_gyms) { [Gym.new(yelp_gym1_params), Gym.new(yelp_gym2_params), Gym.new(yelp_gym3_params)] }
-    let(:user_events) { [Event.new(event1_params), Event.new(event2_params), Event.new(event3_params)] }
+    let(:user_friends) { [user1, user2, user3] }
+    let(:user_gyms) { [gym_membership1, gym_membership2, gym_membership3] }
+    let(:searched_gyms) { [yelp_gym1, yelp_gym2, yelp_gym3] }
+    let(:user_events) { [event1, event2, event3] }
 
     before do
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)

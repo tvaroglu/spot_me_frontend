@@ -76,8 +76,8 @@ describe 'user profile page: friend', type: :feature do
 
         click_on 'Remove Friend'
 
-        expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
-        expect(page).to have_content 'SwoleMate removed!'
+        expect(page).to have_current_path(profile_path(user10.id), ignore_query: true)
+        expect(page).to have_content('SwoleMate removed!')
       end
     end
   end

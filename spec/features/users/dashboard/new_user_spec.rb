@@ -20,7 +20,7 @@ describe 'new user dashboard', type: :feature do
       context "when I don't have any friends" do
         it 'displays "You currently have no friends."', :vcr do
           within '#friends' do
-            expect(page).to have_content('You currently have no friends.')
+            expect(page).to have_content('You have no friends.')
           end
         end
       end
@@ -28,7 +28,7 @@ describe 'new user dashboard', type: :feature do
       context "when I don't have any gyms" do
         it 'displays "You currently are not a member of any gyms."', :vcr do
           within '#gyms' do
-            expect(page).to have_content('You currently are not a member of any gyms.')
+            expect(page).to have_content('You are not a member of any gym.')
           end
         end
       end
@@ -36,7 +36,7 @@ describe 'new user dashboard', type: :feature do
       context "when I don't have any workouts" do
         it 'displays "You currently have no upcoming workouts."', :vcr do
           within '#upcoming-workouts' do
-            expect(page).to have_content('You currently have no upcoming workouts.')
+            expect(page).to have_content('You have no upcoming workouts.')
           end
         end
       end

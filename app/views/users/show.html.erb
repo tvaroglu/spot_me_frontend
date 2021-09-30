@@ -2,38 +2,14 @@
   <div class="container flex-wrap-reverse gray full-radius padding mb-3">
     <div class="row item-center center-it-all" id='profile-header'>
       <div class="col-lg">
+      </div>
+      <div class="col-lg">
         <img id="profile_pic" src="<%= @profile_user.google_image_url %>" style="width:160px; height:auto;" class='round'>
 
         <h1><%= @profile_user.full_name %></h1>
 
-        <div class="row justify-center mb-1">
-          <div class="fit-content">
-            <ul class='no-bullets'>
-              <li id='zip-code'>
-                <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                &nbsp;<%= @profile_user.zip_code %>
-              </li>
-
-              <li id='goal'>
-                <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-                &nbsp;<%= @profile_user.goal %>
-              </li>
-
-              <li id='availability'>
-                <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-                &nbsp;<%= @profile_user.availability %>
-              </li>
-
-              <li id='user-summary'>
-                <%= embedded_svg('icons/basic_sheet_pencil.svg', class: 'icon') %>
-                &nbsp;<%= @profile_user.summary %>
-              </li>
-            </ul>
-          </div>
-        </div>
-
         <% if @user_type == :self %>
-          <%= link_to 'Edit Profile', edit_profile_path(current_user.id), class: "btn btn-med btn-info navbar-custom btn-outline-dark" %>
+          <%= link_to 'Edit Profile', edit_profile_path(current_user.id), class: "btn btn-med btn-info button-bg btn-outline-dark" %>
         <% elsif @user_type == :friend %>
           <%= link_to 'Remove Friend', friendship_path(
                                         current_user.id,
@@ -43,7 +19,7 @@
                                         }
                                        ),
                                        method: :delete,
-                                       class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+                                       class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
         <% else %>
           <%= link_to 'Add Friend', friendships_path(
                                       current_user.id,
@@ -53,8 +29,33 @@
                                       }
                                     ),
                                     method: :post,
-                                    class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+                                    class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
         <% end %>
+
+      </div>
+
+      <div class="col-lg fit-content">
+        <ul class='no-bullets'>
+          <li id='zip-code'>
+            <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.zip_code %>
+          </li>
+
+          <li id='goal'>
+            <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.goal %>
+          </li>
+
+          <li id='availability'>
+            <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.availability %>
+          </li>
+
+          <li id='user-summary'>
+            <%= embedded_svg('icons/basic_sheet_pencil.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.summary %>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -68,7 +69,7 @@
   <div class="container gray bottom-radius padding">
     <div class="row" id='friends'>
       <% if @user_friends.empty? %>
-        <p>You currently have no friends.</p>
+        You currently have no friends.
       <% else %>
         <div class="d-flex flex-wrap center-it-all">
 
@@ -79,7 +80,7 @@
 
               <h5 class='mb-3'><%= link_to friend.full_name, profile_path(friend.id) %></h5>
 
-              <div class="row justify-center no-pad mb-3">
+              <div class="row center no-pad mb-3">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li>

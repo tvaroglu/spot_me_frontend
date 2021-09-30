@@ -1,30 +1,79 @@
 <% if current_user %>
-  <div class="container flex-wrap-reverse gray full-radius padding mb-3">
-    <div class="row item-center center-it-all" id='profile-header'>
+  <div class="container flex-wrap-reverse gray full-radius padding mb-3" id='profile-header'>
+    <div class="row item-center center-it-all">
       <div class="col-lg">
-        <img id="profile_pic" src="<%= current_user.google_image_url %>" style="width:160px; height:auto;" class='round'><br><br>
-
-        <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
       </div>
 
       <div class="col-lg">
-        <h1>Welcome, <%= current_user.full_name %>!</h1>
+        <img id="profile_pic" src="<%= current_user.google_image_url %>" style="width:160px; height:auto;" class='round'>
+
+        <h1><%= current_user.full_name %></h1>
+
+        <%= link_to 'View Profile', profile_path(current_user.id), method: :get, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+        <%= link_to 'Edit Profile', edit_profile_path(current_user.id), method: :get, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+      </div>
+
+      <div class="col-lg fit-content">
+        <ul class='no-bullets'>
+          <li>
+            <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+            &nbsp;<%= current_user.zip_code %>
+          </li>
+
+          <li>
+            <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
+            &nbsp;<%= current_user.goal %>
+          </li>
+
+          <li>
+            <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
+            &nbsp;<%= current_user.availability %>
+          </li>
+
+          <li>
+            <%= embedded_svg('icons/basic_sheet_pencil.svg', class: 'icon') %>
+            &nbsp;<%= current_user.summary %>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 
   <div class="container gray top-radius padding mb-1">
     <div class="row">
-      <h2>Upcoming Workouts</h2>
+      <h2>My Dashboard</h2>
     </div>
   </div>
 
   <div class="container gray bottom-radius padding mb-3">
-    <div class="row" id='upcoming-workouts'>
+    <div class="row center">
+      <div class="col">
+        <h5 class='no-margin'><%= link_to 'Upcoming Workouts', '#my-upcoming-workouts', class: 'center' %></h5>
+      </div>
+      <div class="col">
+        <h5 class='no-margin'><%= link_to 'My Gyms', '#my-gyms', class: 'center' %></h5>
+      </div>
+      <div class="col">
+        <h5 class='no-margin'><%= link_to "#{@user_friends.size} Following", '#my-friends', class: 'center' %></h5>
+      </div>
+      <div class="col">
+        <h5 class='no-margin'><%= link_to 'Followers', '#my-followers', class: 'center' %></h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container gray top-radius padding mb-1" id='my-upcoming-workouts'>
+    <div class="row">
+      <h2>Upcoming Workouts</h2>
+    </div>
+  </div>
+
+  <div class="container gray bottom-radius padding mb-3" id='upcoming-workouts'>
+    <div class="row">
       <div class="d-flex flex-wrap center-it-all">
         <% if @user_events.empty? %>
           <div class='col-sm-3 card-display'>
-            <p align="center">You currently have no upcoming workouts.</p>
+            You have no upcoming workouts.
           </div>
         <% else %>
 
@@ -34,7 +83,7 @@
               <h5><%= event.activity %></h5>
 
               <%= event.date_time %><br><br>
-              <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+              <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
             </p>
           </div>
           <% end %>
@@ -43,18 +92,18 @@
     </div>
   </div>
 
-  <div class="container gray top-radius padding mb-1">
+  <div class="container gray top-radius padding mb-1" id='my-gyms'>
     <div class="row">
       <h2>My Gyms</h2>
     </div>
   </div>
 
-  <div class="container gray bottom-radius padding mb-3">
-    <div class="row" id='gyms'>
+  <div class="container gray bottom-radius padding mb-3" id='gyms'>
+    <div class="row">
       <div class="d-flex flex-wrap center-it-all">
         <% if @user_gyms.empty? %>
           <div class='col-md-auto card-display'>
-            <p align="center">You currently are not a member of any gyms.</p>
+            You are not a member of any gym.
           </div>
         <% else %>
           <% @user_gyms.each do |gym| %>
@@ -62,7 +111,7 @@
               <p align="center">
                 <h5 class='mb-3'><%= link_to gym.gym_name, gym_path(gym.yelp_gym_id) %></h5>
 
-                <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+                <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
               </p>
             </div>
           <% end %>
@@ -74,21 +123,21 @@
 
     <div class="row">
       <div align="center" id='find-gyms'>
-        <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+        <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
       </div>
     </div>
   </div>
 
-  <div class="container gray top-radius padding mb-1">
+  <div class="container gray top-radius padding mb-1" id='my-friends'>
     <div class="row">
       <h2><%= @user_friends.size %> Following</h2>
     </div>
   </div>
 
-  <div class="container gray bottom-radius padding">
-    <div class="row" id='friends'>
+  <div class="container gray bottom-radius padding" id='friends'>
+    <div class="row">
       <% if @user_friends.empty? %>
-        <p>You currently have no friends.</p>
+        You have no friends.
       <% else %>
         <div class="d-flex flex-wrap center-it-all">
 
@@ -96,10 +145,10 @@
             <div class='col-xl-3 card-display' id="friend-<%= friend.id%>">
 
               <img id="profile_pic" src="<%= friend.google_image_url %>" class='round'>
-              
+
               <h5 class='mb-3'><%= link_to friend.full_name, profile_path(friend.id) %></h5>
 
-              <div class="row justify-center no-pad mb-3">
+              <div class="row center no-pad mb-3">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li>
@@ -127,7 +176,7 @@
                                         followee_id: friend.id
                                       }),
                                       method: :delete,
-                                      class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+                                      class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
             </div>
           <% end %>
         <% end %>

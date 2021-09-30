@@ -14,27 +14,45 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap');
+
+// VARIABLES, MIXINS, ETC.
+
+$font-family-body: 'Verdana';
+$font-family-headers: 'Georgia';
+
+$button-bg-color: #ffffff75;
+$link-color: #13525f;
+$navbar-bg-color: #99D3DFBD;
+$card-bg-color: #99D3DF50;
+$card-border-color: #88BBD695;
+$container-bg-color: #E9E9E9F5;
+$container-border-color: #CDCDCD95;
+
+// UNIVERSAL, GLOBALS
+
 html, body {
   background-image: image-url('/assets/risen-wang-20jX9b35r_M-unsplash.jpg');
   height: 100%;
   width: 100%;
   display: flex;
-  // min-height: 100vh;
   flex-direction: column;
-  // background: rgb(2,0,36);
-  // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(193,193,255,1) 0%, rgba(78,205,255,1) 0%, rgba(45,208,255,1) 32%, rgba(184,227,236,1) 74%);
   margin: 0;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Verdana';
+  font-family: $font-family-body;
   font-size: 0.875em;
 }
 
 main {
   flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-family-headers;
+	text-align: center;
 }
 
 footer {
@@ -45,74 +63,47 @@ footer {
   align-self: baseline;
   flex-direction: row;
   background-color: #B9B5B475;
-  color: blacktext;
+  color: black;
   flex-grow: 0
-}
-
-navbar-nav.navbar-center {
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
 }
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #205E6099;
+  background-color: $navbar-bg-color;
 }
 
-.navbar-custom {
-	background-color: #ffffff75;
-}
-
-.navbar-red {
-  background-color: #D4A69E95
-}
-
-.navbar-light {
-  background-color: #99D3DFBD;
-}
-
-.custom {
-	background-color: #ffffffa1;
-}
-
-.customblack {
-	background-color: #000000a1;
-}
-
-.blacktext {
-	color: black;
-}
-
-.center {
-  justify-content: center;
-}
-
-#secret {
-  display: none;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Georgia';
-	text-align: center;
-}
+// LINKS, BUTTONS, ETC.
 
 a {
   text-decoration: none;
-  color: #13525f;
+  color: $link-color;
 }
+
 a:hover {
   text-decoration: underline;
-  color: #13525f;
+  color: $link-color;
 }
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn-info:focus {
+  background-color: $navbar-bg-color;
+  border-color: $navbar-bg-color;
+}
+
+.button-bg {
+	background-color: $button-bg-color;
+}
+
+// IMAGES, ICONS, ETC.
 
 img {
   max-width: 100%;
 }
-
-// Icons
 
 .icon {
   display: inline;
@@ -122,11 +113,33 @@ img {
   height: 1.625em;
 }
 
-// Flexbox, Containers, Cards
+.round {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+// FLEXBOX, CONTAINERS, CARDS, ETC.
+
+.container {
+  width: 85%;
+}
+
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-display {
+  background: $card-bg-color;
+  min-width: 120px;
+  padding: 10px 20px 10px;
+  border: 4px solid $card-border-color;
+  border-radius: 8px 24px;
+}
 
 .gray {
-  background-color: #E9E9E9F5;
-  border: 4px solid #CDCDCD95;
+  background-color: $container-bg-color;
+  border: 4px solid $container-border-color;
 }
 
 .full-radius {
@@ -141,28 +154,11 @@ img {
   border-radius: 0px 0px 24px 24px;
 }
 
-.row {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.container {
-  width: 85%;
-}
-
-.card-display {
-  background: #99D3DF50;
-  min-width: 120px;
-  padding: 10px 20px 10px;
-  border: 4px solid #88BBD695;
-  border-radius: 8px 24px;
-}
-
 .flex-grow {
   flex-grow: 1;
 }
 
-// Formatting
+// PADDING, MARGINS, ETC.
 
 .padding {
   padding: 10px;
@@ -176,6 +172,26 @@ img {
   margin: 10px;
 }
 
+.no-pad {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.title {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+// ALIGNMENT
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
 .center-it-all {
   align-items: stretch;
   justify-content: center;
@@ -185,21 +201,20 @@ img {
   flex-flow: wrap;
 }
 
-.item-center {
-  align-items: center;
-}
-
 .fit-content {
   width: fit-content;
 }
 
-.no-pad {
-  padding: 0;
+.item-center {
+  align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
+.summary {
+  text-indent: -26px;
+  padding-left: 26px;
 }
+
+// LISTS
 
 ul.no-bullets {
   list-style-type: none;
@@ -210,14 +225,4 @@ ul.no-bullets {
   align-items: center;
   margin-bottom: 0.5em;
   width: fit-content;
-}
-
-.title {
-  font-size: 1.25em;
-  font-weight: bold;
-}
-
-.round {
-  padding: 10px;
-  border-radius: 50%;
 }

@@ -119,13 +119,17 @@ describe 'experienced user dashboard', type: :feature do
         end
       end
 
-      it 'can find gyms near me', :vcr do
-        within '#find-gyms' do
-          click_on 'Find Gyms Near Me'
+      context 'when I click on "Find Gyms Near Me"' do
+        before do
+          within('#find-gyms') { click_on 'Find Gyms Near Me' }
         end
 
-        expect(page).to have_current_path("/gyms?zip_code=#{user.zip_code}")
+        it 'redirects me to the gym search page', :vcr do
+          expect(page).to have_current_path("/gyms?zip_code=#{user.zip_code}")
+          expect(page).to have_content(user.zip_code)
+        end
       end
+
 
       it 'displays the users I follow', :vcr do
         expect(page).to have_css('#friends')

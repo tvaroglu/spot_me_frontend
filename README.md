@@ -402,9 +402,8 @@ When you are a member of the gym
 
 ## Acknowledgements
 
-- Background Image: https://unsplash.com/photos/20jX9b35r_M
-- SVG Icons: https://linea.io/
-  - Linea Iconset is a free iconset designed by Dario Ferrando.
+- [Background Image](https://unsplash.com/photos/20jX9b35r_M)
+- [SVG Icons](https://linea.io/): Linea Iconset is a free iconset designed by Dario Ferrando.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

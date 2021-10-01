@@ -153,4 +153,20 @@ describe 'edit user profile', type: :feature do
     expect(page).to have_current_path("/profile/#{user.id}", ignore_query: true)
     expect(page).to have_content('Your profile has been updated!')
   end
+
+  context 'when I click "Cancel"' do
+    it 'returns me to my profile page' do
+      allow(FriendshipFacade).to receive(:get_friends).with(user.id.to_s).and_return(user_friends)
+      allow(UserFacade).to receive(:get_profile_user).with(user.id.to_s).and_return(user)
+
+      visit profile_path(user.id)
+      expect(page).to have_current_path(profile_path(user.id))
+
+      click_on 'Edit Profile'
+      expect(page).to have_current_path(edit_profile_path(user.id))
+
+      click_on 'Cancel'
+      expect(page).to have_current_path(profile_path(user.id))
+    end
+  end
 end

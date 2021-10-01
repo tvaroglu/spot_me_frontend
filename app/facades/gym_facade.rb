@@ -13,15 +13,15 @@ class GymFacade
     Gym.new(gym[:data])
   end
 
-  def self.get_gym_users(yelp_api_key)
-    users = GymService.get_gym_users(yelp_api_key)
-    return [] unless users[:data]
+  def self.get_gym_users(yelp_gym_id)
+    users = GymService.get_gym_users(yelp_gym_id)
+    return [] unless users[:data].present?
 
     users[:data].map { |user| User.new(user) }
   end
 
-  def self.get_gym_users_count(yelp_api_key)
-    users = GymService.get_gym_users(yelp_api_key)
+  def self.get_gym_users_count(yelp_gym_id)
+    users = GymService.get_gym_users(yelp_gym_id)
     return unless users[:meta]
 
     GymUserCount.new(users[:meta])

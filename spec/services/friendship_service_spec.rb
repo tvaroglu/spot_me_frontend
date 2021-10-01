@@ -4,7 +4,29 @@ describe FriendshipService, :vcr, type: :service do
   describe 'class methods' do
     describe '.get_friends' do
       it "returns a hash with the user's friends" do
-        expect(FriendshipService.get_friends(1).class).to eq(Hash)
+        actual = FriendshipService.get_friends(1)
+        expect(actual).to be_a(Hash)
+
+        expect(actual).to have_key(:data)
+        expect(actual[:data]).to be_an(Array)
+        expect(actual[:data]).to all(have_key(:id))
+        expect(actual[:data]).to all(have_key(:type))
+        expect(actual[:data]).to all(have_key(:attributes))
+
+        expect(actual[:data].first[:id]).to be_a(String)
+        expect(actual[:data].first[:type]).to eq('user')
+        expect(actual[:data].first[:attributes]).to be_a(Hash)
+
+        expect(actual[:data].first[:attributes]).to have_key(:email)
+        expect(actual[:data].first[:attributes]).to have_key(:google_id)
+        expect(actual[:data].first[:attributes]).to have_key(:google_image_url)
+        expect(actual[:data].first[:attributes]).to have_key(:zip_code)
+        expect(actual[:data].first[:attributes]).to have_key(:summary)
+        expect(actual[:data].first[:attributes]).to have_key(:goal)
+        expect(actual[:data].first[:attributes]).to have_key(:availability_morning)
+        expect(actual[:data].first[:attributes]).to have_key(:availability_afternoon)
+        expect(actual[:data].first[:attributes]).to have_key(:availability_evening)
+        expect(actual[:data].first[:attributes]).to have_key(:full_name)
       end
     end
 
@@ -30,14 +52,16 @@ describe FriendshipService, :vcr, type: :service do
 
     describe '.get_friends_at_gym' do
       it "returns a hash with the user's friends at the gym" do
-        expect(FriendshipService.get_friends_at_gym('BJBXzKYxQAXZKb5W6HrRnA', 1)).to be_a(Hash)
+        actual = FriendshipService.get_friends_at_gym('BJBXzKYxQAXZKb5W6HrRnA', 1)
+        expect(actual).to be_a(Hash)
       end
     end
 
     describe '.get_non_friends_at_gym' do
       it 'returns a hash of the users at the gym who the user is not following' do
         params = { yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA', user_id: 1 }
-        expect(FriendshipService.get_non_friends_at_gym(params)).to be_a(Hash)
+        actual = FriendshipService.get_non_friends_at_gym(params)
+        expect(actual).to be_a(Hash)
       end
     end
   end

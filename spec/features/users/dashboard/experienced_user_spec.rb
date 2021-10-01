@@ -48,7 +48,7 @@ describe 'experienced user dashboard', type: :feature do
 
             within "#event-#{event.id}" do
               expect(page).to have_content(event.activity)
-              expect(page).to have_content(event.format_date_short.gsub('  ', ' '))
+              expect(page).to have_content(event.format_date_short)
               expect(page).to have_content("With: #{event.invitee_name}")
               expect(page).to have_link('Delete')
             end

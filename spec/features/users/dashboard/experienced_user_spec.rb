@@ -79,13 +79,13 @@ describe 'experienced user dashboard', type: :feature do
         expect(page).to have_css('#gyms')
 
         within '#gyms' do
-          user_gyms.each do |gym|
+          gyms_near_user.each do |gym|
             expect(page).to have_css("#gym-#{gym.yelp_gym_id}")
 
             within "#gym-#{gym.yelp_gym_id}" do
-              expect(page).to have_content(gym.gym_name)
+              expect(page).to have_content(gym.name)
               # expect(page).to have_content(gym.adress)
-              expect(page).to have_link(gym.gym_name)
+              expect(page).to have_link(gym.name)
               expect(page).to have_link('Remove')
             end
           end
@@ -95,7 +95,7 @@ describe 'experienced user dashboard', type: :feature do
       context 'when I click "Remove" on one of the gyms I am a member of' do
         before do
           allow(GymMembershipService).to receive(:delete_gym_membership).and_return(204)
-          gym = user_gyms.last
+          gym = gyms_near_user.last
 
           within "#gym-#{gym.yelp_gym_id}" do
             click_on 'Remove'

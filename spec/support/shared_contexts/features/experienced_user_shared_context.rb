@@ -89,38 +89,38 @@ shared_context 'experienced user' do
     )
   end
 
-  let(:yelp_gym1) do
+  let(:gym1) do
     Gym.new(
-      id: '1',
+      id: 'lex65fkcol5gfq89rymmd2',
       type: 'gym',
       attributes: {
-        name: 'Planet Fitness',
-        address: 'address1',
-        phone: '123-123-1234'
+        name: 'Kling-Wilkinson',
+        address: 'address3',
+        phone: '345-345-3456'
       }
     )
   end
 
-  let(:yelp_gym2) do
+  let(:gym2) do
     Gym.new(
-      id: '2',
+      id: '6x10s0lbnry4ivkzcjpilk',
       type: 'gym',
       attributes: {
-        name: 'Golds Gym',
+        name: 'Konopelski, Lowe and Haley',
         address: 'address2',
         phone: '234-234-2345'
       }
     )
   end
 
-  let(:yelp_gym3) do
+  let(:gym3) do
     Gym.new(
-      id: '3',
+      id: 'wxaw9m796t6wdnsk53uieh',
       type: 'gym',
       attributes: {
-        name: '24Hour Fitness',
-        address: 'address3',
-        phone: '345-345-3456'
+        name: 'Funk LLC',
+        address: 'address1',
+        phone: '123-123-1234'
       }
     )
   end
@@ -183,14 +183,14 @@ shared_context 'experienced user' do
   end
 
   let(:user_friends) { [user1, user2, user3] }
-  let(:user_gyms) { [gym_membership1, gym_membership2, gym_membership3] }
-  let(:searched_gyms) { [yelp_gym1, yelp_gym2, yelp_gym3] }
+  let(:user_gym_memberships) { [gym_membership1, gym_membership2, gym_membership3] }
+  let(:gyms_near_user) { [gym1, gym2, gym3] }
   let(:user_events) { [event1, event2, event3] }
 
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
-    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gyms)
+    allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gym_memberships)
     allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(user_events)
-    allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(searched_gyms)
+    allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(gyms_near_user)
   end
 end

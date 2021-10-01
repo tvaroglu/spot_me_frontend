@@ -4,13 +4,12 @@ describe 'user profile page: current user', type: :feature do
   context 'when I log in as an authenticated user', :vcr do
     # See spec/shared_contexts/features/current_user_shared_context.rb for context
     include_context 'logged in as authenticated user'
+    # See spec/shared_contexts/features/experienced_user_shared_context.rb for context
+    include_context 'experienced user'
 
     before do
       allow(UserFacade).to receive(:get_user).with(user.id).and_return(user)
       allow(UserFacade).to receive(:get_profile_user).with(user.id.to_s).and_return(user)
-      allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
-      allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
-      allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
     end
 
     context 'when I visit my user profile' do
@@ -44,6 +43,18 @@ describe 'user profile page: current user', type: :feature do
 
       it 'displays a section with the users I am following' do
         expect(page).to have_css('#friends')
+
+        within '#friends' do
+          user_friends.each do |friend|
+            within "#friend-#{friend.id}" do
+              expect(page).to have_content(friend.full_name)
+              expect(page).to have_link(friend.full_name)
+              expect(page).to have_content(friend.zip_code)
+              expect(page).to have_content(friend.goal)
+              expect(page).to have_content(friend.availability)
+            end
+          end
+        end
       end
 
       # it 'displays a section with the users following me (i.e. followers)' do

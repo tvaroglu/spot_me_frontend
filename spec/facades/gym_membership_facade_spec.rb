@@ -19,4 +19,36 @@ describe GymMembershipFacade, type: :facade do
       end
     end
   end
+
+  describe '.create_gym_membership' do
+    it 'returns a hash with the gym membership details' do
+      user_id = 1
+      yelp_gym_id = 'c2jzsndq8brvn9fbckeec2'
+      gym_name = 'Planet Fitness'
+      request_params = {
+        'user_id': user_id,
+        'yelp_gym_id': yelp_gym_id,
+        'gym_name': gym_name
+      }
+
+      allow(GymMembershipService).to receive(:create_gym_membership).with(request_params).and_return(true)
+
+      expect(GymMembershipFacade.create_gym_membership(request_params)).to eq(true)
+    end
+  end
+
+  describe '.delete_gym_membership' do
+    it 'returns a hash with the gym membership details' do
+      user_id = 1
+      gym_membership_id = 61
+      path_params = {
+        user_id: user_id,
+        id: gym_membership_id
+      }
+
+      allow(GymMembershipService).to receive(:delete_gym_membership).with(path_params).and_return(true)
+
+      expect(GymMembershipFacade.delete_gym_membership(path_params)).to eq(true)
+    end
+  end
 end

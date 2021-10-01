@@ -58,6 +58,18 @@ describe 'gyms show page: as a non-gym member', type: :feature do
         expect(page).to have_link('Add Gym')
       end
 
+      context 'when I click "Add Gym"' do
+        before do
+          allow(GymMembershipFacade).to receive(:create_gym_membership).and_return(true)
+          expect(GymMembershipFacade.create_gym_membership('some_params')).to eq(true)
+          click_on 'Add Gym'
+        end
+
+        it 'redirects me bak to the gym page' do
+          expect(page).to have_current_path(gym_path(yelp_gym_id))
+        end
+      end
+
       it 'does not display current gym members', :vcr do
         expect(page).to have_no_css('#my-friends')
         expect(page).to have_no_css('#non-friends')

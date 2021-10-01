@@ -14,27 +14,47 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap');
+
+// VARIABLES, MIXINS, ETC.
+
+$font-family-body: 'Verdana';
+$font-family-headers: 'Georgia';
+
+$alert-text-color: #8e0613;
+
+$button-bg-color: #ffffff75;
+$link-color: #13525f;
+$navbar-bg-color: #99D3DFBD;
+$card-bg-color: #99D3DF50;
+$card-border-color: #88BBD695;
+$container-bg-color: #E9E9E9F5;
+$container-border-color: #CDCDCD95;
+
+// UNIVERSAL, GLOBALS
+
 html, body {
-  background-image: image-url('/assets/potentialbackground.jpg');
+  background-image: image-url('/assets/risen-wang-20jX9b35r_M-unsplash.jpg');
   height: 100%;
   width: 100%;
   display: flex;
-  // min-height: 100vh;
   flex-direction: column;
-  // background: rgb(2,0,36);
-  // background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(193,193,255,1) 0%, rgba(78,205,255,1) 0%, rgba(45,208,255,1) 32%, rgba(184,227,236,1) 74%);
   margin: 0;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Tahoma';
-  font-size: 20px;
+  font-family: $font-family-body;
+  font-size: 0.875em;
 }
 
 main {
   flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-family-headers;
+	text-align: center;
 }
 
 footer {
@@ -45,69 +65,177 @@ footer {
   align-self: baseline;
   flex-direction: row;
   background-color: #B9B5B475;
-  color: blacktext;
+  color: black;
   flex-grow: 0
-}
-
-navbar-nav.navbar-center {
-	position: absolute;
-	left: 50%;
-	transform: translatex(-50%);
 }
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #205E6099;
+  background-color: $navbar-bg-color;
 }
 
-.navbar-custom {
-	background-color: #ffffff75;
-}
+// LINKS, BUTTONS, ETC.
 
-.navbar-red {
-  background-color: #D4A69E95
-}
-
-.navbar-brown {
-  background-color: #EFE7DA98;
-}
-
-.custom {
-	background-color: #ffffffa1;
-}
-
-.customblack {
-	background-color: #000000a1;
-}
-
-.blacktext {
-	color: black;
-}
-
-// html {
-//   background: image-url('/assets/wordpressrippp.jpg') no-repeat center center fixed;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
-
-.center{
-  justify-content: center;
-}
-
-#secret{
-  display: none;
-}
-
-h1, h2, h3 {
-  font-family: 'Quicksand';
-	text-align: center;
+a {
+  text-decoration: none;
+  color: $link-color;
 }
 
 a:hover {
+  text-decoration: underline;
+  color: $link-color;
+}
+
+.btn:hover {
   text-decoration: none;
-  color: rgba(255, 254, 254, 0.705);
+}
+
+.btn-info:focus {
+  background-color: $navbar-bg-color;
+  border-color: $navbar-bg-color;
+}
+
+.button-bg {
+	background-color: $button-bg-color;
+}
+
+// IMAGES, ICONS, ETC.
+
+img {
+  max-width: 100%;
+}
+
+.icon {
+  display: inline;
+  margin: 0 auto;
+  fill: black;
+  width: 1.625em;
+  height: 1.625em;
+}
+
+.round {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+// FLEXBOX, CONTAINERS, CARDS, ETC.
+
+.container {
+  width: 85%;
+}
+
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-display {
+  background: $card-bg-color;
+  min-width: 120px;
+  padding: 10px 20px 10px;
+  border: 4px solid $card-border-color;
+  border-radius: 8px 24px;
+}
+
+.gray {
+  background-color: $container-bg-color;
+  border: 4px solid $container-border-color;
+}
+
+.full-radius {
+  border-radius: 24px;
+}
+
+.top-radius {
+  border-radius: 24px 24px 0px 0px;
+}
+
+.bottom-radius {
+  border-radius: 0px 0px 24px 24px;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.no-border-sides {
+  border-left: 0;
+  border-right: 0;
+}
+
+// PADDING, MARGINS, ETC.
+
+.padding {
+  padding: 10px;
+}
+
+.padding-content {
+  padding: 30px 10px 30px 10px;
+}
+
+.margin {
+  margin: 10px;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.title {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+// ALIGNMENT
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.center-it-all {
+  align-items: stretch;
+  justify-content: center;
+  text-align: center;
+  column-gap: 1em;
+  row-gap: 1em;
+  flex-flow: wrap;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.summary {
+  text-indent: -26px;
+  padding-left: 26px;
+}
+
+// LISTS
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  line-height: 2.125;
+  align-items: center;
+  margin-bottom: 0.5em;
+  width: fit-content;
+}
+
+// TEXT FORMATTING
+
+.alert-text {
+  color: $alert-text-color;
 }

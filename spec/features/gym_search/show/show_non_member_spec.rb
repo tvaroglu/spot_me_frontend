@@ -50,17 +50,24 @@ describe 'gyms show page: as a non-gym member', type: :feature do
           expect(page).to have_content(name)
           expect(page).to have_content(address)
           expect(page).to have_content(phone)
-        end
-      end
-
-      it 'displays the number of active members', :vcr do
-        within '#active-members' do
-          expect(page).to have_content('Number of Active Members: 2')
+          expect(page).to have_content('2 Active Members')
         end
       end
 
       it 'has a button to add the gym membership', :vcr do
         expect(page).to have_link('Add Gym')
+      end
+
+      context 'when I click "Add Gym"' do
+        before do
+          allow(GymMembershipFacade).to receive(:create_gym_membership).and_return(true)
+          expect(GymMembershipFacade.create_gym_membership('some_params')).to eq(true)
+          click_on 'Add Gym'
+        end
+
+        it 'redirects me bak to the gym page' do
+          expect(page).to have_current_path(gym_path(yelp_gym_id))
+        end
       end
 
       it 'does not display current gym members', :vcr do

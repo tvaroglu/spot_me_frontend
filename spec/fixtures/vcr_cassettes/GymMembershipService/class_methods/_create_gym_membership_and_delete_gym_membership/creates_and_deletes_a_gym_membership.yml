@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
+    body:
+      encoding: UTF-8
+      string: '{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
+        Fitness"}'
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 01 Oct 2021 14:00:28 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2857010a0a80f73ffa9ad6b8843767e5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 32dba8e4-1ce0-436e-a8a3-cd454fb12864
+      X-Runtime:
+      - '0.072759'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"62","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
+        Fitness"}}}'
+  recorded_at: Fri, 01 Oct 2021 14:00:28 GMT
+- request:
+    method: delete
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/62
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 01 Oct 2021 14:00:28 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 4011e2b8-211a-4e42-b6a2-d0990458465b
+      X-Runtime:
+      - '0.009842'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 01 Oct 2021 14:00:28 GMT
+recorded_with: VCR 6.0.0

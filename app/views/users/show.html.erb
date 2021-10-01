@@ -1,99 +1,112 @@
 <% if current_user %>
-  <table class="table table-sm table-borderless table-responsive navbar-brown align-top">
-    <tr>
-      <td align="center">
-        <div id='profile'>
-          <img id="profile_pic" src="<%= @profile_user.google_image_url %>" style="border-radius:50px; width:200px; height:auto;">
-          <br>
-          <br>
-          <% if @user_type == :self %>
-            <%= link_to 'Edit Profile', edit_profile_path(current_user.id), class: "btn btn-med btn-info navbar-custom btn-outline-dark" %>
-          <% elsif @user_type == :friend %>
-            <%= link_to 'Remove Friend', friendship_path(
-                                          current_user.id,
-                                          {
-                                            user_id: current_user.id,
-                                            followee_id: @profile_user.id
-                                          }
-                                         ),
-                                         method: :delete,
-                                         class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
-          <% else %>
-            <%= link_to 'Add Friend', friendships_path(
+  <div class="container flex-wrap-reverse gray full-radius padding mb-3">
+    <div class="row item-center center-it-all" id='profile-header'>
+      <div class="col-lg">
+      </div>
+      <div class="col-lg">
+        <img id="profile_pic" src="<%= @profile_user.google_image_url %>" style="width:160px; height:auto;" class='round'>
+
+        <h1><%= @profile_user.full_name %></h1>
+
+        <% if @user_type == :self %>
+          <%= link_to 'Edit Profile', edit_profile_path(current_user.id), class: "btn btn-med btn-info button-bg btn-outline-dark" %>
+        <% elsif @user_type == :friend %>
+          <%= link_to 'Unfollow', friendship_path(
                                         current_user.id,
                                         {
                                           user_id: current_user.id,
                                           followee_id: @profile_user.id
                                         }
-                                      ),
-                                      method: :post,
-                                      class: "btn btn-sm btn-info navbar-custom btn-outline-dark" %>
+                                       ),
+                                       method: :delete,
+                                       class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+        <% else %>
+          <%= link_to 'Follow', friendships_path(
+                                      current_user.id,
+                                      {
+                                        user_id: current_user.id,
+                                        followee_id: @profile_user.id
+                                      }
+                                    ),
+                                    method: :post,
+                                    class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+        <% end %>
+
+      </div>
+
+      <div class="col-lg fit-content">
+        <ul class='no-bullets'>
+          <li id='zip-code'>
+            <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.zip_code %>
+          </li>
+
+          <li id='goal'>
+            <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.goal %>
+          </li>
+
+          <li id='availability'>
+            <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.availability %>
+          </li>
+
+          <li id='user-summary'>
+            <%= embedded_svg('icons/basic_sheet_pencil.svg', class: 'icon') %>
+            &nbsp;<%= @profile_user.summary %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container gray top-radius padding mb-1">
+    <div class="row">
+      <h2><%= @user_friends.size %> Following</h2>
+    </div>
+  </div>
+
+  <div class="container gray bottom-radius padding">
+    <div class="row" id='friends'>
+      <% if @user_friends.empty? %>
+        You currently have no friends.
+      <% else %>
+        <div class="d-flex flex-wrap center-it-all">
+
+          <% @user_friends.each do |friend| %>
+            <div class='col-xl-3 card-display' id="friend-<%= friend.id%>">
+
+              <img id="profile_pic" src="<%= friend.google_image_url %>" class='round'>
+
+              <h5 class='mb-3'><%= link_to friend.full_name, profile_path(friend.id) %></h5>
+
+              <div class="row center no-pad mb-3">
+                <div class="fit-content no-pad">
+                  <ul class='no-bullets'>
+                    <li>
+                      <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+                      &nbsp;<%= friend.zip_code %>
+                    </li>
+
+                    <li>
+                      <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
+                      &nbsp;<%= friend.goal %>
+                    </li>
+
+                    <li>
+                      <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
+                      &nbsp;<%= friend.availability %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           <% end %>
-        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-        <br>
+  <br><br>
 
-        <div id='goal'>
-          <h2>Goal:</h2>
-
-          <p>
-            <%= @profile_user.goal %>
-          </p>
-        </div>
-
-        <br>
-
-        <div id='availability'>
-          <h2>Availability:</h2>
-
-          <p>
-            <% if @profile_user.availability_morning %>
-              Morning<br>
-            <% end %>
-
-            <% if @profile_user.availability_afternoon %>
-              Afternoon<br>
-            <% end %>
-
-            <% if @profile_user.availability_evening %>
-              Evening<br>
-            <% end %>
-          </p>
-        </div>
-
-        <br>
-
-        <div id='friends'>
-          <h2>Friends (<%= @user_friends.size %> total):</h2>
-
-          <% if @user_friends.empty? %>
-            <p>No friends added.</p>
-          <% else %>
-            <% @user_friends.each do |friend| %>
-              <p id="friend-<%= friend.id%>">
-                <%= friend.full_name %>
-                <%= link_to 'View Profile', profile_path(friend.id),
-                                            class: "btn btn-med btn-info navbar-custom btn-outline-dark" %>
-              </p>
-            <% end %>
-          <% end %>
-        </div>
-      </td>
-
-      <td>
-        <div align="center" id='profile-header'>
-          <h1 align="center" id="user_name"><%= @profile_user.full_name %></h1>
-          <h6 align="center" id="zip_code">Zip Code: <%= @profile_user.zip_code %></h6>
-        </div>
-
-        <div align="center" id='user-summary'>
-          <h2>Summary:</h2>
-          <p>
-            <u>Profile Summary</u><br/>
-            <%= @profile_user.summary %>
-          </p>
-        </div>
-      </td>
-    </tr>
-  </table>
 <% end %>

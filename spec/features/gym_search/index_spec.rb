@@ -10,11 +10,11 @@ describe 'gyms near me page', :vcr, type: :feature do
     allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
 
     visit dashboard_index_path
-    within('#gyms') { click_on 'Find Gyms Near Me' }
+    within('#find-gyms') { click_on 'Find Gyms Near Me' }
   end
 
   it 'can find gyms near me', :vcr do
-    expect(page).to have_content("Gyms Near #{user.zip_code}")
+    expect(page).to have_content("Gyms Near My Zip Code: #{user.zip_code}")
 
     within '#gyms' do
       within '#BJBXzKYxQAXZKb5W6HrRnA' do

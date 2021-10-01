@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 30 Sep 2021 21:00:49 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"afb3193388f200150f8a1a219aeddd33"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d7e656bf-5567-4be6-90c6-7b847269ad60
+      X-Runtime:
+      - '2.099032'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10","type":"user","attributes":{"email":"loree.daniel@wehner.org","google_id":"gwpx2l1g4g7ye1qjvkadx","google_image_url":"https://robohash.org/eumetomnis.png?size=300x300\u0026set=set1","zip_code":"21221","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Lionel
+        Sawayn"}}}'
+  recorded_at: Thu, 30 Sep 2021 21:00:49 GMT
+recorded_with: VCR 6.0.0

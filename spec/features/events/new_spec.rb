@@ -102,8 +102,15 @@ RSpec.describe 'new event page', type: :feature do
             attributes: {
               user_id: friend.id,
               gym_membership_id: current_user_gym_membership.id,
-              date_time: 'Sat, 01 Jan 2022 17:00:00 +0000',
+              date_time: '2022-01-01T17:00:00.000Z',
               activity: activity
+            },
+            relationships: {
+              user: {
+                meta: {
+                  full_name: friend.full_name
+                }
+              }
             }
           )
         end

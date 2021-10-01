@@ -5,7 +5,7 @@
 [![Issues][issues-shield]][issues-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Forks][forks-shield]][forks-url]
-<img src="https://img.shields.io/travis/tvaroglu/spot_me_frontend?style=flat-square">
+![Build Badge][build-badge]
 <a href="https://github.com/tvaroglu/spot_me_backend"><img src="https://img.shields.io/static/v1?style=flat-square&label=Spot+Me&message=APIv1&color=9cf"></a>
 
 <br>
@@ -410,3 +410,4 @@ When you are a member of the gym
 [stars-url]: https://github.com/tvaroglu/spot_me_frontend/stargazers
 [issues-shield]: https://img.shields.io/github/issues/tvaroglu/spot_me_frontend.svg?style=flat-square
 [issues-url]: https://github.com/tvaroglu/spot_me_frontend/issues
+[build-badge]: https://img.shields.io/circleci/build/github/tvaroglu/spot_me_frontend?style=flat-square

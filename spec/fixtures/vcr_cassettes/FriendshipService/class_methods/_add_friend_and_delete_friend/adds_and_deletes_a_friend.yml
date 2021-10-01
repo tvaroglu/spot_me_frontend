@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?followee_id=10
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 01 Oct 2021 13:46:23 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"803e3db3821d858508b1eaa024c15623"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a326f68e-2f5a-4e60-b822-1077d1a5cc3c
+      X-Runtime:
+      - '0.038545'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"43","type":"friendship","attributes":{"follower_id":1,"followee_id":10}}}'
+  recorded_at: Fri, 01 Oct 2021 13:46:24 GMT
+- request:
+    method: delete
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 01 Oct 2021 13:46:24 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 35dcfd10-b63d-4bc7-807b-bdbac94d0ce0
+      X-Runtime:
+      - '0.011708'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 01 Oct 2021 13:46:24 GMT
+recorded_with: VCR 6.0.0

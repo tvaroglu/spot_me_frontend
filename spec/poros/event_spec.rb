@@ -5,7 +5,7 @@ describe Event, type: :poro do
     id = '1'
     user_id = 1
     gym_membership_id = 1
-    date_time = '2021-09-22T21:41:28.289Z'
+    date_time = '2021-09-22T21:41:28.000Z'
     activity = 'Bodybuilding'
 
     event_params = {
@@ -15,6 +15,13 @@ describe Event, type: :poro do
         gym_membership_id: gym_membership_id,
         date_time: date_time,
         activity: activity
+      },
+      relationships: {
+        user: {
+          meta: {
+            full_name: 'Jimmy'
+          }
+        }
       }
     }
 
@@ -27,7 +34,7 @@ describe Event, type: :poro do
     expect(event.user_id).to be_an Integer
     expect(event.gym_membership_id).to eq(gym_membership_id)
     expect(event.gym_membership_id).to be_an Integer
-    expect(event.date_time).to eq(date_time.to_datetime.strftime('%A, %b %d, %Y %l:%M%P'))
+    expect(event.date_time).to eq(date_time)
     expect(event.date_time).to be_a String
     expect(event.activity).to eq(activity)
     expect(event.activity).to be_a String
@@ -35,11 +42,11 @@ describe Event, type: :poro do
 
   describe 'instance methods' do
     describe '#format_date' do
-      it 'returns the formatted date as [this format]' do
+      it 'returns the formatted date as "Wednesday, Sep 22, 2021  9:41pm"' do
         id = '1'
         user_id = 1
         gym_membership_id = 1
-        date_time = '2021-09-22T21:41:28.289Z'
+        date_time = '2021-09-22T21:41:28.000Z'
         activity = 'Bodybuilding'
 
         event_params = {
@@ -49,13 +56,52 @@ describe Event, type: :poro do
             gym_membership_id: gym_membership_id,
             date_time: date_time,
             activity: activity
+          },
+          relationships: {
+            user: {
+              meta: {
+                full_name: 'Jimmy'
+              }
+            }
           }
         }
 
         event = Event.new(event_params)
-        date_time = '2021-09-22T21:41:28.289Z'
+        date_time = '2021-09-22T21:41:28.000Z'
 
-        expect(event.format_date(date_time)).to eq('Wednesday, Sep 22, 2021  9:41pm')
+        expect(event.format_date).to eq('Wednesday, Sep 22, 2021 9:41pm')
+      end
+    end
+
+    describe '#format_date_short' do
+      it 'returns the formatted date as "Wednesday, Sep 22, 2021 9:41pm"' do
+        id = '1'
+        user_id = 1
+        gym_membership_id = 1
+        date_time = '2021-09-22T21:41:28.000Z'
+        activity = 'Bodybuilding'
+
+        event_params = {
+          id: id,
+          attributes: {
+            user_id: user_id,
+            gym_membership_id: gym_membership_id,
+            date_time: date_time,
+            activity: activity
+          },
+          relationships: {
+            user: {
+              meta: {
+                full_name: 'Jimmy'
+              }
+            }
+          }
+        }
+
+        event = Event.new(event_params)
+        date_time = '2021-09-22T21:41:28.000Z'
+
+        expect(event.format_date_short).to eq('Wed 09/22/21 9:41pm')
       end
     end
   end

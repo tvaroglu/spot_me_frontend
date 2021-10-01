@@ -1,26 +1,26 @@
-<div align="center" class="card navbar-brown" style="width: flex;">
+<div align="center" class="card gray" style="width: flex;">
   <h1>Edit User Profile</h1>
 
   <%= form_with url: profile_path(current_user.id), method: :patch, local: true do |f| %>
     <%= f.label :full_name, 'Name' %>
     <br>
-    <%= f.text_field :full_name, value: current_user.full_name, id: :full_name, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+    <%= f.text_field :full_name, value: current_user.full_name, id: :full_name, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
     <br>
     <%= f.label :email, 'Email' %>
     <br>
-    <%= f.text_field :email, value: current_user.email, readonly: true, id: :email, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+    <%= f.text_field :email, value: current_user.email, readonly: true, id: :email, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
     <br>
     <%= f.label :zip_code, 'Zip Code' %>
     <br>
-    <%= f.text_field :zip_code, value: current_user.zip_code, id: :zip_code, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+    <%= f.text_field :zip_code, value: current_user.zip_code, id: :zip_code, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
     <br>
     <%= f.label :summary, 'Summary' %>
     <br>
-    <%= f.text_area :summary, value: current_user.summary, cols: 40, id: :summary, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+    <%= f.text_area :summary, value: current_user.summary, cols: 40, id: :summary, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
     <br>
     <%= f.label :goal, 'Goals' %>
     <br>
-    <%= f.select :goal, User.goals_array, value: current_user.goal, id: :goal, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+    <%= f.select :goal, User.goals_array, value: current_user.goal, id: :goal, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
     <br>
     <br>
     <h4>Availability</h4>
@@ -34,7 +34,7 @@
     <%= f.check_box :availability_evening, checked: current_user.availability_evening ,id: :availability_evening %>
     <br>
     <br>
-    <%= f.submit 'Update Profile', class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %>
+    <%= f.submit 'Update Profile', class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
   <% end %>
   <br>
 </div>

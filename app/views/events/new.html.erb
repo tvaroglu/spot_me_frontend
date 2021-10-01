@@ -1,4 +1,4 @@
-<div align="center" class="card navbar-brown" style="width: flex;">
+<div align="center" class="card gray" style="width: flex;">
 
   <h1>Create a New Workout</h1>
 
@@ -6,31 +6,31 @@
     <table>
       <tr>
         <th><%= form.label :gym_name, 'Gym Name' %></th>
-        <th><%= form.label :gym_name, @gym_name, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %></th>
+        <th><%= form.label :gym_name, @gym_name, class: "btn btn-sm btn-white button-bg btn-outline-dark" %></th>
       </tr>
 
       <tr>
         <th><%= form.label :friend_name, 'Friend Name' %></th>
-        <th><%= form.label :friend_name, @friend_name, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %></th>
+        <th><%= form.label :friend_name, @friend_name, class: "btn btn-sm btn-white button-bg btn-outline-dark" %></th>
       </tr>
 
       <tr>
         <th><%= form.label :activity, 'Activity' %></th>
-        <td><%= form.text_field :activity, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %></td>
+        <td><%= form.text_field :activity, class: "btn btn-sm btn-white button-bg btn-outline-dark" %></td>
       </tr>
 
       <tr>
         <th><%= form.label :when, 'Day' %></th>
-        <td><%= form.date_select :when, prefix: :date, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %></td>
+        <td><%= form.date_select :when, prefix: :date, class: "btn btn-sm btn-white button-bg btn-outline-dark" %></td>
       </tr>
 
       <tr>
         <th><%= form.label :start_time, 'Start Time' %></th>
-        <td><%= form.time_select :start_time, prefix: :time, class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %></td>
+        <td><%= form.time_select :start_time, prefix: :time, class: "btn btn-sm btn-white button-bg btn-outline-dark" %></td>
       </tr>
 
       <tr>
-        <td colspan='2'><%= form.submit 'Submit', class: "btn btn-sm btn-white navbar-custom btn-outline-dark" %></td>
+        <td colspan='2'><%= form.submit 'Submit', class: "btn btn-sm btn-white button-bg btn-outline-dark" %></td>
       </tr>
     </table>
   <% end %>

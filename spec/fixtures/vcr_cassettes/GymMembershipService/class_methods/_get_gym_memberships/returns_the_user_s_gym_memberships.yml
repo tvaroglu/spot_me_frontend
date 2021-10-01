@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 01 Oct 2021 14:02:35 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"10009d737f258945bb1bd1da80baf689"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ef8f331d-1eb0-4259-be9d-7b06b0d3d245
+      X-Runtime:
+      - '0.006877'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
+        Mraz and Fadel"}},{"id":"58","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
+        Fitness"}},{"id":"60","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
+        Fitness"}}]}'
+  recorded_at: Fri, 01 Oct 2021 14:02:35 GMT
+recorded_with: VCR 6.0.0

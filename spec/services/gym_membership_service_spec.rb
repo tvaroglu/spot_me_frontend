@@ -31,5 +31,22 @@ describe GymMembershipService, :vcr, type: :service do
         expect(actual.status).to eq(204)
       end
     end
+
+    describe '.get_gym_memberships' do
+      it "returns the user's gym memberships" do
+        user_id = 1
+        actual = GymMembershipService.get_gym_memberships(user_id)
+        expect(actual).to be_a(Hash)
+        expect(actual).to have_key(:data)
+        expect(actual[:data]).to be_an(Array)
+        expect(actual[:data]).to all(have_key(:id))
+        expect(actual[:data]).to all(have_key(:type))
+        expect(actual[:data]).to all(have_key(:attributes))
+
+        actual[:data].each do |gym_membership|
+          expect(gym_membership[:attributes][:user_id]).to eq(user_id)
+        end
+      end
+    end
   end
 end

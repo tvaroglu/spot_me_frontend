@@ -1,6 +1,6 @@
 require 'rails_helper'
-RSpec.describe 'new event page', type: :feature do
-  let(:friend) do
+RSpec.describe 'new event page', :vcr, type: :feature do
+  let!(:friend) do
     User.new(
       id: 10,
       attributes: {
@@ -18,40 +18,72 @@ RSpec.describe 'new event page', type: :feature do
     )
   end
 
-  let(:current_user_gym_membership) do
+  let!(:current_user_gym_membership) do
     GymMembership.new(
       id: '1',
       type: 'gym_membership',
       attributes: {
         user_id: 1,
-        yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
-        gym_name: 'Planet Fitness'
+        yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA',
+        gym_name: "Rishi's Community Yoga"
       }
     )
   end
 
-  let(:gym_membership2_params) do
+  let!(:gym_membership2_params) do
     GymMembership.new(
       id: '2',
       type: 'gym_membership',
       attributes: {
         user_id: 10,
-        yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
-        gym_name: 'Planet Fitness'
+        yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA',
+        gym_name: "Rishi's Community Yoga"
       }
     )
   end
 
-  let(:gym1) do
+  let!(:gym1) do
     Gym.new(
-      id: 'wxaw9m796t6wdnsk53uieh',
+      id: 'BJBXzKYxQAXZKb5W6HrRnA',
       type: 'gym',
       attributes: {
-        name: 'Planet Fitness',
+        name: "Rishi's Community Yoga",
         address: 'address1',
         phone: '123-123-1234'
       }
     )
+  end
+
+  let(:yelp_gym_id) { 'BJBXzKYxQAXZKb5W6HrRnA' }
+  let(:gym_user_count) do
+    GymUserCount.new(gym_member_count: 2)
+  end
+
+  before do
+    allow(GymFacade)
+      .to receive(:get_gym)
+      .with(yelp_gym_id)
+      .and_return(gym1)
+    allow(GymMembershipFacade)
+      .to receive(:get_gym_membership)
+      .with(yelp_gym_id: yelp_gym_id, user_id: user.id)
+      .and_return(current_user_gym_membership)
+    allow(GymFacade)
+      .to receive(:get_gym_users_count)
+      .with(yelp_gym_id)
+      .and_return(gym_user_count)
+    allow(GymFacade)
+      .to receive(:get_gym_users)
+      .with(yelp_gym_id)
+      .and_return([user, friend])
+    allow(FriendshipFacade)
+      .to receive(:get_friends_at_gym)
+      .with(yelp_gym_id, user.id)
+      .and_return([friend])
+    allow(FriendshipFacade)
+      .to receive(:get_non_friends_at_gym)
+      .with(yelp_gym_id: yelp_gym_id, user_id: user.id)
+      .and_return([])
   end
 
   context 'when I log in as an authenticated user' do
@@ -68,17 +100,21 @@ RSpec.describe 'new event page', type: :feature do
         }
       end
 
-      before { visit new_event_path(create_params) }
+      before do
+        visit gym_path('BJBXzKYxQAXZKb5W6HrRnA')
 
-      it 'displays the gym name' do
-        expect(page).to have_content(current_user_gym_membership.gym_name)
+        within "#friend-#{friend.id}" do
+          click_on 'Schedule Workout'
+        end
       end
 
-      it 'displays my friends name' do
-        expect(page).to have_content(friend.full_name)
+      it 'redirects me to the new event page' do
+        expect(page).to have_current_path(new_event_path, ignore_query: true)
       end
 
       it 'displays a form to create an event' do
+        expect(page).to have_field('gym_name', with: gym1.name, readonly: true)
+        expect(page).to have_field('friend_name', with: friend.full_name, readonly: true)
         expect(page).to have_field('activity')
         expect(page).to have_field('date[when(1i)]')
         expect(page).to have_field('date[when(2i)]')
@@ -152,6 +188,14 @@ RSpec.describe 'new event page', type: :feature do
           within '#upcoming-workouts' do
             expect(page).to have_content(new_event.activity)
           end
+        end
+      end
+
+      context 'when I click "cancel"' do
+        before { click_on 'Cancel' }
+
+        it 'returns me to the gym show page' do
+          expect(page).to have_current_path(gym_path('BJBXzKYxQAXZKb5W6HrRnA'))
         end
       end
     end

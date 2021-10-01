@@ -400,6 +400,11 @@ When you are a member of the gym
 
 </div>
 
+## Acknowledgements
+
+- Background Image: https://unsplash.com/photos/20jX9b35r_M
+- SVG Icons: https://linea.io/
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/tvaroglu/spot_me_frontend.svg?style=flat-square

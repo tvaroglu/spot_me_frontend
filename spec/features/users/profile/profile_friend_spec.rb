@@ -35,49 +35,44 @@ describe 'user profile page: friend', type: :feature do
     context 'when I visit my friends profile' do
       before { visit profile_path(user10.id) }
 
-      it 'displays my friends name and zip code' do
+      it 'displays my friends user information' do
         within '#profile-header' do
           expect(page).to have_content(user10.full_name)
-        end
-      end
-
-      it 'displays my friends zip code' do
-        within '#zip-code' do
           expect(page).to have_content(user10.zip_code)
-        end
-      end
-
-      it 'displays my friends summary' do
-        within '#user-summary' do
+          expect(page).to have_content(user10.goal)
+          expect(page).to have_content(user10.availability)
           expect(page).to have_content(user10.summary)
         end
       end
 
-      it 'displays my friends goal' do
-        within '#goal' do
-          expect(page).to have_content(user10.goal)
-        end
-      end
-
-      it 'displays my friends availability' do
-        within '#availability' do
-          expect(page).to have_content('Afternoon')
-          expect(page).to have_content('Evening')
-        end
-      end
-
-      it 'displays a "Remove Friend" button' do
+      it 'displays an "Unfollow" button' do
         expect(page).to have_link('Unfollow')
       end
 
-      it 'can remove an existing friend', :vcr do
-        allow(FriendshipService).to receive(:delete_friend).and_return(204)
-        allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+      context 'when I click on the "Unfollow" link' do
+        before do
+          allow(FriendshipService).to receive(:delete_friend).and_return(204)
+          allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
+        end
 
-        click_on 'Unfollow'
+        it 'removes the friend from my account', :vcr do
+          destroy_friendship_params = {
+              user_id: user.id.to_s,
+              id: user10.id.to_s
+          }
 
-        expect(page).to have_current_path(profile_path(user10.id), ignore_query: true)
-        expect(page).to have_content('SwoleMate removed!')
+          expect(FriendshipFacade).to receive(:delete_friend).with(destroy_friendship_params)
+
+          click_on 'Unfollow'
+
+          expect(page).to have_content('SwoleMate removed!')
+        end
+
+        it 'redirects me to the users profile page', :vcr do
+          click_on 'Unfollow'
+
+          expect(page).to have_current_path(profile_path(user10.id), ignore_query: true)
+        end
       end
     end
   end

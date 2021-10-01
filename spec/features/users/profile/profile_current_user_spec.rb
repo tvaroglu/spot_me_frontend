@@ -16,48 +16,39 @@ describe 'user profile page: current user', type: :feature do
     context 'when I visit my user profile' do
       before { visit profile_path(user.id) }
 
-      it 'displays my name and zip code' do
+      it 'displays my user information' do
         within '#profile-header' do
           expect(page).to have_content(user.full_name)
-        end
-      end
-
-      it 'displays my zip code' do
-        within '#zip-code' do
           expect(page).to have_content(user.zip_code)
-        end
-      end
-
-      it 'displays my summary' do
-        within '#user-summary' do
+          expect(page).to have_content(user.goal)
+          expect(page).to have_content(user.availability)
           expect(page).to have_content(user.summary)
         end
       end
 
-      it 'displays my goal' do
-        within '#goal' do
-          expect(page).to have_content(user.goal)
-        end
-      end
-
-      it 'displays my availability' do
-        within '#availability' do
-          expect(page).to have_content('Morning')
-          expect(page).to have_content('Afternoon')
-        end
-      end
-
       it 'displays an "Edit Profile" button' do
-        expect(page).to have_link('Edit Profile')
+        within '#profile-header' do
+          expect(page).to have_link('Edit Profile')
+          expect(page).not_to have_link('Follow')
+          expect(page).not_to have_link('Unfollow')
+        end
       end
 
-      it 'displays add friend button' do
-        expect(page).not_to have_link('Add Friend')
+      context 'when I click on "Edit Profile"' do
+        before { click_on 'Edit Profile' }
+
+        it 'redirects me to the Edit Profile page' do
+          expect(page).to have_current_path(edit_profile_path(user.id))
+        end
       end
 
-      it 'displays delete friend button' do
-        expect(page).not_to have_link('Remove Friend')
+      it 'displays a section with the users I am following' do
+        expect(page).to have_css('#friends')
       end
+
+      # it 'displays a section with the users following me (i.e. followers)' do
+      #   expect(page).to have_css('#followers')
+      # end
     end
   end
 end

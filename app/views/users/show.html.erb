@@ -18,7 +18,7 @@
                                                   }),
                                   method: :delete,
                                   class: "btn btn-sm btn-info button-bg btn-outline-dark",
-                                  data: { confirm: "If you unfollow this person, your events with this person will also be deleted.  Are you sure you want to unfollow #{friend.full_name}?" } %>
+                                  data: { confirm: "If you unfollow this person, your events with this person will also be deleted.  Are you sure you want to unfollow this user?" } %>
         <% else %>
           <%= link_to 'Follow', friendships_path(
                                       current_user.id,

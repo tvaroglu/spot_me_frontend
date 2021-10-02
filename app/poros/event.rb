@@ -28,4 +28,8 @@ class Event
   def format_date_short
     DateTime.strptime(date_time, '%Y-%m-%dT%H:%M:%S').strftime('%a %m/%d/%y%l:%M%P')
   end
+
+  def date
+    DateTime.strptime(date_time, '%Y-%m-%dT%H:%M:%S').strftime('%a %m/%d/%y')
+  end
 end

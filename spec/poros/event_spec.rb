@@ -101,5 +101,34 @@ describe Event, type: :poro do
         expect(event.format_date_short).to eq('Wed 09/22/21 9:41pm')
       end
     end
+
+    describe '#date' do
+      it 'returns the formatted date as "Wednesday, Sep 22, 2021 9:41pm"' do
+        id = '1'
+        user_id = 1
+        gym_membership_id = 1
+        date_time = '2021-09-22T21:41:28.000Z'
+        activity = 'Bodybuilding'
+
+        event_params = {
+          id: id,
+          attributes: {
+            user_id: user_id,
+            gym_membership_id: gym_membership_id,
+            date_time: date_time,
+            activity: activity
+          },
+          meta: {
+            friend_name: 'Jimmy',
+            friend_role: 'invited'
+          }
+        }
+
+        event = Event.new(event_params)
+        date_time = '2021-09-22T21:41:28.000Z'
+
+        expect(event.date).to eq('Wed 09/22/21')
+      end
+    end
   end
 end

@@ -21,6 +21,10 @@ describe 'gyms near me page', :vcr, type: :feature do
         expect(page).to have_content("Rishi's Community Yoga")
         expect(page).to have_content('2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver, CO 80227')
         expect(page).to have_content('(303) 601-0789')
+        # TODO: Once we have the GymSearch endpoint returning the gym member count,
+        #       we can add the `member_count` attribute to the Gym poro and
+        #       uncomment this line below.
+        # expect(page).to have_content('0 Active Members')
       end
     end
   end

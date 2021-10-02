@@ -47,6 +47,10 @@ describe 'experienced user dashboard', type: :feature do
             expect(page).to have_css("#event-#{event.id}")
 
             within "#event-#{event.id}" do
+              # TODO: Once we have the Event endpoint returning the gym name,
+              #       we can add the `gym_name` attribute to the poro and
+              #       uncomment this line below.
+              # expect(page).to have_content(event.gym_name)
               expect(page).to have_content(event.activity)
               expect(page).to have_content(event.format_date_short)
               expect(page).to have_content("With: #{event.friend_name}")

@@ -85,6 +85,11 @@
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li>
+                      <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
+                      &nbsp;<%= link_to 'Gym Name Here', '#' %>
+                    </li>
+
+                    <li>
                       <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
                       &nbsp;<%= event.format_date_short %>
                     </li>
@@ -122,14 +127,14 @@
         <% else %>
           <% @user_gyms.each do |gym| %>
             <div class='col-xl-3 card-display' id="gym-<%= gym.yelp_gym_id%>">
-              <h5 class='mb-3'><%= link_to gym.gym_name, gym_path(gym.yelp_gym_id) %></h5>
+              <h5><%= link_to gym.gym_name, gym_path(gym.yelp_gym_id) %></h5>
 
               <div class="row center no-pad">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li>
                       <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                      &nbsp;Gym Address
+                      &nbsp;Gym Address Here
                     </li>
                   </ul>
                 </div>

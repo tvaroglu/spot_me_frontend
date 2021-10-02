@@ -60,6 +60,12 @@ describe 'experienced user dashboard', type: :feature do
         end
       end
 
+      it 'displays the number of upcoming workouts' do
+        within '#my-upcoming-workouts' do
+          expect(page).to have_content("#{user_events.size} Upcoming Workouts")
+        end
+      end
+
       context 'when I click "Delete" on one of the upcoming workouts' do
         before do
           allow(EventService).to receive(:delete_event).and_return(204)

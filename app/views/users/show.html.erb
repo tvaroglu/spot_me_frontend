@@ -56,6 +56,46 @@
     </div>
   </div>
 
+  <% if @user_type == :friend %>
+
+    <div class="container gray top-radius padding mb-1">
+      <div class="row">
+        <h2><%= @user_events.size %> Upcoming Workouts</h2>
+      </div>
+    </div>
+
+    <div class="container gray bottom-radius padding mb-3" id='upcoming-workouts'>
+      <div class="row">
+        <div class="d-flex flex-wrap center-it-all">
+          <% if @user_events.empty? %>
+            <div class='col-sm-3 card-display'>
+              <%= @profile_user.full_name %> has no upcoming workouts.
+            </div>
+          <% else %>
+
+            <% @user_events.each do |event| %>
+            <div class="col-md-3 card-display" id="event-<%= event.id%>">
+              <p>
+                <h5><%= event.activity %></h5>
+                <div class="row center no-pad">
+                  <div class="fit-content no-pad">
+                    <ul class='no-bullets'>
+                      <li class='calendar'>
+                        <%= event.date %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </p>
+            </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
   <div class="container gray top-radius padding mb-1">
     <div class="row">
       <h2><%= @user_friends.size %> Following</h2>

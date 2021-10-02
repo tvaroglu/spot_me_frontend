@@ -70,9 +70,14 @@ describe 'user profile page: non-friend', type: :feature do
 
         it 'redirects me to the users profile page' do
           click_on 'Follow'
-          
+
           expect(page).to have_current_path(profile_path(user10.id), ignore_query: true)
         end
+      end
+
+      it 'does not display an Upcoming Workouts section' do
+        expect(page).not_to have_content('Upcoming Workouts')
+        expect(page).not_to have_css('#upcoming-workouts')
       end
     end
   end

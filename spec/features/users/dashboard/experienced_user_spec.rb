@@ -88,7 +88,14 @@ describe 'experienced user dashboard', type: :feature do
 
             within "#gym-#{gym.yelp_gym_id}" do
               expect(page).to have_content(gym.name)
-              # expect(page).to have_content(gym.adress)
+              # TODO: Once we have the GymMembership endpoint returning the gym
+              #       address, we can add the address attributes to the poro and
+              #       uncomment this line below.  See the Event poro for how the
+              #       city_state_zip can get parsed.
+              # expect(page).to have_content(gym.adress1)
+              # expect(page).to have_content(gym.adress2)
+              # expect(page).to have_content(gym.adress3)
+              # expect(page).to have_content(gym.city_state_zip)
               expect(page).to have_link(gym.name)
               expect(page).to have_link('Remove')
             end

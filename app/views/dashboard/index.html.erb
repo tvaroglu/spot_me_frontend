@@ -125,22 +125,38 @@
             You are not a member of any gym.
           </div>
         <% else %>
-          <% @user_gyms.each do |gym| %>
-            <div class='col-xl-3 card-display' id="gym-<%= gym.yelp_gym_id%>">
-              <h5><%= link_to gym.gym_name, gym_path(gym.yelp_gym_id) %></h5>
+          <% @user_gyms.each do |gym_membership| %>
+            <div class='col-xl-3 card-display' id="gym-<%= gym_membership.yelp_gym_id%>">
+              <h5><%= link_to gym_membership.gym_name, gym_path(gym_membership.yelp_gym_id) %></h5>
 
               <div class="row center no-pad">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li>
                       <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                      &nbsp;Gym Address Here
+                      &nbsp;AddressLine1 Here
+                    </li>
+
+                    <% # if gym_membership.address2.present? %>
+                      <li class='indent'>
+                        AddressLine3 Here
+                      </li>
+                    <% # end %>
+
+                    <% # if gym_membership.address3.present? %>
+                      <li class='indent'>
+                        AddressLine3 Here
+                      </li>
+                    <% # end %>
+
+                    <li class='indent'>
+                      City, ST 00000
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+              <%= link_to 'Remove', gym_membership_path(gym_membership.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
             </div>
           <% end %>
         <% end %>

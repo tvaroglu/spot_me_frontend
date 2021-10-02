@@ -39,6 +39,15 @@ describe 'experienced user dashboard', type: :feature do
         end
       end
 
+      it 'displays a profile nav bar with anchor links' do
+        within '#profile-nav' do
+          expect(page).to have_link("#{user_events.size} Upcoming Workouts", href: '#my-upcoming-workouts')
+          expect(page).to have_link('My Gyms', href: '#my-gyms')
+          expect(page).to have_link("#{user_friends.size} Following", href: '#my-friends')
+          expect(page).to have_link('Followers', href: '#my-followers')
+        end
+      end
+
       it 'displays my upcoming workouts', :vcr do
         expect(page).to have_css('#upcoming-workouts')
 

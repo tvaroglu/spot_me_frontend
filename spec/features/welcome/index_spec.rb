@@ -4,12 +4,13 @@ describe 'welcome page', type: :feature do
   include_context 'logged in as authenticated user'
 
   let(:user_blob) { File.read('./spec/fixtures/user.json') }
+  let(:about) { "Find your future 'SwoleMate' or fitness bestie at your gym and schedule a workout together!" }
 
   it 'is on the correct page' do
     visit root_path
 
-    expect(page).to have_content 'SpotMe'
-    expect(page).to have_content 'Mission'
+    expect(page).to have_content('SpotMe')
+    expect(page).to have_content(about)
   end
 
   it 'can log in and out of the application with a valid Google token', :aggregate_failures, :vcr do

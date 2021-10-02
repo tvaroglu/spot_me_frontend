@@ -209,6 +209,10 @@ img {
   font-weight: bold;
 }
 
+.mt-150 {
+  margin-top: 150px;
+}
+
 // ALIGNMENT
 
 .center {
@@ -339,4 +343,21 @@ li.user-summary {
 
 .success-text {
   color: $success-text-color;
+}
+
+.welcome-title {
+  font-size: 3em;
+  letter-spacing: -1px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.welcome-subtitle {
+  font-size: 1.75em;
+  letter-spacing: -1px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: normal;
+  color: #13525f;
 }

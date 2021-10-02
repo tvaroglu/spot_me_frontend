@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
   def create
     EventFacade.create_event(create_event_params)
-    flash[:alert] = 'Workout created! Now go get your swole on!'
+    flash[:success] = 'Workout created! Now go get your swole on!'
     redirect_to dashboard_index_path
   end
 

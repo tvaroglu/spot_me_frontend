@@ -22,6 +22,7 @@ $font-family-body: 'Verdana', sans-serif;
 $font-family-headers: 'Garamond', 'Georgia', serif;
 
 $alert-text-color: #8e0613;
+$success-text-color: #1a9d2b;
 
 $button-bg-color: #ffffff75;
 $link-color: #13525f;
@@ -334,4 +335,8 @@ li.user-summary {
 
 .alert-text {
   color: $alert-text-color;
+}
+
+.success-text {
+  color: $success-text-color;
 }

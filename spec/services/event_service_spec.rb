@@ -18,17 +18,13 @@ describe EventService, :vcr, type: :service do
           expect(user_events[:data].first[:type]).to be_a String
           expect(user_events[:data].first[:type]).to eq('event')
 
-          expect(user_events[:data].first).to have_key(:relationships)
-          expect(user_events[:data].first[:relationships]).to be_a Hash
+          expect(user_events[:data].first).to have_key(:meta)
+          expect(user_events[:data].first[:meta]).to be_a Hash
 
-          expect(user_events[:data].first[:relationships]).to have_key(:user)
-          expect(user_events[:data].first[:relationships][:user]).to be_a Hash
-
-          expect(user_events[:data].first[:relationships][:user]).to have_key(:meta)
-          expect(user_events[:data].first[:relationships][:user][:meta]).to be_a Hash
-
-          expect(user_events[:data].first[:relationships][:user][:meta]).to have_key(:full_name)
-          expect(user_events[:data].first[:relationships][:user][:meta][:full_name]).to be_a String
+          expect(user_events[:data].first[:meta]).to have_key(:friend_name)
+          expect(user_events[:data].first[:meta][:friend_name]).to be_a String
+          expect(user_events[:data].first[:meta]).to have_key(:friend_role)
+          expect(user_events[:data].first[:meta][:friend_role]).to be_a String
         end
       end
 

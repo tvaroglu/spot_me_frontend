@@ -21,37 +21,33 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 18:33:08 GMT
+      - Fri, 01 Oct 2021 23:59:43 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"268bc95f8322859805c892f3b3ee0558"
+      - W/"50a708ac7d7f7459188d3c3256f03b7e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 667b2b6f-3ba3-4311-8c5f-ebc7002c8f35
+      - a74c006b-317d-40d6-881b-0edbb6d24242
       X-Runtime:
-      - '0.040377'
+      - '0.042568'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-30T20:38:23.187Z","activity":"Mushroom
-        hunting"},"relationships":{"user":{"data":{"id":"3","type":"user"},"meta":{"full_name":"Gov.
-        Elliot Hills"}}}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-09-29T20:38:23.421Z","activity":"Foraging"},"relationships":{"user":{"data":{"id":"4","type":"user"},"meta":{"full_name":"Malcom
-        Langworth"}}}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T20:38:23.430Z","activity":"Knife
-        making"},"relationships":{"user":{"data":{"id":"7","type":"user"},"meta":{"full_name":"Valentin
-        Bergnaum IV"}}}}],"included":[{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
-        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
-        Elliot Hills"}},{"id":"4","type":"user","attributes":{"email":"edison.sanford@veum.org","google_id":"m4i6jg9qgkb4uox143iyx","google_image_url":"https://robohash.org/velametomnis.png?size=300x300\u0026set=set1","zip_code":"12919","summary":"A
-        few vices are sufficient to darken many virtues.","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Malcom
-        Langworth"}},{"id":"7","type":"user","attributes":{"email":"rolando.nikolaus@jones-cassin.info","google_id":"ummu458qvzj7jxme3quds","google_image_url":"https://robohash.org/voluptatemexcepturivoluptas.png?size=300x300\u0026set=set1","zip_code":"19596","summary":"It
-        is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Valentin
-        Bergnaum IV"}}]}'
-  recorded_at: Tue, 28 Sep 2021 18:33:09 GMT
+      string: '{"data":[{"id":"55","type":"event","attributes":{"user_id":6,"gym_membership_id":17,"date_time":"2021-10-11T23:58:20.119Z","activity":"Table
+        tennis"},"meta":{"friend_name":"Rep. Octavia Kuhic","friend_role":"invited"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T20:38:23.430Z","activity":"Knife
+        making"},"meta":{"friend_name":"Valentin Bergnaum IV","friend_role":"invited"}},{"id":"46","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-11T23:58:20.062Z","activity":"Playing
+        musical instruments"},"meta":{"friend_name":"Scott B","friend_role":"host"}},{"id":"48","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-09T23:58:20.072Z","activity":"Cooking"},"meta":{"friend_name":"Scott
+        B","friend_role":"host"}},{"id":"44","type":"event","attributes":{"user_id":1,"gym_membership_id":3,"date_time":"2021-10-07T23:58:20.050Z","activity":"role-playing
+        games"},"meta":{"friend_name":"Malcom Langworth","friend_role":"host"}},{"id":"50","type":"event","attributes":{"user_id":1,"gym_membership_id":5,"date_time":"2021-10-02T23:58:20.088Z","activity":"Knife
+        making"},"meta":{"friend_name":"Carrie O''Reilly","friend_role":"host"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-02T20:38:23.472Z","activity":"Kayaking"},"meta":{"friend_name":"Valentin
+        Bergnaum IV","friend_role":"host"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-02T20:38:23.462Z","activity":"Cryptography"},"meta":{"friend_name":"Jerome
+        Wunsch","friend_role":"host"}}]}'
+  recorded_at: Fri, 01 Oct 2021 23:59:44 GMT
 recorded_with: VCR 6.0.0

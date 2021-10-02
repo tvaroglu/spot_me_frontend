@@ -134,12 +134,9 @@ shared_context 'experienced user' do
         activity: 'Bodybuilding',
         date_time: '2022-07-22T21:41:28.000Z'
       },
-      relationships: {
-        user: {
-          meta: {
-            full_name: user2.full_name
-          }
-        }
+      meta: {
+        friend_name: user2.full_name,
+        friend_role: 'invited'
       }
     )
   end
@@ -153,12 +150,9 @@ shared_context 'experienced user' do
         date_time: '2022-08-22T21:41:28.000Z',
         activity: 'Running'
       },
-      relationships: {
-        user: {
-          meta: {
-            full_name: user3.full_name
-          }
-        }
+      meta: {
+        friend_name: user3.full_name,
+        friend_role: 'invited'
       }
     )
   end
@@ -172,12 +166,9 @@ shared_context 'experienced user' do
         date_time: '2022-09-22T21:41:28.000Z',
         activity: 'Stretching'
       },
-      relationships: {
-        user: {
-          meta: {
-            full_name: user2.full_name
-          }
-        }
+      meta: {
+        friend_name: user2.full_name,
+        friend_role: 'invited'
       }
     )
   end

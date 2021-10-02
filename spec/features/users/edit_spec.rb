@@ -73,12 +73,9 @@ describe 'edit user profile', type: :feature do
         activity: 'Bodybuilding',
         date_time: '2022-07-22T21:41:28.000Z'
       },
-      relationships: {
-        user: {
-          meta: {
-            full_name: user2.full_name
-          }
-        }
+      meta: {
+        friend_name: user2.full_name,
+        friend_role: 'invited'
       }
     )
   end
@@ -92,12 +89,9 @@ describe 'edit user profile', type: :feature do
         date_time: '2022-08-22T21:41:28.000Z',
         activity: 'Running'
       },
-      relationships: {
-        user: {
-          meta: {
-            full_name: user1.full_name
-          }
-        }
+      meta: {
+        friend_name: user1.full_name,
+        friend_role: 'invited'
       }
     )
   end

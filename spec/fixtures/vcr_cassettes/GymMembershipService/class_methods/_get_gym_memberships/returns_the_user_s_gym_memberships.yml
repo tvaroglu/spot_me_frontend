@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 14:02:35 GMT
+      - Fri, 01 Oct 2021 23:59:47 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ef8f331d-1eb0-4259-be9d-7b06b0d3d245
+      - 6d8b40bc-ee39-401e-a7e5-87b13db47951
       X-Runtime:
-      - '0.006877'
+      - '0.014774'
       Transfer-Encoding:
       - chunked
       Via:
@@ -44,5 +44,5 @@ http_interactions:
         Mraz and Fadel"}},{"id":"58","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
         Fitness"}},{"id":"60","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
         Fitness"}}]}'
-  recorded_at: Fri, 01 Oct 2021 14:02:35 GMT
+  recorded_at: Fri, 01 Oct 2021 23:59:47 GMT
 recorded_with: VCR 6.0.0

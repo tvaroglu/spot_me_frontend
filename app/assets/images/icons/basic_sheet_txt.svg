@@ -4,12 +4,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
 <g>
-	<path d="M43,14.586L30.414,2H0v60h43V14.586z M31,5.414L39.586,14H31V5.414z M2,60V4h27v12h12v44H2z"/>
-	<path d="M64,0H54v54.236l5,10l5-10V0z M62,2v8h-6V2H62z M59,59.764l-3-6V12h6v41.764L59,59.764z"/>
-	<rect x="8" y="12" width="12" height="2"/>
-	<rect x="8" y="22" width="27" height="2"/>
-	<rect x="8" y="30" width="27" height="2"/>
-	<rect x="8" y="38" width="27" height="2"/>
-	<rect x="8" y="46" width="27" height="2"/>
+	<path d="M8,64h48V0H22.586L8,14.586V64z M54,62H10V16h14V2h30V62z M11.414,14L22,3.414V14H11.414z"/>
+	<rect x="32" y="13" width="14" height="2"/>
+	<rect x="18" y="23" width="28" height="2"/>
+	<rect x="18" y="33" width="28" height="2"/>
+	<rect x="18" y="43" width="28" height="2"/>
+	<rect x="18" y="53" width="28" height="2"/>
 </g>
 </svg>

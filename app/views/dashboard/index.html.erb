@@ -15,24 +15,20 @@
 
       <div class="col-lg fit-content">
         <ul class='no-bullets'>
-          <li>
-            <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-            &nbsp;<%= current_user.zip_code %>
+          <li class='location'>
+            <%= current_user.zip_code %>
           </li>
 
-          <li>
-            <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-            &nbsp;<%= current_user.goal %>
+          <li class='goal'>
+            <%= current_user.goal %>
           </li>
 
-          <li>
-            <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-            &nbsp;<%= current_user.availability %>
+          <li class='calendar'>
+            <%= current_user.availability %>
           </li>
 
-          <li>
-            <%= embedded_svg('icons/basic_sheet_pencil.svg', class: 'icon') %>
-            &nbsp;<%= current_user.summary %>
+          <li class='user-summary'>
+            <%= current_user.summary %>
           </li>
         </ul>
       </div>
@@ -84,19 +80,16 @@
               <div class="row center no-pad">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
-                    <li>
-                      <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                      &nbsp;<%= link_to 'Gym Name Here', '#' %>
+                    <li class='sign'>
+                      <%= link_to 'Gym Name Here', '#' %>
                     </li>
 
-                    <li>
-                      <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-                      &nbsp;<%= event.format_date_short %>
+                    <li class='calendar'>
+                      <%= event.format_date_short %>
                     </li>
 
-                    <li>
-                      <%= embedded_svg('icons/basic_star.svg', class: 'icon') %>
-                      &nbsp;With: <%= link_to event.friend_name, profile_path(event.user_id) %>
+                    <li class='star'>
+                      With: <%= link_to event.friend_name, profile_path(event.user_id) %>
                     </li>
                   </ul>
                 </div>
@@ -132,24 +125,10 @@
               <div class="row center no-pad">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
-                    <li>
-                      <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                      &nbsp;AddressLine1 Here
-                    </li>
-
-                    <% # if gym_membership.address2.present? %>
-                      <li class='indent'>
-                        AddressLine3 Here
-                      </li>
-                    <% # end %>
-
-                    <% # if gym_membership.address3.present? %>
-                      <li class='indent'>
-                        AddressLine3 Here
-                      </li>
-                    <% # end %>
-
-                    <li class='indent'>
+                    <li class='address'>
+                      AddressLine1 Here<br>
+                      AddressLine2 Here<br>
+                      AddressLine3 Here<br>
                       City, ST 00000
                     </li>
                   </ul>
@@ -198,19 +177,16 @@
                 <div class="row center no-pad mb-3">
                   <div class="fit-content no-pad">
                     <ul class='no-bullets'>
-                      <li>
-                        <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                        &nbsp;<%= friend.zip_code %>
+                      <li class='location'>
+                        <%= friend.zip_code %>
                       </li>
 
-                      <li>
-                        <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-                        &nbsp;<%= friend.goal %>
+                      <li class='goal'>
+                        <%= friend.goal %>
                       </li>
 
-                      <li>
-                        <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-                        &nbsp;<%= friend.availability %>
+                      <li class='calendar'>
+                        <%= friend.availability %>
                       </li>
                     </ul>
                   </div>

@@ -105,7 +105,7 @@
   <div class="container gray bottom-radius padding">
     <div class="row" id='friends'>
       <% if @user_friends.empty? %>
-        You currently have no friends.
+        <%= @profile_user.full_name %> is not following anyone.
       <% else %>
         <div class="d-flex flex-wrap center-it-all">
 

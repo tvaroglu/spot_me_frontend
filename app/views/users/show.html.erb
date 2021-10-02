@@ -11,15 +11,14 @@
         <% if @user_type == :self %>
           <%= link_to 'Edit Profile', edit_profile_path(current_user.id), class: "btn btn-med btn-info button-bg btn-outline-dark" %>
         <% elsif @user_type == :friend %>
-          <%= link_to 'Unfollow', friendship_path(
-                                        current_user.id,
-                                        {
-                                          user_id: current_user.id,
-                                          followee_id: @profile_user.id
-                                        }
-                                       ),
-                                       method: :delete,
-                                       class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+          <%= link_to 'Unfollow', friendship_path(current_user.id,
+                                                  {
+                                                    user_id: current_user.id,
+                                                    followee_id: @profile_user.id
+                                                  }),
+                                  method: :delete,
+                                  class: "btn btn-sm btn-info button-bg btn-outline-dark",
+                                  data: { confirm: "If you unfollow this person, your events with this person will also be deleted.  Are you sure you want to unfollow #{friend.full_name}?" } %>
         <% else %>
           <%= link_to 'Follow', friendships_path(
                                       current_user.id,

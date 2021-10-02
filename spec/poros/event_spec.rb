@@ -16,12 +16,9 @@ describe Event, type: :poro do
         date_time: date_time,
         activity: activity
       },
-      relationships: {
-        user: {
-          meta: {
-            full_name: 'Jimmy'
-          }
-        }
+      meta: {
+        friend_name: 'Jimmy',
+        friend_role: 'invited'
       }
     }
 
@@ -57,12 +54,9 @@ describe Event, type: :poro do
             date_time: date_time,
             activity: activity
           },
-          relationships: {
-            user: {
-              meta: {
-                full_name: 'Jimmy'
-              }
-            }
+          meta: {
+            friend_name: 'Jimmy',
+            friend_role: 'invited'
           }
         }
 
@@ -89,12 +83,9 @@ describe Event, type: :poro do
             date_time: date_time,
             activity: activity
           },
-          relationships: {
-            user: {
-              meta: {
-                full_name: 'Jimmy'
-              }
-            }
+          meta: {
+            friend_name: 'Jimmy',
+            friend_role: 'invited'
           }
         }
 

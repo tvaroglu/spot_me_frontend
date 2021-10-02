@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/11/events
     body:
       encoding: US-ASCII
       string: ''
@@ -21,25 +21,25 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 18:23:51 GMT
+      - Fri, 01 Oct 2021 23:59:37 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"42f8104a18754db6b114ef6672fc4f0e"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 14644307-fb62-4396-972c-35187be8d4ef
+      - feff2505-eaeb-4b2a-8562-2f222d4646bf
       X-Runtime:
-      - '0.006785'
+      - '0.020439'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[],"included":[]}'
-  recorded_at: Tue, 28 Sep 2021 18:23:52 GMT
+      string: '{"data":[]}'
+  recorded_at: Fri, 01 Oct 2021 23:59:37 GMT
 recorded_with: VCR 6.0.0

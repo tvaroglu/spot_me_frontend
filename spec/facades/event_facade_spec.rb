@@ -13,7 +13,7 @@ describe EventFacade, type: :facade do
 
     context 'when the user does not have any events' do
       it 'can return an empty array', :vcr do
-        events = EventFacade.get_upcoming_events(2)
+        events = EventFacade.get_upcoming_events(11)
 
         expect(events).to be_empty
       end

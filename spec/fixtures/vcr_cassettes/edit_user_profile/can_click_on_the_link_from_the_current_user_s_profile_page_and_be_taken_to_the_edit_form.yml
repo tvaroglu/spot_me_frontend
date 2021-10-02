@@ -21,27 +21,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 18:23:56 GMT
+      - Fri, 01 Oct 2021 23:59:42 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a3936c2804083afc197dcc24675b9318"
+      - W/"e7d05f1bad5b937ba3786b58da83079d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f6bd6f31-4a4d-47e0-920c-fb685049999a
+      - 7a7e3cdc-c882-46e3-9d5c-e8a85b17e6fb
       X-Runtime:
-      - '0.003464'
+      - '0.004521'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"05114","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":"Maintain Weight","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Keneth
-        Swift"}}}'
-  recorded_at: Tue, 28 Sep 2021 18:23:56 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"41895","summary":"The
+        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
+        Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":false,"full_name":"Joanne
+        Champlin"}}}'
+  recorded_at: Fri, 01 Oct 2021 23:59:43 GMT
 recorded_with: VCR 6.0.0

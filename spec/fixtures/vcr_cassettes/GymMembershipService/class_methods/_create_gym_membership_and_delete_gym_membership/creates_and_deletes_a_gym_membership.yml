@@ -24,31 +24,31 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 14:00:28 GMT
+      - Fri, 01 Oct 2021 23:59:46 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2857010a0a80f73ffa9ad6b8843767e5"
+      - W/"d67e1781b0dfffbec0a1845476e72a21"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 32dba8e4-1ce0-436e-a8a3-cd454fb12864
+      - ba06ee96-3f69-446b-881f-de4c4b4eaa78
       X-Runtime:
-      - '0.072759'
+      - '0.114903'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"62","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
+      string: '{"data":{"id":"66","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
         Fitness"}}}'
-  recorded_at: Fri, 01 Oct 2021 14:00:28 GMT
+  recorded_at: Fri, 01 Oct 2021 23:59:46 GMT
 - request:
     method: delete
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/62
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/66
     body:
       encoding: US-ASCII
       string: ''
@@ -67,7 +67,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 14:00:28 GMT
+      - Fri, 01 Oct 2021 23:59:46 GMT
       Content-Length:
       - '0'
       Connection:
@@ -75,13 +75,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 4011e2b8-211a-4e42-b6a2-d0990458465b
+      - ade9efb5-d204-4b03-9092-c6a897d4dae7
       X-Runtime:
-      - '0.009842'
+      - '0.014990'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 01 Oct 2021 14:00:28 GMT
+  recorded_at: Fri, 01 Oct 2021 23:59:46 GMT
 recorded_with: VCR 6.0.0

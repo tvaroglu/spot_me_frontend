@@ -1,13 +1,20 @@
 class Event
-  attr_reader :id, :user_id, :invitee_name, :gym_membership_id, :date_time, :activity
+  attr_reader :id,
+              :user_id,
+              :gym_membership_id,
+              :date_time,
+              :activity,
+              :invitee_name,
+              :role
 
   def initialize(data)
-    @id                = data[:id]
-    @user_id           = data[:attributes][:user_id]
-    @invitee_name      = data[:relationships][:user][:meta][:full_name]
+    @id = data[:id]
+    @user_id = data[:attributes][:user_id]
     @gym_membership_id = data[:attributes][:gym_membership_id]
-    @date_time         = data[:attributes][:date_time]
-    @activity          = data[:attributes][:activity]
+    @date_time = data[:attributes][:date_time]
+    @activity = data[:attributes][:activity]
+    @invitee_name = data[:meta][:friend_name]
+    @role = data[:meta][:friend_role]
   end
 
   # TODO: Update method to handle different timezones

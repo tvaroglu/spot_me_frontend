@@ -21,27 +21,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Tue, 28 Sep 2021 18:23:52 GMT
+      - Fri, 01 Oct 2021 23:59:37 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d85ac187d4e93c4883b199bed13bf02d"
+      - W/"10009d737f258945bb1bd1da80baf689"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4da689d2-0f1c-493f-be70-e568532d5701
+      - dafec006-794e-40e9-a217-8995540668b1
       X-Runtime:
-      - '0.018721'
+      - '0.011142'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"lex65fkcol5gfq89rymmd2","gym_name":"Feil,
-        Sporer and Medhurst"}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
-        Mraz and Fadel"}}]}'
-  recorded_at: Tue, 28 Sep 2021 18:23:53 GMT
+      string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
+        Mraz and Fadel"}},{"id":"58","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
+        Fitness"}},{"id":"60","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
+        Fitness"}}]}'
+  recorded_at: Fri, 01 Oct 2021 23:59:38 GMT
 recorded_with: VCR 6.0.0

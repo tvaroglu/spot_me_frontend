@@ -141,12 +141,9 @@ RSpec.describe 'new event page', :vcr, type: :feature do
               date_time: '2022-01-01T17:00:00.000Z',
               activity: activity
             },
-            relationships: {
-              user: {
-                meta: {
-                  full_name: friend.full_name
-                }
-              }
+            meta: {
+              friend_name: friend.full_name,
+              friend_role: 'invited'
             }
           )
         end

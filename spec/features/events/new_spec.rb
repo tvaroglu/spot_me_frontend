@@ -49,7 +49,15 @@ RSpec.describe 'new event page', :vcr, type: :feature do
       attributes: {
         name: "Rishi's Community Yoga",
         address: 'address1',
-        phone: '123-123-1234'
+        phone: '123-123-1234',
+        address_details: {
+          address1: "430 Pierre St",
+          address2: nil,
+          address3: '',
+          city: 'Boulder',
+          state: 'CO',
+          zip_code: '80304'
+        }
       }
     )
   end

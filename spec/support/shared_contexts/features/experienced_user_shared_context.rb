@@ -108,7 +108,15 @@ shared_context 'experienced user' do
       attributes: {
         name: 'Kling-Wilkinson',
         address: 'address3',
-        phone: '345-345-3456'
+        phone: '345-345-3456',
+        address_details: {
+          address1: "431 Pierre St",
+          address2: nil,
+          address3: '',
+          city: 'Boulder',
+          state: 'CO',
+          zip_code: '80304'
+        }
       }
     )
   end
@@ -120,7 +128,15 @@ shared_context 'experienced user' do
       attributes: {
         name: 'Konopelski, Lowe and Haley',
         address: 'address2',
-        phone: '234-234-2345'
+        phone: '234-234-2345',
+        address_details: {
+          address1: "432 Pierre St",
+          address2: nil,
+          address3: '',
+          city: 'Boulder',
+          state: 'CO',
+          zip_code: '80305'
+        }
       }
     )
   end
@@ -132,7 +148,15 @@ shared_context 'experienced user' do
       attributes: {
         name: 'Funk LLC',
         address: 'address1',
-        phone: '123-123-1234'
+        phone: '123-123-1234',
+        address_details: {
+          address1: "433 Pierre St",
+          address2: nil,
+          address3: '',
+          city: 'Boulder',
+          state: 'CO',
+          zip_code: '80306'
+        }
       }
     )
   end

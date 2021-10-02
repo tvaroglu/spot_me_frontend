@@ -5,7 +5,7 @@ describe Gym, type: :poro do
     it 'initialize from given parameters params' do
       yelp_gym_id = '1'
       name = 'Planet Fitness'
-      address = '123 Main St'
+      full_address = '123 Main St'
       phone = '123-123-1234'
       address1 = "430 Pierre St"
       address2 = nil
@@ -20,7 +20,7 @@ describe Gym, type: :poro do
         type: 'gym',
         attributes: {
           name: name,
-          address: address,
+          address: full_address,
           phone: phone,
           address_details: {
             address1: address1,
@@ -40,8 +40,8 @@ describe Gym, type: :poro do
       expect(gym.yelp_gym_id).to be_a String
       expect(gym.name).to eq(name)
       expect(gym.name).to be_a String
-      expect(gym.address).to eq(address)
-      expect(gym.address).to be_a String
+      expect(gym.full_address).to eq(full_address)
+      expect(gym.full_address).to be_a String
       expect(gym.address1).to eq(address1)
       expect(gym.address1).to be_a String
       expect(gym.address2).to eq(address2)
@@ -58,7 +58,7 @@ describe Gym, type: :poro do
       it 'returns the concatenated city, state, and zip' do
         yelp_gym_id = '1'
         name = 'Planet Fitness'
-        address = '123 Main St'
+        full_address = '123 Main St'
         phone = '123-123-1234'
         city = 'Boulder'
         state = 'CO'
@@ -69,7 +69,7 @@ describe Gym, type: :poro do
           type: 'gym',
           attributes: {
             name: name,
-            address: address,
+            address: full_address,
             phone: phone,
             address_details: {
               city: city,

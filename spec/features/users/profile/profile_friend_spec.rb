@@ -30,6 +30,7 @@ describe 'user profile page: friend', type: :feature do
       allow(UserFacade).to receive(:get_profile_user).with(user10.id.to_s).and_return(user10)
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([user10])
       allow(FriendshipFacade).to receive(:get_friends).with(user10.id).and_return([])
+      allow(EventFacade).to receive(:get_upcoming_events).with(user10.id).and_return([])
     end
 
     context 'when I visit my friends profile' do
@@ -72,6 +73,17 @@ describe 'user profile page: friend', type: :feature do
           click_on 'Unfollow'
 
           expect(page).to have_current_path(profile_path(user10.id), ignore_query: true)
+        end
+      end
+
+      context 'when they have no upcoming workouts' do
+        it 'displays an Upcoming Workouts section' do
+          expect(page).to have_content('0 Upcoming Workouts')
+          expect(page).to have_css('#upcoming-workouts')
+
+          within '#upcoming-workouts' do
+            expect(page).to have_content("#{user10.full_name} has no upcoming workouts.")
+          end
         end
       end
     end

@@ -89,6 +89,18 @@ shared_context 'experienced user' do
     )
   end
 
+  let(:gym_membership4) do
+    GymMembership.new(
+      id: '20',
+      type: 'gym_membership',
+      attributes: {
+        user_id: user1.id,
+        yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
+        gym_name: 'Funk LLC'
+      }
+    )
+  end
+
   let(:gym1) do
     Gym.new(
       id: 'lex65fkcol5gfq89rymmd2',
@@ -96,7 +108,15 @@ shared_context 'experienced user' do
       attributes: {
         name: 'Kling-Wilkinson',
         address: 'address3',
-        phone: '345-345-3456'
+        phone: '345-345-3456',
+        address_details: {
+          address1: "431 Pierre St",
+          address2: nil,
+          address3: '',
+          city: 'Boulder',
+          state: 'CO',
+          zip_code: '80304'
+        }
       }
     )
   end
@@ -108,7 +128,15 @@ shared_context 'experienced user' do
       attributes: {
         name: 'Konopelski, Lowe and Haley',
         address: 'address2',
-        phone: '234-234-2345'
+        phone: '234-234-2345',
+        address_details: {
+          address1: "432 Pierre St",
+          address2: nil,
+          address3: '',
+          city: 'Boulder',
+          state: 'CO',
+          zip_code: '80305'
+        }
       }
     )
   end
@@ -120,7 +148,15 @@ shared_context 'experienced user' do
       attributes: {
         name: 'Funk LLC',
         address: 'address1',
-        phone: '123-123-1234'
+        phone: '123-123-1234',
+        address_details: {
+          address1: "433 Pierre St",
+          address2: nil,
+          address3: '',
+          city: 'Boulder',
+          state: 'CO',
+          zip_code: '80306'
+        }
       }
     )
   end
@@ -173,10 +209,26 @@ shared_context 'experienced user' do
     )
   end
 
+  let(:event4) do
+    Event.new(
+      id: '4',
+      attributes: {
+        user_id: user.id,
+        gym_membership_id: gym_membership4.id,
+        date_time: '2022-09-22T21:41:28.000Z',
+        activity: 'Stretching'
+      },
+      meta: {
+        friend_name: user1.full_name,
+        friend_role: 'host'
+      }
+    )
+  end
+
   let(:user_friends) { [user1, user2, user3] }
   let(:user_gym_memberships) { [gym_membership1, gym_membership2, gym_membership3] }
   let(:gyms_near_user) { [gym1, gym2, gym3] }
-  let(:user_events) { [event1, event2, event3] }
+  let(:user_events) { [event1, event2, event3, event4] }
 
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)

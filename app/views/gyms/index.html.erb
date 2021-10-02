@@ -9,22 +9,23 @@
         <div class="col-xl-5 card-display flex-grow">
           <div id="<%= gym.yelp_gym_id %>">
             <ul class='no-bullets'>
-              <li>
-                <%= embedded_svg('icons/basic_signs.svg', class: 'icon') %>
-                &nbsp;<span class='title'><%= link_to gym.name, gym_path(gym.yelp_gym_id) %></span>
+              <li class='sign'>
+                <span class='title'><%= link_to gym.name, gym_path(gym.yelp_gym_id) %></span>
               </li>
 
-              <li>
-                <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                &nbsp;<%= gym.address %>
+              <li class='address'>
+                <%= gym.full_address %>
               </li>
 
               <% if gym.phone.present? %>
-                <li>
-                  <%= embedded_svg('icons/basic_smartphone.svg', class: 'icon') %>
-                  &nbsp;<%= gym.phone %>
+                <li class='phone'>
+                  <%= gym.phone %>
                 </li>
               <% end %>
+
+              <li class='star'>
+                [##] Active Members
+              </li>
             </ul>
           </div>
         </div>

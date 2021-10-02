@@ -11,15 +11,14 @@
         <% if @user_type == :self %>
           <%= link_to 'Edit Profile', edit_profile_path(current_user.id), class: "btn btn-med btn-info button-bg btn-outline-dark" %>
         <% elsif @user_type == :friend %>
-          <%= link_to 'Unfollow', friendship_path(
-                                        current_user.id,
-                                        {
-                                          user_id: current_user.id,
-                                          followee_id: @profile_user.id
-                                        }
-                                       ),
-                                       method: :delete,
-                                       class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+          <%= link_to 'Unfollow', friendship_path(current_user.id,
+                                                  {
+                                                    user_id: current_user.id,
+                                                    followee_id: @profile_user.id
+                                                  }),
+                                  method: :delete,
+                                  class: "btn btn-sm btn-info button-bg btn-outline-dark",
+                                  data: { confirm: "If you unfollow this person, your events with this person will also be deleted.  Are you sure you want to unfollow this user?" } %>
         <% else %>
           <%= link_to 'Follow', friendships_path(
                                       current_user.id,
@@ -36,29 +35,65 @@
 
       <div class="col-lg fit-content">
         <ul class='no-bullets'>
-          <li id='zip-code'>
-            <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-            &nbsp;<%= @profile_user.zip_code %>
+          <li class= 'location' id='zip-code'>
+            <%= @profile_user.zip_code %>
           </li>
 
-          <li id='goal'>
-            <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-            &nbsp;<%= @profile_user.goal %>
+          <li class='goal' id='goal'>
+            <%= @profile_user.goal %>
           </li>
 
-          <li id='availability'>
-            <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-            &nbsp;<%= @profile_user.availability %>
+          <li class='calendar' id='availability'>
+            <%= @profile_user.availability %>
           </li>
 
-          <li id='user-summary'>
-            <%= embedded_svg('icons/basic_sheet_pencil.svg', class: 'icon') %>
-            &nbsp;<%= @profile_user.summary %>
+          <li class='user-summary' id='user-summary'>
+            <%= @profile_user.summary %>
           </li>
         </ul>
       </div>
     </div>
   </div>
+
+  <% if @user_type == :friend %>
+
+    <div class="container gray top-radius padding mb-1">
+      <div class="row">
+        <h2><%= @user_events.size %> Upcoming Workouts</h2>
+      </div>
+    </div>
+
+    <div class="container gray bottom-radius padding mb-3" id='upcoming-workouts'>
+      <div class="row">
+        <div class="d-flex flex-wrap center-it-all">
+          <% if @user_events.empty? %>
+            <div class='col-sm-3 card-display'>
+              <%= @profile_user.full_name %> has no upcoming workouts.
+            </div>
+          <% else %>
+
+            <% @user_events.each do |event| %>
+            <div class="col-md-3 card-display" id="event-<%= event.id%>">
+              <p>
+                <h5><%= event.activity %></h5>
+                <div class="row center no-pad">
+                  <div class="fit-content no-pad">
+                    <ul class='no-bullets'>
+                      <li class='calendar'>
+                        <%= event.date %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </p>
+            </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
 
   <div class="container gray top-radius padding mb-1">
     <div class="row">
@@ -69,7 +104,7 @@
   <div class="container gray bottom-radius padding">
     <div class="row" id='friends'>
       <% if @user_friends.empty? %>
-        You currently have no friends.
+        <%= @profile_user.full_name %> is not following anyone.
       <% else %>
         <div class="d-flex flex-wrap center-it-all">
 
@@ -83,19 +118,16 @@
               <div class="row center no-pad mb-3">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
-                    <li>
-                      <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                      &nbsp;<%= friend.zip_code %>
+                    <li class='location'>
+                      <%= friend.zip_code %>
                     </li>
 
-                    <li>
-                      <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-                      &nbsp;<%= friend.goal %>
+                    <li class='goal'>
+                      <%= friend.goal %>
                     </li>
 
-                    <li>
-                      <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-                      &nbsp;<%= friend.availability %>
+                    <li class='calendar'>
+                      <%= friend.availability %>
                     </li>
                   </ul>
                 </div>

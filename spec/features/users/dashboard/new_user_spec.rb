@@ -84,7 +84,7 @@ describe 'new user dashboard', type: :feature do
       context "when I don't have any friends" do
         it 'displays "You currently have no friends."', :vcr do
           within '#friends' do
-            expect(page).to have_content('You have no friends.')
+            expect(page).to have_content('You are not following anyone.')
           end
         end
       end

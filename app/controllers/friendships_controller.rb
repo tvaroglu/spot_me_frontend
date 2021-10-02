@@ -1,7 +1,7 @@
 class FriendshipsController < ApplicationController
   def create
     FriendshipFacade.add_friend(create_friendship_params)
-    flash[:alert] = "You just added a SwoleMate! Now go get them gains!!"
+    flash[:success] = "You just added a SwoleMate! Now go get them gains!!"
     redirect_to URI(request.referer).path
   end
 

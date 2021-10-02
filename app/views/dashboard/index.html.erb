@@ -15,24 +15,20 @@
 
       <div class="col-lg fit-content">
         <ul class='no-bullets'>
-          <li>
-            <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-            &nbsp;<%= current_user.zip_code %>
+          <li class='location'>
+            <%= current_user.zip_code %>
           </li>
 
-          <li>
-            <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-            &nbsp;<%= current_user.goal %>
+          <li class='goal'>
+            <%= current_user.goal %>
           </li>
 
-          <li>
-            <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-            &nbsp;<%= current_user.availability %>
+          <li class='calendar'>
+            <%= current_user.availability %>
           </li>
 
-          <li>
-            <%= embedded_svg('icons/basic_sheet_pencil.svg', class: 'icon') %>
-            &nbsp;<%= current_user.summary %>
+          <li class='user-summary'>
+            <%= current_user.summary %>
           </li>
         </ul>
       </div>
@@ -46,9 +42,9 @@
   </div>
 
   <div class="container gray bottom-radius padding mb-3">
-    <div class="row center">
+    <div class="row center" id='profile-nav'>
       <div class="col">
-        <h5 class='no-margin'><%= link_to 'Upcoming Workouts', '#my-upcoming-workouts', class: 'center' %></h5>
+        <h5 class='no-margin'><%= link_to "#{@user_events.size} Upcoming Workouts", '#my-upcoming-workouts', class: 'center' %></h5>
       </div>
       <div class="col">
         <h5 class='no-margin'><%= link_to 'My Gyms', '#my-gyms', class: 'center' %></h5>
@@ -64,7 +60,7 @@
 
   <div class="container gray top-radius padding mb-1" id='my-upcoming-workouts'>
     <div class="row">
-      <h2>Upcoming Workouts</h2>
+      <h2><%= @user_events.size %> Upcoming Workouts</h2>
     </div>
   </div>
 
@@ -84,20 +80,25 @@
               <div class="row center no-pad">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
-                    <li>
-                      <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-                      &nbsp;<%= event.format_date_short %>
+                    <li class='sign'>
+                      <%= link_to 'Gym Name Here', '#' %>
                     </li>
 
-                    <li>
-                      <%= embedded_svg('icons/basic_star.svg', class: 'icon') %>
-                      &nbsp;With: <%= link_to event.invitee_name, profile_path(event.user_id) %>
+                    <li class='calendar'>
+                      <%= event.format_date_short %>
+                    </li>
+
+                    <li class='star'>
+                      With: <%= link_to event.friend_name, profile_path(event.user_id) %>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+              <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}),
+                                    method: :delete,
+                                    class: "btn btn-sm btn-info button-bg btn-outline-dark",
+                                    data: { confirm: 'Are you sure you want to delete this event?' } %>
             </p>
           </div>
           <% end %>
@@ -120,22 +121,27 @@
             You are not a member of any gym.
           </div>
         <% else %>
-          <% @user_gyms.each do |gym| %>
-            <div class='col-xl-3 card-display' id="gym-<%= gym.yelp_gym_id%>">
-              <h5 class='mb-3'><%= link_to gym.gym_name, gym_path(gym.yelp_gym_id) %></h5>
+          <% @user_gyms.each do |gym_membership| %>
+            <div class='col-xl-3 card-display' id="gym-<%= gym_membership.yelp_gym_id%>">
+              <h5><%= link_to gym_membership.gym_name, gym_path(gym_membership.yelp_gym_id) %></h5>
 
               <div class="row center no-pad">
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
-                    <li>
-                      <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                      &nbsp;Gym Address
+                    <li class='address'>
+                      AddressLine1 Here<br>
+                      AddressLine2 Here<br>
+                      AddressLine3 Here<br>
+                      City, ST 00000
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <%= link_to 'Remove', gym_membership_path(gym.id, {user_id: current_user.id}), method: :delete, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+              <%= link_to 'Remove', gym_membership_path(gym_membership.id, {user_id: current_user.id}),
+                                    method: :delete,
+                                    class: "btn btn-sm btn-info button-bg btn-outline-dark",
+                                    data: { confirm: 'If you remove this gym, your events at this gym will also be deleted.  Are you sure you want to remove this gym?' } %>
             </div>
           <% end %>
         <% end %>
@@ -146,7 +152,8 @@
 
     <div class="row">
       <div align="center" id='find-gyms'>
-        <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code), class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+        <%= link_to 'Find Gyms Near Me', gyms_path(zip_code: current_user.zip_code),
+                                         class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
       </div>
     </div>
   </div>
@@ -161,7 +168,7 @@
     <div class="row center-it-all">
       <% if @user_friends.empty? %>
         <div class='col-sm-3 card-display center'>
-          You have no friends.
+          You are not following anyone.
         </div>
       <% else %>
         <div class="row center-it-all">
@@ -177,19 +184,16 @@
                 <div class="row center no-pad mb-3">
                   <div class="fit-content no-pad">
                     <ul class='no-bullets'>
-                      <li>
-                        <%= embedded_svg('icons/basic_geolocalize-01.svg', class: 'icon') %>
-                        &nbsp;<%= friend.zip_code %>
+                      <li class='location'>
+                        <%= friend.zip_code %>
                       </li>
 
-                      <li>
-                        <%= embedded_svg('icons/basic_gunsight.svg', class: 'icon') %>
-                        &nbsp;<%= friend.goal %>
+                      <li class='goal'>
+                        <%= friend.goal %>
                       </li>
 
-                      <li>
-                        <%= embedded_svg('icons/basic_calendar.svg', class: 'icon') %>
-                        &nbsp;<%= friend.availability %>
+                      <li class='calendar'>
+                        <%= friend.availability %>
                       </li>
                     </ul>
                   </div>
@@ -202,7 +206,8 @@
                                           followee_id: friend.id
                                         }),
                                         method: :delete,
-                                        class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+                                        class: "btn btn-sm btn-info button-bg btn-outline-dark",
+                                        data: { confirm: "If you unfollow this person, your events with this person will also be deleted.  Are you sure you want to unfollow this user?" } %>
               </div>
             <% end %>
           </div>

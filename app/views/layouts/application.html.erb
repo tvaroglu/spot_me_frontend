@@ -19,12 +19,16 @@
     <br><br><br/>
 
     <% flash.each do |type, msg| %>
-  <div align="center">
-    <div class="padding no-border-sides gray">
-      <h5 class='no-margin alert-text'><%= msg %></h5>
-    </div>
-  </div>
-  <% end %>
+      <div align="center">
+        <div class="padding no-border-sides gray">
+          <% if type == 'success' %>
+            <h5 class='no-margin success-text'><%= msg %></h5>
+          <% else %>
+            <h5 class='no-margin alert-text'><%= msg %></h5>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
 
     <div class='container'>
       <br>

@@ -8,7 +8,7 @@ describe 'gyms show page: as a gym member', type: :feature do
     let(:current_user_id) { user.id }
     let(:yelp_gym_id) { 'BJBXzKYxQAXZKb5W6HrRnA' }
     let(:name) { 'Planet Fitness' }
-    let(:address) { '123 Main St' }
+    let(:full_address) { '123 Main St' }
     let(:phone) { '123-123-1234' }
 
     let(:gym) do
@@ -17,8 +17,16 @@ describe 'gyms show page: as a gym member', type: :feature do
         type: 'gym',
         attributes: {
           name: name,
-          address: address,
-          phone: phone
+          address: full_address,
+          phone: phone,
+          address_details: {
+            address1: "430 Pierre St",
+            address2: nil,
+            address3: '',
+            city: 'Boulder',
+            state: 'CO',
+            zip_code: '80304'
+          }
         }
       )
     end
@@ -87,7 +95,7 @@ describe 'gyms show page: as a gym member', type: :feature do
       it 'displays the gym and its information', :vcr do
         within '#gym-details' do
           expect(page).to have_content(name)
-          expect(page).to have_content(address)
+          expect(page).to have_content(full_address)
           expect(page).to have_content(phone)
           expect(page).to have_content('2 Active Members')
         end

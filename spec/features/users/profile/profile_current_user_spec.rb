@@ -41,6 +41,11 @@ describe 'user profile page: current user', type: :feature do
         end
       end
 
+      it 'does not display an Upcoming Workouts section' do
+        expect(page).not_to have_content('Upcoming Workouts')
+        expect(page).not_to have_css('#upcoming-workouts')
+      end
+
       it 'displays a section with the users I am following' do
         expect(page).to have_css('#friends')
 

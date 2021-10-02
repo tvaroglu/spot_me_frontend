@@ -91,7 +91,7 @@
 
                     <li>
                       <%= embedded_svg('icons/basic_star.svg', class: 'icon') %>
-                      &nbsp;With: <%= link_to event.invitee_name, profile_path(event.user_id) %>
+                      &nbsp;With: <%= link_to event.friend_name, profile_path(event.user_id) %>
                     </li>
                   </ul>
                 </div>

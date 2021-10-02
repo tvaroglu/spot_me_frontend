@@ -7,6 +7,8 @@ describe Event, type: :poro do
     gym_membership_id = 1
     date_time = '2021-09-22T21:41:28.000Z'
     activity = 'Bodybuilding'
+    friend_name = 'Jimmy'
+    friend_role = 'invited'
 
     event_params = {
       id: id,
@@ -35,6 +37,10 @@ describe Event, type: :poro do
     expect(event.date_time).to be_a String
     expect(event.activity).to eq(activity)
     expect(event.activity).to be_a String
+    expect(event.friend_name).to eq(friend_name)
+    expect(event.friend_name).to be_a String
+    expect(event.friend_role).to eq(friend_role)
+    expect(event.friend_role).to be_a String
   end
 
   describe 'instance methods' do

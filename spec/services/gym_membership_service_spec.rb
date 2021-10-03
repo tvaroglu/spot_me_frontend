@@ -8,13 +8,13 @@ describe GymMembershipService, :vcr, type: :service do
         yelp_gym_id = 'gHmS3WIjRRhSWG4OdCQYLA'
         gym_name = 'Planet Fitness'
         request_params = {
-          'user_id': user_id,
-          'yelp_gym_id': yelp_gym_id,
-          'gym_name': gym_name
+          user_id: user_id,
+          yelp_gym_id: yelp_gym_id,
+          gym_name: gym_name
         }
 
         actual = GymMembershipService.create_gym_membership(request_params)
-        actual_parsed = JSON.parse(actual.env.response_body, symbolize_names:true)
+        actual_parsed = JSON.parse(actual.env.response_body, symbolize_names: true)
 
         expect(actual.status).to eq(201)
         expect(actual_parsed[:data][:attributes][:user_id]).to eq(user_id)

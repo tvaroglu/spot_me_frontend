@@ -75,7 +75,6 @@ describe 'new user dashboard', type: :feature do
         end
 
         it 'redirects me to the gym search page', :vcr do
-
           expect(page).to have_current_path("/gyms?zip_code=#{user.zip_code}")
           expect(page).to have_content(user.zip_code)
         end

@@ -13,7 +13,7 @@ class GymsController < ApplicationController
 
     @gym_users = GymFacade.get_gym_users(params[:id])
     @gym_friends = FriendshipFacade.get_friends_at_gym(params[:id],
-                                                    current_user.id)
+                                                       current_user.id)
     @gym_non_friends = FriendshipFacade.get_non_friends_at_gym(
       yelp_gym_id: params[:id], user_id: current_user.id
     )

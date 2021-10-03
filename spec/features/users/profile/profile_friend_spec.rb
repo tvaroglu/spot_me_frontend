@@ -58,8 +58,8 @@ describe 'user profile page: friend', type: :feature do
 
         it 'removes the friend from my account', :vcr do
           destroy_friendship_params = {
-              user_id: user.id.to_s,
-              id: user10.id.to_s
+            user_id: user.id.to_s,
+            id: user10.id.to_s
           }
 
           expect(FriendshipFacade).to receive(:delete_friend).with(destroy_friendship_params)

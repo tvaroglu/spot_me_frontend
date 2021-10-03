@@ -32,9 +32,9 @@ describe GymMembershipFacade, type: :facade do
       yelp_gym_id = 'gHmS3WIjRRhSWG4OdCQYLA'
       gym_name = 'Planet Fitness'
       request_params = {
-        'user_id': user_id,
-        'yelp_gym_id': yelp_gym_id,
-        'gym_name': gym_name
+        user_id: user_id,
+        yelp_gym_id: yelp_gym_id,
+        gym_name: gym_name
       }
 
       allow(GymMembershipService).to receive(:create_gym_membership).with(request_params).and_return(true)

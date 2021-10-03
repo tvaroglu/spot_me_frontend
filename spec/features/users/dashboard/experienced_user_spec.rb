@@ -7,7 +7,6 @@ describe 'experienced user dashboard', type: :feature do
     # See spec/shared_contexts/features/experienced_user_shared_context.rb for context
     include_context 'experienced user'
 
-
     context 'when I visit my user dashboard' do
       before { visit dashboard_index_path }
 
@@ -155,7 +154,6 @@ describe 'experienced user dashboard', type: :feature do
           expect(page).to have_content(user.zip_code)
         end
       end
-
 
       it 'displays the users I follow', :vcr do
         expect(page).to have_css('#friends')

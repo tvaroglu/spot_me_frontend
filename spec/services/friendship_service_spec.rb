@@ -45,7 +45,7 @@ describe FriendshipService, :vcr, type: :service do
         }
 
         actual = FriendshipService.delete_friend(params)
-        expect(actual.env.url.to_s).to eq("https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/10")
+        expect(actual.env.url.to_s).to eq('https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/10')
         expect(actual.status).to eq(204)
       end
     end

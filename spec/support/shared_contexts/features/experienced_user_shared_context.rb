@@ -154,7 +154,7 @@ shared_context 'experienced user' do
         address: 'address3',
         phone: '345-345-3456',
         address_details: {
-          address1: "431 Pierre St",
+          address1: '431 Pierre St',
           address2: nil,
           address3: '',
           city: 'Boulder',
@@ -174,7 +174,7 @@ shared_context 'experienced user' do
         address: 'address2',
         phone: '234-234-2345',
         address_details: {
-          address1: "432 Pierre St",
+          address1: '432 Pierre St',
           address2: nil,
           address3: '',
           city: 'Boulder',
@@ -194,7 +194,7 @@ shared_context 'experienced user' do
         address: 'address1',
         phone: '123-123-1234',
         address_details: {
-          address1: "433 Pierre St",
+          address1: '433 Pierre St',
           address2: nil,
           address3: '',
           city: 'Boulder',

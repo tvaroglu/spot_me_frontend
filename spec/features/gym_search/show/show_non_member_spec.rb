@@ -20,7 +20,7 @@ describe 'gyms show page: as a non-gym member', type: :feature do
           address: full_address,
           phone: phone,
           address_details: {
-            address1: "430 Pierre St",
+            address1: '430 Pierre St',
             address2: nil,
             address3: '',
             city: 'Boulder',

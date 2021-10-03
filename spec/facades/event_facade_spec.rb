@@ -27,10 +27,10 @@ describe EventFacade, type: :facade do
       activity = 'c2jzsndq8brvn9fbckeec2'
       date_time = 'Planet Fitness'
       request_params = {
-        'user_id': friend_id,
-        'gym_membership_id': user_gym_membership_id,
-        "activity": activity,
-        "date_time": date_time
+        user_id: friend_id,
+        gym_membership_id: user_gym_membership_id,
+        activity: activity,
+        date_time: date_time
       }
 
       allow(EventService).to receive(:create_event).with(request_params).and_return(true)
@@ -45,9 +45,9 @@ describe EventFacade, type: :facade do
       user_gym_membership_id = 42
       event_id = 32
       path_params = {
-        'user_id': friend_id,
-        'gym_membership_id': user_gym_membership_id,
-        "id": event_id
+        user_id: friend_id,
+        gym_membership_id: user_gym_membership_id,
+        id: event_id
       }
 
       allow(EventService).to receive(:delete_event).with(path_params).and_return(true)

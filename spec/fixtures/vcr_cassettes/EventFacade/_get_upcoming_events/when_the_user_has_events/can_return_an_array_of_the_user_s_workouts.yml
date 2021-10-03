@@ -21,20 +21,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4122080f3bdb1be806dfb9616ef0305a"
+      - W/"f7219271a1fa23d32acab44f231c262c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c703bea6-6944-47b6-a01a-0088def1c452
+      - df3a119b-5e5f-4bcb-a191-d1b434777b65
       X-Runtime:
-      - '0.150644'
+      - '0.045399'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T22:25:12.628Z","activity":"Mushroom
-        hunting"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
-        Medhurst and Rohan","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"18","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-04T00:39:30.286Z","activity":"Foreign
+      string: '{"data":[{"id":"18","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-04T00:39:30.286Z","activity":"Foreign
         language learning"},"meta":{"friend_name":"Arthur Dickinson","friend_role":"invited","gym_name":"Moen
         and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"34","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-04T01:18:38.483Z","activity":"Board
         games"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
@@ -47,5 +45,5 @@ http_interactions:
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"35","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-10-11T01:18:38.484Z","activity":"Surfing"},"meta":{"friend_name":"Arthur
         Dickinson","friend_role":"host","gym_name":"Bode, Feest and Daniel","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"39","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-11T01:18:38.492Z","activity":"Geocaching"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}}]}'
-  recorded_at: Sun, 03 Oct 2021 20:48:07 GMT
+  recorded_at: Sun, 03 Oct 2021 23:06:45 GMT
 recorded_with: VCR 6.0.0

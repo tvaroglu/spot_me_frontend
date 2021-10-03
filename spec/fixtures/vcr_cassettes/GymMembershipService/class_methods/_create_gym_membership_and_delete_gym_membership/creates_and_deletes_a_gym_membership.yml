@@ -24,24 +24,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f638de4fddf3df73bfb7823796cdf38b"
+      - W/"14c8525eb3ebbd2e6699af325b841e07"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e990c2ec-ec6b-4fab-b512-50976f2507cd
+      - 459893f6-c251-4d78-83a5-6de258774d2e
       X-Runtime:
-      - '0.719803'
+      - '1.062975'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"31","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+      string: '{"data":{"id":"33","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}}'
-  recorded_at: Sun, 03 Oct 2021 20:48:18 GMT
+  recorded_at: Sun, 03 Oct 2021 23:06:58 GMT
 - request:
     method: delete
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships/31
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships/33
     body:
       encoding: US-ASCII
       string: ''
@@ -60,11 +60,11 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 0afad236-b072-4da3-8025-55050b1ce6ce
+      - 9913546a-dc15-423d-af0a-11e55f78d945
       X-Runtime:
-      - '0.005760'
+      - '0.008113'
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 03 Oct 2021 20:48:18 GMT
+  recorded_at: Sun, 03 Oct 2021 23:06:58 GMT
 recorded_with: VCR 6.0.0

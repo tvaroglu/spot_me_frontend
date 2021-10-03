@@ -16,7 +16,7 @@ class Gym
     @address1       = data[:attributes][:address_details][:address1]
     @address2       = data[:attributes][:address_details][:address2]
     @address3       = data[:attributes][:address_details][:address3]
-    @city_state_zip = format_city_state_zip(data)
+    @city_state_zip = format_city_state_zip(data[:attributes][:address_details])
     @phone          = data[:attributes][:phone]
   end
 end

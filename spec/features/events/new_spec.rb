@@ -173,7 +173,9 @@ RSpec.describe 'new event page', :vcr, type: :feature do
             },
             meta: {
               friend_name: friend.full_name,
-              friend_role: 'invited'
+              friend_role: 'invited',
+              gym_name: 'Planet Fitness',
+              yelp_gym_id: yelp_gym_id
             }
           )
         end

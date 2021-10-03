@@ -49,16 +49,12 @@ describe 'experienced user dashboard', type: :feature do
 
       it 'displays my upcoming workouts', :vcr do
         expect(page).to have_css('#upcoming-workouts')
-
         within '#upcoming-workouts' do
           user_events.each do |event|
             expect(page).to have_css("#event-#{event.id}")
 
             within "#event-#{event.id}" do
-              # TODO: Once we have the Event endpoint returning the gym name,
-              #       we can add the `gym_name` attribute to the poro and
-              #       uncomment this line below.
-              # expect(page).to have_content(event.gym_name)
+              expect(page).to have_link(event.gym_name)
               expect(page).to have_content(event.activity)
               expect(page).to have_content(event.format_date_short)
               expect(page).to have_content("With: #{event.friend_name}")
@@ -97,20 +93,13 @@ describe 'experienced user dashboard', type: :feature do
         expect(page).to have_css('#gyms')
 
         within '#gyms' do
-          gyms_near_user.each do |gym|
+          user_gym_memberships.each do |gym|
             expect(page).to have_css("#gym-#{gym.yelp_gym_id}")
 
             within "#gym-#{gym.yelp_gym_id}" do
-              expect(page).to have_content(gym.name)
-              # TODO: Once we have the GymMembership endpoint returning the gym
-              #       address, we can add the address attributes to the poro and
-              #       uncomment this line below.  See the Event poro for how the
-              #       city_state_zip can get parsed.
-              # expect(page).to have_content(gym.adress1)
-              # expect(page).to have_content(gym.adress2)
-              # expect(page).to have_content(gym.adress3)
-              # expect(page).to have_content(gym.city_state_zip)
-              expect(page).to have_link(gym.name)
+              expect(page).to have_link(gym.gym_name)
+              expect(page).to have_content(gym.address1)
+              expect(page).to have_content(gym.city_state_zip)
               expect(page).to have_link('Remove')
             end
           end

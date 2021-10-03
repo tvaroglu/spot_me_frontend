@@ -81,7 +81,7 @@
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li class='sign'>
-                      <%= link_to 'Gym Name Here', '#' %>
+                      <%= link_to event.gym_name, gym_path(event.yelp_gym_id) %>
                     </li>
 
                     <li class='calendar'>
@@ -129,10 +129,8 @@
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li class='address'>
-                      AddressLine1 Here<br>
-                      AddressLine2 Here<br>
-                      AddressLine3 Here<br>
-                      City, ST 00000
+                      <%= gym_membership.address1 %> <br>
+                      <%= gym_membership.city_state_zip %>
                     </li>
                   </ul>
                 </div>

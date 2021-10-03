@@ -20,7 +20,7 @@ describe 'gyms show page: as a gym member', type: :feature do
           address: full_address,
           phone: phone,
           address_details: {
-            address1: "430 Pierre St",
+            address1: '430 Pierre St',
             address2: nil,
             address3: '',
             city: 'Boulder',
@@ -38,6 +38,17 @@ describe 'gyms show page: as a gym member', type: :feature do
         attributes: {
           gym_name: name,
           yelp_gym_id: yelp_gym_id
+        },
+        meta: {
+          address: '430 Pierre St',
+          address_details: {
+            address1: '430 Pierre St',
+            address2: nil,
+            address3: '',
+            city: 'Boulder',
+            state: 'CO',
+            zip_code: '80304'
+          }
         }
       )
     end

@@ -61,6 +61,17 @@ shared_context 'experienced user' do
         user_id: 1,
         yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
         gym_name: 'Kling-Wilkinson'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -73,6 +84,17 @@ shared_context 'experienced user' do
         user_id: 1,
         yelp_gym_id: '6x10s0lbnry4ivkzcjpilk',
         gym_name: 'Konopelski, Lowe and Haley'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -85,6 +107,17 @@ shared_context 'experienced user' do
         user_id: 1,
         yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
         gym_name: 'Funk LLC'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -97,6 +130,17 @@ shared_context 'experienced user' do
         user_id: user1.id,
         yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
         gym_name: 'Funk LLC'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -172,7 +216,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user2.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -188,7 +234,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user3.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -204,7 +252,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user2.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -220,7 +270,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user1.full_name,
-        friend_role: 'host'
+        friend_role: 'host',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end

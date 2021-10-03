@@ -26,6 +26,17 @@ RSpec.describe 'new event page', :vcr, type: :feature do
         user_id: 1,
         yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA',
         gym_name: "Rishi's Community Yoga"
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -38,6 +49,17 @@ RSpec.describe 'new event page', :vcr, type: :feature do
         user_id: 10,
         yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA',
         gym_name: "Rishi's Community Yoga"
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end

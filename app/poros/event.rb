@@ -5,7 +5,9 @@ class Event
               :date_time,
               :activity,
               :friend_name,
-              :friend_role
+              :friend_role,
+              :gym_name,
+              :yelp_gym_id
 
   def initialize(data)
     @id = data[:id]
@@ -15,6 +17,8 @@ class Event
     @activity = data[:attributes][:activity]
     @friend_name = data[:meta][:friend_name]
     @friend_role = data[:meta][:friend_role]
+    @gym_name = data[:meta][:gym_name]
+    @yelp_gym_id = data[:meta][:yelp_gym_id]
   end
 
   # TODO: Update method to handle different timezones

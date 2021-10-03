@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
+    uri: http://localhost:4500/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -18,36 +18,28 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 01 Oct 2021 23:59:42 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e7d05f1bad5b937ba3786b58da83079d"
+      - W/"20c971d79f3541f1f3f5345b2d49d5b7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 75eab66c-cb6a-4e35-93e8-7a42711d7bbb
+      - 1f62c06f-1807-42dd-a235-117477bf6fa4
       X-Runtime:
-      - '0.006483'
+      - '0.002190'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"41895","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
-        Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":false,"full_name":"Joanne
-        Champlin"}}}'
-  recorded_at: Fri, 01 Oct 2021 23:59:43 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"miquel_kiehn@mcglynn.co","google_id":"nyuy62z5gx494xt2fzqeh","google_image_url":"https://robohash.org/molestiassuntdolores.png?size=300x300\u0026set=set1","zip_code":"38624","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Chuck
+        Hamill"}}}'
+  recorded_at: Sun, 03 Oct 2021 19:09:42 GMT
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
+    uri: http://localhost:4500/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -63,31 +55,23 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 01 Oct 2021 23:59:43 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e7d05f1bad5b937ba3786b58da83079d"
+      - W/"20c971d79f3541f1f3f5345b2d49d5b7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fe606e05-35bd-4732-a221-78e301b85ac2
+      - 32747977-51f6-4fc3-887b-51c6348e2343
       X-Runtime:
-      - '0.006231'
+      - '0.002418'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"41895","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
-        Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":false,"full_name":"Joanne
-        Champlin"}}}'
-  recorded_at: Fri, 01 Oct 2021 23:59:43 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"miquel_kiehn@mcglynn.co","google_id":"nyuy62z5gx494xt2fzqeh","google_image_url":"https://robohash.org/molestiassuntdolores.png?size=300x300\u0026set=set1","zip_code":"38624","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Chuck
+        Hamill"}}}'
+  recorded_at: Sun, 03 Oct 2021 19:09:43 GMT
 recorded_with: VCR 6.0.0

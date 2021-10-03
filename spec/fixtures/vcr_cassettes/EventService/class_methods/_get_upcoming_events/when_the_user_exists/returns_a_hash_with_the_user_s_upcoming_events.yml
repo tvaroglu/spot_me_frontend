@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
+    uri: http://localhost:4500/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -18,36 +18,34 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 01 Oct 2021 23:59:43 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"50a708ac7d7f7459188d3c3256f03b7e"
+      - W/"7af0a3f916ad1a125dba65ed867a3908"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a74c006b-317d-40d6-881b-0edbb6d24242
+      - 22c76f12-d173-4d91-a347-96449b1af643
       X-Runtime:
-      - '0.042568'
+      - '0.012962'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"55","type":"event","attributes":{"user_id":6,"gym_membership_id":17,"date_time":"2021-10-11T23:58:20.119Z","activity":"Table
-        tennis"},"meta":{"friend_name":"Rep. Octavia Kuhic","friend_role":"invited"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T20:38:23.430Z","activity":"Knife
-        making"},"meta":{"friend_name":"Valentin Bergnaum IV","friend_role":"invited"}},{"id":"46","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-11T23:58:20.062Z","activity":"Playing
-        musical instruments"},"meta":{"friend_name":"Scott B","friend_role":"host"}},{"id":"48","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-09T23:58:20.072Z","activity":"Cooking"},"meta":{"friend_name":"Scott
-        B","friend_role":"host"}},{"id":"44","type":"event","attributes":{"user_id":1,"gym_membership_id":3,"date_time":"2021-10-07T23:58:20.050Z","activity":"role-playing
-        games"},"meta":{"friend_name":"Malcom Langworth","friend_role":"host"}},{"id":"50","type":"event","attributes":{"user_id":1,"gym_membership_id":5,"date_time":"2021-10-02T23:58:20.088Z","activity":"Knife
-        making"},"meta":{"friend_name":"Carrie O''Reilly","friend_role":"host"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-02T20:38:23.472Z","activity":"Kayaking"},"meta":{"friend_name":"Valentin
-        Bergnaum IV","friend_role":"host"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-02T20:38:23.462Z","activity":"Cryptography"},"meta":{"friend_name":"Jerome
-        Wunsch","friend_role":"host"}}]}'
-  recorded_at: Fri, 01 Oct 2021 23:59:44 GMT
+      string: '{"data":[{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T22:25:12.628Z","activity":"Mushroom
+        hunting"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
+        Medhurst and Rohan","yelp_gym_id":"6x10s0lbnry4ivkzcjpilk"}},{"id":"18","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-04T00:39:30.286Z","activity":"Foreign
+        language learning"},"meta":{"friend_name":"Arthur Dickinson","friend_role":"invited","gym_name":"Moen
+        and Sons","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"34","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-04T01:18:38.483Z","activity":"Board
+        games"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
+        Medhurst and Rohan","yelp_gym_id":"6x10s0lbnry4ivkzcjpilk"}},{"id":"19","type":"event","attributes":{"user_id":6,"gym_membership_id":7,"date_time":"2021-10-10T00:39:30.289Z","activity":"Cooking"},"meta":{"friend_name":"Russel
+        Turner","friend_role":"invited","gym_name":"Hickle, Medhurst and Rohan","yelp_gym_id":"6x10s0lbnry4ivkzcjpilk"}},{"id":"16","type":"event","attributes":{"user_id":10,"gym_membership_id":1,"date_time":"2022-01-01T17:00:00.000Z","activity":"Weight
+        Lifting"},"meta":{"friend_name":"Rep. Keena Swaniawski","friend_role":"invited","gym_name":"Moen
+        and Sons","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"37","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-04T01:18:38.488Z","activity":"Magic"},"meta":{"friend_name":"Kenny
+        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}},{"id":"25","type":"event","attributes":{"user_id":1,"gym_membership_id":13,"date_time":"2021-10-05T00:39:30.309Z","activity":"Rowing"},"meta":{"friend_name":"Russel
+        Turner","friend_role":"host","gym_name":"Feil, Lehner and Kozey","yelp_gym_id":"yfsp4c59p3wrlplrn1rf7r"}},{"id":"23","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-11T00:39:30.304Z","activity":"Soapmaking"},"meta":{"friend_name":"Kenny
+        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}},{"id":"35","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-10-11T01:18:38.484Z","activity":"Surfing"},"meta":{"friend_name":"Arthur
+        Dickinson","friend_role":"host","gym_name":"Bode, Feest and Daniel","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"39","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-11T01:18:38.492Z","activity":"Geocaching"},"meta":{"friend_name":"Kenny
+        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}}]}'
+  recorded_at: Sun, 03 Oct 2021 19:09:43 GMT
 recorded_with: VCR 6.0.0

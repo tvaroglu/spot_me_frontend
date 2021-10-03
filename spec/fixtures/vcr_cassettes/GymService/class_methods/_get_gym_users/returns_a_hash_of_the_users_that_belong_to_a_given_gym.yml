@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -18,31 +18,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 01 Oct 2021 23:59:47 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6852600cc8d1e5afc79717b3319f3814"
+      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 24bf6e56-6384-4c94-8471-485220f177cb
+      - e69314ee-7b60-4b15-b086-4da440077c52
       X-Runtime:
-      - '0.006693'
+      - '0.009691'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
-        I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
-        B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
-        EVEN more!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":false,"full_name":"TaylorV"}}],"meta":{"gym_member_count":2}}'
-  recorded_at: Fri, 01 Oct 2021 23:59:48 GMT
+      string: '{"data":[],"meta":{"gym_member_count":0}}'
+  recorded_at: Sun, 03 Oct 2021 19:09:45 GMT
 recorded_with: VCR 6.0.0

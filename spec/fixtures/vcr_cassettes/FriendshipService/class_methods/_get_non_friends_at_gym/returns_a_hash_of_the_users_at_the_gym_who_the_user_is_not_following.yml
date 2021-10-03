@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_members?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    uri: http://localhost:4500/api/v1/users/1/gym_members?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -18,31 +18,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Fri, 01 Oct 2021 23:59:46 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2339aeeb0b334a5e02912b7b63538ed"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d0f17a6f-16dd-4179-9b47-88910635806c
+      - 6a4b84f7-f598-4966-8280-4ff1ec853624
       X-Runtime:
-      - '0.011485'
+      - '0.006094'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
-        I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
-        B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
-        EVEN more!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":false,"full_name":"TaylorV"}}]}'
-  recorded_at: Fri, 01 Oct 2021 23:59:46 GMT
+      string: '{"data":[]}'
+  recorded_at: Sun, 03 Oct 2021 19:09:43 GMT
 recorded_with: VCR 6.0.0

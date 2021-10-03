@@ -20,7 +20,9 @@ describe Event, type: :poro do
       },
       meta: {
         friend_name: 'Jimmy',
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     }
 
@@ -41,6 +43,8 @@ describe Event, type: :poro do
     expect(event.friend_name).to be_a String
     expect(event.friend_role).to eq(friend_role)
     expect(event.friend_role).to be_a String
+    expect(event.gym_name).to be_a String
+    expect(event.yelp_gym_id).to be_a String
   end
 
   describe 'instance methods' do
@@ -62,7 +66,9 @@ describe Event, type: :poro do
           },
           meta: {
             friend_name: 'Jimmy',
-            friend_role: 'invited'
+            friend_role: 'invited',
+            gym_name: 'Planet Fitness',
+            yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
           }
         }
 
@@ -91,7 +97,9 @@ describe Event, type: :poro do
           },
           meta: {
             friend_name: 'Jimmy',
-            friend_role: 'invited'
+            friend_role: 'invited',
+            gym_name: 'Planet Fitness',
+            yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
           }
         }
 
@@ -120,7 +128,9 @@ describe Event, type: :poro do
           },
           meta: {
             friend_name: 'Jimmy',
-            friend_role: 'invited'
+            friend_role: 'invited',
+            gym_name: 'Planet Fitness',
+            yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
           }
         }
 

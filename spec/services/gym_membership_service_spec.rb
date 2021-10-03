@@ -5,7 +5,7 @@ describe GymMembershipService, :vcr, type: :service do
     describe '.create_gym_membership and .delete_gym_membership' do
       it 'creates and deletes a gym_membership' do
         user_id = 1
-        yelp_gym_id = 'c2jzsndq8brvn9fbckeec2'
+        yelp_gym_id = 'gHmS3WIjRRhSWG4OdCQYLA'
         gym_name = 'Planet Fitness'
         request_params = {
           'user_id': user_id,
@@ -15,6 +15,7 @@ describe GymMembershipService, :vcr, type: :service do
 
         actual = GymMembershipService.create_gym_membership(request_params)
         actual_parsed = JSON.parse(actual.env.response_body, symbolize_names:true)
+
         expect(actual.status).to eq(201)
         expect(actual_parsed[:data][:attributes][:user_id]).to eq(user_id)
         expect(actual_parsed[:data][:attributes][:yelp_gym_id]).to eq(yelp_gym_id)
@@ -36,6 +37,7 @@ describe GymMembershipService, :vcr, type: :service do
       it "returns the user's gym memberships" do
         user_id = 1
         actual = GymMembershipService.get_gym_memberships(user_id)
+
         expect(actual).to be_a(Hash)
         expect(actual).to have_key(:data)
         expect(actual[:data]).to be_an(Array)

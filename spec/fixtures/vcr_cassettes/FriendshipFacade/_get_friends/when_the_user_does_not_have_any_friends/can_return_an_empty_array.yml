@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 37d7293a-cc1b-49ef-a67e-131a50301c5f
+      - '0820eefd-265d-4b9f-acfd-296865e88364'
       X-Runtime:
-      - '0.003084'
+      - '0.003267'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 03 Oct 2021 19:09:40 GMT
+  recorded_at: Sun, 03 Oct 2021 20:03:00 GMT
 recorded_with: VCR 6.0.0

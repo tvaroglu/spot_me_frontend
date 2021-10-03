@@ -15,152 +15,35 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
     headers:
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f5958973a87cb86ce785a9330f7dd422"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7ee54f50-f3fa-4122-9ca6-0edb9fc329b7
+      - b7f20190-ebf8-4ea2-b1f6-34d47c004e96
       X-Runtime:
-      - '0.284024'
-      Content-Length:
-      - '12758'
+      - '4.676647'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
-      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cNoMethodError:
-        undefined method `address'' for #\u003cHash:0x00007fd2cf043f90\u003e\u003e","traces":{"Application
-        Trace":[{"id":0,"trace":"app/models/gym_membership.rb:6:in `address''"},{"id":1,"trace":"app/serializers/gym_membership_serializer.rb:8:in
-        `block in \u003cclass:GymMembershipSerializer\u003e''"},{"id":10,"trace":"app/controllers/api/v1/users/gym_memberships_controller.rb:6:in
-        `index''"}],"Framework Trace":[{"id":2,"trace":"jsonapi-serializer (2.2.0)
-        lib/fast_jsonapi/helpers.rb:17:in `call_proc''"},{"id":3,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/serialization_core.rb:65:in `meta_hash''"},{"id":4,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/serialization_core.rb:86:in `record_hash''"},{"id":5,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/object_serializer.rb:64:in `block in hash_for_collection''"},{"id":6,"trace":"activerecord
-        (5.2.6) lib/active_record/relation/delegation.rb:71:in `each''"},{"id":7,"trace":"activerecord
-        (5.2.6) lib/active_record/relation/delegation.rb:71:in `each''"},{"id":8,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/object_serializer.rb:63:in `hash_for_collection''"},{"id":9,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/object_serializer.rb:38:in `serializable_hash''"},{"id":11,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action''"},{"id":12,"trace":"actionpack
-        (5.2.6) lib/abstract_controller/base.rb:194:in `process_action''"},{"id":13,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal/rendering.rb:30:in `process_action''"},{"id":14,"trace":"actionpack
-        (5.2.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action''"},{"id":15,"trace":"activesupport
-        (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":16,"trace":"actionpack
-        (5.2.6) lib/abstract_controller/callbacks.rb:41:in `process_action''"},{"id":17,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal/rescue.rb:22:in `process_action''"},{"id":18,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action''"},{"id":19,"trace":"activesupport
-        (5.2.6) lib/active_support/notifications.rb:168:in `block in instrument''"},{"id":20,"trace":"activesupport
-        (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in `instrument''"},{"id":21,"trace":"activesupport
-        (5.2.6) lib/active_support/notifications.rb:168:in `instrument''"},{"id":22,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action''"},{"id":23,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in `process_action''"},{"id":24,"trace":"activerecord
-        (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in `process_action''"},{"id":25,"trace":"actionpack
-        (5.2.6) lib/abstract_controller/base.rb:134:in `process''"},{"id":26,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal.rb:191:in `dispatch''"},{"id":27,"trace":"actionpack
-        (5.2.6) lib/action_controller/metal.rb:252:in `dispatch''"},{"id":28,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch''"},{"id":29,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve''"},{"id":30,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve''"},{"id":31,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each''"},{"id":32,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve''"},{"id":33,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call''"},{"id":34,"trace":"rack
-        (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":35,"trace":"rack (2.2.3) lib/rack/conditional_get.rb:27:in
-        `call''"},{"id":36,"trace":"rack (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":37,"trace":"activerecord
-        (5.2.6) lib/active_record/migration.rb:559:in `call''"},{"id":38,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":39,"trace":"activesupport
-        (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":40,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":41,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":42,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":43,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:135:in `call_app''"},{"id":44,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:30:in `block in call''"},{"id":45,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `catch''"},{"id":46,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `call''"},{"id":47,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":48,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":49,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":50,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":51,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":52,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":53,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":54,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":55,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":56,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":57,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":58,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":59,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":60,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":61,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":62,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":63,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":64,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":65,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":66,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/models/gym_membership.rb:6:in
-        `address''"},{"id":1,"trace":"app/serializers/gym_membership_serializer.rb:8:in
-        `block in \u003cclass:GymMembershipSerializer\u003e''"},{"id":2,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/helpers.rb:17:in `call_proc''"},{"id":3,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/serialization_core.rb:65:in `meta_hash''"},{"id":4,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/serialization_core.rb:86:in `record_hash''"},{"id":5,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/object_serializer.rb:64:in `block in hash_for_collection''"},{"id":6,"trace":"activerecord
-        (5.2.6) lib/active_record/relation/delegation.rb:71:in `each''"},{"id":7,"trace":"activerecord
-        (5.2.6) lib/active_record/relation/delegation.rb:71:in `each''"},{"id":8,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/object_serializer.rb:63:in `hash_for_collection''"},{"id":9,"trace":"jsonapi-serializer
-        (2.2.0) lib/fast_jsonapi/object_serializer.rb:38:in `serializable_hash''"},{"id":10,"trace":"app/controllers/api/v1/users/gym_memberships_controller.rb:6:in
-        `index''"},{"id":11,"trace":"actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in
-        `send_action''"},{"id":12,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:194:in
-        `process_action''"},{"id":13,"trace":"actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in
-        `process_action''"},{"id":14,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in
-        `block in process_action''"},{"id":15,"trace":"activesupport (5.2.6) lib/active_support/callbacks.rb:98:in
-        `run_callbacks''"},{"id":16,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in
-        `process_action''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in
-        `process_action''"},{"id":18,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in
-        `block in process_action''"},{"id":19,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
-        `block in instrument''"},{"id":20,"trace":"activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in
-        `instrument''"},{"id":21,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
-        `instrument''"},{"id":22,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in
-        `process_action''"},{"id":23,"trace":"actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in
-        `process_action''"},{"id":24,"trace":"activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in
-        `process_action''"},{"id":25,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:134:in
-        `process''"},{"id":26,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:191:in
-        `dispatch''"},{"id":27,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:252:in
-        `dispatch''"},{"id":28,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in
-        `dispatch''"},{"id":29,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in
-        `serve''"},{"id":30,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in
-        `block in serve''"},{"id":31,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
-        `each''"},{"id":32,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
-        `serve''"},{"id":33,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in
-        `call''"},{"id":34,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":35,"trace":"rack
-        (2.2.3) lib/rack/conditional_get.rb:27:in `call''"},{"id":36,"trace":"rack
-        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":37,"trace":"activerecord (5.2.6)
-        lib/active_record/migration.rb:559:in `call''"},{"id":38,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":39,"trace":"activesupport
-        (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":40,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":41,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":42,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":43,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:135:in `call_app''"},{"id":44,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:30:in `block in call''"},{"id":45,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `catch''"},{"id":46,"trace":"web-console
-        (3.7.0) lib/web_console/middleware.rb:20:in `call''"},{"id":47,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":48,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":49,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":50,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":51,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":52,"trace":"activesupport
-        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":53,"trace":"railties
-        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":54,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":55,"trace":"actionpack
-        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":56,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":57,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":58,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":59,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":60,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":61,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":62,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":63,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":64,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":65,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":66,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Sun, 03 Oct 2021 19:09:44 GMT
+      string: '{"data":[{"id":"25","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+        Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
+        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"26","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+        Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
+        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Moen
+        and Sons"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
+        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Hickle,
+        Medhurst and Rohan"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
+        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Price-McClure"},"meta":{"address":"2
+        Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2 Livewell
+        Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"24","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+        Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
+        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
+  recorded_at: Sun, 03 Oct 2021 20:03:20 GMT
 recorded_with: VCR 6.0.0

@@ -23,7 +23,7 @@ describe GymMembershipFacade, type: :facade do
   describe '.create_gym_membership' do
     it 'returns a hash with the gym membership details' do
       user_id = 1
-      yelp_gym_id = 'c2jzsndq8brvn9fbckeec2'
+      yelp_gym_id = 'gHmS3WIjRRhSWG4OdCQYLA'
       gym_name = 'Planet Fitness'
       request_params = {
         'user_id': user_id,

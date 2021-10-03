@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5e39fba0-ad83-45c5-bc72-44e4440d65c9
+      - 05a775b0-13e2-4686-9ea0-9f32355b1639
       X-Runtime:
-      - '0.396490'
+      - '0.413272'
       Transfer-Encoding:
       - chunked
     body:
@@ -98,5 +98,5 @@ http_interactions:
         Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","address_details":{"address1":"7700
         W Virginia Ave","address2":"Ste A","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
         402-3888"}}]}'
-  recorded_at: Sun, 03 Oct 2021 19:09:44 GMT
+  recorded_at: Sun, 03 Oct 2021 20:03:20 GMT
 recorded_with: VCR 6.0.0

@@ -23,19 +23,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"685ffae998caca6679b7b4ecdac5db94"
+      - W/"6dcabf6125bafa7c568a26de02953e08"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b0a6bba0-304a-4c0e-800a-ad722c0eec9a
+      - 0f099e1c-c14b-43ee-bdfa-08eea379811f
       X-Runtime:
-      - '0.012793'
+      - '0.005664'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"24","type":"friendship","attributes":{"follower_id":1,"followee_id":10}}}'
-  recorded_at: Sun, 03 Oct 2021 19:09:43 GMT
+      string: '{"data":{"id":"27","type":"friendship","attributes":{"follower_id":1,"followee_id":10}}}'
+  recorded_at: Sun, 03 Oct 2021 20:03:14 GMT
 - request:
     method: delete
     uri: http://localhost:4500/api/v1/users/1/friendships/10
@@ -57,11 +57,11 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - d9098f8e-f0fd-4f79-9b65-4927f688f3b5
+      - f54dace7-dc14-4ad7-9281-b7622ab56436
       X-Runtime:
-      - '0.006581'
+      - '0.004823'
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 03 Oct 2021 19:09:43 GMT
+  recorded_at: Sun, 03 Oct 2021 20:03:14 GMT
 recorded_with: VCR 6.0.0

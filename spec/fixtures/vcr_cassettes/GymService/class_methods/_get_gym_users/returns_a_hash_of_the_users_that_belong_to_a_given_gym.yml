@@ -25,13 +25,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 96d3baa8-f86f-45e0-8062-7b0b1fdf01a0
+      - c9d6e935-3444-4c74-874a-fa5b55e98b92
       X-Runtime:
-      - '0.007168'
+      - '0.006180'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[],"meta":{"gym_member_count":0}}'
-  recorded_at: Sun, 03 Oct 2021 20:03:20 GMT
+  recorded_at: Sun, 03 Oct 2021 20:48:22 GMT
 recorded_with: VCR 6.0.0

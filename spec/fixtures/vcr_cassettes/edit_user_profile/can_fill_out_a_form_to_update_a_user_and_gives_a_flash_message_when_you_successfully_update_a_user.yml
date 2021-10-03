@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7d5b0ca3-2a81-4941-b789-4d4be0c5aeec
+      - 26293554-4b11-4ea4-93a0-07c8d1954324
       X-Runtime:
-      - '0.003649'
+      - '0.006708'
       Transfer-Encoding:
       - chunked
     body:
@@ -36,7 +36,7 @@ http_interactions:
         is impossible to begin to learn that which one thinks one already knows.","goal":"Gain
         Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Chuck
         Hamill"}}}'
-  recorded_at: Sun, 03 Oct 2021 20:03:14 GMT
+  recorded_at: Sun, 03 Oct 2021 20:48:17 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1
@@ -62,9 +62,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 001c19de-79ea-46c8-ac3c-74f883f03b9b
+      - 71a08303-1e2a-48e1-9338-9b43e4d35367
       X-Runtime:
-      - '0.003535'
+      - '0.003573'
       Transfer-Encoding:
       - chunked
     body:
@@ -73,5 +73,5 @@ http_interactions:
         is impossible to begin to learn that which one thinks one already knows.","goal":"Gain
         Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Chuck
         Hamill"}}}'
-  recorded_at: Sun, 03 Oct 2021 20:03:14 GMT
+  recorded_at: Sun, 03 Oct 2021 20:48:17 GMT
 recorded_with: VCR 6.0.0

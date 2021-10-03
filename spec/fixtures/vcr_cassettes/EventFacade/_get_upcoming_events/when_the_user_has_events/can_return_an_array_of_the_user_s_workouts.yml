@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 64369873-4464-4613-9077-6a7516213c34
+      - c703bea6-6944-47b6-a01a-0088def1c452
       X-Runtime:
-      - '0.016940'
+      - '0.150644'
       Transfer-Encoding:
       - chunked
     body:
@@ -47,5 +47,5 @@ http_interactions:
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"35","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-10-11T01:18:38.484Z","activity":"Surfing"},"meta":{"friend_name":"Arthur
         Dickinson","friend_role":"host","gym_name":"Bode, Feest and Daniel","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"39","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-11T01:18:38.492Z","activity":"Geocaching"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}}]}'
-  recorded_at: Sun, 03 Oct 2021 20:03:00 GMT
+  recorded_at: Sun, 03 Oct 2021 20:48:07 GMT
 recorded_with: VCR 6.0.0

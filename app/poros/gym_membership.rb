@@ -4,7 +4,11 @@ class GymMembership
               :gym_name,
               :yelp_gym_id,
               :address,
-              :address_details
+              :address_details,
+              :address1,
+              :address2,
+              :address3
+              # :city_state_zip
 
   def initialize(data)
     @id              = data[:id]

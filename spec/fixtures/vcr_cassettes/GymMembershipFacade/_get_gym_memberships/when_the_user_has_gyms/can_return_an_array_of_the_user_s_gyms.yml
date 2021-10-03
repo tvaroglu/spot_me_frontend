@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - af0dda89-0ded-4772-9d55-9fa176987a3b
+      - 6fd2349c-baa5-4081-96a3-e3dddc87b232
       X-Runtime:
-      - '4.400869'
+      - '3.289952'
       Transfer-Encoding:
       - chunked
     body:
@@ -45,5 +45,5 @@ http_interactions:
         Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"24","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
-  recorded_at: Sun, 03 Oct 2021 20:03:04 GMT
+  recorded_at: Sun, 03 Oct 2021 20:48:10 GMT
 recorded_with: VCR 6.0.0

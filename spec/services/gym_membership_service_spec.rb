@@ -35,6 +35,12 @@ describe GymMembershipService, :vcr, type: :service do
 
     describe '.get_gym_memberships' do
       it "returns the user's gym memberships" do
+        # NOTE: if you are doing local dev work and have to rerecord cassettes against LocalHost
+        # make sure your User with user_id == 1 has their GymMemberships updated with the following:
+        # yelp_gym_id: 'gHmS3WIjRRhSWG4OdCQYLA'
+
+        # New meta keys from GymMembership query Yelp for address info, and require a real yelp_gym_id
+        # Heroku DB has been updated accordingly, but local DB requires this update if rerecording cassettes
         user_id = 1
         actual = GymMembershipService.get_gym_memberships(user_id)
 

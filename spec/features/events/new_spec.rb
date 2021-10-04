@@ -193,7 +193,8 @@ RSpec.describe 'new event page', :vcr, type: :feature do
           allow(EventFacade).to receive(:create_event).with(create_event_params).and_return(new_event)
           allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([friend])
           allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([current_user_gym_membership])
-          allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([new_event])
+          allow(EventFacade).to receive(:get_events).with(user.id).and_return([new_event])
+          allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
 
           fill_in 'activity', with: activity
           select year, from: 'date[when(1i)]'

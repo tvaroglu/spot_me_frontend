@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Oct 2021 21:04:00 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -25,11 +31,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7f76761b-07fc-4335-a106-4f9b838057f4
+      - 16e3730d-df52-4517-bc67-a98f01ab52a7
       X-Runtime:
-      - '0.369549'
+      - '0.202403'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
@@ -37,5 +45,5 @@ http_interactions:
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         601-0789"}}}'
-  recorded_at: Mon, 04 Oct 2021 20:18:11 GMT
+  recorded_at: Mon, 04 Oct 2021 21:04:01 GMT
 recorded_with: VCR 6.0.0

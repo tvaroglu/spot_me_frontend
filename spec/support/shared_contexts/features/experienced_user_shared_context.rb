@@ -287,8 +287,8 @@ shared_context 'experienced user' do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
     allow(FriendshipFacade).to receive(:get_followers).with(user.id).and_return(user_friends)
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gym_memberships)
-    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(user_events)
-    allow(EventFacade).to receive(:get_past_events).with(user.id).and_return(past_events)
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return(past_events)
     allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(gyms_near_user)
   end
 end

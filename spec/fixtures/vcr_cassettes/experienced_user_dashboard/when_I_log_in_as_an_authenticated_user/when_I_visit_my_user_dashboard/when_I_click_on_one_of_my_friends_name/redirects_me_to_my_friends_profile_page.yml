@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/10
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/10
     body:
       encoding: US-ASCII
       string: ''
@@ -18,23 +18,30 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Oct 2021 21:03:42 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a4110ff00a4beaa717c77d69381deff5"
+      - W/"afb3193388f200150f8a1a219aeddd33"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c1310cd4-bdf1-4d8f-96b3-af114e52fce9
+      - ab44258e-103e-48e3-ae27-9999a2443041
       X-Runtime:
-      - '0.002863'
+      - '0.010521'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"10","type":"user","attributes":{"email":"stewart@hettinger.org","google_id":"3wmqcuzhlu8llxjqaxiev","google_image_url":"https://robohash.org/dignissimosrepudiandaedolores.png?size=300x300\u0026set=set1","zip_code":"38585","summary":"It
-        is impossible to begin to learn that which one thinks one already knows.","goal":"Gain
-        Muscle","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Rep.
-        Keena Swaniawski"}}}'
-  recorded_at: Mon, 04 Oct 2021 20:18:07 GMT
+      string: '{"data":{"id":"10","type":"user","attributes":{"email":"loree.daniel@wehner.org","google_id":"gwpx2l1g4g7ye1qjvkadx","google_image_url":"https://robohash.org/eumetomnis.png?size=300x300\u0026set=set1","zip_code":"21221","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Lionel
+        Sawayn"}}}'
+  recorded_at: Mon, 04 Oct 2021 21:03:42 GMT
 recorded_with: VCR 6.0.0

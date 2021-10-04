@@ -142,7 +142,8 @@ describe 'edit user profile', type: :feature do
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gyms)
-    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
   end
 
   it "can click on the link from the current user's profile page and be taken to the edit form", :vcr do

@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     return unless @user_type == :friend
 
-    @user_events = EventFacade.get_upcoming_events(@profile_user.id)
+    @user_events = EventFacade.get_events(@profile_user.id)
   end
 
   def edit; end

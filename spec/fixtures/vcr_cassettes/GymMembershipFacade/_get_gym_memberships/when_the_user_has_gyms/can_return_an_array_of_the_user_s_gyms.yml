@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,22 +18,30 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Oct 2021 21:03:35 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"de2896108d57f203467fcd368e15f966"
+      - W/"3e3f77ad6eeebabece85d9362fb3e46c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 69946704-8b09-474b-ba7a-8accc6fe1350
+      - f0d9cefa-0fe1-4afb-8ebb-7b460d7d60c6
       X-Runtime:
-      - '0.574189'
+      - '0.395994'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"25","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
-        Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
-        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
-  recorded_at: Mon, 04 Oct 2021 20:18:04 GMT
+      string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Ward-Koepp"},"meta":{"address":"2
+        Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2 Livewell
+        Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
+  recorded_at: Mon, 04 Oct 2021 21:03:35 GMT
 recorded_with: VCR 6.0.0

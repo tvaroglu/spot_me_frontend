@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/11/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/0/events
     body:
       encoding: US-ASCII
       string: ''
@@ -15,23 +15,30 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Oct 2021 21:03:52 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - e384afc1-e2c3-4945-9368-3ed60ce847de
+      - 173e3e9d-38b4-4f9e-ad50-8f7a6e10748f
       X-Runtime:
-      - '0.005634'
+      - '0.007665'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Mon, 04 Oct 2021 20:18:03 GMT
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=0"]}'
+  recorded_at: Mon, 04 Oct 2021 21:03:52 GMT
 recorded_with: VCR 6.0.0

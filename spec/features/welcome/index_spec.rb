@@ -16,7 +16,8 @@ describe 'welcome page', type: :feature do
   it 'can log in and out of the application with a valid Google token', :aggregate_failures, :vcr do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
-    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
 
     visit root_path
 
@@ -25,7 +26,8 @@ describe 'welcome page', type: :feature do
 
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
-    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
 
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock

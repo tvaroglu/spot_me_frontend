@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,24 +18,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Oct 2021 21:03:32 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"37d6a32b2ea87fc00d0406f04988d410"
+      - W/"e4cb705bc2bdc9c5f743c33f3ff55840"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d52d13c3-3bd3-47de-8b55-c7b05d9ab9b1
+      - c779eda9-1e4c-4a57-8c31-8f3c93acdce1
       X-Runtime:
-      - '0.009642'
+      - '0.006770'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
-        few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
-        Dickinson"}},{"id":"9","type":"user","attributes":{"email":"tonda.barrows@reichert-kulas.name","google_id":"jpso7w2zae60s6r3kr8pi","google_image_url":"https://robohash.org/rerumprovidentnostrum.png?size=300x300\u0026set=set1","zip_code":"52377","summary":"The
-        unexamined life is not worth living.","goal":"Lose Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":true,"full_name":"Lindsey
-        McDermott"}}]}'
-  recorded_at: Mon, 04 Oct 2021 20:18:03 GMT
+      string: '{"data":[{"id":"9","type":"user","attributes":{"email":"dario.carter@wintheiser.net","google_id":"85prfo95zbvtuik27upid","google_image_url":"https://robohash.org/similiqueenimarchitecto.png?size=300x300\u0026set=set1","zip_code":"18881","summary":"Rhetoric
+        is the art of ruling the minds of men.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Carrie
+        O''Reilly"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
+        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
+        Elliot Hills"}}]}'
+  recorded_at: Mon, 04 Oct 2021 21:03:33 GMT
 recorded_with: VCR 6.0.0

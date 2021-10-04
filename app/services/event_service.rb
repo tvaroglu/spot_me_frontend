@@ -4,6 +4,11 @@ class EventService < BackEndService
     parse_json(response)
   end
 
+  def self.get_past_events(user_id)
+    response = db_conn.get("/api/v1/users/#{user_id}/events?time_frame=past")
+    parse_json(response)
+  end
+
   def self.create_event(params)
     db_conn.post("/api/v1/users/#{params[:user_id]}/gym_memberships/#{params[:gym_membership_id]}/events") do |req|
       req.params['activity'] = params[:activity]

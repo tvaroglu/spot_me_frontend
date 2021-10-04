@@ -281,12 +281,14 @@ shared_context 'experienced user' do
   let(:user_gym_memberships) { [gym_membership1, gym_membership2, gym_membership3] }
   let(:gyms_near_user) { [gym1, gym2, gym3] }
   let(:user_events) { [event1, event2, event3, event4] }
+  let(:past_events) { [event1, event2, event3] }
 
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
     allow(FriendshipFacade).to receive(:get_followers).with(user.id).and_return(user_friends)
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gym_memberships)
     allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_past_events).with(user.id).and_return(past_events)
     allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(gyms_near_user)
   end
 end

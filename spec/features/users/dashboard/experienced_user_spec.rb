@@ -64,9 +64,32 @@ describe 'experienced user dashboard', type: :feature do
         end
       end
 
+      it 'displays my completed workouts', :vcr do
+        expect(page).to have_css('#completed-workouts')
+        within '#completed-workouts' do
+          past_events.each do |event|
+            expect(page).to have_css("#event-#{event.id}")
+
+            within "#event-#{event.id}" do
+              expect(page).to have_link(event.gym_name)
+              expect(page).to have_content(event.activity)
+              expect(page).to have_content(event.format_date_short)
+              expect(page).to have_content("With: #{event.friend_name}")
+              expect(page).to have_link('Delete')
+            end
+          end
+        end
+      end
+
       it 'displays the number of upcoming workouts' do
         within '#my-upcoming-workouts' do
           expect(page).to have_content("#{user_events.size} Upcoming Workouts")
+        end
+      end
+
+      it 'displays the number of completed workouts' do
+        within '#my-activity-log' do
+          expect(page).to have_content("#{past_events.size} Completed Workouts")
         end
       end
 

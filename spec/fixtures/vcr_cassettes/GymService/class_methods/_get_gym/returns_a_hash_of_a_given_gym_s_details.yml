@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 27348f39-4350-4aad-a071-7390f368a5d4
+      - 810f8e7c-1683-454b-8d20-a2770f625a6d
       X-Runtime:
-      - '0.313105'
+      - '0.269148'
       Transfer-Encoding:
       - chunked
     body:
@@ -37,5 +37,5 @@ http_interactions:
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         601-0789"}}}'
-  recorded_at: Mon, 04 Oct 2021 00:17:33 GMT
+  recorded_at: Mon, 04 Oct 2021 01:43:04 GMT
 recorded_with: VCR 6.0.0

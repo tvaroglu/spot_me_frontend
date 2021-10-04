@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    uri: http://localhost:4500/api/v1/users/0/events?time_frame=past
     body:
       encoding: US-ASCII
       string: ''
@@ -15,23 +15,22 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - cdbdcb92-baf6-45c7-9569-94cb5b79cf77
+      - c8ba092f-f540-4ea6-bc92-cf5a6f3d4e76
       X-Runtime:
-      - '0.004623'
+      - '0.003781'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=0"]}'
   recorded_at: Mon, 04 Oct 2021 01:42:59 GMT
 recorded_with: VCR 6.0.0

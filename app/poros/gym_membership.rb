@@ -1,5 +1,5 @@
 class GymMembership
-  include Convertable
+  include Formatable
   attr_reader :id,
               :gym_name,
               :yelp_gym_id,

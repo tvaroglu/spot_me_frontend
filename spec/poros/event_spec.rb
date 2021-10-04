@@ -106,7 +106,7 @@ describe Event, type: :poro do
         event = Event.new(event_params)
         date_time = '2021-09-22T21:41:28.000Z'
 
-        expect(event.format_date_short).to eq('Wed 09/22/21- 9:41pm')
+        expect(event.format_date_short).to eq('Wed 09/22/21 9:41pm')
       end
     end
 

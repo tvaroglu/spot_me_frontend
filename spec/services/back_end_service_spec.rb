@@ -18,7 +18,6 @@ describe BackEndService, :vcr, type: :service do
       let(:response) { BackEndService.db_conn.get("/api/v1/users/#{user_id}") }
 
       it 'returns the json response body' do
-
         expect(parsed_json).to be_a Hash
         expect(parsed_json[:data][:id]).to eq(user_id)
       end

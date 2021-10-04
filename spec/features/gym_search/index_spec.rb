@@ -7,7 +7,8 @@ describe 'gyms near me page', :vcr, type: :feature do
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([])
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([])
-    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return([])
+    allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
 
     visit dashboard_index_path
     within('#find-gyms') { click_on 'Find Gyms Near Me' }

@@ -1,19 +1,36 @@
 require 'rails_helper'
 
 describe EventFacade, type: :facade do
-  describe '.get_upcoming_events' do
-    context 'when the user has events' do
+  describe '.get_events' do
+    context 'when the user has upcoming events' do
       it "can return an array of the user's workouts", :vcr do
-        events = EventFacade.get_upcoming_events(1)
+        events = EventFacade.get_events(1)
 
         expect(events[0]).to be_an_instance_of(Event)
         expect(events).not_to be_empty
       end
     end
 
-    context 'when the user does not have any events' do
+    context 'when the user does not have any upcoming events' do
       it 'can return an empty array', :vcr do
-        events = EventFacade.get_upcoming_events(11)
+        events = EventFacade.get_events(11)
+
+        expect(events).to be_empty
+      end
+    end
+
+    context 'when the user has past events' do
+      it "can return an array of the user's workouts", :vcr do
+        events = EventFacade.get_events(1, 'past')
+
+        expect(events[0]).to be_an_instance_of(Event)
+        expect(events).not_to be_empty
+      end
+    end
+
+    context 'when the user does not have any past events' do
+      it 'can return an empty array', :vcr do
+        events = EventFacade.get_events(11, 'past')
 
         expect(events).to be_empty
       end
@@ -27,10 +44,10 @@ describe EventFacade, type: :facade do
       activity = 'c2jzsndq8brvn9fbckeec2'
       date_time = 'Planet Fitness'
       request_params = {
-        'user_id': friend_id,
-        'gym_membership_id': user_gym_membership_id,
-        "activity": activity,
-        "date_time": date_time
+        user_id: friend_id,
+        gym_membership_id: user_gym_membership_id,
+        activity: activity,
+        date_time: date_time
       }
 
       allow(EventService).to receive(:create_event).with(request_params).and_return(true)
@@ -45,9 +62,9 @@ describe EventFacade, type: :facade do
       user_gym_membership_id = 42
       event_id = 32
       path_params = {
-        'user_id': friend_id,
-        'gym_membership_id': user_gym_membership_id,
-        "id": event_id
+        user_id: friend_id,
+        gym_membership_id: user_gym_membership_id,
+        id: event_id
       }
 
       allow(EventService).to receive(:delete_event).with(path_params).and_return(true)

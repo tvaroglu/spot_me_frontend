@@ -4,6 +4,12 @@ describe GymMembershipFacade, type: :facade do
   describe '.get_gym_memberships' do
     context 'when the user has gyms' do
       it "can return an array of the user's gyms", :vcr do
+        # NOTE: if you are doing local dev work and have to rerecord cassettes against LocalHost
+        # make sure your User with user_id == 1 has their GymMemberships updated with the following:
+        # yelp_gym_id: 'gHmS3WIjRRhSWG4OdCQYLA'
+
+        # New meta keys from GymMembership query Yelp for address info, and require a real yelp_gym_id
+        # Heroku DB has been updated accordingly, but local DB requires this update if rerecording cassettes
         gyms = GymMembershipFacade.get_gym_memberships(1)
 
         expect(gyms[0]).to be_an_instance_of(GymMembership)
@@ -23,12 +29,12 @@ describe GymMembershipFacade, type: :facade do
   describe '.create_gym_membership' do
     it 'returns a hash with the gym membership details' do
       user_id = 1
-      yelp_gym_id = 'c2jzsndq8brvn9fbckeec2'
+      yelp_gym_id = 'gHmS3WIjRRhSWG4OdCQYLA'
       gym_name = 'Planet Fitness'
       request_params = {
-        'user_id': user_id,
-        'yelp_gym_id': yelp_gym_id,
-        'gym_name': gym_name
+        user_id: user_id,
+        yelp_gym_id: yelp_gym_id,
+        gym_name: gym_name
       }
 
       allow(GymMembershipService).to receive(:create_gym_membership).with(request_params).and_return(true)

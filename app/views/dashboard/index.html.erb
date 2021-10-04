@@ -53,7 +53,10 @@
         <h5 class='no-margin'><%= link_to "#{@user_friends.size} Following", '#my-friends', class: 'center' %></h5>
       </div>
       <div class="col">
-        <h5 class='no-margin'><%= link_to 'Followers', '#my-followers', class: 'center' %></h5>
+        <h5 class='no-margin'><%= link_to "#{@user_followers.size} Followers", '#my-followers', class: 'center' %></h5>
+      </div>
+      <div class="col">
+        <h5 class='no-margin'><%= link_to 'Activity Log', '#my-activity-log', class: 'center' %></h5>
       </div>
     </div>
   </div>
@@ -81,7 +84,7 @@
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li class='sign'>
-                      <%= link_to 'Gym Name Here', '#' %>
+                      <%= link_to event.gym_name, gym_path(event.yelp_gym_id) %>
                     </li>
 
                     <li class='calendar'>
@@ -129,10 +132,8 @@
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li class='address'>
-                      AddressLine1 Here<br>
-                      AddressLine2 Here<br>
-                      AddressLine3 Here<br>
-                      City, ST 00000
+                      <%= gym_membership.address1 %> <br>
+                      <%= gym_membership.city_state_zip %>
                     </li>
                   </ul>
                 </div>
@@ -218,14 +219,97 @@
 
   <div class="container gray top-radius padding mb-1" id='my-followers'>
     <div class="row">
-      <h2>[#] Followers</h2>
+      <h2><%= @user_followers.size %> Followers</h2>
     </div>
   </div>
 
   <div class="container gray bottom-radius padding mb-3" id='followers'>
     <div class="row center-it-all">
-      <div class='col-sm-3 card-display'>
-        You have no followers.
+      <% if @user_followers.empty? %>
+        <div class='col-sm-3 card-display center'>
+          You have no followers.
+        </div>
+      <% else %>
+        <div class="row center-it-all">
+          <div class="d-flex flex-wrap center-it-all">
+
+            <% @user_followers.each do |follower| %>
+              <div class='col-xl-3 card-display' id="follower-<%= follower.id%>">
+
+                <img id="profile_pic" src="<%= follower.google_image_url %>" class='round'>
+
+                <h5 class='mb-3'><%= link_to follower.full_name, profile_path(follower.id) %></h5>
+
+                <div class="row center no-pad mb-3">
+                  <div class="fit-content no-pad">
+                    <ul class='no-bullets'>
+                      <li class='location'>
+                        <%= follower.zip_code %>
+                      </li>
+
+                      <li class='goal'>
+                        <%= follower.goal %>
+                      </li>
+
+                      <li class='calendar'>
+                        <%= follower.availability %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="container gray top-radius padding mb-1" id='my-activity-log'>
+    <div class="row">
+      <h2><%= @past_events.size %> Completed Workouts</h2>
+    </div>
+  </div>
+
+  <div class="container gray bottom-radius padding mb-3" id='completed-workouts'>
+    <div class="row">
+      <div class="d-flex flex-wrap center-it-all">
+        <% if @past_events.empty? %>
+          <div class='col-sm-3 card-display'>
+            You have not completed any workouts.
+          </div>
+        <% else %>
+
+          <% @past_events.each do |event| %>
+          <div class="col-md-3 card-display" id="event-<%= event.id%>">
+            <p>
+              <h5><%= event.activity %></h5>
+              <div class="row center no-pad">
+                <div class="fit-content no-pad">
+                  <ul class='no-bullets'>
+                    <li class='sign'>
+                      <%= link_to event.gym_name, gym_path(event.yelp_gym_id) %>
+                    </li>
+
+                    <li class='calendar'>
+                      <%= event.format_date_short %>
+                    </li>
+
+                    <li class='star'>
+                      With: <%= link_to event.friend_name, profile_path(event.user_id) %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <%= link_to 'Delete', event_path(event.id, {user_id: current_user.id, gym_membership_id: event.gym_membership_id}),
+                                    method: :delete,
+                                    class: "btn btn-sm btn-info button-bg btn-outline-dark",
+                                    data: { confirm: 'Are you sure you want to delete this event?' } %>
+            </p>
+          </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -61,6 +61,17 @@ shared_context 'experienced user' do
         user_id: 1,
         yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
         gym_name: 'Kling-Wilkinson'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -73,6 +84,17 @@ shared_context 'experienced user' do
         user_id: 1,
         yelp_gym_id: '6x10s0lbnry4ivkzcjpilk',
         gym_name: 'Konopelski, Lowe and Haley'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -85,6 +107,17 @@ shared_context 'experienced user' do
         user_id: 1,
         yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
         gym_name: 'Funk LLC'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -97,6 +130,17 @@ shared_context 'experienced user' do
         user_id: user1.id,
         yelp_gym_id: 'wxaw9m796t6wdnsk53uieh',
         gym_name: 'Funk LLC'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -110,7 +154,7 @@ shared_context 'experienced user' do
         address: 'address3',
         phone: '345-345-3456',
         address_details: {
-          address1: "431 Pierre St",
+          address1: '431 Pierre St',
           address2: nil,
           address3: '',
           city: 'Boulder',
@@ -130,7 +174,7 @@ shared_context 'experienced user' do
         address: 'address2',
         phone: '234-234-2345',
         address_details: {
-          address1: "432 Pierre St",
+          address1: '432 Pierre St',
           address2: nil,
           address3: '',
           city: 'Boulder',
@@ -150,7 +194,7 @@ shared_context 'experienced user' do
         address: 'address1',
         phone: '123-123-1234',
         address_details: {
-          address1: "433 Pierre St",
+          address1: '433 Pierre St',
           address2: nil,
           address3: '',
           city: 'Boulder',
@@ -172,7 +216,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user2.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -188,7 +234,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user3.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -204,7 +252,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user2.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -220,7 +270,9 @@ shared_context 'experienced user' do
       },
       meta: {
         friend_name: user1.full_name,
-        friend_role: 'host'
+        friend_role: 'host',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -229,11 +281,14 @@ shared_context 'experienced user' do
   let(:user_gym_memberships) { [gym_membership1, gym_membership2, gym_membership3] }
   let(:gyms_near_user) { [gym1, gym2, gym3] }
   let(:user_events) { [event1, event2, event3, event4] }
+  let(:past_events) { [event1, event2, event3] }
 
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
+    allow(FriendshipFacade).to receive(:get_followers).with(user.id).and_return(user_friends)
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gym_memberships)
-    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return(past_events)
     allow(GymFacade).to receive(:get_gyms_near_user).with(user.zip_code).and_return(gyms_near_user)
   end
 end

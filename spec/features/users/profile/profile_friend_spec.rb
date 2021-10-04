@@ -30,7 +30,8 @@ describe 'user profile page: friend', type: :feature do
       allow(UserFacade).to receive(:get_profile_user).with(user10.id.to_s).and_return(user10)
       allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([user10])
       allow(FriendshipFacade).to receive(:get_friends).with(user10.id).and_return([])
-      allow(EventFacade).to receive(:get_upcoming_events).with(user10.id).and_return([])
+      allow(EventFacade).to receive(:get_events).with(user10.id).and_return([])
+      allow(EventFacade).to receive(:get_events).with(user10.id, 'past').and_return([])
     end
 
     context 'when I visit my friends profile' do
@@ -58,8 +59,8 @@ describe 'user profile page: friend', type: :feature do
 
         it 'removes the friend from my account', :vcr do
           destroy_friendship_params = {
-              user_id: user.id.to_s,
-              id: user10.id.to_s
+            user_id: user.id.to_s,
+            id: user10.id.to_s
           }
 
           expect(FriendshipFacade).to receive(:delete_friend).with(destroy_friendship_params)

@@ -4,6 +4,11 @@ class FriendshipService < BackEndService
     parse_json(response)
   end
 
+  def self.get_followers(user_id)
+    response = db_conn.get("/api/v1/users/#{user_id}/friendships?relationship=followers")
+    parse_json(response)
+  end
+
   def self.get_friends_at_gym(yelp_gym_id, current_user_id)
     response = db_conn.get("api/v1/users/#{current_user_id}/friendships") do |req|
       req.params['yelp_gym_id'] = yelp_gym_id

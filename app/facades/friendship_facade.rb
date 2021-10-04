@@ -6,6 +6,13 @@ class FriendshipFacade
     friends[:data].map { |friend| User.new(friend) }
   end
 
+  def self.get_followers(user_id)
+    followers = FriendshipService.get_followers(user_id)
+    return [] unless followers[:data]
+
+    followers[:data].map { |follower| User.new(follower) }
+  end
+
   def self.get_friends_at_gym(yelp_gym_id, current_user_id)
     friends = FriendshipService.get_friends_at_gym(yelp_gym_id, current_user_id)
     return [] unless friends[:data]

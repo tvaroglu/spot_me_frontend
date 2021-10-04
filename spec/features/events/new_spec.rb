@@ -26,6 +26,17 @@ RSpec.describe 'new event page', :vcr, type: :feature do
         user_id: 1,
         yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA',
         gym_name: "Rishi's Community Yoga"
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -38,6 +49,17 @@ RSpec.describe 'new event page', :vcr, type: :feature do
         user_id: 10,
         yelp_gym_id: 'BJBXzKYxQAXZKb5W6HrRnA',
         gym_name: "Rishi's Community Yoga"
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -51,7 +73,7 @@ RSpec.describe 'new event page', :vcr, type: :feature do
         address: 'address1',
         phone: '123-123-1234',
         address_details: {
-          address1: "430 Pierre St",
+          address1: '430 Pierre St',
           address2: nil,
           address3: '',
           city: 'Boulder',
@@ -151,7 +173,9 @@ RSpec.describe 'new event page', :vcr, type: :feature do
             },
             meta: {
               friend_name: friend.full_name,
-              friend_role: 'invited'
+              friend_role: 'invited',
+              gym_name: 'Planet Fitness',
+              yelp_gym_id: yelp_gym_id
             }
           )
         end
@@ -169,7 +193,8 @@ RSpec.describe 'new event page', :vcr, type: :feature do
           allow(EventFacade).to receive(:create_event).with(create_event_params).and_return(new_event)
           allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return([friend])
           allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return([current_user_gym_membership])
-          allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return([new_event])
+          allow(EventFacade).to receive(:get_events).with(user.id).and_return([new_event])
+          allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
 
           fill_in 'activity', with: activity
           select year, from: 'date[when(1i)]'

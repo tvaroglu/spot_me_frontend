@@ -2,6 +2,53 @@
 http_interactions:
 - request:
     method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?relationship=followers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Oct 2021 21:03:38 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d350138170651bd958cbbdda58de81c9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9cf60ba3-cc7e-47fa-ba3d-3dd8d08181da
+      X-Runtime:
+      - '0.006958'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"user","attributes":{"email":"rolando.nikolaus@jones-cassin.info","google_id":"ummu458qvzj7jxme3quds","google_image_url":"https://robohash.org/voluptatemexcepturivoluptas.png?size=300x300\u0026set=set1","zip_code":"19596","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Valentin
+        Bergnaum IV"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
+        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
+        Elliot Hills"}}]}'
+  recorded_at: Mon, 04 Oct 2021 21:03:39 GMT
+- request:
+    method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
@@ -21,7 +68,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 23:59:40 GMT
+      - Mon, 04 Oct 2021 21:03:39 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +78,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a4d756b8-3444-4cb1-b81f-b721860d578f
+      - f9ce084f-eee3-4861-8c33-e500df2fb6b3
       X-Runtime:
-      - '0.295437'
+      - '0.319678'
       Transfer-Encoding:
       - chunked
       Via:
@@ -106,7 +153,7 @@ http_interactions:
         Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","address_details":{"address1":"7700
         W Virginia Ave","address2":"Ste A","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
         402-3888"}}]}'
-  recorded_at: Fri, 01 Oct 2021 23:59:40 GMT
+  recorded_at: Mon, 04 Oct 2021 21:03:40 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -128,7 +175,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 23:59:40 GMT
+      - Mon, 04 Oct 2021 21:03:40 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -138,9 +185,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 415d5237-263d-425c-978d-8e773d2b3006
+      - a3005fcc-89fb-49f1-ab37-4cb049e1864d
       X-Runtime:
-      - '0.165417'
+      - '0.188308'
       Transfer-Encoding:
       - chunked
       Via:
@@ -152,7 +199,7 @@ http_interactions:
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         601-0789"}}}'
-  recorded_at: Fri, 01 Oct 2021 23:59:40 GMT
+  recorded_at: Mon, 04 Oct 2021 21:03:40 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
@@ -174,30 +221,29 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 23:59:40 GMT
+      - Mon, 04 Oct 2021 21:03:41 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"10009d737f258945bb1bd1da80baf689"
+      - W/"3e3f77ad6eeebabece85d9362fb3e46c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7a575ca2-5ad7-45fb-892c-1bbd6b78d2df
+      - 04c43e46-d55a-48cf-9e77-cd2954e6d557
       X-Runtime:
-      - '0.013660'
+      - '0.452645'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"6x10s0lbnry4ivkzcjpilk","gym_name":"Ward-Koepp"}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"wxaw9m796t6wdnsk53uieh","gym_name":"Beatty,
-        Mraz and Fadel"}},{"id":"58","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
-        Fitness"}},{"id":"60","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"c2jzsndq8brvn9fbckeec2","gym_name":"Planet
-        Fitness"}}]}'
-  recorded_at: Fri, 01 Oct 2021 23:59:41 GMT
+      string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Ward-Koepp"},"meta":{"address":"2
+        Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2 Livewell
+        Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
+  recorded_at: Mon, 04 Oct 2021 21:03:41 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -219,19 +265,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 23:59:41 GMT
+      - Mon, 04 Oct 2021 21:03:41 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"6852600cc8d1e5afc79717b3319f3814"
+      - W/"5413bc301545d4eebe4c7f84575f35c9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b68cec95-e3fd-43ae-8b9f-04f45016aab5
+      - 284f846c-8c78-431a-8b53-dd26e729ca89
       X-Runtime:
-      - '0.074030'
+      - '0.013632'
       Transfer-Encoding:
       - chunked
       Via:
@@ -241,6 +287,6 @@ http_interactions:
       string: '{"data":[{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
         I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
         B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
-        EVEN more!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":false,"full_name":"TaylorV"}}],"meta":{"gym_member_count":2}}'
-  recorded_at: Fri, 01 Oct 2021 23:59:41 GMT
+        EVEN more!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}}],"meta":{"gym_member_count":2}}'
+  recorded_at: Mon, 04 Oct 2021 21:03:42 GMT
 recorded_with: VCR 6.0.0

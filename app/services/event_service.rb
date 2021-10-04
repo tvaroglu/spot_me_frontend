@@ -1,6 +1,8 @@
 class EventService < BackEndService
-  def self.get_upcoming_events(user_id)
-    response = db_conn.get("/api/v1/users/#{user_id}/events")
+  def self.get_events(user_id, time_frame = nil)
+    response = db_conn.get("/api/v1/users/#{user_id}/events") do |req|
+      req.params['time_frame'] = time_frame if time_frame == 'past'
+    end
     parse_json(response)
   end
 

@@ -23,27 +23,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 23:59:44 GMT
+      - Mon, 04 Oct 2021 21:03:53 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"695b17dfc2d439d65864aed2cffe1bc4"
+      - W/"02afaf37f16ae8440ff3af74690a6bb8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 25751b82-594f-4546-ad19-3754b00bb460
+      - 5d891193-71c1-4db7-8c30-a3b797eaa974
       X-Runtime:
-      - '0.066283'
+      - '0.069426'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"47","type":"friendship","attributes":{"follower_id":1,"followee_id":10}}}'
-  recorded_at: Fri, 01 Oct 2021 23:59:45 GMT
+      string: '{"data":{"id":"51","type":"friendship","attributes":{"follower_id":1,"followee_id":10}}}'
+  recorded_at: Mon, 04 Oct 2021 21:03:54 GMT
 - request:
     method: delete
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/10
@@ -65,7 +65,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 01 Oct 2021 23:59:44 GMT
+      - Mon, 04 Oct 2021 21:03:54 GMT
       Content-Length:
       - '0'
       Connection:
@@ -73,13 +73,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - bb140d58-6c7b-4fb4-9afd-df8da024fe59
+      - '05169b54-76a4-4a45-a391-8e4e1d1b4960'
       X-Runtime:
-      - '0.017212'
+      - '0.041498'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 01 Oct 2021 23:59:45 GMT
+  recorded_at: Mon, 04 Oct 2021 21:03:54 GMT
 recorded_with: VCR 6.0.0

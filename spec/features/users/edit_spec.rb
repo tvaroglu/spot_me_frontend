@@ -48,6 +48,17 @@ describe 'edit user profile', type: :feature do
         user_id: 1,
         yelp_gym_id: 'lex65fkcol5gfq89rymmd2',
         gym_name: 'Kling-Wilkinson'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -60,6 +71,17 @@ describe 'edit user profile', type: :feature do
         user_id: 1,
         yelp_gym_id: '6x10s0lbnry4ivkzcjpilk',
         gym_name: 'Konopelski, Lowe and Haley'
+      },
+      meta: {
+        address: '123 Main St',
+        address_details: {
+          address1: '123 Main St',
+          address2: '',
+          address3: '',
+          city: 'Somewhere',
+          state: 'USA',
+          zip_code: '12345'
+        }
       }
     )
   end
@@ -75,7 +97,9 @@ describe 'edit user profile', type: :feature do
       },
       meta: {
         friend_name: user2.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -91,7 +115,9 @@ describe 'edit user profile', type: :feature do
       },
       meta: {
         friend_name: user1.full_name,
-        friend_role: 'invited'
+        friend_role: 'invited',
+        gym_name: 'Planet Fitness',
+        yelp_gym_id: 'c2jzsndq8brvn9fbckeec2'
       }
     )
   end
@@ -116,7 +142,8 @@ describe 'edit user profile', type: :feature do
   before do
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gyms)
-    allow(EventFacade).to receive(:get_upcoming_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
+    allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
   end
 
   it "can click on the link from the current user's profile page and be taken to the edit form", :vcr do

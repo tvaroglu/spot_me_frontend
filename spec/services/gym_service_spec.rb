@@ -16,7 +16,7 @@ describe GymService, :vcr, type: :service do
     end
 
     describe '.get_gym_users' do
-      it "returns a hash of the users that belong to a given gym" do
+      it 'returns a hash of the users that belong to a given gym' do
         expect(GymService.get_gym_users('BJBXzKYxQAXZKb5W6HrRnA')).to be_a(Hash)
       end
     end

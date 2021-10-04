@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events?time_frame=past
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 04 Oct 2021 21:03:51 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"6b359dec3adc67327a45300a89c96e10"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3e933104-f3f1-4057-a491-fa3ddc52e839
+      X-Runtime:
+      - '0.081491'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T20:38:23.430Z","activity":"Knife
+        making"},"meta":{"friend_name":"Valentin Bergnaum IV","friend_role":"invited","gym_name":"Ward-Koepp","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"50","type":"event","attributes":{"user_id":1,"gym_membership_id":5,"date_time":"2021-10-02T23:58:20.088Z","activity":"Knife
+        making"},"meta":{"friend_name":"Carrie O''Reilly","friend_role":"host","gym_name":"Hudson-Hirthe","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-02T20:38:23.472Z","activity":"Kayaking"},"meta":{"friend_name":"Valentin
+        Bergnaum IV","friend_role":"host","gym_name":"Roob-Konopelski","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-02T20:38:23.462Z","activity":"Cryptography"},"meta":{"friend_name":"Jerome
+        Wunsch","friend_role":"host","gym_name":"Blick, Cormier and Kerluke","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}},{"id":"4","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-09-30T20:38:23.438Z","activity":"Soapmaking"},"meta":{"friend_name":"Gov.
+        Elliot Hills","friend_role":"host","gym_name":"Gutkowski, Pfeffer and Hessel","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"6","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-27T20:38:23.450Z","activity":"Woodworking"},"meta":{"friend_name":"Jerome
+        Wunsch","friend_role":"host","gym_name":"Blick, Cormier and Kerluke","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}}]}'
+  recorded_at: Mon, 04 Oct 2021 21:03:52 GMT
+recorded_with: VCR 6.0.0

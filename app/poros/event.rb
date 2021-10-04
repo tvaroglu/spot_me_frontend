@@ -29,10 +29,10 @@ class Event
   end
 
   # TODO: Update method to handle different timezones
-  # Returns the date in the format of 'Wed 09/22/21 9:41pm'
+  # Returns the date in the format of 'Wed 09/22/21- 9:41pm'
   def format_date_short
     DateTime.strptime(date_time,
-                      '%Y-%m-%dT%H:%M:%S').strftime('%a %m/%d/%y%l:%M%P')
+                      '%Y-%m-%dT%H:%M:%S').strftime('%a %m/%d/%y-%l:%M%P')
   end
 
   def date

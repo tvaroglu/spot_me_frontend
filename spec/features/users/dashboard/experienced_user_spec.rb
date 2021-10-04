@@ -43,7 +43,8 @@ describe 'experienced user dashboard', type: :feature do
           expect(page).to have_link("#{user_events.size} Upcoming Workouts", href: '#my-upcoming-workouts')
           expect(page).to have_link('My Gyms', href: '#my-gyms')
           expect(page).to have_link("#{user_friends.size} Following", href: '#my-friends')
-          expect(page).to have_link('Followers', href: '#my-followers')
+          expect(page).to have_link("#{user_friends.size} Followers", href: '#my-followers')
+          expect(page).to have_link('Activity Log', href: '#my-activity-log')
         end
       end
 

@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9bf18c96-eaee-47e5-8541-f72febc4e104
+      - 22832008-a59e-49de-b6e3-6e75224f5bbe
       X-Runtime:
-      - '0.027723'
+      - '0.015978'
       Transfer-Encoding:
       - chunked
     body:
@@ -55,5 +55,5 @@ http_interactions:
         Heller and Harvey","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"6","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-26T22:25:12.635Z","activity":"Singing"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-25T22:25:12.638Z","activity":"Photography"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}}]}'
-  recorded_at: Mon, 04 Oct 2021 01:42:59 GMT
+  recorded_at: Mon, 04 Oct 2021 03:36:59 GMT
 recorded_with: VCR 6.0.0

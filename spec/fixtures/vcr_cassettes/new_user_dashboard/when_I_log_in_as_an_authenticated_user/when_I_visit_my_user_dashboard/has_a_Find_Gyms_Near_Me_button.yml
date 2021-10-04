@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - cf796787-c4c9-4506-a468-9a6f03157f9a
+      - b6fbdfa6-f667-4a22-9e80-596413a9e77d
       X-Runtime:
-      - '0.005886'
+      - '0.003040'
       Transfer-Encoding:
       - chunked
     body:
@@ -38,7 +38,7 @@ http_interactions:
         is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
         Collins"}},{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
         Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}]}'
-  recorded_at: Mon, 04 Oct 2021 01:42:58 GMT
+  recorded_at: Mon, 04 Oct 2021 03:36:58 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/events?time_frame=past
@@ -64,9 +64,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 679aa60f-3eaf-45da-9207-9bf1af6940b3
+      - 11cac961-53cd-400c-a513-f5fd05115ff4
       X-Runtime:
-      - '0.015006'
+      - '0.015336'
       Transfer-Encoding:
       - chunked
     body:
@@ -94,5 +94,5 @@ http_interactions:
         Heller and Harvey","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"6","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-26T22:25:12.635Z","activity":"Singing"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-25T22:25:12.638Z","activity":"Photography"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}}]}'
-  recorded_at: Mon, 04 Oct 2021 01:42:58 GMT
+  recorded_at: Mon, 04 Oct 2021 03:36:58 GMT
 recorded_with: VCR 6.0.0

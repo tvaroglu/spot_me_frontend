@@ -163,6 +163,24 @@ describe 'experienced user dashboard', type: :feature do
         end
       end
 
+      it 'displays the users that follow me', :vcr do
+        expect(page).to have_css('#followers')
+
+        within '#followers' do
+          user_friends.each do |friend|
+            expect(page).to have_css("#follower-#{friend.id}")
+
+            within "#follower-#{friend.id}" do
+              expect(page).to have_content(friend.full_name)
+              expect(page).to have_content(friend.zip_code)
+              expect(page).to have_content(friend.goal)
+              expect(page).to have_content(friend.availability)
+              expect(page).to have_link(friend.full_name)
+            end
+          end
+        end
+      end
+
       context 'when I click on one of my friends name' do
         let(:first_friend) { user_friends.first }
 

@@ -2,6 +2,45 @@
 http_interactions:
 - request:
     method: get
+    uri: http://localhost:4500/api/v1/users/1/friendships?relationship=followers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b30cc57cce79bfdd9f8990724611ce9c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fad11b35-25a7-4467-ba48-c548fe3f1f89
+      X-Runtime:
+      - '0.004563'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
+        few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
+        Dickinson"}},{"id":"7","type":"user","attributes":{"email":"rosendo@stark.net","google_id":"wp1eb2h9nus9v7dunji9h","google_image_url":"https://robohash.org/omnisillummolestiae.png?size=300x300\u0026set=set1","zip_code":"73105","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
+        Collins"}},{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
+        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}]}'
+  recorded_at: Mon, 04 Oct 2021 00:17:20 GMT
+- request:
+    method: get
     uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
@@ -25,9 +64,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e813bf87-a834-4c6e-8595-3cd025782953
+      - eefa92b0-e319-4bc7-b25f-7662bec1ed34
       X-Runtime:
-      - '0.446735'
+      - '0.455123'
       Transfer-Encoding:
       - chunked
     body:
@@ -98,7 +137,7 @@ http_interactions:
         Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","address_details":{"address1":"7700
         W Virginia Ave","address2":"Ste A","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
         402-3888"}}]}'
-  recorded_at: Sun, 03 Oct 2021 23:06:50 GMT
+  recorded_at: Mon, 04 Oct 2021 00:17:20 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -124,9 +163,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8ceea397-59ca-420d-95a7-ac4e461a2ce6
+      - e781c198-e17e-4ab7-a816-434f32bb3af4
       X-Runtime:
-      - '0.368091'
+      - '0.260909'
       Transfer-Encoding:
       - chunked
     body:
@@ -136,7 +175,7 @@ http_interactions:
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         601-0789"}}}'
-  recorded_at: Sun, 03 Oct 2021 23:06:51 GMT
+  recorded_at: Mon, 04 Oct 2021 00:17:21 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/gym_memberships
@@ -162,9 +201,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5c1fca95-d4ef-416c-8831-e5ec337b8387
+      - edcc5240-ff10-449d-bf4c-bc80459448bb
       X-Runtime:
-      - '4.947395'
+      - '3.988979'
       Transfer-Encoding:
       - chunked
     body:
@@ -182,7 +221,7 @@ http_interactions:
         Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"24","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
-  recorded_at: Sun, 03 Oct 2021 23:06:56 GMT
+  recorded_at: Mon, 04 Oct 2021 00:17:25 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -204,17 +243,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1b40dd3a532cd5d8e6f14dc133b2138d"
+      - W/"7299ba80bc69b04e1804156f6db84849"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 68f6e2c4-8c4f-4fe2-a094-32289c7ab86d
+      - 1ccd7000-a6d6-4b0d-a4ef-e36bd544c586
       X-Runtime:
-      - '0.010296'
+      - '0.011788'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[],"meta":{"gym_member_count":0}}'
-  recorded_at: Sun, 03 Oct 2021 23:06:56 GMT
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
+        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}],"meta":{"gym_member_count":1}}'
+  recorded_at: Mon, 04 Oct 2021 00:17:25 GMT
 recorded_with: VCR 6.0.0

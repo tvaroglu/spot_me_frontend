@@ -216,15 +216,49 @@
 
   <div class="container gray top-radius padding mb-1" id='my-followers'>
     <div class="row">
-      <h2>[#] Followers</h2>
+      <h2><%= @user_followers.size %> Followers</h2>
     </div>
   </div>
 
   <div class="container gray bottom-radius padding mb-3" id='followers'>
     <div class="row center-it-all">
-      <div class='col-sm-3 card-display'>
-        You have no followers.
-      </div>
+      <% if @user_followers.empty? %>
+        <div class='col-sm-3 card-display center'>
+          You have no followers.
+        </div>
+      <% else %>
+        <div class="row center-it-all">
+          <div class="d-flex flex-wrap center-it-all">
+
+            <% @user_followers.each do |friend| %>
+              <div class='col-xl-3 card-display' id="follower-<%= friend.id%>">
+
+                <img id="profile_pic" src="<%= friend.google_image_url %>" class='round'>
+
+                <h5 class='mb-3'><%= link_to friend.full_name, profile_path(friend.id) %></h5>
+
+                <div class="row center no-pad mb-3">
+                  <div class="fit-content no-pad">
+                    <ul class='no-bullets'>
+                      <li class='location'>
+                        <%= friend.zip_code %>
+                      </li>
+
+                      <li class='goal'>
+                        <%= friend.goal %>
+                      </li>
+
+                      <li class='calendar'>
+                        <%= friend.availability %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 

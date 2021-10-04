@@ -30,6 +30,34 @@ describe FriendshipService, :vcr, type: :service do
       end
     end
 
+    describe '.get_followers' do
+      it "returns a hash with the user's followers" do
+        actual = FriendshipService.get_followers(1)
+        expect(actual).to be_a(Hash)
+
+        expect(actual).to have_key(:data)
+        expect(actual[:data]).to be_an(Array)
+        expect(actual[:data]).to all(have_key(:id))
+        expect(actual[:data]).to all(have_key(:type))
+        expect(actual[:data]).to all(have_key(:attributes))
+
+        expect(actual[:data].first[:id]).to be_a(String)
+        expect(actual[:data].first[:type]).to eq('user')
+        expect(actual[:data].first[:attributes]).to be_a(Hash)
+
+        expect(actual[:data].first[:attributes]).to have_key(:email)
+        expect(actual[:data].first[:attributes]).to have_key(:google_id)
+        expect(actual[:data].first[:attributes]).to have_key(:google_image_url)
+        expect(actual[:data].first[:attributes]).to have_key(:zip_code)
+        expect(actual[:data].first[:attributes]).to have_key(:summary)
+        expect(actual[:data].first[:attributes]).to have_key(:goal)
+        expect(actual[:data].first[:attributes]).to have_key(:availability_morning)
+        expect(actual[:data].first[:attributes]).to have_key(:availability_afternoon)
+        expect(actual[:data].first[:attributes]).to have_key(:availability_evening)
+        expect(actual[:data].first[:attributes]).to have_key(:full_name)
+      end
+    end
+
     describe '.add_friend and .delete_friend' do
       it 'adds and deletes a friend' do
         params = {

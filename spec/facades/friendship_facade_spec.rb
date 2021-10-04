@@ -10,12 +10,29 @@ describe FriendshipFacade, type: :facade do
         expect(friends).not_to be_empty
       end
     end
-
     context 'when the user does not have any friends' do
       it 'can return an empty array', :vcr do
         friends = FriendshipFacade.get_friends(2)
 
         expect(friends).to be_empty
+      end
+    end
+  end
+
+  describe '.get_followers' do
+    context 'when the user has followers' do
+      it "can return an array of the user's followers", :vcr do
+        followers = FriendshipFacade.get_followers(1)
+
+        expect(followers[0]).to be_an_instance_of(User)
+        expect(followers).not_to be_empty
+      end
+    end
+    context 'when the user does not have any followers' do
+      it 'can return an empty array', :vcr do
+        followers = FriendshipFacade.get_followers(11)
+
+        expect(followers).to be_empty
       end
     end
   end

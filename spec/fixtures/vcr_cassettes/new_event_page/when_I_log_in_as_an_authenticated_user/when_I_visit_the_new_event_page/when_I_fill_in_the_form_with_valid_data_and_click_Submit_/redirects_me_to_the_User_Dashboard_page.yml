@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4500/api/v1/users/1/friendships?relationship=followers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b30cc57cce79bfdd9f8990724611ce9c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 59374435-a30f-45e3-bf6c-20cc84917264
+      X-Runtime:
+      - '0.003864'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
+        few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
+        Dickinson"}},{"id":"7","type":"user","attributes":{"email":"rosendo@stark.net","google_id":"wp1eb2h9nus9v7dunji9h","google_image_url":"https://robohash.org/omnisillummolestiae.png?size=300x300\u0026set=set1","zip_code":"73105","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
+        Collins"}},{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
+        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}]}'
+  recorded_at: Mon, 04 Oct 2021 00:17:19 GMT
+recorded_with: VCR 6.0.0

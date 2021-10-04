@@ -10,6 +10,7 @@ describe FriendshipFacade, type: :facade do
         expect(friends).not_to be_empty
       end
     end
+
     context 'when the user does not have any friends' do
       it 'can return an empty array', :vcr do
         friends = FriendshipFacade.get_friends(2)
@@ -28,6 +29,7 @@ describe FriendshipFacade, type: :facade do
         expect(followers).not_to be_empty
       end
     end
+
     context 'when the user does not have any followers' do
       it 'can return an empty array', :vcr do
         followers = FriendshipFacade.get_followers(11)

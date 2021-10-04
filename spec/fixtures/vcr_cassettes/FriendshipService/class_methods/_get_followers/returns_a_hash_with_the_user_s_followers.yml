@@ -21,22 +21,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b30cc57cce79bfdd9f8990724611ce9c"
+      - W/"a50565f071d6cb23ffee87bdfb94e458"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5a80ab20-ee6d-490c-9fed-3bf60927156a
+      - a5aadffe-4b6a-43f7-ba9c-bd2d74447c6d
       X-Runtime:
-      - '0.003113'
+      - '0.003301'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift!!","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}},{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
         few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
         Dickinson"}},{"id":"7","type":"user","attributes":{"email":"rosendo@stark.net","google_id":"wp1eb2h9nus9v7dunji9h","google_image_url":"https://robohash.org/omnisillummolestiae.png?size=300x300\u0026set=set1","zip_code":"73105","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
-        Collins"}},{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
-        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}]}'
-  recorded_at: Mon, 04 Oct 2021 03:36:59 GMT
+        Collins"}}]}'
+  recorded_at: Mon, 04 Oct 2021 20:18:08 GMT
 recorded_with: VCR 6.0.0

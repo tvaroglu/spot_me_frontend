@@ -21,24 +21,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b30cc57cce79bfdd9f8990724611ce9c"
+      - W/"a50565f071d6cb23ffee87bdfb94e458"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8a2e5915-5e95-4401-a2ee-3526d2b7e666
+      - 39a5d9d4-81fa-405e-9db6-e1a0c7840054
       X-Runtime:
-      - '0.003972'
+      - '0.004270'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift!!","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}},{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
         few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
         Dickinson"}},{"id":"7","type":"user","attributes":{"email":"rosendo@stark.net","google_id":"wp1eb2h9nus9v7dunji9h","google_image_url":"https://robohash.org/omnisillummolestiae.png?size=300x300\u0026set=set1","zip_code":"73105","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
-        Collins"}},{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
-        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}]}'
-  recorded_at: Mon, 04 Oct 2021 03:36:53 GMT
+        Collins"}}]}'
+  recorded_at: Mon, 04 Oct 2021 20:18:05 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/events?time_frame=past
@@ -60,41 +60,28 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ce5d1e32e483b6c81df5ef566d1703e7"
+      - W/"c84f6c2c1cc897784c51a5bc1349070b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 41d7235f-d461-4325-9ee6-473b836cef58
+      - 3ac84d8e-d3cf-4477-87e9-0d904152f962
       X-Runtime:
-      - '0.018102'
+      - '0.011605'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"34","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-04T01:18:38.483Z","activity":"Board
-        games"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
-        Medhurst and Rohan","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"18","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-04T00:39:30.286Z","activity":"Foreign
-        language learning"},"meta":{"friend_name":"Arthur Dickinson","friend_role":"invited","gym_name":"Moen
-        and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T22:25:12.628Z","activity":"Mushroom
-        hunting"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
-        Medhurst and Rohan","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"33","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-10-03T01:18:38.480Z","activity":"Yoga"},"meta":{"friend_name":"Lahoma
-        Kuhic Ret.","friend_role":"invited","gym_name":"Moen and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"17","type":"event","attributes":{"user_id":2,"gym_membership_id":1,"date_time":"2021-10-03T00:39:30.261Z","activity":"Inline
-        skating"},"meta":{"friend_name":"Willy Schuster Esq.","friend_role":"invited","gym_name":"Moen
-        and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"32","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-02T01:18:38.461Z","activity":"Crocheting"},"meta":{"friend_name":"Arthur
-        Dickinson","friend_role":"invited","gym_name":"Moen and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-10-01T22:25:12.626Z","activity":"Jewelry
-        making"},"meta":{"friend_name":"Lahoma Kuhic Ret.","friend_role":"invited","gym_name":"Moen
-        and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-24T22:25:12.622Z","activity":"Sewing"},"meta":{"friend_name":"Arthur
-        Dickinson","friend_role":"invited","gym_name":"Moen and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"37","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-04T01:18:38.488Z","activity":"Magic"},"meta":{"friend_name":"Kenny
-        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"47","type":"event","attributes":{"user_id":1,"gym_membership_id":35,"date_time":"2021-10-03T23:28:00.000Z","activity":"Lift!"},"meta":{"friend_name":"Taylor","friend_role":"host","gym_name":"Quest
-        Fitness","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"41","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-03T01:18:38.496Z","activity":"Photography"},"meta":{"friend_name":"Lyle
+      string: '{"data":[{"id":"37","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-04T01:18:38.488Z","activity":"Magic"},"meta":{"friend_name":"Kenny
+        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"41","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-03T01:18:38.496Z","activity":"Photography"},"meta":{"friend_name":"Lyle
         Collins","friend_role":"host","gym_name":"Schowalter, Heller and Harvey","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"4","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-10-02T22:25:12.630Z","activity":"Sand
         art"},"meta":{"friend_name":"Arthur Dickinson","friend_role":"host","gym_name":"Bode,
-        Feest and Daniel","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-09-30T22:25:12.641Z","activity":"Do
+        Feest and Daniel","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"49","type":"event","attributes":{"user_id":1,"gym_membership_id":35,"date_time":"2021-10-01T03:39:00.000Z","activity":"Lift!"},"meta":{"friend_name":"Taylor","friend_role":"host","gym_name":"Quest
+        Fitness","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-09-30T22:25:12.641Z","activity":"Do
         it yourself"},"meta":{"friend_name":"Lyle Collins","friend_role":"host","gym_name":"Schowalter,
         Heller and Harvey","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"6","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-26T22:25:12.635Z","activity":"Singing"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-25T22:25:12.638Z","activity":"Photography"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}}]}'
-  recorded_at: Mon, 04 Oct 2021 03:36:53 GMT
+  recorded_at: Mon, 04 Oct 2021 20:18:05 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
@@ -120,9 +107,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - aae2142a-a6f5-458f-b294-e6d90f83858c
+      - 5dd35dd1-21fe-4a7e-b97a-dd4f4f99c310
       X-Runtime:
-      - '0.391553'
+      - '0.529463'
       Transfer-Encoding:
       - chunked
     body:
@@ -193,7 +180,7 @@ http_interactions:
         Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","address_details":{"address1":"7700
         W Virginia Ave","address2":"Ste A","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
         402-3888"}}]}'
-  recorded_at: Mon, 04 Oct 2021 03:36:54 GMT
+  recorded_at: Mon, 04 Oct 2021 20:18:06 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -219,9 +206,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 59f5117e-aefb-4431-bde1-5a7d3fa7dc84
+      - c1a33a22-0467-463e-bc95-ce62cdd8b2cc
       X-Runtime:
-      - '0.205961'
+      - '0.302687'
       Transfer-Encoding:
       - chunked
     body:
@@ -231,7 +218,7 @@ http_interactions:
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         601-0789"}}}'
-  recorded_at: Mon, 04 Oct 2021 03:36:54 GMT
+  recorded_at: Mon, 04 Oct 2021 20:18:06 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/gym_memberships
@@ -253,31 +240,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f5958973a87cb86ce785a9330f7dd422"
+      - W/"de2896108d57f203467fcd368e15f966"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e44c1641-1f21-450c-a258-39afdfb130d6
+      - 2836bd38-7793-4419-9b00-0dd7166162c5
       X-Runtime:
-      - '3.824941'
+      - '0.729830'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"25","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
-        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"26","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
-        Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
-        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Moen
-        and Sons"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
-        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Hickle,
-        Medhurst and Rohan"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
-        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"17","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Price-McClure"},"meta":{"address":"2
-        Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2 Livewell
-        Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}},{"id":"24","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
-        Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
-  recorded_at: Mon, 04 Oct 2021 03:36:58 GMT
+  recorded_at: Mon, 04 Oct 2021 20:18:07 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -299,18 +276,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7299ba80bc69b04e1804156f6db84849"
+      - W/"7118dd8fc4db38f53c398e7af9e9a325"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e1b3f978-935a-464e-9e02-81ddd2be333b
+      - 6f218ae2-ac4b-433d-84b1-3c086c03e621
       X-Runtime:
-      - '0.016842'
+      - '0.016803'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
-        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}],"meta":{"gym_member_count":1}}'
-  recorded_at: Mon, 04 Oct 2021 03:36:58 GMT
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift!!","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}}],"meta":{"gym_member_count":1}}'
+  recorded_at: Mon, 04 Oct 2021 20:18:07 GMT
 recorded_with: VCR 6.0.0

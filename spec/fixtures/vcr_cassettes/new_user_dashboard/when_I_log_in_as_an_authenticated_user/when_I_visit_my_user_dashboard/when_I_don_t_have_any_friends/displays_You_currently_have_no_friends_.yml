@@ -21,24 +21,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b30cc57cce79bfdd9f8990724611ce9c"
+      - W/"a50565f071d6cb23ffee87bdfb94e458"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7e3e3044-5249-4a9b-9cd5-4b6f231ea939
+      - 0126a7d8-e718-47ab-9ab3-f1fe7fb34072
       X-Runtime:
-      - '0.003297'
+      - '0.004663'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift!!","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}},{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
         few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
         Dickinson"}},{"id":"7","type":"user","attributes":{"email":"rosendo@stark.net","google_id":"wp1eb2h9nus9v7dunji9h","google_image_url":"https://robohash.org/omnisillummolestiae.png?size=300x300\u0026set=set1","zip_code":"73105","summary":"Love
         is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
-        Collins"}},{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift","goal":"Lose
-        Weight","availability_morning":false,"availability_afternoon":true,"availability_evening":false,"full_name":"Taylor"}}]}'
-  recorded_at: Mon, 04 Oct 2021 03:36:58 GMT
+        Collins"}}]}'
+  recorded_at: Mon, 04 Oct 2021 20:18:08 GMT
 - request:
     method: get
     uri: http://localhost:4500/api/v1/users/1/events?time_frame=past
@@ -60,39 +60,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ce5d1e32e483b6c81df5ef566d1703e7"
+      - W/"c84f6c2c1cc897784c51a5bc1349070b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1e7903d7-8357-4434-b661-ed6e6f92fa99
+      - 779d5dee-efb0-4cd3-970e-923020337ec9
       X-Runtime:
-      - '0.015281'
+      - '0.011647'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"34","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-04T01:18:38.483Z","activity":"Board
-        games"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
-        Medhurst and Rohan","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"18","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-04T00:39:30.286Z","activity":"Foreign
-        language learning"},"meta":{"friend_name":"Arthur Dickinson","friend_role":"invited","gym_name":"Moen
-        and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T22:25:12.628Z","activity":"Mushroom
-        hunting"},"meta":{"friend_name":"Lyle Collins","friend_role":"invited","gym_name":"Hickle,
-        Medhurst and Rohan","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"33","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-10-03T01:18:38.480Z","activity":"Yoga"},"meta":{"friend_name":"Lahoma
-        Kuhic Ret.","friend_role":"invited","gym_name":"Moen and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"17","type":"event","attributes":{"user_id":2,"gym_membership_id":1,"date_time":"2021-10-03T00:39:30.261Z","activity":"Inline
-        skating"},"meta":{"friend_name":"Willy Schuster Esq.","friend_role":"invited","gym_name":"Moen
-        and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"32","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-10-02T01:18:38.461Z","activity":"Crocheting"},"meta":{"friend_name":"Arthur
-        Dickinson","friend_role":"invited","gym_name":"Moen and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"2","type":"event","attributes":{"user_id":4,"gym_membership_id":1,"date_time":"2021-10-01T22:25:12.626Z","activity":"Jewelry
-        making"},"meta":{"friend_name":"Lahoma Kuhic Ret.","friend_role":"invited","gym_name":"Moen
-        and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"1","type":"event","attributes":{"user_id":3,"gym_membership_id":1,"date_time":"2021-09-24T22:25:12.622Z","activity":"Sewing"},"meta":{"friend_name":"Arthur
-        Dickinson","friend_role":"invited","gym_name":"Moen and Sons","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"37","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-04T01:18:38.488Z","activity":"Magic"},"meta":{"friend_name":"Kenny
-        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"47","type":"event","attributes":{"user_id":1,"gym_membership_id":35,"date_time":"2021-10-03T23:28:00.000Z","activity":"Lift!"},"meta":{"friend_name":"Taylor","friend_role":"host","gym_name":"Quest
-        Fitness","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"41","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-03T01:18:38.496Z","activity":"Photography"},"meta":{"friend_name":"Lyle
+      string: '{"data":[{"id":"37","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-04T01:18:38.488Z","activity":"Magic"},"meta":{"friend_name":"Kenny
+        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"41","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-03T01:18:38.496Z","activity":"Photography"},"meta":{"friend_name":"Lyle
         Collins","friend_role":"host","gym_name":"Schowalter, Heller and Harvey","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"4","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-10-02T22:25:12.630Z","activity":"Sand
         art"},"meta":{"friend_name":"Arthur Dickinson","friend_role":"host","gym_name":"Bode,
-        Feest and Daniel","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-09-30T22:25:12.641Z","activity":"Do
+        Feest and Daniel","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"49","type":"event","attributes":{"user_id":1,"gym_membership_id":35,"date_time":"2021-10-01T03:39:00.000Z","activity":"Lift!"},"meta":{"friend_name":"Taylor","friend_role":"host","gym_name":"Quest
+        Fitness","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-09-30T22:25:12.641Z","activity":"Do
         it yourself"},"meta":{"friend_name":"Lyle Collins","friend_role":"host","gym_name":"Schowalter,
         Heller and Harvey","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"6","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-26T22:25:12.635Z","activity":"Singing"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-25T22:25:12.638Z","activity":"Photography"},"meta":{"friend_name":"Kenny
         Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}}]}'
-  recorded_at: Mon, 04 Oct 2021 03:36:59 GMT
+  recorded_at: Mon, 04 Oct 2021 20:18:08 GMT
 recorded_with: VCR 6.0.0

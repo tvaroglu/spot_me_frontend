@@ -23,14 +23,14 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 36e4a411-839f-4481-8079-5cf17a88aa0b
+      - 17c512e6-e4bf-4063-bd74-62e331782160
       X-Runtime:
-      - '0.004548'
+      - '0.003587'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User"]}'
-  recorded_at: Mon, 04 Oct 2021 03:37:04 GMT
+  recorded_at: Mon, 04 Oct 2021 20:18:11 GMT
 recorded_with: VCR 6.0.0

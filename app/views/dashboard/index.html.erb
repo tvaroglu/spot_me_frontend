@@ -233,26 +233,26 @@
         <div class="row center-it-all">
           <div class="d-flex flex-wrap center-it-all">
 
-            <% @user_followers.each do |friend| %>
-              <div class='col-xl-3 card-display' id="follower-<%= friend.id%>">
+            <% @user_followers.each do |follower| %>
+              <div class='col-xl-3 card-display' id="follower-<%= follower.id%>">
 
-                <img id="profile_pic" src="<%= friend.google_image_url %>" class='round'>
+                <img id="profile_pic" src="<%= follower.google_image_url %>" class='round'>
 
-                <h5 class='mb-3'><%= link_to friend.full_name, profile_path(friend.id) %></h5>
+                <h5 class='mb-3'><%= link_to follower.full_name, profile_path(follower.id) %></h5>
 
                 <div class="row center no-pad mb-3">
                   <div class="fit-content no-pad">
                     <ul class='no-bullets'>
                       <li class='location'>
-                        <%= friend.zip_code %>
+                        <%= follower.zip_code %>
                       </li>
 
                       <li class='goal'>
-                        <%= friend.goal %>
+                        <%= follower.goal %>
                       </li>
 
                       <li class='calendar'>
-                        <%= friend.availability %>
+                        <%= follower.availability %>
                       </li>
                     </ul>
                   </div>

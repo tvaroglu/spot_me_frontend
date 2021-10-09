@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/friendships?relationship=followers
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?relationship=followers
     body:
       encoding: US-ASCII
       string: ''
@@ -18,30 +18,38 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:24:52 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a50565f071d6cb23ffee87bdfb94e458"
+      - W/"d350138170651bd958cbbdda58de81c9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3951be18-0175-4539-90bc-39c30009b0fd
+      - e5ef168b-6377-48ae-9643-a95d022c7508
       X-Runtime:
-      - '0.004718'
+      - '0.007957'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift!!","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}},{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
-        few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
-        Dickinson"}},{"id":"7","type":"user","attributes":{"email":"rosendo@stark.net","google_id":"wp1eb2h9nus9v7dunji9h","google_image_url":"https://robohash.org/omnisillummolestiae.png?size=300x300\u0026set=set1","zip_code":"73105","summary":"Love
-        is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
-        Collins"}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:08:24 GMT
+      string: '{"data":[{"id":"7","type":"user","attributes":{"email":"rolando.nikolaus@jones-cassin.info","google_id":"ummu458qvzj7jxme3quds","google_image_url":"https://robohash.org/voluptatemexcepturivoluptas.png?size=300x300\u0026set=set1","zip_code":"19596","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Valentin
+        Bergnaum IV"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
+        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
+        Elliot Hills"}}]}'
+  recorded_at: Sat, 09 Oct 2021 21:24:52 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +65,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:24:53 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"53ceb65201c8edd1d5901c1ed804307e"
+      - W/"13a22134e1a3b8296db4b451c0495145"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 510883ba-480f-4263-bf9b-c1c22c2df3ef
+      - 707a6537-60fb-441b-992d-726af91e14cf
       X-Runtime:
-      - '0.953325'
+      - '0.466575'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789","gym_member_count":1}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
+        601-0789","gym_member_count":2}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
         Fitness","address":"3265 S Wadsworth Blvd, Lakewood, CO 80227","address_details":{"address1":"3265
         S Wadsworth Blvd","address2":"","address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         985-8888","gym_member_count":0}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
@@ -228,10 +244,10 @@ http_interactions:
         Martial Arts","address":"13701 West Jewell Ave, Lakewood, CO 80228","address_details":{"address1":"13701
         West Jewell Ave","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
         746-8500","gym_member_count":0}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:08:25 GMT
+  recorded_at: Sat, 09 Oct 2021 21:24:54 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -247,29 +263,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:24:54 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3633805326bf9e30dc77a852cdc08a63"
+      - W/"77cf26098c7cc35e38de8d9e4be313b7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2f029259-8ed9-42c1-8ddb-c0a60d7b15fd
+      - 480bd9b1-866e-4168-bab6-c264b08d8d8f
       X-Runtime:
-      - '0.936279'
+      - '0.764502'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789","gym_member_count":1}}}'
-  recorded_at: Sat, 09 Oct 2021 21:08:26 GMT
+        601-0789","gym_member_count":2}}}'
+  recorded_at: Sat, 09 Oct 2021 21:24:55 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -285,27 +309,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:24:56 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"de2896108d57f203467fcd368e15f966"
+      - W/"3e3f77ad6eeebabece85d9362fb3e46c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3421d1e3-cf79-4efc-83b8-b47d5103acef
+      - 87d35fd0-79ad-4e19-962b-52a9e5dcf45c
       X-Runtime:
-      - '0.966518'
+      - '0.376580'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"25","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
-        Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
-        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:08:27 GMT
+      string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Ward-Koepp"},"meta":{"address":"2
+        Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2 Livewell
+        Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
+  recorded_at: Sat, 09 Oct 2021 21:24:56 GMT
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
     body:
       encoding: US-ASCII
       string: ''
@@ -321,21 +353,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:24:57 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7118dd8fc4db38f53c398e7af9e9a325"
+      - W/"bc04fc197b4867b32acf8065f3e0a4bd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6690cacd-9526-4f9d-964d-1909248b0e6e
+      - 59124df7-fb7d-40b1-8046-e3e94caf2a0e
       X-Runtime:
-      - '0.012776'
+      - '0.013350'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift!!","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}}],"meta":{"gym_member_count":1}}'
-  recorded_at: Sat, 09 Oct 2021 21:08:27 GMT
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
+        I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
+        B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
+        EVEN more!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}}],"meta":{"gym_member_count":2}}'
+  recorded_at: Sat, 09 Oct 2021 21:24:57 GMT
 recorded_with: VCR 6.0.0

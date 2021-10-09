@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/11/events?time_frame=past
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/11/events?time_frame=past
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:24:43 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -25,13 +31,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dc2929a7-af9c-4b4b-865b-a70b7327ddd1
+      - 82c31d39-f467-48df-84a8-e9f6cedfa3c6
       X-Runtime:
-      - '0.007998'
+      - '0.016486'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 09 Oct 2021 21:08:21 GMT
+  recorded_at: Sat, 09 Oct 2021 21:24:43 GMT
 recorded_with: VCR 6.0.0

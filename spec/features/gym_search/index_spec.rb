@@ -21,7 +21,7 @@ describe 'gyms near me page', :vcr, type: :feature do
         expect(page).to have_content("Rishi's Community Yoga")
         expect(page).to have_content('2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver, CO 80227')
         expect(page).to have_content('(303) 601-0789')
-        expect(page).to have_content('1 Active Members')
+        expect(page).to have_content('Active Members')
       end
     end
   end

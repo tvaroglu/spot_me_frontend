@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/gym_search?zip_code=80227
+    uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
     body:
       encoding: US-ASCII
       string: ''
@@ -18,25 +18,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:25:18 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"53ceb65201c8edd1d5901c1ed804307e"
+      - W/"13a22134e1a3b8296db4b451c0495145"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8aca7f26-ecfa-4910-bda4-5cf38268c951
+      - 1a53bf0a-0b2a-4652-bcbb-66be2cbb08ef
       X-Runtime:
-      - '0.981379'
+      - '0.549764'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789","gym_member_count":1}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
+        601-0789","gym_member_count":2}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
         Fitness","address":"3265 S Wadsworth Blvd, Lakewood, CO 80227","address_details":{"address1":"3265
         S Wadsworth Blvd","address2":"","address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         985-8888","gym_member_count":0}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
@@ -189,5 +197,5 @@ http_interactions:
         Martial Arts","address":"13701 West Jewell Ave, Lakewood, CO 80228","address_details":{"address1":"13701
         West Jewell Ave","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
         746-8500","gym_member_count":0}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:08:31 GMT
+  recorded_at: Sat, 09 Oct 2021 21:25:18 GMT
 recorded_with: VCR 6.0.0

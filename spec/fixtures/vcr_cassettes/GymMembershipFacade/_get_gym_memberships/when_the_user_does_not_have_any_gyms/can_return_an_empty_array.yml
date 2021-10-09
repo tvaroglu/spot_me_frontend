@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/11/gym_memberships
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/11/gym_memberships
     body:
       encoding: US-ASCII
       string: ''
@@ -18,6 +18,12 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:24:47 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
@@ -25,13 +31,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 459c882d-f553-40a3-9a78-42b8d2eae8ee
+      - a46b0715-619f-4b99-8a20-5c832f92ddb9
       X-Runtime:
-      - '0.003064'
+      - '0.006618'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sat, 09 Oct 2021 21:08:22 GMT
+  recorded_at: Sat, 09 Oct 2021 21:24:47 GMT
 recorded_with: VCR 6.0.0

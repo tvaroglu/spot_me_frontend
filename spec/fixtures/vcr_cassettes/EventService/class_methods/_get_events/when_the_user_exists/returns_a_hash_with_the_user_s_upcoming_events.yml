@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1/events
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
     body:
       encoding: US-ASCII
       string: ''
@@ -18,24 +18,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:25:08 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9d2725d1229e07aed0418ad9ea6cae3d"
+      - W/"5d2a2040ea9d123331dfb6943cdb8f19"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c7bedb3f-8937-4f30-8d3c-49fdf62516b7
+      - 3c957fec-8774-4693-98d8-9bf7209cd0d6
       X-Runtime:
-      - '0.013341'
+      - '0.015241'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"48","type":"event","attributes":{"user_id":1,"gym_membership_id":35,"date_time":"2021-10-09T23:28:00.000Z","activity":"Lift!"},"meta":{"friend_name":"Taylor","friend_role":"host","gym_name":"Quest
-        Fitness","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"23","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-11T00:39:30.304Z","activity":"Soapmaking"},"meta":{"friend_name":"Kenny
-        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"35","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-10-11T01:18:38.484Z","activity":"Surfing"},"meta":{"friend_name":"Arthur
-        Dickinson","friend_role":"host","gym_name":"Bode, Feest and Daniel","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"39","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-11T01:18:38.492Z","activity":"Geocaching"},"meta":{"friend_name":"Kenny
-        Dach","friend_role":"host","gym_name":"Parker-Trantow","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:08:28 GMT
+      string: '{"data":[{"id":"48","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-09T23:58:20.072Z","activity":"Cooking"},"meta":{"friend_name":"Scott
+        B","friend_role":"host","gym_name":"Rishi''s Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}},{"id":"46","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-11T23:58:20.062Z","activity":"Playing
+        musical instruments"},"meta":{"friend_name":"Scott B","friend_role":"host","gym_name":"Rishi''s
+        Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}}]}'
+  recorded_at: Sat, 09 Oct 2021 21:25:09 GMT
 recorded_with: VCR 6.0.0

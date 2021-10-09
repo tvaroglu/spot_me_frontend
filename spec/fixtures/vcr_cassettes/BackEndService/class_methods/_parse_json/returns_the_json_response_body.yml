@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4500/api/v1/users/1
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -18,23 +18,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sat, 09 Oct 2021 21:25:08 GMT
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"20c971d79f3541f1f3f5345b2d49d5b7"
+      - W/"e7d05f1bad5b937ba3786b58da83079d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 464304e8-6f9d-4984-87e3-b8fac34a3797
+      - 4af6ad08-33b1-4584-9652-4cac933dfe3a
       X-Runtime:
-      - '0.003494'
+      - '0.011229'
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"miquel_kiehn@mcglynn.co","google_id":"nyuy62z5gx494xt2fzqeh","google_image_url":"https://robohash.org/molestiassuntdolores.png?size=300x300\u0026set=set1","zip_code":"38624","summary":"It
-        is impossible to begin to learn that which one thinks one already knows.","goal":"Gain
-        Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Chuck
-        Hamill"}}}'
-  recorded_at: Sat, 09 Oct 2021 21:08:28 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"41895","summary":"The
+        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
+        Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":false,"full_name":"Joanne
+        Champlin"}}}'
+  recorded_at: Sat, 09 Oct 2021 21:25:08 GMT
 recorded_with: VCR 6.0.0

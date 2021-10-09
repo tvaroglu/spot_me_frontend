@@ -24,32 +24,32 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 04 Oct 2021 21:03:55 GMT
+      - Sat, 09 Oct 2021 21:25:14 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"753c888b3e1fe7958885db69a43a3fa4"
+      - W/"95fcdb968404a61c8de910a67d22fb42"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0e07fa77-31d3-4ebf-8c60-f6fb64699a82
+      - 5f289629-1b7d-484c-a221-9e23668e0d50
       X-Runtime:
-      - '0.459425'
+      - '0.676475'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"74","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+      string: '{"data":{"id":"108","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}}'
-  recorded_at: Mon, 04 Oct 2021 21:03:56 GMT
+  recorded_at: Sat, 09 Oct 2021 21:25:15 GMT
 - request:
     method: delete
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/74
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/108
     body:
       encoding: US-ASCII
       string: ''
@@ -68,7 +68,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 04 Oct 2021 21:03:56 GMT
+      - Sat, 09 Oct 2021 21:25:15 GMT
       Content-Length:
       - '0'
       Connection:
@@ -76,13 +76,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 6d0808b2-fe28-44ce-9096-283fe1caf9ad
+      - e1948264-20bd-4ff8-9de9-7c685bdce2b1
       X-Runtime:
-      - '0.049478'
+      - '0.047092'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Mon, 04 Oct 2021 21:03:57 GMT
+  recorded_at: Sat, 09 Oct 2021 21:25:16 GMT
 recorded_with: VCR 6.0.0

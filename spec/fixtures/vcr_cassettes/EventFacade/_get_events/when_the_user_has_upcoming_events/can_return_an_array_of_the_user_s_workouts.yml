@@ -21,30 +21,28 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 04 Oct 2021 21:03:30 GMT
+      - Sat, 09 Oct 2021 21:24:41 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7769795a25458fadb887a02a946ab311"
+      - W/"5d2a2040ea9d123331dfb6943cdb8f19"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92a0fa60-d08c-4e29-9f98-886548e5f629
+      - 4041ed69-3e6d-4329-85d3-25238657bd08
       X-Runtime:
-      - '0.039897'
+      - '0.375191'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"44","type":"event","attributes":{"user_id":1,"gym_membership_id":3,"date_time":"2021-10-07T23:58:20.050Z","activity":"role-playing
-        games"},"meta":{"friend_name":"Malcom Langworth","friend_role":"host","gym_name":"O''Hara
-        Group","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"48","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-09T23:58:20.072Z","activity":"Cooking"},"meta":{"friend_name":"Scott
+      string: '{"data":[{"id":"48","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-09T23:58:20.072Z","activity":"Cooking"},"meta":{"friend_name":"Scott
         B","friend_role":"host","gym_name":"Rishi''s Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}},{"id":"46","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-11T23:58:20.062Z","activity":"Playing
         musical instruments"},"meta":{"friend_name":"Scott B","friend_role":"host","gym_name":"Rishi''s
         Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}}]}'
-  recorded_at: Mon, 04 Oct 2021 21:03:30 GMT
+  recorded_at: Sat, 09 Oct 2021 21:24:42 GMT
 recorded_with: VCR 6.0.0

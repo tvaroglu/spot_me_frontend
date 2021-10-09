@@ -27,7 +27,8 @@ describe Gym, type: :poro do
           city: city,
           state: state,
           zip_code: zip_code
-        }
+        },
+        gym_member_count: 0
       }
     }
   end
@@ -58,6 +59,9 @@ describe Gym, type: :poro do
 
       expect(gym.phone).to eq(phone)
       expect(gym.phone).to be_a String
+
+      expect(gym.gym_member_count).to eq 0
+      expect(gym.gym_member_count).to be_an Integer
     end
   end
 

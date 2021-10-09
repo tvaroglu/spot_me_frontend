@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 04 Oct 2021 21:03:54 GMT
+      - Sat, 09 Oct 2021 21:25:13 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"fc8c92178fd5fa67fde9f31f73236d19"
+      - W/"ffdff40d0ed235eb01eef25288211703"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b08dd1af-c049-4e8c-ac2f-ab6c6c831eae
+      - 46b88bb7-7739-4216-87ee-826e29a773c5
       X-Runtime:
-      - '0.024666'
+      - '0.031627'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,6 +43,6 @@ http_interactions:
       string: '{"data":[{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
         I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
         B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
-        EVEN more!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}}]}'
-  recorded_at: Mon, 04 Oct 2021 21:03:55 GMT
+        EVEN more!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}}]}'
+  recorded_at: Sat, 09 Oct 2021 21:25:14 GMT
 recorded_with: VCR 6.0.0

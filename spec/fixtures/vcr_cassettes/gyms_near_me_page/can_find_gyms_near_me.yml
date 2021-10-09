@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 04 Oct 2021 21:03:37 GMT
+      - Sat, 09 Oct 2021 21:24:50 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3877c75e-9ef9-4bbf-8cff-def94bec3f43
+      - 581ebd28-5c85-4d10-b9c2-3feaee136793
       X-Runtime:
-      - '0.018881'
+      - '0.008086'
       Transfer-Encoding:
       - chunked
       Via:
@@ -46,7 +46,7 @@ http_interactions:
         Bergnaum IV"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
         unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
         Elliot Hills"}}]}'
-  recorded_at: Mon, 04 Oct 2021 21:03:38 GMT
+  recorded_at: Sat, 09 Oct 2021 21:24:50 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
@@ -68,19 +68,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 04 Oct 2021 21:03:38 GMT
+      - Sat, 09 Oct 2021 21:24:51 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1114a071c9b615dbe87ef3ec5505e2ab"
+      - W/"13a22134e1a3b8296db4b451c0495145"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '08d230f7-e622-45fc-995c-68f19ea9437a'
+      - 0bb12df9-ab9a-43ca-bcce-c0f91893939c
       X-Runtime:
-      - '0.326155'
+      - '0.608949'
       Transfer-Encoding:
       - chunked
       Via:
@@ -91,67 +91,158 @@ http_interactions:
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789"}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
+        601-0789","gym_member_count":2}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
         Fitness","address":"3265 S Wadsworth Blvd, Lakewood, CO 80227","address_details":{"address1":"3265
         S Wadsworth Blvd","address2":"","address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        985-8888"}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
+        985-8888","gym_member_count":0}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
         Boot Camp - Bear Creek","address":"3333 S Wadsworth Blvd, Unit A-111, Lakewood,
         CO 80227","address_details":{"address1":"3333 S Wadsworth Blvd","address2":"Unit
         A-111","address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(720)
-        920-9746"}},{"id":"R0KoJs345Zxga1CnrGn8tw","type":"gym","attributes":{"name":"Rocky
+        920-9746","gym_member_count":0}},{"id":"R0KoJs345Zxga1CnrGn8tw","type":"gym","attributes":{"name":"Rocky
         Mountain Karate Association","address":"3234 S Wadsworth Blvd, Unit K, Lakewood,
         CO 80227","address_details":{"address1":"3234 S Wadsworth Blvd","address2":"Unit
         K","address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        989-4328"}},{"id":"xTWx3zsFHim7sbPfCMjX8Q","type":"gym","attributes":{"name":"Arthur
+        989-4328","gym_member_count":0}},{"id":"xTWx3zsFHim7sbPfCMjX8Q","type":"gym","attributes":{"name":"Arthur
         Murray Dance Studio","address":"3355 S Yarrow, Ste E-125, Lakewood, CO 80227","address_details":{"address1":"3355
         S Yarrow","address2":"Ste E-125","address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        987-2444"}},{"id":"mwVz1h_a-q6HYKFGWr-ezA","type":"gym","attributes":{"name":"The
+        987-2444","gym_member_count":0}},{"id":"mwVz1h_a-q6HYKFGWr-ezA","type":"gym","attributes":{"name":"The
         Sanctuary Brazilian JiuJitsu and Fitness","address":"3355 S Wadsworth Blvd,
         Unit F109, Lakewood, CO 80227","address_details":{"address1":"3355 S Wadsworth
         Blvd","address2":"Unit F109","address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(720)
-        383-1617"}},{"id":"AlUJKAnzTr3ww3158hiexQ","type":"gym","attributes":{"name":"Colorado
+        383-1617","gym_member_count":0}},{"id":"AlUJKAnzTr3ww3158hiexQ","type":"gym","attributes":{"name":"Colorado
         Krav Maga","address":"1957 S Wadsworth, Lakewood, CO 80227","address_details":{"address1":"1957
         S Wadsworth","address2":null,"address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        984-1957"}},{"id":"zDCVsjiiEfN5sP7hNT_6tA","type":"gym","attributes":{"name":"Denver
+        984-1957","gym_member_count":0}},{"id":"zDCVsjiiEfN5sP7hNT_6tA","type":"gym","attributes":{"name":"Denver
         Karate Academy","address":"7857 W Jewell Ave, Lakewood, CO 80232","address_details":{"address1":"7857
         W Jewell Ave","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        934-2988"}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
+        934-2988","gym_member_count":0}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
         Winds and Hands","address":"9150 W Jewell Ave, Ste 118, Lakewood, CO 80232","address_details":{"address1":"9150
         W Jewell Ave","address2":"Ste 118","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
-        939-1723"}},{"id":"yniujIwHCBfraVGz349TTg","type":"gym","attributes":{"name":"Prestige
+        939-1723","gym_member_count":0}},{"id":"yniujIwHCBfraVGz349TTg","type":"gym","attributes":{"name":"Prestige
         Fitness - Lakewood","address":"7777 W Jewell Ave, Lakewood, CO 80232","address_details":{"address1":"7777
         W Jewell Ave","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        989-7900"}},{"id":"5bDgDRasg-0EdO2UPnWuEw","type":"gym","attributes":{"name":"Flo
+        989-7900","gym_member_count":0}},{"id":"5bDgDRasg-0EdO2UPnWuEw","type":"gym","attributes":{"name":"Flo
         Life BJJ+","address":"9191 W Jewell Ave, Lakewood, CO 80232","address_details":{"address1":"9191
         W Jewell Ave","address2":null,"address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
-        665-4035"}},{"id":"GEY_itNFmyT124gj24JjnA","type":"gym","attributes":{"name":"Shane
+        665-4035","gym_member_count":0}},{"id":"GEY_itNFmyT124gj24JjnA","type":"gym","attributes":{"name":"Shane
         Keri Dance","address":"1466 S Wadsworth Blvd, Lakewood, CO 80232","address_details":{"address1":"1466
         S Wadsworth Blvd","address2":"","address3":null,"city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
-        299-1228"}},{"id":"CORIddkNzPMqpaV6wAO2Qg","type":"gym","attributes":{"name":"5280
+        299-1228","gym_member_count":0}},{"id":"CORIddkNzPMqpaV6wAO2Qg","type":"gym","attributes":{"name":"5280
         Karate Academy","address":"10815 W Jewell Ave, Ste G, Lakewood, CO 80232","address_details":{"address1":"10815
         W Jewell Ave","address2":"Ste G","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        986-5468"}},{"id":"m2r-plZskJ9h_ln6dnIrLg","type":"gym","attributes":{"name":"VASA
+        986-5468","gym_member_count":0}},{"id":"m2r-plZskJ9h_ln6dnIrLg","type":"gym","attributes":{"name":"VASA
         Fitness - Denver","address":"1955 S Sheridan Blvd, Denver, CO 80227","address_details":{"address1":"1955
         S Sheridan Blvd","address2":null,"address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        985-8272"}},{"id":"3CIO2aJshjn1IBcbWcn8Vw","type":"gym","attributes":{"name":"TIS
+        985-8272","gym_member_count":0}},{"id":"3CIO2aJshjn1IBcbWcn8Vw","type":"gym","attributes":{"name":"TIS
         Fitness Systems","address":"6100 W Mansfield Ave, Ste 31, Denver, CO 80235","address_details":{"address1":"6100
         W Mansfield Ave","address2":"Ste 31","address3":null,"city":"Denver","zip_code":"80235","country":"US","state":"CO"},"phone":"(815)
-        904-0133"}},{"id":"mRjQmf7JNkTGgcJXySftSg","type":"gym","attributes":{"name":"Body
+        904-0133","gym_member_count":0}},{"id":"mRjQmf7JNkTGgcJXySftSg","type":"gym","attributes":{"name":"Body
         \u0026 Brain Yoga Tai Chi - Lakewood","address":"1535 S Kipling Pkwy, Unit
         M, Lakewood, CO 80232","address_details":{"address1":"1535 S Kipling Pkwy","address2":"Unit
         M","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        948-5500"}},{"id":"tlXokHTl53TZci9jBRHJRA","type":"gym","attributes":{"name":"Southwest-Chatfield
+        948-5500","gym_member_count":0}},{"id":"tlXokHTl53TZci9jBRHJRA","type":"gym","attributes":{"name":"Southwest-Chatfield
         Branch YMCA","address":"5181 W Kenyon Ave, Denver, CO 80236","address_details":{"address1":"5181
         W Kenyon Ave","address2":"","address3":"","city":"Denver","zip_code":"80236","country":"US","state":"CO"},"phone":"(303)
-        761-7530"}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
+        761-7530","gym_member_count":0}},{"id":"zGNwwiBAF7k5u946AwfplQ","type":"gym","attributes":{"name":"Aqua
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","address_details":{"address1":"4625
         W Warren Ave","address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"(303)
-        568-9192"}},{"id":"UfB0UTkQiJAOGO8ZeN71hQ","type":"gym","attributes":{"name":"iLoveKickboxing-
+        568-9192","gym_member_count":0}},{"id":"UfB0UTkQiJAOGO8ZeN71hQ","type":"gym","attributes":{"name":"iLoveKickboxing-
         Lakewood","address":"650 S Wadsworth Blvd, Lakewood, CO 80226","address_details":{"address1":"650
         S Wadsworth Blvd","address2":null,"address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
-        935-7159"}},{"id":"J51EDNPrWHJsTOhih_ELzg","type":"gym","attributes":{"name":"Orangetheory
+        935-7159","gym_member_count":0}},{"id":"J51EDNPrWHJsTOhih_ELzg","type":"gym","attributes":{"name":"Orangetheory
         Fitness Belmar","address":"7700 W Virginia Ave, Ste A, Lakewood, CO 80226","address_details":{"address1":"7700
         W Virginia Ave","address2":"Ste A","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
-        402-3888"}}]}'
-  recorded_at: Mon, 04 Oct 2021 21:03:39 GMT
+        402-3888","gym_member_count":0}},{"id":"gvfltiBTRd3ZoXwKa4jDGg","type":"gym","attributes":{"name":"Orangetheory
+        Fitness Littleton","address":"8555 W. Belleview Ave, Littleton, CO 80123","address_details":{"address1":"8555
+        W. Belleview Ave","address2":null,"address3":null,"city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(303)
+        979-6878","gym_member_count":0}},{"id":"9AysRhHFCFATPd49QcNpwA","type":"gym","attributes":{"name":"Club
+        USA","address":"5066 S Wadsworth Way, Unit 107, Littleton, CO 80123","address_details":{"address1":"5066
+        S Wadsworth Way","address2":"Unit 107","address3":"","city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(303)
+        979-7772","gym_member_count":0}},{"id":"a3kzQfxkmTNLTlhB3X3Dvg","type":"gym","attributes":{"name":"Club
+        Pilates","address":"437 S Wadsworth Blvd, Ste F, Lakewood, CO 80226","address_details":{"address1":"437
+        S Wadsworth Blvd","address2":"Ste F","address3":"","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
+        789-1011","gym_member_count":0}},{"id":"VJ-tmILwVpOARlLnATKb7Q","type":"gym","attributes":{"name":"Pure
+        Barre","address":"7420 W Alaska Dr, Space 511, Lakewood, CO 80226","address_details":{"address1":"7420
+        W Alaska Dr","address2":"Space 511","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
+        928-9849","gym_member_count":0}},{"id":"PgSoFufawSL90gT9-dxRtA","type":"gym","attributes":{"name":"Exclusive
+        Martial Arts","address":"8555 W Belleview Ave, Ste D-09, Littleton, CO 80123","address_details":{"address1":"8555
+        W Belleview Ave","address2":"Ste D-09","address3":null,"city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(303)
+        972-0114","gym_member_count":0}},{"id":"lK837HiUHAPEiiUoU_e3pw","type":"gym","attributes":{"name":"CorePower
+        Yoga","address":"7349 W Alaska Dr, Lakewood, CO 80226","address_details":{"address1":"7349
+        W Alaska Dr","address2":"","address3":"","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
+        233-9642","gym_member_count":0}},{"id":"1Vm56EM7IRgePgtL_XARsw","type":"gym","attributes":{"name":"Let
+        Love PBC","address":"Denver, CO 80226","address_details":{"address1":"","address2":null,"address3":"","city":"Denver","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
+        359-9885","gym_member_count":0}},{"id":"1N_9MGctxH1cdMLpQk2-Ew","type":"gym","attributes":{"name":"JETKids
+        Gymnastics","address":"5012 S Jellison Way, Littleton, CO 80123","address_details":{"address1":"5012
+        S Jellison Way","address2":"","address3":"","city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(303)
+        933-6136","gym_member_count":0}},{"id":"A-HfbxlhcFzJ15JAgsNAHg","type":"gym","attributes":{"name":"Easton
+        Training Center - Littleton","address":"5005 S Kipling Pkwy, Ste A2, Littleton,
+        CO 80127","address_details":{"address1":"5005 S Kipling Pkwy","address2":"Ste
+        A2","address3":"","city":"Littleton","zip_code":"80127","country":"US","state":"CO"},"phone":"(303)
+        600-8425","gym_member_count":0}},{"id":"6dEpwjRt2NG_9fKlHAX04w","type":"gym","attributes":{"name":"Koko
+        FitClub of Ken Caryl","address":"5055 S Kipling Pkwy, C-1, Littleton, CO 80127","address_details":{"address1":"5055
+        S Kipling Pkwy","address2":"C-1","address3":"","city":"Littleton","zip_code":"80127","country":"US","state":"CO"},"phone":"(303)
+        993-7261","gym_member_count":0}},{"id":"Whw9ejwvfjMZYDVPIhrhYA","type":"gym","attributes":{"name":"Colorado
+        Hsing-I Kung Fu","address":"305 S Kipling St, Mueller''s Martial Arts, Lakewood,
+        CO 80226","address_details":{"address1":"305 S Kipling St","address2":"","address3":"Mueller''s
+        Martial Arts","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
+        317-6847","gym_member_count":0}},{"id":"BuazFravSf7WDuOWd5FRsw","type":"gym","attributes":{"name":"Nelvana
+        Fitness","address":"Denver, CO 80219","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"CWH5BFNnEr3YJNikyK0FIQ","type":"gym","attributes":{"name":"Sun
+        Fitness","address":"13654 W Auburn Ave, Denver, CO 80228","address_details":{"address1":"13654
+        W Auburn Ave","address2":"","address3":"","city":"Denver","zip_code":"80228","country":"US","state":"CO"},"phone":"(720)
+        351-0722","gym_member_count":0}},{"id":"w8BhjGxrNtVrmlXhlACclw","type":"gym","attributes":{"name":"SwimLabs
+        Swim School - Littleton","address":"8500 W Crestline Ave, Unit I, Littleton,
+        CO 80123","address_details":{"address1":"8500 W Crestline Ave","address2":"Unit
+        I","address3":"","city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(720)
+        699-0001","gym_member_count":0}},{"id":"WWSjaolIpnuSlU0tK96sxg","type":"gym","attributes":{"name":"Tstotalfitness","address":"12164
+        W Stanford Dr, Morrison, CO 80465","address_details":{"address1":"12164 W
+        Stanford Dr","address2":"","address3":null,"city":"Morrison","zip_code":"80465","country":"US","state":"CO"},"phone":"(303)
+        906-3399","gym_member_count":0}},{"id":"ugiyyxL6P9R_K98pX7l9IQ","type":"gym","attributes":{"name":"TM
+        Ballroom Dance Studio","address":"12354 W Alameda Pkwy, Ste 170, Lakewood,
+        CO 80228","address_details":{"address1":"12354 W Alameda Pkwy","address2":"Ste
+        170","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
+        997-3486","gym_member_count":0}},{"id":"ec_zqqp2n4tetTwAF3vbkA","type":"gym","attributes":{"name":"Denver
+        Wing Chun","address":"3005 W Bear Creek Dr, Englewood, CO 80110","address_details":{"address1":"3005
+        W Bear Creek Dr","address2":null,"address3":"","city":"Englewood","zip_code":"80110","country":"US","state":"CO"},"phone":"(720)
+        298-6457","gym_member_count":0}},{"id":"Y99veEihdJhCA60TYh4k8g","type":"gym","attributes":{"name":"Elevated
+        Fitness","address":"12364 W Alameda Pkwy, Ste 105, Lakewood, CO 80228","address_details":{"address1":"12364
+        W Alameda Pkwy","address2":"Ste 105","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(720)
+        383-1607","gym_member_count":0}},{"id":"T4--k0xwFDuMAvvQrSuohg","type":"gym","attributes":{"name":"Absolute
+        Personal Fitness","address":"12364 W Alameda Pkwy, Ste 105, Lakewood, CO 80228","address_details":{"address1":"12364
+        W Alameda Pkwy","address2":"Ste 105","address3":null,"city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(720)
+        389-9693","gym_member_count":0}},{"id":"9rl1pmJXBOtKVYtk4IT5tA","type":"gym","attributes":{"name":"Blue
+        Spruce Yoga","address":"100 Carr St, Lakewood United Church of Christ, Lakewood,
+        CO 80226","address_details":{"address1":"100 Carr St","address2":null,"address3":"Lakewood
+        United Church of Christ","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
+        237-4776","gym_member_count":0}},{"id":"Ar-0s6JAO3b17NWZ-_FH6w","type":"gym","attributes":{"name":"Green
+        Mountain Recreation Center","address":"13198 W Green Mountain Dr, Lakewood,
+        CO 80228","address_details":{"address1":"13198 W Green Mountain Dr","address2":"","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
+        987-7830","gym_member_count":0}},{"id":"eCCxSIBo-iusyOIw0JQZag","type":"gym","attributes":{"name":"The
+        Cycling Yogi","address":"12790 W Alameda Pkwy, Ste G, Lakewood, CO 80228","address_details":{"address1":"12790
+        W Alameda Pkwy","address2":"Ste G","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
+        988-2773","gym_member_count":0}},{"id":"AKFDPM4Cd5YoKoo3a_yneA","type":"gym","attributes":{"name":"Fitness
+        Evolution","address":"12790 W Alameda Pkwy, Lakewood, CO 80228","address_details":{"address1":"12790
+        W Alameda Pkwy","address2":"","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
+        249-3526","gym_member_count":0}},{"id":"1JDOpRODpccHDtCwa2BOhA","type":"gym","attributes":{"name":"Colorado
+        Taekwondo Institute","address":"12354 W Alameda Pkwy, Lakewood, CO 80228","address_details":{"address1":"12354
+        W Alameda Pkwy","address2":"","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
+        989-7542","gym_member_count":0}},{"id":"GWs-mchsBcWJODh6AcMKVg","type":"gym","attributes":{"name":"Crossfit
+        South Denver","address":"2783 W Hampden Ave, Englewood, CO 80110","address_details":{"address1":"2783
+        W Hampden Ave","address2":"","address3":"","city":"Englewood","zip_code":"80110","country":"US","state":"CO"},"phone":"(303)
+        725-6989","gym_member_count":0}},{"id":"rBaKJdb2rBA_gb8bC-kVHA","type":"gym","attributes":{"name":"Hungryoga
+        at Ascent Therapy","address":"9116 W Bowles Ave, 10, Littleton, CO 80123","address_details":{"address1":"9116
+        W Bowles Ave","address2":"10","address3":"","city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(720)
+        336-1030","gym_member_count":0}},{"id":"lrCLHQd9TTVsF_o8hIq52w","type":"gym","attributes":{"name":"Bastet
+        Birthing","address":"Denver, CO 80123","address_details":{"address1":"","address2":null,"address3":"","city":"Denver","zip_code":"80123","country":"US","state":"CO"},"phone":"(512)
+        688-0884","gym_member_count":0}},{"id":"Zkfty_xH5aFskgji2QlxCA","type":"gym","attributes":{"name":"Winddancer
+        Studios","address":"13701 W Jewell Ave, Ste 107, Lakewood, CO 80228","address_details":{"address1":"13701
+        W Jewell Ave","address2":"Ste 107","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(720)
+        940-9834","gym_member_count":0}},{"id":"29jp81EtRpDJTAABpvE5rQ","type":"gym","attributes":{"name":"Tribe
+        Gym Denver","address":"1169 S Alkire St, Lakewood, CO 80228","address_details":{"address1":"1169
+        S Alkire St","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(918)
+        640-8452","gym_member_count":0}},{"id":"EIvEo7asZAe_VEofHnDtng","type":"gym","attributes":{"name":"Paragon
+        Martial Arts","address":"13701 West Jewell Ave, Lakewood, CO 80228","address_details":{"address1":"13701
+        West Jewell Ave","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
+        746-8500","gym_member_count":0}}]}'
+  recorded_at: Sat, 09 Oct 2021 21:24:52 GMT
 recorded_with: VCR 6.0.0

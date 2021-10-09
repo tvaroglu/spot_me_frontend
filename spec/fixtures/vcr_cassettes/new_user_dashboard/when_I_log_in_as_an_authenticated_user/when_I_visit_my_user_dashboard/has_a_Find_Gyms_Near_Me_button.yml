@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?relationship=followers
+    uri: http://localhost:4500/api/v1/users/1/friendships?relationship=followers
     body:
       encoding: US-ASCII
       string: ''
@@ -18,33 +18,25 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 04 Oct 2021 21:03:44 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d350138170651bd958cbbdda58de81c9"
+      - W/"a50565f071d6cb23ffee87bdfb94e458"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d5d223f3-ecb3-4250-8579-e26dc9e0c125
+      - 6bee275c-d321-4bdb-ae98-3c7146377d07
       X-Runtime:
-      - '0.012881'
+      - '0.003151'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"user","attributes":{"email":"rolando.nikolaus@jones-cassin.info","google_id":"ummu458qvzj7jxme3quds","google_image_url":"https://robohash.org/voluptatemexcepturivoluptas.png?size=300x300\u0026set=set1","zip_code":"19596","summary":"It
-        is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Valentin
-        Bergnaum IV"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
-        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
-        Elliot Hills"}}]}'
-  recorded_at: Mon, 04 Oct 2021 21:03:45 GMT
+      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift!!","goal":"Gain
+        Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}},{"id":"3","type":"user","attributes":{"email":"octavio@pfeffer.co","google_id":"phqmh6hfwngn7v5zirldm","google_image_url":"https://robohash.org/pariaturtotamvoluptate.png?size=300x300\u0026set=set1","zip_code":"71836","summary":"A
+        few vices are sufficient to darken many virtues.","goal":"Lose Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":false,"full_name":"Arthur
+        Dickinson"}},{"id":"7","type":"user","attributes":{"email":"rosendo@stark.net","google_id":"wp1eb2h9nus9v7dunji9h","google_image_url":"https://robohash.org/omnisillummolestiae.png?size=300x300\u0026set=set1","zip_code":"73105","summary":"Love
+        is composed of a single soul inhabiting two bodies.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Lyle
+        Collins"}}]}'
+  recorded_at: Sat, 09 Oct 2021 21:08:27 GMT
 recorded_with: VCR 6.0.0

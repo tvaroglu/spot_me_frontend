@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships
     body:
       encoding: UTF-8
       string: '{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
@@ -21,35 +21,27 @@ http_interactions:
       code: 201
       message: Created
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 04 Oct 2021 21:03:55 GMT
-      Connection:
-      - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"753c888b3e1fe7958885db69a43a3fa4"
+      - W/"258bc03d53a19ad63bf9359f38eb6491"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0e07fa77-31d3-4ebf-8c60-f6fb64699a82
+      - 248134e5-558b-4c46-9ec8-5139fb37bf11
       X-Runtime:
-      - '0.459425'
+      - '1.337594'
       Transfer-Encoding:
       - chunked
-      Via:
-      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"74","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+      string: '{"data":{"id":"44","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}}'
-  recorded_at: Mon, 04 Oct 2021 21:03:56 GMT
+  recorded_at: Sat, 09 Oct 2021 21:08:29 GMT
 - request:
     method: delete
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/74
+    uri: http://localhost:4500/api/v1/users/1/gym_memberships/44
     body:
       encoding: US-ASCII
       string: ''
@@ -65,24 +57,14 @@ http_interactions:
       code: 204
       message: No Content
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Mon, 04 Oct 2021 21:03:56 GMT
-      Content-Length:
-      - '0'
-      Connection:
-      - keep-alive
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 6d0808b2-fe28-44ce-9096-283fe1caf9ad
+      - 7b308961-3acb-486d-9681-f07c6284986e
       X-Runtime:
-      - '0.049478'
-      Via:
-      - 1.1 vegur
+      - '0.012313'
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Mon, 04 Oct 2021 21:03:57 GMT
+  recorded_at: Sat, 09 Oct 2021 21:08:29 GMT
 recorded_with: VCR 6.0.0

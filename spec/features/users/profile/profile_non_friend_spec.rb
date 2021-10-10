@@ -79,6 +79,14 @@ describe 'user profile page: non-friend', type: :feature do
         expect(page).not_to have_content('Upcoming Workouts')
         expect(page).not_to have_css('#upcoming-workouts')
       end
+
+      it 'displays a section with the users following the profile user (i.e. followers)' do
+        expect(page).to have_css('#followers')
+
+        within '#followers' do
+          expect(page).to have_content("#{user10.full_name} has no followers.")
+        end
+      end
     end
   end
 end

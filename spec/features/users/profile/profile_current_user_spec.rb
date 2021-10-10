@@ -62,9 +62,21 @@ describe 'user profile page: current user', type: :feature do
         end
       end
 
-      # it 'displays a section with the users following me (i.e. followers)' do
-      #   expect(page).to have_css('#followers')
-      # end
+      it 'displays a section with the users following me (i.e. followers)' do
+        expect(page).to have_css('#followers')
+
+        within '#followers' do
+          user_friends.each do |friend|
+            within "#follower-#{friend.id}" do
+              expect(page).to have_content(friend.full_name)
+              expect(page).to have_link(friend.full_name)
+              expect(page).to have_content(friend.zip_code)
+              expect(page).to have_content(friend.goal)
+              expect(page).to have_content(friend.availability)
+            end
+          end
+        end
+      end
     end
   end
 end

@@ -1,4 +1,4 @@
-<div class="container flex-wrap-reverse gray full-radius padding mb-3 mt-150" id='profile-header'>
+<div class="container flex-wrap-reverse gray center full-radius padding mb-3 mt-150" id='profile-header'>
   <div class="row item-center center-it-all">
     <h1 class='welcome-title'>Welcome to SpotMe</h1>
 
@@ -6,4 +6,8 @@
       Find your future 'SwoleMate' or fitness bestie at your gym and schedule a workout together!
     </h2>
   </div>
+
+  <%= link_to 'Sign in with Google', '/auth/google_oauth2', method: :post, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+
+  <br><br><br>
 </div>

@@ -140,15 +140,16 @@ describe 'edit user profile', type: :feature do
   let(:user_events) { [event1, event2] }
 
   before do
+    allow(FriendshipFacade).to receive(:get_friends).with(user.id.to_s).and_return(user_friends)
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
+    allow(FriendshipFacade).to receive(:get_followers).with(user.id.to_s).and_return(user_friends)
+    allow(FriendshipFacade).to receive(:get_followers).with(user.id).and_return(user_friends)
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gyms)
     allow(EventFacade).to receive(:get_events).with(user.id).and_return(user_events)
     allow(EventFacade).to receive(:get_events).with(user.id, 'past').and_return([])
   end
 
   it "can click on the link from the current user's profile page and be taken to the edit form", :vcr do
-    allow(FriendshipFacade).to receive(:get_friends).with(user.id.to_s).and_return(user_friends)
-
     visit profile_path(user.id)
     click_on 'Edit Profile'
 
@@ -156,8 +157,7 @@ describe 'edit user profile', type: :feature do
   end
 
   it 'can fill out a form to update a user and gives a flash message when you successfully update a user', :vcr do
-    allow(FriendshipFacade).to receive(:get_friends).with(user.id.to_s).and_return(user_friends)
-    allow(UserService).to receive(:update_user).with(user_blob, user.id).and_return(user)
+    allow(UserFacade).to receive(:update_user).with(user_blob, user.id).and_return(user)
 
     visit edit_profile_path(user.id)
 
@@ -177,7 +177,6 @@ describe 'edit user profile', type: :feature do
 
   context 'when I click "Cancel"' do
     it 'returns me to my profile page' do
-      allow(FriendshipFacade).to receive(:get_friends).with(user.id.to_s).and_return(user_friends)
       allow(UserFacade).to receive(:get_profile_user).with(user.id.to_s).and_return(user)
 
       visit profile_path(user.id)

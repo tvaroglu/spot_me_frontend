@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/10/friendships?relationship=followers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 10 Oct 2021 20:30:45 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d0d8ebe6cdf10f7bc967cc4c0b612532"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1cea7182-60e8-4367-ba29-42a83cba270b
+      X-Runtime:
+      - '0.007597'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"7","type":"user","attributes":{"email":"rolando.nikolaus@jones-cassin.info","google_id":"ummu458qvzj7jxme3quds","google_image_url":"https://robohash.org/voluptatemexcepturivoluptas.png?size=300x300\u0026set=set1","zip_code":"19596","summary":"It
+        is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Valentin
+        Bergnaum IV"}},{"id":"9","type":"user","attributes":{"email":"dario.carter@wintheiser.net","google_id":"85prfo95zbvtuik27upid","google_image_url":"https://robohash.org/similiqueenimarchitecto.png?size=300x300\u0026set=set1","zip_code":"18881","summary":"Rhetoric
+        is the art of ruling the minds of men.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Carrie
+        O''Reilly"}},{"id":"6","type":"user","attributes":{"email":"janell@lubowitz.biz","google_id":"ehykf7q91dhfe5yzkuo6q","google_image_url":"https://robohash.org/evenietquieos.png?size=300x300\u0026set=set1","zip_code":"92642","summary":"It''s
+        not what happens to you, but how you react to it that matters.","goal":"Lose
+        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Rep.
+        Octavia Kuhic"}}]}'
+  recorded_at: Sun, 10 Oct 2021 20:30:45 GMT
+recorded_with: VCR 6.0.0

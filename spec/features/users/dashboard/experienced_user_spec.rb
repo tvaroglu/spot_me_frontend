@@ -41,10 +41,10 @@ describe 'experienced user dashboard', type: :feature do
       it 'displays a profile nav bar with anchor links' do
         within '#profile-nav' do
           expect(page).to have_link("#{user_events.size} Upcoming Workouts", href: '#my-upcoming-workouts')
-          expect(page).to have_link('My Gyms', href: '#my-gyms')
+          expect(page).to have_link("#{user_gym_memberships.size} Gyms", href: '#my-gyms')
           expect(page).to have_link("#{user_friends.size} Following", href: '#my-friends')
           expect(page).to have_link("#{user_friends.size} Followers", href: '#my-followers')
-          expect(page).to have_link('Activity Log', href: '#my-activity-log')
+          expect(page).to have_link("#{past_events.size} Completed Workouts", href: '#my-completed-workouts')
         end
       end
 
@@ -89,7 +89,7 @@ describe 'experienced user dashboard', type: :feature do
       end
 
       it 'displays the number of completed workouts' do
-        within '#my-activity-log' do
+        within '#my-completed-workouts' do
           expect(page).to have_content("#{past_events.size} Completed Workouts")
         end
       end
@@ -211,6 +211,7 @@ describe 'experienced user dashboard', type: :feature do
         before do
           allow(UserFacade).to receive(:get_user).with(first_friend.id.to_s).and_return(first_friend)
           allow(FriendshipFacade).to receive(:get_friends).with(first_friend.id.to_s).and_return([])
+          allow(FriendshipFacade).to receive(:get_followers).with(first_friend.id.to_s).and_return([])
           allow(GymMembershipFacade).to receive(:get_gym_memberships).with(first_friend.id).and_return([])
           allow(EventFacade).to receive(:get_events).with(first_friend.id.to_s).and_return([])
 

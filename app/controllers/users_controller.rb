@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     current_user_friends = FriendshipFacade.get_friends(current_user.id)
     @profile_user = UserFacade.get_profile_user(params[:id])
     @user_friends = FriendshipFacade.get_friends(@profile_user.id)
+    @user_followers = FriendshipFacade.get_followers(@profile_user.id)
 
     @user_type = if current_user.id.to_s == params[:id]
                    :self

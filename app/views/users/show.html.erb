@@ -101,10 +101,12 @@
     </div>
   </div>
 
-  <div class="container gray bottom-radius padding">
+  <div class="container gray bottom-radius padding mb-3">
     <div class="row" id='friends'>
       <% if @user_friends.empty? %>
-        <%= @profile_user.full_name %> is not following anyone.
+        <div class='col-sm-3 card-display center'>
+          <%= @profile_user.full_name %> is not following anyone.
+        </div>
       <% else %>
         <div class="d-flex flex-wrap center-it-all">
 
@@ -136,6 +138,54 @@
           <% end %>
         <% end %>
       </div>
+    </div>
+  </div>
+
+  <div class="container gray top-radius padding mb-1" id='my-followers'>
+    <div class="row">
+      <h2><%= @user_followers.size %> Followers</h2>
+    </div>
+  </div>
+
+  <div class="container gray bottom-radius padding mb-3" id='followers'>
+    <div class="row center-it-all">
+      <% if @user_friends.empty? %>
+        <div class='col-sm-3 card-display center'>
+          <%= @profile_user.full_name %> has no followers.
+        </div>
+      <% else %>
+        <div class="row center-it-all">
+          <div class="d-flex flex-wrap center-it-all">
+
+            <% @user_followers.each do |follower| %>
+              <div class='col-xl-3 card-display' id="follower-<%= follower.id%>">
+
+                <img id="profile_pic" src="<%= follower.google_image_url %>" class='round'>
+
+                <h5 class='mb-3'><%= link_to follower.full_name, profile_path(follower.id) %></h5>
+
+                <div class="row center no-pad mb-3">
+                  <div class="fit-content no-pad">
+                    <ul class='no-bullets'>
+                      <li class='location'>
+                        <%= follower.zip_code %>
+                      </li>
+
+                      <li class='goal'>
+                        <%= follower.goal %>
+                      </li>
+
+                      <li class='calendar'>
+                        <%= follower.availability %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 

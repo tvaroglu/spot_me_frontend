@@ -87,6 +87,14 @@ describe 'user profile page: friend', type: :feature do
           end
         end
       end
+
+      it 'displays a section with the users following the profile user (i.e. followers)' do
+        expect(page).to have_css('#followers')
+
+        within '#followers' do
+          expect(page).to have_content("#{user10.full_name} has no followers.")
+        end
+      end
     end
   end
 end

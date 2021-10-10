@@ -32,6 +32,7 @@ describe 'welcome page', type: :feature do
     # helper method defined in spec/support
     # see bottom of rails_helper for OmniAuth mock
     login_with_oauth
+
     expect(page).to have_current_path(dashboard_index_path, ignore_query: true)
 
     expect(page).to have_link 'Dashboard'

@@ -41,10 +41,10 @@ describe 'experienced user dashboard', type: :feature do
       it 'displays a profile nav bar with anchor links' do
         within '#profile-nav' do
           expect(page).to have_link("#{user_events.size} Upcoming Workouts", href: '#my-upcoming-workouts')
-          expect(page).to have_link('My Gyms', href: '#my-gyms')
+          expect(page).to have_link("#{user_gym_memberships.size} Gyms", href: '#my-gyms')
           expect(page).to have_link("#{user_friends.size} Following", href: '#my-friends')
           expect(page).to have_link("#{user_friends.size} Followers", href: '#my-followers')
-          expect(page).to have_link('Activity Log', href: '#my-activity-log')
+          expect(page).to have_link("#{past_events.size} Completed Workouts", href: '#my-completed-workouts')
         end
       end
 
@@ -89,7 +89,7 @@ describe 'experienced user dashboard', type: :feature do
       end
 
       it 'displays the number of completed workouts' do
-        within '#my-activity-log' do
+        within '#my-completed-workouts' do
           expect(page).to have_content("#{past_events.size} Completed Workouts")
         end
       end

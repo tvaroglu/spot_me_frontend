@@ -1,6 +1,12 @@
 <% if current_user %>
-  <div class="container flex-wrap-reverse gray full-radius padding mb-3" id='profile-header'>
-    <div class="row item-center center-it-all">
+  <div class="container gray top-radius padding mb-1">
+    <div class="row">
+      <h2>My Dashboard</h2>
+    </div>
+  </div>
+
+  <div class="container flex-wrap-reverse gray padding mb-1" id='profile-header'>
+    <div class="row item-center center-it-all pb-3">
       <div class="col-lg">
       </div>
 
@@ -35,28 +41,26 @@
     </div>
   </div>
 
-  <div class="container gray top-radius padding mb-1">
-    <div class="row">
-      <h2>My Dashboard</h2>
-    </div>
-  </div>
-
   <div class="container gray bottom-radius padding mb-3">
-    <div class="row center" id='profile-nav'>
+    <div class="row center-it-all" id='profile-nav'>
       <div class="col">
-        <h5 class='no-margin'><%= link_to "#{@user_events.size} Upcoming Workouts", '#my-upcoming-workouts', class: 'center' %></h5>
+        <%= link_to "#{@user_events.size} Upcoming Workouts", '#my-upcoming-workouts', class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
       </div>
+
       <div class="col">
-        <h5 class='no-margin'><%= link_to 'My Gyms', '#my-gyms', class: 'center' %></h5>
+        <%= link_to "#{@user_gyms.size} Gyms", '#my-gyms', class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
       </div>
+
       <div class="col">
-        <h5 class='no-margin'><%= link_to "#{@user_friends.size} Following", '#my-friends', class: 'center' %></h5>
+        <%= link_to "#{@user_friends.size} Following", '#my-friends', class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
       </div>
+
       <div class="col">
-        <h5 class='no-margin'><%= link_to "#{@user_followers.size} Followers", '#my-followers', class: 'center' %></h5>
+        <%= link_to "#{@user_followers.size} Followers", '#my-followers', class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
       </div>
+
       <div class="col">
-        <h5 class='no-margin'><%= link_to 'Activity Log', '#my-activity-log', class: 'center' %></h5>
+        <%= link_to "#{@past_events.size} Completed Workouts", '#my-completed-workouts', class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
       </div>
     </div>
   </div>
@@ -265,7 +269,7 @@
     </div>
   </div>
 
-  <div class="container gray top-radius padding mb-1" id='my-activity-log'>
+  <div class="container gray top-radius padding mb-1" id='my-completed-workouts'>
     <div class="row">
       <h2><%= @past_events.size %> Completed Workouts</h2>
     </div>

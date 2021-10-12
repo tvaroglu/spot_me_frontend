@@ -233,7 +233,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/77654906/134607507-63b9ab1a-c6ba-4065-914c-7c6aff1cc3c7.png" style="height:225px">
   </td>
   <td style = 'width:45%'>
-    <img src="https://user-images.githubusercontent.com/77654906/134611060-aa275111-6c36-4cfe-a05a-155c6474c8dc.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/58891447/136871444-dfb7e3c5-20d4-4b9f-8a5e-f5f692a2b14e.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -409,8 +409,10 @@ When you are a member of the gym
 
 ## Acknowledgements
 
-- [Background Image](https://unsplash.com/photos/20jX9b35r_M)
-- [SVG Icons](https://linea.io/): Linea Iconset is a free iconset designed by Dario Ferrando.
+- [Background Image](https://unsplash.com/photos/20jX9b35r_M): Unsplash
+- [SVG Icons](https://linea.io/): Linea Iconset is a free iconset designed by Dario Ferrando
+- [Google](https://www.google.com)
+- [Yelp](https://www.yelp.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

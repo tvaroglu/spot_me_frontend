@@ -10,7 +10,7 @@
 
 <br>
 
-<img src="https://user-images.githubusercontent.com/77654906/134606173-65c4cfaa-a7c9-46b4-9e4d-560989f9ec8c.png" width="100%"><br/>
+<img src="https://user-images.githubusercontent.com/58891447/136867925-0e8d08ed-29de-4d01-a553-c2f007350740.png" width="100%"><br/>
 
 <br>
 
@@ -42,14 +42,14 @@
 
 |Development|Development|Testing|Deployment
 |--- |--- |--- |--- |
-|[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
-|[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[Travis CI](https://travis-ci.org/)|
-|[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[Webmock](https://github.com/bblimke/webmock)
-|[PostgresQL](https://www.postgresql.org/)|[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)|[VCR](https://github.com/vcr/vcr)
-|[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)|[Launchy](https://rubygems.org/gems/launchy/versions/2.4.3)
-|[Postico](https://eggerapps.at/postico/)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[Orderly](https://github.com/jmondo/orderly)
-|[Faraday](https://github.com/lostisland/faraday)|[Atom](https://atom.io/)|[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)
-|[Figaro](https://github.com/laserlemon/figaro)|[FactoryBot](https://github.com/thoughtbot/factory_bot)
+|[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
+|[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[CircleCI](https://circleci.com/)|
+|[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[Webmock](https://github.com/bblimke/webmock)
+|[PostgresQL](https://www.postgresql.org/)|[HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)|[VCR](https://github.com/vcr/vcr)
+|[Postico](https://eggerapps.at/postico/)|[CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)|[Launchy](https://rubygems.org/gems/launchy/versions/2.4.3)
+|[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[FactoryBot](https://github.com/thoughtbot/factory_bot)
+|[Figaro](https://github.com/laserlemon/figaro)|[Atom](https://atom.io/)|[Faker](https://github.com/faker-ruby/faker)
+|[Faraday](https://github.com/lostisland/faraday)||[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
 |[Postman](https://www.postman.com/product/rest-client/)|
 
 </div>
@@ -65,8 +65,7 @@
 
   * Fork this repository
   * From the command line, install gems and set up your DB:
-      * `bundle`
-      * `bundle update`
+      * `bundle install && bundle update`
       * `rails db:{create,migrate}`
   * Run the test suite with `bundle exec rspec -fd`
   * Run your development server with `rails s` to see the app in action.
@@ -94,8 +93,11 @@
 
   * [OAuth setup](https://github.com/zquestz/omniauth-google-oauth2#installation)
       ```bash
-      Add to your Gemfile:
+      #Gemfile
         gem 'omniauth-google-oauth2'
+        gem 'omniauth-rails_csrf_protection'
+      ```
+      ```bash
       $ bundle install
       ```
 
@@ -125,9 +127,14 @@
       ```bash
       $ bundle exec figaro install
       ```
-      Add your API key to `config/application.yml`:
+      Add your credentials & API keys to `config/application.yml`:
       ```yml
-      yelp_api_key: 'Bearer <your v4 token>'
+      #Frontend Repo:
+      GOOGLE_CLIENT_ID: <your client id>
+      GOOGLE_CLIENT_SECRET: <your client secret>
+
+      #Backend Repo:
+      yelp_api_key: 'Bearer <your v3 token>'
       ```
 
   * How to run the test suite
@@ -165,15 +172,15 @@
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create a project with a separate frontend and backend<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Organize and refactor code to be more maintainable<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement a self-referential relationship in ActiveRecord<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize Continuous Integration using Travis CI<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Use Rails to create web pages that allow users to CRUD resources<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create instance and class methods on a Rails model that use ActiveRecord methods and helpers<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write model and feature tests that fully cover data logic and potential user behavior<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize Continuous Integration via Travis CI or CircleCI<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Deploy to Heroku<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement a production-quality user interface using Bootstrap or other common CSS styling framework<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement project management by using project boards, participating in daily stand-ups and team retros<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Use Rails to create web pages that allow users to CRUD resources<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write thorough, understandable documentation<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Create instance and class methods on a Rails model that use ActiveRecord methods and helpers<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write model and feature tests that fully cover data logic and potential user behavior<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Apply RuboCop’s style guide for code quality<br>
 
 <div align="center">
@@ -203,11 +210,11 @@ The following section displays a comparison of our vision and how our vision cam
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134611529-ee566f26-c37a-40a0-a085-37fbe6e2047a.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134611529-ee566f26-c37a-40a0-a085-37fbe6e2047a.png" style="height:225px">
   </td>
 
   <td style = 'width:45%'>
-    <img src="https://user-images.githubusercontent.com/77654906/134611661-b627cf0e-618e-4ea7-8227-591f8a58934a.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136867925-0e8d08ed-29de-4d01-a553-c2f007350740.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -223,10 +230,10 @@ The following section displays a comparison of our vision and how our vision cam
 
 <tr align = 'center'>
   <td style = 'width:45%'>
-    <img src="https://user-images.githubusercontent.com/77654906/134607507-63b9ab1a-c6ba-4065-914c-7c6aff1cc3c7.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134607507-63b9ab1a-c6ba-4065-914c-7c6aff1cc3c7.png" style="height:225px">
   </td>
   <td style = 'width:45%'>
-    <img src="https://user-images.githubusercontent.com/77654906/134611060-aa275111-6c36-4cfe-a05a-155c6474c8dc.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134611060-aa275111-6c36-4cfe-a05a-155c6474c8dc.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -241,10 +248,10 @@ The following section displays a comparison of our vision and how our vision cam
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607569-50fb42c1-2361-4f72-8f93-2204e63fba9f.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134607569-50fb42c1-2361-4f72-8f93-2204e63fba9f.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134611300-cdfa5f95-2d3f-460f-9765-210fd783598a.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136869912-bc1effbd-8a40-4e03-a1fe-48aa59224b0b.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -260,10 +267,10 @@ When you visit your own profile
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607641-450aa4ea-2deb-4ae8-ae66-bd124b0c64ff.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134607641-450aa4ea-2deb-4ae8-ae66-bd124b0c64ff.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134685865-5c38fb57-30bb-427e-86f7-74a39ca2339d.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870018-140b65c0-8509-45c9-ab84-b841ecb2204a.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -279,10 +286,10 @@ When you visit the profile of a user you follow
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607730-1497a446-dba2-4759-92bc-1d91bc3120f3.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134607730-1497a446-dba2-4759-92bc-1d91bc3120f3.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134688744-c81d6347-4d54-4c5c-9543-288d3f76c2a1.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870064-e31a72ec-086e-4566-a4d7-403d75360fca.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -298,10 +305,10 @@ When you visit the profile of a user you do not follow
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607784-46b4bfb3-c68a-4369-a9e7-e90ee35a9b51.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134607784-46b4bfb3-c68a-4369-a9e7-e90ee35a9b51.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134685011-94e18d9f-2e60-4911-bb03-9196bc8d57a4.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870138-8b690dba-54d6-44ed-9a71-2ca40da29cd1.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -316,10 +323,10 @@ When you visit the profile of a user you do not follow
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134609165-8ee83942-3411-4664-a80e-8091afe88300.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134609165-8ee83942-3411-4664-a80e-8091afe88300.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134687195-73906d6c-8377-4c22-b59d-e7af281381d6.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870186-e303fbb4-ed14-4475-8f1b-49ca692d61df.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -334,10 +341,10 @@ When you visit the profile of a user you do not follow
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607849-9990b284-5624-4665-8c94-e31be71f5f1c.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134607849-9990b284-5624-4665-8c94-e31be71f5f1c.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134686403-c8ecca65-b1c5-482d-b6c1-277f42c9e39d.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870240-2484b4b6-f3b5-47fd-bea4-f8c6d41a7265.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -353,10 +360,10 @@ When you are not a member of the gym
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134607940-77263a9c-5619-4b15-811f-f1dd2a685a88.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134607940-77263a9c-5619-4b15-811f-f1dd2a685a88.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134686841-830dcb13-8f85-4a1e-ba46-3d2ea085d6a1.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870290-c8b7c7e0-13ba-41d0-a5aa-298b7a8470a6.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -372,10 +379,10 @@ When you are a member of the gym
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134608630-a4574498-e543-4368-a9b7-120443d9a56d.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134608630-a4574498-e543-4368-a9b7-120443d9a56d.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134685377-23a5d15f-1d56-4d7e-bd26-a08da8479927.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870397-02470948-5396-482b-9a95-497ac7257083.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -390,10 +397,10 @@ When you are a member of the gym
 
 <tr align = 'center'>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/77654906/134608670-0e265185-1d2f-4dcc-8e61-21b012ab46de.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/77654906/134608670-0e265185-1d2f-4dcc-8e61-21b012ab46de.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/79381792/134689936-4ea9fa1f-0c75-4dd2-a389-faf389250aa7.png" style="height:200px">
+    <img src="https://user-images.githubusercontent.com/58891447/136870429-b2fa127a-c7e8-445e-baf2-894c317abb0c.png" style="height:225px">
   </td>
 </tr>
 </table>

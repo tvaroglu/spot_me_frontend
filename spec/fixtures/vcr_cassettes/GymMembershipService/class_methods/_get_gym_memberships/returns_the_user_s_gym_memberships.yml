@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:25:17 GMT
+      - Fri, 29 Oct 2021 03:34:52 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - aa745189-5fdc-497a-a723-a41e606ff182
+      - db8d6b92-56ad-4dc9-b52a-21c1bfb237dd
       X-Runtime:
-      - '0.411571'
+      - '0.314433'
       Transfer-Encoding:
       - chunked
       Via:
@@ -43,5 +43,5 @@ http_interactions:
       string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Ward-Koepp"},"meta":{"address":"2
         Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2 Livewell
         Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:25:17 GMT
+  recorded_at: Fri, 29 Oct 2021 03:34:52 GMT
 recorded_with: VCR 6.0.0

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:24:52 GMT
+      - Fri, 29 Oct 2021 03:34:38 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e5ef168b-6377-48ae-9643-a95d022c7508
+      - 1aadde7d-259c-405f-b1ad-7f1766c6c807
       X-Runtime:
-      - '0.007957'
+      - '0.006930'
       Transfer-Encoding:
       - chunked
       Via:
@@ -46,7 +46,7 @@ http_interactions:
         Bergnaum IV"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
         unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
         Elliot Hills"}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:24:52 GMT
+  recorded_at: Fri, 29 Oct 2021 03:34:39 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
@@ -68,19 +68,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:24:53 GMT
+      - Fri, 29 Oct 2021 03:34:39 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"13a22134e1a3b8296db4b451c0495145"
+      - W/"6c9b73445a5f1ae623f6afa74ea7a463"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 707a6537-60fb-441b-992d-726af91e14cf
+      - 8496f535-4326-4f66-9d1d-6413e66e8e57
       X-Runtime:
-      - '0.466575'
+      - '0.504511'
       Transfer-Encoding:
       - chunked
       Via:
@@ -91,7 +91,7 @@ http_interactions:
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789","gym_member_count":2}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
+        601-0789","gym_member_count":3}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
         Fitness","address":"3265 S Wadsworth Blvd, Lakewood, CO 80227","address_details":{"address1":"3265
         S Wadsworth Blvd","address2":"","address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         985-8888","gym_member_count":0}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
@@ -187,17 +187,20 @@ http_interactions:
         CO 80226","address_details":{"address1":"305 S Kipling St","address2":"","address3":"Mueller''s
         Martial Arts","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
         317-6847","gym_member_count":0}},{"id":"BuazFravSf7WDuOWd5FRsw","type":"gym","attributes":{"name":"Nelvana
-        Fitness","address":"Denver, CO 80219","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"CWH5BFNnEr3YJNikyK0FIQ","type":"gym","attributes":{"name":"Sun
+        Fitness","address":"Denver, CO 80219","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"ecojOXPvfCoJDA9A7T4Q8Q","type":"gym","attributes":{"name":"Planet
+        Fitness","address":"98 Wadsworth Blvd, Ste 125B, Lakewood, CO 80226","address_details":{"address1":"98
+        Wadsworth Blvd","address2":"Ste 125B","address3":"","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
+        237-2676","gym_member_count":0}},{"id":"CWH5BFNnEr3YJNikyK0FIQ","type":"gym","attributes":{"name":"Sun
         Fitness","address":"13654 W Auburn Ave, Denver, CO 80228","address_details":{"address1":"13654
         W Auburn Ave","address2":"","address3":"","city":"Denver","zip_code":"80228","country":"US","state":"CO"},"phone":"(720)
-        351-0722","gym_member_count":0}},{"id":"w8BhjGxrNtVrmlXhlACclw","type":"gym","attributes":{"name":"SwimLabs
+        351-0722","gym_member_count":0}},{"id":"WWSjaolIpnuSlU0tK96sxg","type":"gym","attributes":{"name":"Tstotalfitness","address":"12164
+        W Stanford Dr, Morrison, CO 80465","address_details":{"address1":"12164 W
+        Stanford Dr","address2":"","address3":null,"city":"Morrison","zip_code":"80465","country":"US","state":"CO"},"phone":"(303)
+        906-3399","gym_member_count":0}},{"id":"w8BhjGxrNtVrmlXhlACclw","type":"gym","attributes":{"name":"SwimLabs
         Swim School - Littleton","address":"8500 W Crestline Ave, Unit I, Littleton,
         CO 80123","address_details":{"address1":"8500 W Crestline Ave","address2":"Unit
         I","address3":"","city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(720)
-        699-0001","gym_member_count":0}},{"id":"WWSjaolIpnuSlU0tK96sxg","type":"gym","attributes":{"name":"Tstotalfitness","address":"12164
-        W Stanford Dr, Morrison, CO 80465","address_details":{"address1":"12164 W
-        Stanford Dr","address2":"","address3":null,"city":"Morrison","zip_code":"80465","country":"US","state":"CO"},"phone":"(303)
-        906-3399","gym_member_count":0}},{"id":"ugiyyxL6P9R_K98pX7l9IQ","type":"gym","attributes":{"name":"TM
+        699-0001","gym_member_count":0}},{"id":"ugiyyxL6P9R_K98pX7l9IQ","type":"gym","attributes":{"name":"TM
         Ballroom Dance Studio","address":"12354 W Alameda Pkwy, Ste 170, Lakewood,
         CO 80228","address_details":{"address1":"12354 W Alameda Pkwy","address2":"Ste
         170","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
@@ -240,11 +243,8 @@ http_interactions:
         940-9834","gym_member_count":0}},{"id":"29jp81EtRpDJTAABpvE5rQ","type":"gym","attributes":{"name":"Tribe
         Gym Denver","address":"1169 S Alkire St, Lakewood, CO 80228","address_details":{"address1":"1169
         S Alkire St","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(918)
-        640-8452","gym_member_count":0}},{"id":"EIvEo7asZAe_VEofHnDtng","type":"gym","attributes":{"name":"Paragon
-        Martial Arts","address":"13701 West Jewell Ave, Lakewood, CO 80228","address_details":{"address1":"13701
-        West Jewell Ave","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
-        746-8500","gym_member_count":0}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:24:54 GMT
+        640-8452","gym_member_count":0}}]}'
+  recorded_at: Fri, 29 Oct 2021 03:34:40 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -266,19 +266,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:24:54 GMT
+      - Fri, 29 Oct 2021 03:34:40 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"77cf26098c7cc35e38de8d9e4be313b7"
+      - W/"6802ec5d34b4519ba18bb9cf6c1afabf"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 480bd9b1-866e-4168-bab6-c264b08d8d8f
+      - 27e55b26-994c-431e-b2d0-6428a7bbe00d
       X-Runtime:
-      - '0.764502'
+      - '0.163390'
       Transfer-Encoding:
       - chunked
       Via:
@@ -289,8 +289,8 @@ http_interactions:
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789","gym_member_count":2}}}'
-  recorded_at: Sat, 09 Oct 2021 21:24:55 GMT
+        601-0789","gym_member_count":3}}}'
+  recorded_at: Fri, 29 Oct 2021 03:34:40 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
@@ -312,7 +312,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:24:56 GMT
+      - Fri, 29 Oct 2021 03:34:40 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -322,9 +322,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 87d35fd0-79ad-4e19-962b-52a9e5dcf45c
+      - 1434894f-8650-4563-b4de-154e0d2f74b4
       X-Runtime:
-      - '0.376580'
+      - '0.310745'
       Transfer-Encoding:
       - chunked
       Via:
@@ -334,7 +334,7 @@ http_interactions:
       string: '{"data":[{"id":"7","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Ward-Koepp"},"meta":{"address":"2
         Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2 Livewell
         Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:24:56 GMT
+  recorded_at: Fri, 29 Oct 2021 03:34:41 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -356,28 +356,30 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:24:57 GMT
+      - Fri, 29 Oct 2021 03:34:40 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bc04fc197b4867b32acf8065f3e0a4bd"
+      - W/"fe6f89ff464b2924332c1f7b40b59a30"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 59124df7-fb7d-40b1-8046-e3e94caf2a0e
+      - c05732c7-499b-495d-8986-e96953ca2bfd
       X-Runtime:
-      - '0.013350'
+      - '0.008344'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
+      string: '{"data":[{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
+        EVEN more!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}},{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
         I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
-        B"}},{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
-        EVEN more!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}}],"meta":{"gym_member_count":2}}'
-  recorded_at: Sat, 09 Oct 2021 21:24:57 GMT
+        B"}},{"id":"17","type":"user","attributes":{"email":"dunkcrunk@gmail.com","google_id":"111046601195516206054","google_image_url":"https://lh3.googleusercontent.com/a/AATXAJw4zHMZso5-i6FLqPYII1cbPB3davRXpkbdZBRU=s96-c","zip_code":"80227","summary":"Just
+        moved to San Diego from Charlotte. 36. Would love a gym bud to lift weights
+        with!","goal":"Gain Muscle","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Ethan"}}],"meta":{"gym_member_count":3}}'
+  recorded_at: Fri, 29 Oct 2021 03:34:41 GMT
 recorded_with: VCR 6.0.0

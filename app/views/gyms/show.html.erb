@@ -30,14 +30,14 @@
                                       { user_id: current_user.id }
                                     ),
                                     method: :delete,
-                                    class: "btn btn-sm btn-white button-bg btn-outline-dark",
+                                    class: "btn btn-sm btn-white button-bg btn-outline-secondary",
                                     data: { confirm: 'If you remove this gym, your events at this gym will also be deleted.  Are you sure you want to remove this gym?' } %>
         <% else %>
           <%= link_to 'Add Gym', gym_memberships_path(user_id: current_user.id,
                                                       yelp_gym_id: @gym.yelp_gym_id,
                                                       gym_name: @gym.name),
                                  method: :post,
-                                 class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+                                 class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
         <% end %>
       </div>
     </div>
@@ -88,7 +88,7 @@
                                                 gym_name: @gym.name
                                             ),
                                             method: :get,
-                                            class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+                                            class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
               </div>
             <% end %>
           <% end %>
@@ -141,7 +141,7 @@
                                             }
                                           ),
                                           method: :post,
-                                          class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
+                                          class: "btn btn-sm btn-info button-bg btn-outline-secondary" %>
               </div>
             <% end %>
           <% end %>

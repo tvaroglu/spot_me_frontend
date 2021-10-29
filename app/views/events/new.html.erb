@@ -8,32 +8,32 @@
   <div class="row center-it-all">
     <%= form_with url: events_path(user_id: @friend_id, gym_membership_id: @gym_membership_id), method: :post, local: true do |form| %>
       <h5><%= form.label :gym_name, 'Gym Name' %></h5>
-      <%= form.text_field :gym_name, value: @gym_name, readonly: true, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= form.text_field :gym_name, value: @gym_name, readonly: true, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= form.label :friend_name, 'Friend Name' %></h5>
-      <%= form.text_field :friend_name, value: @friend_name, readonly: true, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= form.text_field :friend_name, value: @friend_name, readonly: true, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= form.label :activity, 'Activity' %></h5>
-      <%= form.text_field :activity, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= form.text_field :activity, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= form.label :when, 'Day' %></h5>
-      <%= form.date_select :when, prefix: :date, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= form.date_select :when, prefix: :date, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= form.label :start_time, 'Start Time' %></h5>
-      <%= form.time_select :start_time, prefix: :time, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= form.time_select :start_time, prefix: :time, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br><br>
 
-      <%= form.submit 'Submit', class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
-      <%= link_to 'Cancel', URI(request.referer).path, class: "btn btn-sm btn-white button-bg btn-outline-dark"  %>
+      <%= form.submit 'Submit', class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
+      <%= link_to 'Cancel', URI(request.referer).path, class: "btn btn-sm btn-white button-bg btn-outline-secondary"  %>
     <% end %>
   </div>
 </div>

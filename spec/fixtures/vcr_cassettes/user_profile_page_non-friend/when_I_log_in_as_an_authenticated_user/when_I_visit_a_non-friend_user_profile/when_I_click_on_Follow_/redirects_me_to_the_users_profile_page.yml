@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sun, 10 Oct 2021 20:30:47 GMT
+      - Fri, 29 Oct 2021 03:34:47 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d7549be2-cfe5-474b-90ea-652a8992a6d2
+      - c8aa52eb-46e3-46c7-9586-c929db8ffd8d
       X-Runtime:
-      - '0.007346'
+      - '0.007612'
       Transfer-Encoding:
       - chunked
       Via:
@@ -41,7 +41,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 10 Oct 2021 20:30:47 GMT
+  recorded_at: Fri, 29 Oct 2021 03:34:47 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/11/friendships?relationship=followers
@@ -63,7 +63,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sun, 10 Oct 2021 20:30:47 GMT
+      - Fri, 29 Oct 2021 03:34:47 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -73,9 +73,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8965384d-9eff-4f9f-a452-2f660616bc81
+      - a5caba31-3034-40cc-8df4-286b3f845299
       X-Runtime:
-      - '0.011098'
+      - '0.007295'
       Transfer-Encoding:
       - chunked
       Via:
@@ -83,5 +83,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 10 Oct 2021 20:30:48 GMT
+  recorded_at: Fri, 29 Oct 2021 03:34:47 GMT
 recorded_with: VCR 6.0.0

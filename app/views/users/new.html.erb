@@ -8,43 +8,43 @@
   <div class="row center-it-all">
     <%= form_with url: registration_index_path(google_id: params[:google_id], google_token: params[:google_token], google_image_url: params[:google_image_url]), local: true do |f| %>
       <h5><%= f.label :full_name, 'Name' %></h5>
-      <%= f.text_field :full_name, value: params[:full_name], id: :full_name, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.text_field :full_name, value: params[:full_name], id: :full_name, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= f.label :email, 'Email' %></h5>
-      <%= f.text_field :email, value: params[:email], readonly: true, id: :email, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.text_field :email, value: params[:email], readonly: true, id: :email, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= f.label :zip_code, 'Zip Code' %></h5>
-      <%= f.text_field :zip_code, id: :zip_code, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.text_field :zip_code, id: :zip_code, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= f.label :summary, 'Summary' %></h5>
-      <%= f.text_area :summary, cols: 40, id: :summary, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.text_area :summary, cols: 40, id: :summary, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= f.label :goal, 'Goals' %></h5>
-      <%= f.select :goal, User.goals_array, include_blank: 'Select your motivation', id: :goal, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.select :goal, User.goals_array, include_blank: 'Select your motivation', id: :goal, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br>
 
       <h5><%= f.label :availability %></h5>
       <%= f.label :availability_morning, 'Morning' %>
-      <%= f.check_box :availability_morning, id: :availability_morning, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.check_box :availability_morning, id: :availability_morning, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
       <br>
       <%= f.label :availability_afternoon, 'Afternoon' %>
-      <%= f.check_box :availability_afternoon, id: :availability_afternoon, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.check_box :availability_afternoon, id: :availability_afternoon, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
       <br>
       <%= f.label :availability_evening, 'Evening' %>
-      <%= f.check_box :availability_evening, id: :availability_evening, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.check_box :availability_evening, id: :availability_evening, class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
 
       <br><br><br>
 
-      <%= f.submit 'Register', class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.submit 'Register', class: "btn btn-sm btn-white button-bg btn-outline-secondary" %>
     <% end %>
   </div>
 </div>

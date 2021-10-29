@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:24:42 GMT
+      - Fri, 29 Oct 2021 03:34:33 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a5982cc6-30b3-4ffb-bb31-82915654cc12
+      - 2a8f899c-5d3e-4f8c-8a05-1d21887cb73d
       X-Runtime:
-      - '0.052936'
+      - '0.029162'
       Transfer-Encoding:
       - chunked
       Via:
@@ -49,5 +49,5 @@ http_interactions:
         Wunsch","friend_role":"host","gym_name":"Blick, Cormier and Kerluke","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}},{"id":"4","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-09-30T20:38:23.438Z","activity":"Soapmaking"},"meta":{"friend_name":"Gov.
         Elliot Hills","friend_role":"host","gym_name":"Gutkowski, Pfeffer and Hessel","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"6","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-27T20:38:23.450Z","activity":"Woodworking"},"meta":{"friend_name":"Jerome
         Wunsch","friend_role":"host","gym_name":"Blick, Cormier and Kerluke","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:24:43 GMT
+  recorded_at: Fri, 29 Oct 2021 03:34:33 GMT
 recorded_with: VCR 6.0.0

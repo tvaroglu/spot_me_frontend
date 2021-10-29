@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:25:19 GMT
+      - Fri, 29 Oct 2021 03:34:53 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"77cf26098c7cc35e38de8d9e4be313b7"
+      - W/"6802ec5d34b4519ba18bb9cf6c1afabf"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fa103410-6d11-449a-9c68-8989e0540444
+      - 8a6736ef-0f2f-433a-86b2-45bfa9e510f6
       X-Runtime:
-      - '0.182627'
+      - '0.171693'
       Transfer-Encoding:
       - chunked
       Via:
@@ -44,6 +44,6 @@ http_interactions:
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789","gym_member_count":2}}}'
-  recorded_at: Sat, 09 Oct 2021 21:25:19 GMT
+        601-0789","gym_member_count":3}}}'
+  recorded_at: Fri, 29 Oct 2021 03:34:53 GMT
 recorded_with: VCR 6.0.0

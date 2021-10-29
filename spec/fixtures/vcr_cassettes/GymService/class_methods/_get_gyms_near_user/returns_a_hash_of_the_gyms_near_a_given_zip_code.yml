@@ -21,19 +21,19 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:25:18 GMT
+      - Fri, 29 Oct 2021 03:34:53 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"13a22134e1a3b8296db4b451c0495145"
+      - W/"6c9b73445a5f1ae623f6afa74ea7a463"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1a53bf0a-0b2a-4652-bcbb-66be2cbb08ef
+      - efa539a4-1dd6-49be-b3e7-c2c262d6bf28
       X-Runtime:
-      - '0.549764'
+      - '0.438857'
       Transfer-Encoding:
       - chunked
       Via:
@@ -44,7 +44,7 @@ http_interactions:
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        601-0789","gym_member_count":2}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
+        601-0789","gym_member_count":3}},{"id":"hZkoTYYun1LpDy-pe4Gujg","type":"gym","attributes":{"name":"Planet
         Fitness","address":"3265 S Wadsworth Blvd, Lakewood, CO 80227","address_details":{"address1":"3265
         S Wadsworth Blvd","address2":"","address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         985-8888","gym_member_count":0}},{"id":"-dSBBizygDjlbL2fWF-mbg","type":"gym","attributes":{"name":"Burn
@@ -140,17 +140,20 @@ http_interactions:
         CO 80226","address_details":{"address1":"305 S Kipling St","address2":"","address3":"Mueller''s
         Martial Arts","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
         317-6847","gym_member_count":0}},{"id":"BuazFravSf7WDuOWd5FRsw","type":"gym","attributes":{"name":"Nelvana
-        Fitness","address":"Denver, CO 80219","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"CWH5BFNnEr3YJNikyK0FIQ","type":"gym","attributes":{"name":"Sun
+        Fitness","address":"Denver, CO 80219","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"ecojOXPvfCoJDA9A7T4Q8Q","type":"gym","attributes":{"name":"Planet
+        Fitness","address":"98 Wadsworth Blvd, Ste 125B, Lakewood, CO 80226","address_details":{"address1":"98
+        Wadsworth Blvd","address2":"Ste 125B","address3":"","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
+        237-2676","gym_member_count":0}},{"id":"CWH5BFNnEr3YJNikyK0FIQ","type":"gym","attributes":{"name":"Sun
         Fitness","address":"13654 W Auburn Ave, Denver, CO 80228","address_details":{"address1":"13654
         W Auburn Ave","address2":"","address3":"","city":"Denver","zip_code":"80228","country":"US","state":"CO"},"phone":"(720)
-        351-0722","gym_member_count":0}},{"id":"w8BhjGxrNtVrmlXhlACclw","type":"gym","attributes":{"name":"SwimLabs
+        351-0722","gym_member_count":0}},{"id":"WWSjaolIpnuSlU0tK96sxg","type":"gym","attributes":{"name":"Tstotalfitness","address":"12164
+        W Stanford Dr, Morrison, CO 80465","address_details":{"address1":"12164 W
+        Stanford Dr","address2":"","address3":null,"city":"Morrison","zip_code":"80465","country":"US","state":"CO"},"phone":"(303)
+        906-3399","gym_member_count":0}},{"id":"w8BhjGxrNtVrmlXhlACclw","type":"gym","attributes":{"name":"SwimLabs
         Swim School - Littleton","address":"8500 W Crestline Ave, Unit I, Littleton,
         CO 80123","address_details":{"address1":"8500 W Crestline Ave","address2":"Unit
         I","address3":"","city":"Littleton","zip_code":"80123","country":"US","state":"CO"},"phone":"(720)
-        699-0001","gym_member_count":0}},{"id":"WWSjaolIpnuSlU0tK96sxg","type":"gym","attributes":{"name":"Tstotalfitness","address":"12164
-        W Stanford Dr, Morrison, CO 80465","address_details":{"address1":"12164 W
-        Stanford Dr","address2":"","address3":null,"city":"Morrison","zip_code":"80465","country":"US","state":"CO"},"phone":"(303)
-        906-3399","gym_member_count":0}},{"id":"ugiyyxL6P9R_K98pX7l9IQ","type":"gym","attributes":{"name":"TM
+        699-0001","gym_member_count":0}},{"id":"ugiyyxL6P9R_K98pX7l9IQ","type":"gym","attributes":{"name":"TM
         Ballroom Dance Studio","address":"12354 W Alameda Pkwy, Ste 170, Lakewood,
         CO 80228","address_details":{"address1":"12354 W Alameda Pkwy","address2":"Ste
         170","address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
@@ -193,9 +196,6 @@ http_interactions:
         940-9834","gym_member_count":0}},{"id":"29jp81EtRpDJTAABpvE5rQ","type":"gym","attributes":{"name":"Tribe
         Gym Denver","address":"1169 S Alkire St, Lakewood, CO 80228","address_details":{"address1":"1169
         S Alkire St","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(918)
-        640-8452","gym_member_count":0}},{"id":"EIvEo7asZAe_VEofHnDtng","type":"gym","attributes":{"name":"Paragon
-        Martial Arts","address":"13701 West Jewell Ave, Lakewood, CO 80228","address_details":{"address1":"13701
-        West Jewell Ave","address2":null,"address3":"","city":"Lakewood","zip_code":"80228","country":"US","state":"CO"},"phone":"(303)
-        746-8500","gym_member_count":0}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:25:18 GMT
+        640-8452","gym_member_count":0}}]}'
+  recorded_at: Fri, 29 Oct 2021 03:34:53 GMT
 recorded_with: VCR 6.0.0

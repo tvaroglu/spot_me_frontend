@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:25:04 GMT
+      - Fri, 29 Oct 2021 03:34:44 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -31,9 +31,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3100e568-e610-4b6f-9dca-be53bd559d13
+      - 007cc856-eaf4-4698-9b8e-3fa57c6461dc
       X-Runtime:
-      - '0.012775'
+      - '0.004778'
       Transfer-Encoding:
       - chunked
       Via:
@@ -44,50 +44,5 @@ http_interactions:
         virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
         Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":false,"full_name":"Joanne
         Champlin"}}}'
-  recorded_at: Sat, 09 Oct 2021 21:25:05 GMT
-- request:
-    method: get
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.8.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sat, 09 Oct 2021 21:25:05 GMT
-      Connection:
-      - keep-alive
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"e7d05f1bad5b937ba3786b58da83079d"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - ec608b92-f571-441b-9b22-63e0d4599121
-      X-Runtime:
-      - '0.004815'
-      Transfer-Encoding:
-      - chunked
-      Via:
-      - 1.1 vegur
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"41895","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
-        Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":false,"full_name":"Joanne
-        Champlin"}}}'
-  recorded_at: Sat, 09 Oct 2021 21:25:06 GMT
+  recorded_at: Fri, 29 Oct 2021 03:34:45 GMT
 recorded_with: VCR 6.0.0

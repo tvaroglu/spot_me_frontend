@@ -21,28 +21,31 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sat, 09 Oct 2021 21:25:08 GMT
+      - Fri, 29 Oct 2021 03:34:48 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5d2a2040ea9d123331dfb6943cdb8f19"
+      - W/"942632cd5cfec13d2a9854479bfe59aa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3c957fec-8774-4693-98d8-9bf7209cd0d6
+      - ed5d5209-9126-4369-8b9b-98eb7d086831
       X-Runtime:
-      - '0.015241'
+      - '0.022889'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"48","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-09T23:58:20.072Z","activity":"Cooking"},"meta":{"friend_name":"Scott
-        B","friend_role":"host","gym_name":"Rishi''s Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}},{"id":"46","type":"event","attributes":{"user_id":1,"gym_membership_id":24,"date_time":"2021-10-11T23:58:20.062Z","activity":"Playing
-        musical instruments"},"meta":{"friend_name":"Scott B","friend_role":"host","gym_name":"Rishi''s
-        Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}}]}'
-  recorded_at: Sat, 09 Oct 2021 21:25:09 GMT
+      string: '{"data":[{"id":"105","type":"event","attributes":{"user_id":1,"gym_membership_id":25,"date_time":"2021-10-31T03:34:03.340Z","activity":"Board
+        sports"},"meta":{"friend_name":"TaylorV","friend_role":"host","gym_name":"Rishi''s
+        Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}},{"id":"107","type":"event","attributes":{"user_id":1,"gym_membership_id":25,"date_time":"2021-11-02T03:34:03.370Z","activity":"Geocaching"},"meta":{"friend_name":"TaylorV","friend_role":"host","gym_name":"Rishi''s
+        Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}},{"id":"109","type":"event","attributes":{"user_id":1,"gym_membership_id":5,"date_time":"2021-11-03T03:34:03.396Z","activity":"Origami"},"meta":{"friend_name":"Carrie
+        O''Reilly","friend_role":"host","gym_name":"Hudson-Hirthe","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"103","type":"event","attributes":{"user_id":1,"gym_membership_id":3,"date_time":"2021-11-04T03:34:03.314Z","activity":"Model
+        building"},"meta":{"friend_name":"Malcom Langworth","friend_role":"host","gym_name":"O''Hara
+        Group","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}}]}'
+  recorded_at: Fri, 29 Oct 2021 03:34:48 GMT
 recorded_with: VCR 6.0.0

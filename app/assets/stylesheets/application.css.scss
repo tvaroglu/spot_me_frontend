@@ -114,6 +114,17 @@ select {
   background-color: $button-bg-color;
 }
 
+// input, textarea {
+//   -webkit-user-select: text;
+// }
+
+.form-custom {
+  font-family: $font-family-body;
+  font-size: 0.875em;
+  border: 1px solid black;
+  border-radius: 3%;
+}
+
 // IMAGES, ICONS, ETC.
 
 img {

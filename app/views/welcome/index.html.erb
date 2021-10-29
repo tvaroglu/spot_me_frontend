@@ -8,7 +8,7 @@
   </div>
 
   <% if !current_user && session[:google_token].blank? %>
-    <%= link_to 'Sign in with Google', '/auth/google_oauth2', method: :post, class: "btn btn-sm btn-info button-bg btn-outline-secondary" %>
+    <%= link_to 'Sign in with Google', '/auth/google_oauth2', method: :post, class: "btn btn-sm btn-info button-bg btn-outline-dark" %>
   <% end %>
   <br><br><br>
 </div>

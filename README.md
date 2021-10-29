@@ -178,7 +178,7 @@
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize Continuous Integration via Travis CI or CircleCI<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Deploy to Heroku<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement a production-quality user interface using Bootstrap or other common CSS styling framework<br>
-&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement project management by using project boards, participating in daily stand-ups and team retros<br>
+&nbsp; &nbsp; ⭐ &nbsp; &nbsp; Implement project management by using project boards, participating in daily stand-ups and retros<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Utilize quality workflow practices: small commits, descriptive pull requests, and code reviews<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Write thorough, understandable documentation<br>
 &nbsp; &nbsp; ⭐ &nbsp; &nbsp; Apply RuboCop’s style guide for code quality<br>
@@ -411,8 +411,8 @@ When you are a member of the gym
 
 - [Background Image](https://unsplash.com/photos/20jX9b35r_M): Unsplash
 - [SVG Icons](https://linea.io/): Linea Iconset is a free iconset designed by Dario Ferrando
-- [Google](https://www.google.com)
-- [Yelp](https://www.yelp.com)
+- [Google Cloud Platform](https://console.cloud.google.com/getting-started)
+- [Yelp API](https://www.yelp.com/developers)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

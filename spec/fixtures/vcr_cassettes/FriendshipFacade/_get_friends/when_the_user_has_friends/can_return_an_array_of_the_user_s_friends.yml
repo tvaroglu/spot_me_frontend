@@ -21,29 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:33 GMT
+      - Sun, 23 Apr 2023 04:16:20 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e4cb705bc2bdc9c5f743c33f3ff55840"
+      - W/"3a54ade838d7c65bd5080bf8811a76c3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 68ff6885-dbb8-4dc7-83ff-70072fd288ad
+      - a2f60732-9b3b-4f75-b342-55566cac0bfa
       X-Runtime:
-      - '0.007550'
+      - '0.004626'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"9","type":"user","attributes":{"email":"dario.carter@wintheiser.net","google_id":"85prfo95zbvtuik27upid","google_image_url":"https://robohash.org/similiqueenimarchitecto.png?size=300x300\u0026set=set1","zip_code":"18881","summary":"Rhetoric
-        is the art of ruling the minds of men.","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Carrie
-        O''Reilly"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
-        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
-        Elliot Hills"}}]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:34 GMT
+      string: '{"data":[{"id":"2","type":"user","attributes":{"email":"taylor.varoglu@gmail.com","google_id":"112620306165906709595","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxajYOILViSMytXRTd-2g_DKy9aVMWJ_M0A-E_gE=s96-c","zip_code":"80302","summary":"Hi
+        friend!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor
+        Varoglu"}}]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:20 GMT
 recorded_with: VCR 6.0.0

@@ -15,31 +15,30 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:45 GMT
+      - Sun, 23 Apr 2023 04:16:30 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 276e33dd-a5df-409f-94bf-43c1dc880fab
+      - 9bfacf21-0865-4ca0-86d8-660041d835b1
       X-Runtime:
-      - '0.006488'
+      - '0.002842'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:45 GMT
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=11"]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:30 GMT
 recorded_with: VCR 6.0.0

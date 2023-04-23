@@ -21,28 +21,26 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:48 GMT
+      - Sun, 23 Apr 2023 04:16:33 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e7d05f1bad5b937ba3786b58da83079d"
+      - W/"51bc6d133a51ddcc1073c44c9f41fae8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 246f9f52-9eff-4bf3-94fb-88df1f71792d
+      - 80e86f09-951a-4c51-a070-110727cf67c6
       X-Runtime:
-      - '0.004867'
+      - '0.002895'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tona.stark@klocko.info","google_id":"g94kqftp41tyi50sg42aa","google_image_url":"https://robohash.org/quiaetaspernatur.png?size=300x300\u0026set=set1","zip_code":"41895","summary":"The
-        virtue of justice consists in moderation, as regulated by wisdom.","goal":"Maintain
-        Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":false,"full_name":"Joanne
-        Champlin"}}}'
-  recorded_at: Fri, 29 Oct 2021 03:34:48 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxY8jq2Y2Xu0yJyh--ARjG5om-JB_iwBV06UVibcJQ=s96-c","zip_code":"80302","summary":"Let''s
+        get swoll!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}}}'
+  recorded_at: Sun, 23 Apr 2023 04:16:33 GMT
 recorded_with: VCR 6.0.0

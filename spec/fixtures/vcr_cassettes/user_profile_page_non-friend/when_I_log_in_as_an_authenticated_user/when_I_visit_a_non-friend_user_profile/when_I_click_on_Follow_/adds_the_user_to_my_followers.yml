@@ -15,33 +15,32 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:46 GMT
+      - Sun, 23 Apr 2023 04:16:31 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - eb3222de-2255-45dc-b762-0854c2fbe86e
+      - 61161781-2c88-452d-bdcf-f0a9c5d25034
       X-Runtime:
-      - '0.006691'
+      - '0.003032'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:46 GMT
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=11"]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:32 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/11/friendships?relationship=followers
@@ -57,31 +56,30 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:47 GMT
+      - Sun, 23 Apr 2023 04:16:32 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 3f1f2296-525d-4707-96a4-8d1680e0317c
+      - 62e30ca7-6889-43db-bca4-981261a7c3a8
       X-Runtime:
-      - '0.011225'
+      - '0.002902'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:47 GMT
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=11"]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:32 GMT
 recorded_with: VCR 6.0.0

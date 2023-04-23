@@ -1,35 +1,37 @@
-<div class="container gray top-radius padding mb-1" style="width: flex;">
-  <h1 class="card-title">Gyms Near My Zip Code: <%= current_user.zip_code %></h1>
-</div>
+<% if current_user %>
+  <div class="container gray top-radius padding mb-1" style="width: flex;">
+    <h1 class="card-title">Gyms Near My Zip Code: <%= current_user.zip_code %></h1>
+  </div>
 
-<div class='container gray bottom-radius padding-content mb-3'>
-  <div class="row" id="gyms">
-    <div class="d-flex flex-wrap center-it-all">
-      <% @gyms.each do |gym| %>
-        <div class="col-xl-5 card-display flex-grow">
-          <div id="<%= gym.yelp_gym_id %>">
-            <ul class='no-bullets'>
-              <li class='sign'>
-                <span class='title'><%= link_to gym.name, gym_path(gym.yelp_gym_id) %></span>
-              </li>
-
-              <li class='address'>
-                <%= gym.full_address %>
-              </li>
-
-              <% if gym.phone.present? %>
-                <li class='phone'>
-                  <%= gym.phone %>
+  <div class='container gray bottom-radius padding-content mb-3'>
+    <div class="row" id="gyms">
+      <div class="d-flex flex-wrap center-it-all">
+        <% @gyms.each do |gym| %>
+          <div class="col-xl-5 card-display flex-grow">
+            <div id="<%= gym.yelp_gym_id %>">
+              <ul class='no-bullets'>
+                <li class='sign'>
+                  <span class='title'><%= link_to gym.name, gym_path(gym.yelp_gym_id) %></span>
                 </li>
-              <% end %>
 
-              <li class='star'>
-                <%= gym.gym_member_count %> Active Members
-              </li>
-            </ul>
+                <li class='address'>
+                  <%= gym.full_address %>
+                </li>
+
+                <% if gym.phone.present? %>
+                  <li class='phone'>
+                    <%= gym.phone %>
+                  </li>
+                <% end %>
+
+                <li class='star'>
+                  <%= gym.gym_member_count %> Active Members
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

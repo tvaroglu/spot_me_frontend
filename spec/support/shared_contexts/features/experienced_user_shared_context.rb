@@ -1,7 +1,8 @@
 shared_context 'experienced user' do
   let(:user1) do
     User.new(
-      id: 10,
+      # id: 10,
+      id: '10',
       attributes: {
         email: '123@test.com',
         full_name: 'Joe Shmoe',
@@ -19,7 +20,8 @@ shared_context 'experienced user' do
 
   let(:user2) do
     User.new(
-      id: 20,
+      # id: 20,
+      id: '20',
       attributes: {
         email: '234@test.com',
         full_name: 'John Doe',
@@ -37,7 +39,8 @@ shared_context 'experienced user' do
 
   let(:user3) do
     User.new(
-      id: 30,
+      # id: 30,
+      id: '30',
       attributes: {
         email: '345@test.com',
         full_name: 'Jane Doe',
@@ -284,6 +287,7 @@ shared_context 'experienced user' do
   let(:past_events) { [event1, event2, event3] }
 
   before do
+    allow(UserFacade).to receive(:get_profile_user).with(user_friends.first.id).and_return(user1)
     allow(FriendshipFacade).to receive(:get_friends).with(user.id).and_return(user_friends)
     allow(FriendshipFacade).to receive(:get_followers).with(user.id).and_return(user_friends)
     allow(GymMembershipFacade).to receive(:get_gym_memberships).with(user.id).and_return(user_gym_memberships)

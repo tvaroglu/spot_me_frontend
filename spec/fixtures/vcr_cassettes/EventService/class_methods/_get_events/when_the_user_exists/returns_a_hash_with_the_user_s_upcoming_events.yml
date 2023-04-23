@@ -21,31 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:48 GMT
+      - Sun, 23 Apr 2023 04:16:33 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"942632cd5cfec13d2a9854479bfe59aa"
+      - W/"1794e925c8b8dfad7a00ee097f9e62d7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ed5d5209-9126-4369-8b9b-98eb7d086831
+      - 9746482e-c495-4ded-bcc7-4609bfce4046
       X-Runtime:
-      - '0.022889'
+      - '0.008120'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"105","type":"event","attributes":{"user_id":1,"gym_membership_id":25,"date_time":"2021-10-31T03:34:03.340Z","activity":"Board
-        sports"},"meta":{"friend_name":"TaylorV","friend_role":"host","gym_name":"Rishi''s
-        Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}},{"id":"107","type":"event","attributes":{"user_id":1,"gym_membership_id":25,"date_time":"2021-11-02T03:34:03.370Z","activity":"Geocaching"},"meta":{"friend_name":"TaylorV","friend_role":"host","gym_name":"Rishi''s
-        Community Yoga","yelp_gym_id":"BJBXzKYxQAXZKb5W6HrRnA"}},{"id":"109","type":"event","attributes":{"user_id":1,"gym_membership_id":5,"date_time":"2021-11-03T03:34:03.396Z","activity":"Origami"},"meta":{"friend_name":"Carrie
-        O''Reilly","friend_role":"host","gym_name":"Hudson-Hirthe","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"103","type":"event","attributes":{"user_id":1,"gym_membership_id":3,"date_time":"2021-11-04T03:34:03.314Z","activity":"Model
-        building"},"meta":{"friend_name":"Malcom Langworth","friend_role":"host","gym_name":"O''Hara
-        Group","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}}]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:48 GMT
+      string: '{"data":[{"id":"2","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-12-31T04:20:00.000Z","activity":"Lift
+        more!!"},"meta":{"friend_name":"Taylor Varoglu","friend_role":"host","gym_name":"24
+        Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}}]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:34 GMT
 recorded_with: VCR 6.0.0

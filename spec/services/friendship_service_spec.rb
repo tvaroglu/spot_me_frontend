@@ -61,19 +61,24 @@ describe FriendshipService, :vcr, type: :service do
     describe '.add_friend and .delete_friend' do
       it 'adds and deletes a friend' do
         params = {
-          user_id: 1,
-          followee_id: 10
+          # user_id: 1,
+          # followee_id: 10
+          user_id: 2,
+          followee_id: 3
         }
 
         expect(FriendshipService.add_friend(params).class).to eq(Hash)
 
         params = {
-          user_id: 1,
-          id: 10
+          # user_id: 1,
+          # id: 10
+          user_id: 2,
+          id: 3
         }
 
         actual = FriendshipService.delete_friend(params)
-        expect(actual.env.url.to_s).to eq('https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/10')
+        # expect(actual.env.url.to_s).to eq('https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/10')
+        expect(actual.env.url.to_s).to eq('https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships/3')
         expect(actual.status).to eq(204)
       end
     end

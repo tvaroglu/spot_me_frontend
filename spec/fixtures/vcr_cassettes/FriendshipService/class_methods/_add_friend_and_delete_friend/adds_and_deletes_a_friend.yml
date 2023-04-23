@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?followee_id=10
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships?followee_id=3
     body:
       encoding: UTF-8
       string: ''
@@ -23,30 +23,30 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:50 GMT
+      - Sun, 23 Apr 2023 04:16:34 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b4faf3db0a4b31dae72e9b71a0de1bd2"
+      - W/"c8aadf0bf7ddb3609df684aeeb291f70"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e275814f-bdf9-484c-8dcd-0a28b0ca243f
+      - 423c349f-41ee-4ab5-813a-714fcd7149d5
       X-Runtime:
-      - '0.018172'
+      - '0.011588'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"90","type":"friendship","attributes":{"follower_id":1,"followee_id":10}}}'
-  recorded_at: Fri, 29 Oct 2021 03:34:50 GMT
+      string: '{"data":{"id":"11","type":"friendship","attributes":{"follower_id":2,"followee_id":3}}}'
+  recorded_at: Sun, 23 Apr 2023 04:16:35 GMT
 - request:
     method: delete
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships/10
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships/3
     body:
       encoding: US-ASCII
       string: ''
@@ -65,7 +65,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:49 GMT
+      - Sun, 23 Apr 2023 04:16:35 GMT
       Content-Length:
       - '0'
       Connection:
@@ -73,13 +73,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 5cba5ebe-c3f2-460e-8985-aec13e03c22e
+      - 466e0e5a-44aa-4812-b43b-5f9b50c8f0a9
       X-Runtime:
-      - '0.013324'
+      - '0.008263'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Fri, 29 Oct 2021 03:34:50 GMT
+  recorded_at: Sun, 23 Apr 2023 04:16:36 GMT
 recorded_with: VCR 6.0.0

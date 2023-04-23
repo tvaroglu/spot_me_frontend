@@ -21,30 +21,27 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:33 GMT
+      - Sun, 23 Apr 2023 04:16:20 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d350138170651bd958cbbdda58de81c9"
+      - W/"3a54ade838d7c65bd5080bf8811a76c3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f07a5696-5b19-4afc-8979-63611cdf613a
+      - 9bfabf42-58f6-48ca-b41c-b748c26b2d5b
       X-Runtime:
-      - '0.007470'
+      - '0.004269'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"7","type":"user","attributes":{"email":"rolando.nikolaus@jones-cassin.info","google_id":"ummu458qvzj7jxme3quds","google_image_url":"https://robohash.org/voluptatemexcepturivoluptas.png?size=300x300\u0026set=set1","zip_code":"19596","summary":"It
-        is impossible to begin to learn that which one thinks one already knows.","goal":"Lose
-        Weight","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Valentin
-        Bergnaum IV"}},{"id":"3","type":"user","attributes":{"email":"geoffrey.beier@conroy-mohr.name","google_id":"w1kt8729o7qzp0e1up913","google_image_url":"https://robohash.org/fugitvoluptatumexplicabo.png?size=300x300\u0026set=set1","zip_code":"38023","summary":"The
-        unexamined life is not worth living.","goal":"Increase Stamina","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Gov.
-        Elliot Hills"}}]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:34 GMT
+      string: '{"data":[{"id":"2","type":"user","attributes":{"email":"taylor.varoglu@gmail.com","google_id":"112620306165906709595","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxajYOILViSMytXRTd-2g_DKy9aVMWJ_M0A-E_gE=s96-c","zip_code":"80302","summary":"Hi
+        friend!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor
+        Varoglu"}}]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:21 GMT
 recorded_with: VCR 6.0.0

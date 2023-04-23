@@ -21,30 +21,25 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:50 GMT
+      - Sun, 23 Apr 2023 04:16:35 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"33387c0e80d09b0337a8484c37203de3"
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '080a5ff5-2a63-4432-bdd4-7af254059369'
+      - 03cb1ec1-607a-4fa9-9bde-8e8b07cd95a1
       X-Runtime:
-      - '0.009681'
+      - '0.006824'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"13","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GifljenRAo6VQ5AxxEBSVTPslKe7NXJK_vCP3qB6A=s96-c","zip_code":"80302","summary":"Lift
-        EVEN more!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"TaylorV"}},{"id":"12","type":"user","attributes":{"email":"scottborecki@gmail.com","google_id":"106528528691724675718","google_image_url":"https://lh3.googleusercontent.com/a-/AOh14GiixaRvJYV5U8W8E3I4XYNluHYW9XoaMRQKZGRJBw=s96-c","zip_code":"91945","summary":"Hi!
-        I''m excited to increase my flexibility!","goal":"Increase Flexibility","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Scott
-        B"}},{"id":"17","type":"user","attributes":{"email":"dunkcrunk@gmail.com","google_id":"111046601195516206054","google_image_url":"https://lh3.googleusercontent.com/a/AATXAJw4zHMZso5-i6FLqPYII1cbPB3davRXpkbdZBRU=s96-c","zip_code":"80227","summary":"Just
-        moved to San Diego from Charlotte. 36. Would love a gym bud to lift weights
-        with!","goal":"Gain Muscle","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Ethan"}}]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:51 GMT
+      string: '{"data":[]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:36 GMT
 recorded_with: VCR 6.0.0

@@ -214,8 +214,9 @@ describe 'experienced user dashboard', type: :feature do
           allow(FriendshipFacade).to receive(:get_followers).with(first_friend.id.to_s).and_return([])
           allow(GymMembershipFacade).to receive(:get_gym_memberships).with(first_friend.id).and_return([])
           allow(EventFacade).to receive(:get_events).with(first_friend.id.to_s).and_return([])
-
-          within("#friend-#{first_friend.id}") { click_link first_friend.full_name }
+          # save_and_open_page
+          # within("#friend-#{first_friend.id}") { click_link first_friend.full_name }
+          within("#follower-#{first_friend.id}") { click_link first_friend.full_name }
         end
 
         it 'redirects me to my friends profile page', :vcr do

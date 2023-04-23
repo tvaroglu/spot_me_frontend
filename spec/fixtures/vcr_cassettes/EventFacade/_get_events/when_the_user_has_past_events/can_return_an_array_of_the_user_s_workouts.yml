@@ -21,33 +21,26 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 29 Oct 2021 03:34:33 GMT
+      - Sun, 23 Apr 2023 04:16:19 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9be117c0b4528cb1c08e366054be8f45"
+      - W/"47f9fb4b12c024458677d6bcf5384fcb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2a8f899c-5d3e-4f8c-8a05-1d21887cb73d
+      - 6277176b-c93e-47df-b532-ef7ec2ee9041
       X-Runtime:
-      - '0.029162'
+      - '0.008014'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"3","type":"event","attributes":{"user_id":7,"gym_membership_id":7,"date_time":"2021-10-03T20:38:23.430Z","activity":"Knife
-        making"},"meta":{"friend_name":"Valentin Bergnaum IV","friend_role":"invited","gym_name":"Ward-Koepp","yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA"}},{"id":"44","type":"event","attributes":{"user_id":1,"gym_membership_id":3,"date_time":"2021-10-07T23:58:20.050Z","activity":"role-playing
-        games"},"meta":{"friend_name":"Malcom Langworth","friend_role":"host","gym_name":"O''Hara
-        Group","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"50","type":"event","attributes":{"user_id":1,"gym_membership_id":5,"date_time":"2021-10-02T23:58:20.088Z","activity":"Knife
-        making"},"meta":{"friend_name":"Carrie O''Reilly","friend_role":"host","gym_name":"Hudson-Hirthe","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"10","type":"event","attributes":{"user_id":1,"gym_membership_id":4,"date_time":"2021-10-02T20:38:23.472Z","activity":"Kayaking"},"meta":{"friend_name":"Valentin
-        Bergnaum IV","friend_role":"host","gym_name":"Roob-Konopelski","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"8","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-10-02T20:38:23.462Z","activity":"Cryptography"},"meta":{"friend_name":"Jerome
-        Wunsch","friend_role":"host","gym_name":"Blick, Cormier and Kerluke","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}},{"id":"4","type":"event","attributes":{"user_id":1,"gym_membership_id":2,"date_time":"2021-09-30T20:38:23.438Z","activity":"Soapmaking"},"meta":{"friend_name":"Gov.
-        Elliot Hills","friend_role":"host","gym_name":"Gutkowski, Pfeffer and Hessel","yelp_gym_id":"lex65fkcol5gfq89rymmd2"}},{"id":"6","type":"event","attributes":{"user_id":1,"gym_membership_id":19,"date_time":"2021-09-27T20:38:23.450Z","activity":"Woodworking"},"meta":{"friend_name":"Jerome
-        Wunsch","friend_role":"host","gym_name":"Blick, Cormier and Kerluke","yelp_gym_id":"wxaw9m796t6wdnsk53uieh"}}]}'
-  recorded_at: Fri, 29 Oct 2021 03:34:33 GMT
+      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-04-23T02:30:00.000Z","activity":"Lift"},"meta":{"friend_name":"Taylor
+        Varoglu","friend_role":"host","gym_name":"24 Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}}]}'
+  recorded_at: Sun, 23 Apr 2023 04:16:20 GMT
 recorded_with: VCR 6.0.0

@@ -1,51 +1,53 @@
-<div class="container gray top-radius padding mb-1">
-  <div class="row">
-    <h2>Edit User Profile</h2>
+<% if current_user %>
+  <div class="container gray top-radius padding mb-1">
+    <div class="row">
+      <h2>Edit User Profile</h2>
+    </div>
   </div>
-</div>
 
-<div class="container gray bottom-radius padding">
-  <div class="row center-it-all">
-    <%= form_with url: profile_path(current_user.id), method: :patch, local: true do |f| %>
-      <h5><%= f.label :full_name, 'Name' %></h5>
-      <%= f.text_field :full_name, value: current_user.full_name, id: :full_name, class: "form-custom center-it-all" %>
+  <div class="container gray bottom-radius padding">
+    <div class="row center-it-all">
+      <%= form_with url: profile_path(current_user.id), method: :patch, local: true do |f| %>
+        <h5><%= f.label :full_name, 'Name' %></h5>
+        <%= f.text_field :full_name, value: current_user.full_name, id: :full_name, class: "form-custom center-it-all" %>
 
-      <br><br>
+        <br><br>
 
-      <h5><%= f.label :email, 'Email' %></h5>
-      <%= f.text_field :email, value: current_user.email, readonly: true, id: :email, class: "form-custom center-it-all" %>
+        <h5><%= f.label :email, 'Email' %></h5>
+        <%= f.text_field :email, value: current_user.email, readonly: true, id: :email, class: "form-custom center-it-all" %>
 
-      <br><br>
+        <br><br>
 
-      <h5><%= f.label :zip_code, 'Zip Code' %></h5>
-      <%= f.text_field :zip_code, value: current_user.zip_code, id: :zip_code, class: "form-custom center-it-all" %>
+        <h5><%= f.label :zip_code, 'Zip Code' %></h5>
+        <%= f.text_field :zip_code, value: current_user.zip_code, id: :zip_code, class: "form-custom center-it-all" %>
 
-      <br><br>
+        <br><br>
 
-      <h5><%= f.label :summary, 'Summary' %></h5>
-      <%= f.text_area :summary, value: current_user.summary, cols: 40, id: :summary, class: "form-custom center-it-all" %>
+        <h5><%= f.label :summary, 'Summary' %></h5>
+        <%= f.text_area :summary, value: current_user.summary, cols: 40, id: :summary, class: "form-custom center-it-all" %>
 
-      <br><br>
+        <br><br>
 
-      <h5><%= f.label :goal, 'Goals' %></h5>
-      <%= f.select :goal, User.goals_array, value: current_user.goal, id: :goal, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+        <h5><%= f.label :goal, 'Goals' %></h5>
+        <%= f.select :goal, User.goals_array, value: current_user.goal, id: :goal, class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
 
-      <br><br>
+        <br><br>
 
-      <h5><%= f.label :availability %></h5>
-      <%= f.label :availability_morning, 'Morning' %>
-      <%= f.check_box :availability_morning, checked: current_user.availability_morning, id: :availability_morning %>
-      <br>
-      <%= f.label :availability_afternoon, 'Afternoon' %>
-      <%= f.check_box :availability_afternoon, checked: current_user.availability_afternoon ,id: :availability_afternoon %>
-      <br>
-      <%= f.label :availability_evening, 'Evening' %>
-      <%= f.check_box :availability_evening, checked: current_user.availability_evening ,id: :availability_evening %>
+        <h5><%= f.label :availability %></h5>
+        <%= f.label :availability_morning, 'Morning' %>
+        <%= f.check_box :availability_morning, checked: current_user.availability_morning, id: :availability_morning %>
+        <br>
+        <%= f.label :availability_afternoon, 'Afternoon' %>
+        <%= f.check_box :availability_afternoon, checked: current_user.availability_afternoon ,id: :availability_afternoon %>
+        <br>
+        <%= f.label :availability_evening, 'Evening' %>
+        <%= f.check_box :availability_evening, checked: current_user.availability_evening ,id: :availability_evening %>
 
-      <br><br><br>
+        <br><br><br>
 
-      <%= f.submit 'Update Profile', class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
-      <%= link_to 'Cancel', profile_path(current_user.id), class: "btn btn-sm btn-white button-bg btn-outline-dark"  %>
-    <% end %>
+        <%= f.submit 'Update Profile', class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+        <%= link_to 'Cancel', profile_path(current_user.id), class: "btn btn-sm btn-white button-bg btn-outline-dark"  %>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>

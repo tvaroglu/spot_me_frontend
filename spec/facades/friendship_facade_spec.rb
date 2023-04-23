@@ -13,7 +13,8 @@ describe FriendshipFacade, type: :facade do
 
     context 'when the user does not have any friends' do
       it 'can return an empty array', :vcr do
-        friends = FriendshipFacade.get_friends(2)
+        # friends = FriendshipFacade.get_friends(2)
+        friends = FriendshipFacade.get_friends(3)
 
         expect(friends).to be_empty
       end

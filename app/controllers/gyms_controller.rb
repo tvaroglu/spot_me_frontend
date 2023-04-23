@@ -8,9 +8,11 @@ class GymsController < ApplicationController
     # @user_gym_membership = GymMembershipFacade.get_gym_membership(
     #   yelp_gym_id: params[:id], user_id: current_user.id
     # )
-    @user_gym_membership = (current_user && current_user.id) ? GymMembershipFacade.get_gym_membership(
-      yelp_gym_id: params[:id], user_id: current_user.id
-    ) : nil
+    @user_gym_membership = if current_user && current_user.id
+                             GymMembershipFacade.get_gym_membership(
+                               yelp_gym_id: params[:id], user_id: current_user.id
+                             )
+                           end
     @gym_users_count = GymFacade.get_gym_users_count(params[:id])
     return if @user_gym_membership.blank?
 

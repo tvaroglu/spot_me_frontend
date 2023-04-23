@@ -17,13 +17,14 @@ class UsersController < ApplicationController
   # User Profile
   def show
     # current_user_friends = FriendshipFacade.get_friends(current_user.id)
-    current_user_friends = (current_user && current_user.id) ? FriendshipFacade.get_friends(current_user.id) : []
+    current_user_friends = current_user && current_user.id ? FriendshipFacade.get_friends(current_user.id) : []
     return if current_user.blank?
+
     @profile_user = UserFacade.get_profile_user(params[:id])
     # @user_friends = FriendshipFacade.get_friends(@profile_user.id)
     # @user_followers = FriendshipFacade.get_followers(@profile_user.id)
-    @user_friends = (@profile_user && @profile_user.id) ? FriendshipFacade.get_friends(@profile_user.id) : []
-    @user_followers = (@profile_user && @profile_user.id) ? FriendshipFacade.get_followers(@profile_user.id) : []
+    @user_friends = @profile_user && @profile_user.id ? FriendshipFacade.get_friends(@profile_user.id) : []
+    @user_followers = @profile_user && @profile_user.id ? FriendshipFacade.get_followers(@profile_user.id) : []
 
     @user_type = if current_user.id.to_s == params[:id]
                    :self
@@ -34,8 +35,9 @@ class UsersController < ApplicationController
                  end
 
     return unless @user_type == :friend
+
     # @user_events = EventFacade.get_events(@profile_user.id)
-    @user_events = (@profile_user && @profile_user.id) ? EventFacade.get_events(@profile_user.id) : []
+    @user_events = @profile_user && @profile_user.id ? EventFacade.get_events(@profile_user.id) : []
   end
 
   def edit; end

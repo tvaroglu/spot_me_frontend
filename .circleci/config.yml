@@ -16,12 +16,13 @@ workflows:
               only: main
           post-steps:
             - run: heroku run rails db:migrate --app spotme-app
+
 jobs:
   build:
     parallelism: 1
     docker:
-      - image: circleci/ruby:2.7.2
-      - image: circleci/postgres:9.6-alpine
+      - image: cimg/ruby:3.0.6
+      - image: cimg/postgres:13.9
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: spot_me_frontend_test
@@ -39,7 +40,11 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
-      - run: sudo apt install -y postgresql-client || true
+      - run:
+          name: Install Node + Yarn (Rails 6 asset compilation)
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y nodejs yarn
       - run:
           name: Setup DB
           command: bundle exec rails db:create db:schema:load --trace

@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.11'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.15', require: false
+gem 'bootsnap', '~> 1.15', require: false
 
 gem 'faraday', '~> 1.10'
 gem 'omniauth', '~> 2.0'

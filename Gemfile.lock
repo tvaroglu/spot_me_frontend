@@ -370,7 +370,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.15)
+  bootsnap (~> 1.15)
   capybara (~> 3.40)
   coffee-rails (~> 4.2)
   execjs

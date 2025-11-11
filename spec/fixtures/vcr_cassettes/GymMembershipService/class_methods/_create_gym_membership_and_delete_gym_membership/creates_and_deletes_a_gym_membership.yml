@@ -9,7 +9,7 @@ http_interactions:
         Fitness"}'
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,41 +21,45 @@ http_interactions:
       code: 201
       message: Created
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 23 Apr 2023 04:16:36 GMT
-      Connection:
-      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"aba3dcc3ef8fa85ee4eb0e8025e38b29"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 03d95fb4-36ab-4ee3-9f8d-c86a1cbc687d
-      X-Runtime:
-      - '0.307687'
-      Transfer-Encoding:
-      - chunked
+      - W/"2e3b7c9cb58de020be19ab0ad5b05e76"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=6K%2F72JdlHXltX1PD%2Fsfe53kKWetL%2Fpk9HPnN4Yldl50%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903452"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=6K%2F72JdlHXltX1PD%2Fsfe53kKWetL%2Fpk9HPnN4Yldl50%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903452"
+      Server:
+      - Heroku
       Via:
-      - 1.1 vegur
+      - 1.1 heroku-router
+      X-Request-Id:
+      - dad351d4-d661-fddc-655b-02b7bc5783eb
+      X-Runtime:
+      - '0.242723'
+      Date:
+      - Tue, 11 Nov 2025 23:24:12 GMT
+      Content-Length:
+      - '339'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"21","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+      string: '{"data":{"id":"36","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}}'
-  recorded_at: Sun, 23 Apr 2023 04:16:37 GMT
+  recorded_at: Tue, 11 Nov 2025 23:24:12 GMT
 - request:
     method: delete
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/21
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/36
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -65,24 +69,26 @@ http_interactions:
       code: 204
       message: No Content
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 23 Apr 2023 04:16:36 GMT
-      Content-Length:
-      - '0'
-      Connection:
-      - keep-alive
       Cache-Control:
       - no-cache
-      X-Request-Id:
-      - b3be3a99-18a3-4b8b-8837-921829c1bb49
-      X-Runtime:
-      - '0.008805'
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ph2DaUQD9l9oRFwJdEejnhmjKLkdzdgVuU7%2F%2BpzkTPg%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903453"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=ph2DaUQD9l9oRFwJdEejnhmjKLkdzdgVuU7%2F%2BpzkTPg%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903453"
+      Server:
+      - Heroku
       Via:
-      - 1.1 vegur
+      - 1.1 heroku-router
+      X-Request-Id:
+      - 8245a166-9f52-fc61-c3f5-0bf96444df0a
+      X-Runtime:
+      - '0.012201'
+      Date:
+      - Tue, 11 Nov 2025 23:24:13 GMT
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sun, 23 Apr 2023 04:16:37 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 11 Nov 2025 23:24:13 GMT
+recorded_with: VCR 6.3.1

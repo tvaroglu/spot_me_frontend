@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,29 +18,35 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 23 Apr 2023 04:16:19 GMT
-      Connection:
-      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"47f9fb4b12c024458677d6bcf5384fcb"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6277176b-c93e-47df-b532-ef7ec2ee9041
-      X-Runtime:
-      - '0.008014'
-      Transfer-Encoding:
-      - chunked
+      - W/"60c143b992db9460fed3de2f757dfeb4"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=o23Vk0Ho2C505E%2FT%2FdXyC0Q4mN8dGH5LR2LUi9E9POw%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903431"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=o23Vk0Ho2C505E%2FT%2FdXyC0Q4mN8dGH5LR2LUi9E9POw%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903431"
+      Server:
+      - Heroku
       Via:
-      - 1.1 vegur
+      - 1.1 heroku-router
+      X-Request-Id:
+      - 8bfb9416-5de7-eeea-88c1-8e728ff38e73
+      X-Runtime:
+      - '0.011709'
+      Date:
+      - Tue, 11 Nov 2025 23:23:51 GMT
+      Content-Length:
+      - '583'
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-04-23T02:30:00.000Z","activity":"Lift"},"meta":{"friend_name":"Taylor
+      string: '{"data":[{"id":"2","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-12-31T04:20:00.000Z","activity":"Lift
+        more!!"},"meta":{"friend_name":"Taylor Varoglu","friend_role":"host","gym_name":"24
+        Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}},{"id":"1","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-04-23T02:30:00.000Z","activity":"Lift"},"meta":{"friend_name":"Taylor
         Varoglu","friend_role":"host","gym_name":"24 Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}}]}'
-  recorded_at: Sun, 23 Apr 2023 04:16:20 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 11 Nov 2025 23:23:51 GMT
+recorded_with: VCR 6.3.1

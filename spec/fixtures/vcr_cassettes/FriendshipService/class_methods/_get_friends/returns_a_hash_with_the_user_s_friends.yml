@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,30 +18,36 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 23 Apr 2023 04:16:34 GMT
-      Connection:
-      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3a54ade838d7c65bd5080bf8811a76c3"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - c2115a70-a333-4b25-bbd6-5045b7713898
-      X-Runtime:
-      - '0.004148'
-      Transfer-Encoding:
-      - chunked
+      - W/"f847b53d7bd5e1443f3dcb024b75f61e"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=VzZcoQjQzMH%2B%2FOYXRtdHxuYPFI4IYi9SHuWgyWPlVvg%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903450"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=VzZcoQjQzMH%2B%2FOYXRtdHxuYPFI4IYi9SHuWgyWPlVvg%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903450"
+      Server:
+      - Heroku
       Via:
-      - 1.1 vegur
+      - 1.1 heroku-router
+      X-Request-Id:
+      - c2829f2b-4814-d24c-903c-7e1f1a923f6a
+      X-Runtime:
+      - '0.007351'
+      Date:
+      - Tue, 11 Nov 2025 23:24:10 GMT
+      Content-Length:
+      - '814'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"2","type":"user","attributes":{"email":"taylor.varoglu@gmail.com","google_id":"112620306165906709595","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxajYOILViSMytXRTd-2g_DKy9aVMWJ_M0A-E_gE=s96-c","zip_code":"80302","summary":"Hi
         friend!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor
+        Varoglu"}},{"id":"4","type":"user","attributes":{"email":"alli.j.varoglu@gmail.com","google_id":"103649569578369516428","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxa57thf-8CUIvUYwFC87xcBHs_pVHNwWAbRSTI7=s96-c","zip_code":"80302","summary":"Stay
+        healthy","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Alexandria
         Varoglu"}}]}'
-  recorded_at: Sun, 23 Apr 2023 04:16:35 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 11 Nov 2025 23:24:10 GMT
+recorded_with: VCR 6.3.1

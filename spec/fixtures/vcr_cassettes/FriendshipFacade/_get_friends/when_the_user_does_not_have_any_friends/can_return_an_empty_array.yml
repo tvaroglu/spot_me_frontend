@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,28 +18,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 23 Apr 2023 04:16:20 GMT
-      Connection:
-      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
       - W/"8fe32e407a1038ee38753b70e5374b3a"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 7bbc2913-fbdf-49e5-a49a-5af9cf40cff4
-      X-Runtime:
-      - '0.004181'
-      Transfer-Encoding:
-      - chunked
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=HZkpirF8kN7azaHxE%2FTweUSkIUclYAXTQXIuFDhFE9I%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903432"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=HZkpirF8kN7azaHxE%2FTweUSkIUclYAXTQXIuFDhFE9I%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903432"
+      Server:
+      - Heroku
       Via:
-      - 1.1 vegur
+      - 1.1 heroku-router
+      X-Request-Id:
+      - f3ba264b-1de7-b9d5-62e5-e79e2b9415f0
+      X-Runtime:
+      - '0.006032'
+      Date:
+      - Tue, 11 Nov 2025 23:23:52 GMT
+      Content-Length:
+      - '11'
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Sun, 23 Apr 2023 04:16:21 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Tue, 11 Nov 2025 23:23:52 GMT
+recorded_with: VCR 6.3.1

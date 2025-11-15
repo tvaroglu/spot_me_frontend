@@ -25,29 +25,29 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"024c346d8af9b155d7f264fd37ea9d9f"
+      - W/"fc71092d0bd02f03741373c2af3091dc"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=PVj0BZxX2tBQqPrFZ7H0DZ%2FCIc3HE%2B5DfgFRuDLlmN4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169177"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224893"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=PVj0BZxX2tBQqPrFZ7H0DZ%2FCIc3HE%2B5DfgFRuDLlmN4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169177"
+      - heroku-nel="https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224893"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 68f3f7d1-5c36-673b-cf73-8c467a65bea3
+      - 6ca388f6-91c7-9e03-ec96-10b1139b2cd0
       X-Runtime:
-      - '0.022183'
+      - '0.015136'
       Date:
-      - Sat, 15 Nov 2025 01:12:57 GMT
+      - Sat, 15 Nov 2025 16:41:33 GMT
       Content-Length:
       - '87'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"54","type":"friendship","attributes":{"follower_id":2,"followee_id":3}}}'
-  recorded_at: Sat, 15 Nov 2025 01:12:57 GMT
+      string: '{"data":{"id":"56","type":"friendship","attributes":{"follower_id":2,"followee_id":3}}}'
+  recorded_at: Sat, 15 Nov 2025 16:41:33 GMT
 - request:
     method: delete
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships/3
@@ -71,21 +71,21 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=edWLCKTMxceZFAdTqkOgY%2F855hxEjSm6y5kV2rgX%2BK4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169178"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224893"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=edWLCKTMxceZFAdTqkOgY%2F855hxEjSm6y5kV2rgX%2BK4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169178"
+      - heroku-nel="https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224893"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - a31799b6-8819-0654-a224-5dc3b524c1a9
+      - d040af93-8eb4-66c2-0fc3-da17a26d5d7e
       X-Runtime:
-      - '0.010010'
+      - '0.010071'
       Date:
-      - Sat, 15 Nov 2025 01:12:58 GMT
+      - Sat, 15 Nov 2025 16:41:33 GMT
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sat, 15 Nov 2025 01:12:58 GMT
+  recorded_at: Sat, 15 Nov 2025 16:41:33 GMT
 recorded_with: VCR 6.3.1

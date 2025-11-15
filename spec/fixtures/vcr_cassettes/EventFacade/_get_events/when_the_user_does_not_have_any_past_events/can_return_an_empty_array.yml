@@ -25,24 +25,24 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=IccMNLi6FgOoLSPV6B5SF%2FiWFii6Wl3c3RxbsJJ6wJc%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169145"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=6O9CzPZ%2BUgf%2FfOaEzvmsgYtdkGTGUcxsA4gRhe%2Ff0XQ%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224874"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=IccMNLi6FgOoLSPV6B5SF%2FiWFii6Wl3c3RxbsJJ6wJc%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169145"
+      - heroku-nel="https://nel.heroku.com/reports?s=6O9CzPZ%2BUgf%2FfOaEzvmsgYtdkGTGUcxsA4gRhe%2Ff0XQ%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224874"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 744224c0-8ec2-a86c-cae6-04bf6a27c2f6
+      - '095d6ff2-01b9-057a-5b7c-dd6f47353e1a'
       X-Runtime:
-      - '0.003522'
+      - '0.003907'
       Date:
-      - Sat, 15 Nov 2025 01:12:25 GMT
+      - Sat, 15 Nov 2025 16:41:14 GMT
       Content-Length:
       - '92'
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User with ''id''=11"]}'
-  recorded_at: Sat, 15 Nov 2025 01:12:25 GMT
+  recorded_at: Sat, 15 Nov 2025 16:41:14 GMT
 recorded_with: VCR 6.3.1

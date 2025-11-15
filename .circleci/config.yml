@@ -8,15 +8,14 @@ workflows:
   heroku_deploy:
     jobs:
       - build
-      # TODO: uncomment job job post-stack upgrade
-      # - heroku/deploy-via-git:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only: main
-      #     post-steps:
-      #       - run: heroku run rails db:migrate --app spotme-app
+      - heroku/deploy-via-git:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
+          post-steps:
+            - run: heroku run rails db:migrate --app spotme-app
 
 jobs:
   build:

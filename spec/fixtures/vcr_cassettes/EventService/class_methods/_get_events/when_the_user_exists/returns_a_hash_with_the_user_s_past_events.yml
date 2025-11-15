@@ -27,19 +27,19 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=lOU4gI5ugrR62hnvAwusZeLj4inRif%2BkqA7Kvojkikc%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169175"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=K6huX4Y7vgC%2BsMU2fcko4wnrAxhnabmy7q8hBVW3tw8%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224892"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=lOU4gI5ugrR62hnvAwusZeLj4inRif%2BkqA7Kvojkikc%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169175"
+      - heroku-nel="https://nel.heroku.com/reports?s=K6huX4Y7vgC%2BsMU2fcko4wnrAxhnabmy7q8hBVW3tw8%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224892"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - fd95330f-02df-b059-0669-6528ccf1cf10
+      - 7e790d47-83f0-90cd-d111-07c282c9cc3b
       X-Runtime:
-      - '0.009650'
+      - '0.009893'
       Date:
-      - Sat, 15 Nov 2025 01:12:55 GMT
+      - Sat, 15 Nov 2025 16:41:32 GMT
       Content-Length:
       - '583'
     body:
@@ -48,5 +48,5 @@ http_interactions:
         more!!"},"meta":{"friend_name":"Taylor Varoglu","friend_role":"host","gym_name":"24
         Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}},{"id":"1","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-04-23T02:30:00.000Z","activity":"Lift"},"meta":{"friend_name":"Taylor
         Varoglu","friend_role":"host","gym_name":"24 Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}}]}'
-  recorded_at: Sat, 15 Nov 2025 01:12:55 GMT
+  recorded_at: Sat, 15 Nov 2025 16:41:31 GMT
 recorded_with: VCR 6.3.1

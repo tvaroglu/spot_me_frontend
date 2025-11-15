@@ -65,7 +65,16 @@ jobs:
       - run:
           name: Authenticate with Heroku
           command: |
-            heroku login --apikey $HEROKU_API_KEY
+            cat > ~/.netrc \<<EOF
+            machine api.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKU_API_KEY
+            machine git.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKU_API_KEY
+            EOF
+            chmod 600 ~/.netrc
+            heroku auth:whoami
       - run:
           name: Deploy to Heroku via Git
           command: |

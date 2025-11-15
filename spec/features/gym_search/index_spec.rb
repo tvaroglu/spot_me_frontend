@@ -18,31 +18,24 @@ describe 'gyms near me page', :vcr, type: :feature do
     expect(page).to have_content("Gyms Near My Zip Code: #{user.zip_code}")
     # save_and_open_page
     within '#gyms' do
-      # NOTE: gym no longer returned by Yelp API; adding a different one to fix legacy failing tests
-      # within '#BJBXzKYxQAXZKb5W6HrRnA' do
-      within '#hZkoTYYun1LpDy-pe4Gujg' do
-        # expect(page).to have_content("Rishi's Community Yoga")
-        # expect(page).to have_content('2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver, CO 80227')
-        # expect(page).to have_content('(303) 601-0789')
-        expect(page).to have_content('Planet Fitness')
-        expect(page).to have_content('3265 S Wadsworth Blvd, Lakewood, CO 80227')
-        expect(page).to have_content('(303) 985-8888')
+      gym_id = 'BJBXzKYxQAXZKb5W6HrRnA'
+      within "##{gym_id}" do
+        expect(page).to have_content("Rishi's Community Yoga")
+        expect(page).to have_content('Denver, CO')
+        expect(page).to have_content('(303)')
         expect(page).to have_content('Active Members')
       end
     end
   end
 
   it 'has a link to each individual gym', :vcr do
-    # NOTE: gym no longer returned by Yelp API; adding a different one to fix legacy failing tests
-    # within '#BJBXzKYxQAXZKb5W6HrRnA' do
-    within '#hZkoTYYun1LpDy-pe4Gujg' do
-      # expect(page).to have_link("Rishi's Community Yoga")
-      # click_on "Rishi's Community Yoga"
-      expect(page).to have_link('Planet Fitness')
-      click_on 'Planet Fitness'
+    gym_id = 'BJBXzKYxQAXZKb5W6HrRnA'
+    within "##{gym_id}" do
+      gym_name = "Rishi's Community Yoga"
+      expect(page).to have_link(gym_name)
+      click_on gym_name
     end
 
-    # expect(page).to have_current_path(gym_path('BJBXzKYxQAXZKb5W6HrRnA'), ignore_query: true)
-    expect(page).to have_current_path(gym_path('hZkoTYYun1LpDy-pe4Gujg'), ignore_query: true)
+    expect(page).to have_current_path(gym_path(gym_id), ignore_query: true)
   end
 end

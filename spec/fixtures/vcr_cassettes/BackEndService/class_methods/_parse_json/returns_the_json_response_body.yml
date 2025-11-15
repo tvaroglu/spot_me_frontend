@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.10.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -18,29 +18,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - Cowboy
-      Date:
-      - Sun, 23 Apr 2023 04:16:33 GMT
-      Connection:
-      - keep-alive
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"51bc6d133a51ddcc1073c44c9f41fae8"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 80e86f09-951a-4c51-a070-110727cf67c6
-      X-Runtime:
-      - '0.002895'
-      Transfer-Encoding:
-      - chunked
+      - W/"44c12615a96e145d62f01316cb9b2aa2"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=SGhkrzNPrDU9sDYmcptcM9XBJfwB18Flj%2BPEWYqX6x8%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903449"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=SGhkrzNPrDU9sDYmcptcM9XBJfwB18Flj%2BPEWYqX6x8%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903449"
+      Server:
+      - Heroku
       Via:
-      - 1.1 vegur
+      - 1.1 heroku-router
+      X-Request-Id:
+      - 7b992084-36fd-4777-8937-3eb72697952c
+      X-Runtime:
+      - '0.004259'
+      Date:
+      - Tue, 11 Nov 2025 23:24:09 GMT
+      Content-Length:
+      - '398'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxY8jq2Y2Xu0yJyh--ARjG5om-JB_iwBV06UVibcJQ=s96-c","zip_code":"80302","summary":"Let''s
-        get swoll!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":false,"availability_evening":true,"full_name":"Taylor"}}}'
-  recorded_at: Sun, 23 Apr 2023 04:16:33 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxY8jq2Y2Xu0yJyh--ARjG5om-JB_iwBV06UVibcJQ=s96-c","zip_code":"85296","summary":"Let''s
+        get swoll!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Taylor"}}}'
+  recorded_at: Tue, 11 Nov 2025 23:24:09 GMT
+recorded_with: VCR 6.3.1

@@ -1,26 +1,24 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '3.0.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.6'
+gem 'rails', '~> 6.0.6.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
-# gem 'puma', '>= 4.3.8'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'mini_racer', platforms: :ruby
-
+gem 'execjs'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -33,13 +31,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '~> 1.15', require: false
 
-gem 'faraday'
-gem 'json'
-gem 'date'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-rails_csrf_protection'
+gem 'faraday', '~> 1.10'
+gem 'omniauth', '~> 2.0'
+gem 'omniauth-google-oauth2', '~> 0.8.1'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 group :development, :test do
   gem 'pry'
@@ -47,27 +44,24 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rake', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'travis'
+  gem 'web-console', '~> 4.2'
+  gem 'listen', '>= 3.6', '< 4.0'
+  gem 'rubocop', '~> 1.42', require: false
+  gem 'rubocop-performance', '~> 1.15', require: false
+  gem 'rubocop-rails', '~> 2.16', require: false
+  gem 'rubocop-rake', '~> 0.6', require: false
+  gem 'rubocop-rspec', '~> 2.5', require: false
 end
 
 group :test do
-  gem 'rspec-rails', '~> 4.0.1'
-  gem 'simplecov'
-  gem 'shoulda-matchers'
-  gem 'launchy'
-  gem 'capybara'
-  gem 'orderly'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'webmock'
-  gem 'vcr'
+  gem 'rspec-rails', '~> 5.1'
+  gem 'factory_bot_rails', '~> 6.3'
+  gem 'faker', '~> 2.23'
+  gem 'webmock', '~> 3.23'
+  gem 'vcr', '~> 6.0'
+  gem 'capybara', '~> 3.40'
+  gem 'simplecov', '~> 0.22'
+  gem 'shoulda-matchers', '~> 5.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -61,7 +61,7 @@
 </div>
 
 
-  This project requires Ruby 2.7.2.
+  This project requires Ruby locally.
 
   * Fork this repository
   * From the command line, install gems and set up your DB:
@@ -75,13 +75,13 @@
   * Ruby version
       ```bash
       $ ruby -v
-      ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin20]
+      ruby 3.0.6p216 (2023-03-30 revision 23a532679b) [arm64-darwin23]
       ```
 
   * [System dependencies](https://github.com/tvaroglu/spot_me_frontend/blob/main/Gemfile)
       ```bash
       $ rails -v
-      Rails 5.2.6
+      Rails 6.0.6.1
       ```
 
   * Database creation
@@ -146,13 +146,14 @@
       ```bash
       $ rails s
       => Booting Puma
-      => Rails 5.2.6 application starting in development
-      => Run `rails server -h` for more startup options
+      => Rails 6.0.6.1 application starting in development 
+      => Run `rails server --help` for more startup options
       Puma starting in single mode...
-      * Version 3.12.6 (ruby 2.7.2-p137), codename: Llamas in Pajamas
+      * Version 4.3.12 (ruby 3.0.6-p216), codename: Mysterious Traveller
       * Min threads: 5, max threads: 5
       * Environment: development
-      * Listening on tcp://localhost:3000
+      * Listening on tcp://127.0.0.1:3000
+      * Listening on tcp://[::1]:3000
       Use Ctrl-C to stop
       ```
 

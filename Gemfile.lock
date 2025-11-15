@@ -160,9 +160,10 @@ GEM
     minitest (5.26.1)
     msgpack (1.8.0)
     multi_json (1.17.0)
-    multi_xml (0.6.0)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
     multipart-post (2.4.1)
-    net-imap (0.4.22)
+    net-imap (0.5.12)
       date
       net-protocol
     net-pop (0.1.2)
@@ -172,7 +173,7 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.17.2)
+    nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     oauth2 (1.4.11)
@@ -285,7 +286,7 @@ GEM
     rubocop-capybara (2.22.1)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
-    rubocop-factory_bot (2.27.1)
+    rubocop-factory_bot (2.28.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
     rubocop-performance (1.26.1)
@@ -403,7 +404,7 @@ DEPENDENCIES
   webmock (~> 3.23)
 
 RUBY VERSION
-   ruby 3.0.6p216
+   ruby 3.1.4p223
 
 BUNDLED WITH
-   2.2.33
+   2.3.25

@@ -8,14 +8,15 @@ workflows:
   heroku_deploy:
     jobs:
       - build
-      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
-          requires:
-            - build
-          filters:
-            branches:
-              only: main
-          post-steps:
-            - run: heroku run rails db:migrate --app spotme-app
+      # TODO: comment in revised heroku/deploy-via-git job post-stack upgrade
+      # - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: main
+      #     post-steps:
+      #       - run: heroku run rails db:migrate --app spotme-app
 
 jobs:
   build:

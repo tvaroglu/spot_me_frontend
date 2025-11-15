@@ -27,19 +27,19 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=nI9l8gry4ypVpkt81Dy7wmgENciwJ2o7dRjNqEaEhzw%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903438"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Z2w%2BHwSKkkNfuBZWgqpeuYXgXbkgHgVL4R7gxlZaH1A%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169156"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=nI9l8gry4ypVpkt81Dy7wmgENciwJ2o7dRjNqEaEhzw%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903438"
+      - heroku-nel="https://nel.heroku.com/reports?s=Z2w%2BHwSKkkNfuBZWgqpeuYXgXbkgHgVL4R7gxlZaH1A%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169156"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - db36cfe2-086f-dae9-627d-cfc418b0c463
+      - ebd9cfe5-ccad-d25d-ae92-4ee288b08fad
       X-Runtime:
-      - '0.006393'
+      - '0.005439'
       Date:
-      - Tue, 11 Nov 2025 23:23:58 GMT
+      - Sat, 15 Nov 2025 01:12:36 GMT
       Content-Length:
       - '814'
     body:
@@ -49,7 +49,7 @@ http_interactions:
         Varoglu"}},{"id":"4","type":"user","attributes":{"email":"alli.j.varoglu@gmail.com","google_id":"103649569578369516428","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxa57thf-8CUIvUYwFC87xcBHs_pVHNwWAbRSTI7=s96-c","zip_code":"80302","summary":"Stay
         healthy","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Alexandria
         Varoglu"}}]}'
-  recorded_at: Tue, 11 Nov 2025 23:23:58 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:36 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search?zip_code=80227
@@ -73,23 +73,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a0e60f15ae7ada8abcf5d040771db805"
+      - W/"dd08e6ecbfa6b467fe37e814312c0c9d"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=nI9l8gry4ypVpkt81Dy7wmgENciwJ2o7dRjNqEaEhzw%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903438"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Z2w%2BHwSKkkNfuBZWgqpeuYXgXbkgHgVL4R7gxlZaH1A%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169156"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=nI9l8gry4ypVpkt81Dy7wmgENciwJ2o7dRjNqEaEhzw%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903438"
+      - heroku-nel="https://nel.heroku.com/reports?s=Z2w%2BHwSKkkNfuBZWgqpeuYXgXbkgHgVL4R7gxlZaH1A%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169156"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 580ef64a-6e71-7a1c-9fe5-dd4692ea4cd5
+      - 3367c352-57c8-e971-d7d9-9e8c618ef036
       X-Runtime:
-      - '0.345140'
+      - '0.380886'
       Date:
-      - Tue, 11 Nov 2025 23:23:58 GMT
+      - Sat, 15 Nov 2025 01:12:37 GMT
       Transfer-Encoding:
       - chunked
     body:
@@ -97,14 +97,14 @@ http_interactions:
       string: '{"data":[{"id":"k7FJbD1gnvZKyg2f4nLwgA","type":"gym","attributes":{"name":"Barnabas-Paul","address":"4560
         South Balsom Way, Unit 2102, Denver, CO 80227","address_details":{"address1":"4560
         South Balsom Way","address2":"Unit 2102","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(800)
-        653-7042","gym_member_count":0}},{"id":"PgKY-X5NQEUxchReaTG5GA","type":"gym","attributes":{"name":"Swing
-        Doctor","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        915-9969","gym_member_count":0}},{"id":"wq9ZKBEPwcYl-OrjL-kxFQ","type":"gym","attributes":{"name":"Fred
-        Fitness","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"GsWRqEopfNAQC2E9cXAhng","type":"gym","attributes":{"name":"Pure
-        X Fitness","address":"Denver, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(720)
-        402-8595","gym_member_count":0}},{"id":"whFEoCGD0ZdXDc9yfisEmw","type":"gym","attributes":{"name":"Sound
+        653-7042","gym_member_count":0}},{"id":"whFEoCGD0ZdXDc9yfisEmw","type":"gym","attributes":{"name":"Sound
         Body Training","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        916-9914","gym_member_count":0}},{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
+        916-9914","gym_member_count":0}},{"id":"GsWRqEopfNAQC2E9cXAhng","type":"gym","attributes":{"name":"Pure
+        X Fitness","address":"Denver, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(720)
+        402-8595","gym_member_count":0}},{"id":"wq9ZKBEPwcYl-OrjL-kxFQ","type":"gym","attributes":{"name":"Fred
+        Fitness","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"PgKY-X5NQEUxchReaTG5GA","type":"gym","attributes":{"name":"Swing
+        Doctor","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
+        915-9969","gym_member_count":0}},{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
@@ -183,11 +183,11 @@ http_interactions:
         356-4910","gym_member_count":0}},{"id":"qTbwGQM_TCO2iZk8ON6jsQ","type":"gym","attributes":{"name":"Lakewood
         Fitness and Massage","address":"1880 S Pierce St, Lakewood, CO 80232","address_details":{"address1":"1880
         S Pierce St","address2":null,"address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        349-1380","gym_member_count":0}},{"id":"4uSMExlyy8a1FsSbR62sPg","type":"gym","attributes":{"name":"Fluid
-        Fusion","address":"Lakewood, CO 80232","address_details":{"address1":"","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        623-3179","gym_member_count":0}},{"id":"6zfuMhQ0Q9CQSS_6-yW03w","type":"gym","attributes":{"name":"Fitness
+        349-1380","gym_member_count":0}},{"id":"6zfuMhQ0Q9CQSS_6-yW03w","type":"gym","attributes":{"name":"Fitness
         Solutions by Jess","address":"Lakewood, CO 80232","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
-        339-3049","gym_member_count":0}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
+        339-3049","gym_member_count":0}},{"id":"4uSMExlyy8a1FsSbR62sPg","type":"gym","attributes":{"name":"Fluid
+        Fusion","address":"Lakewood, CO 80232","address_details":{"address1":"","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
+        623-3179","gym_member_count":0}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
         Winds and Hands","address":"Lakewood, CO 80232","address_details":{"address1":"","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
         939-1723","gym_member_count":0}},{"id":"y-2NJfVIWQEwHjtWlkqP4w","type":"gym","attributes":{"name":"CK
         Health and Wellness","address":"Denver, CO 80232","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
@@ -223,14 +223,14 @@ http_interactions:
         904-0133","gym_member_count":0}},{"id":"XRLuul22I6-7ZTCFQMwbfQ","type":"gym","attributes":{"name":"Soul
         Journey Health","address":"1075 S Yukon St, Ste 120, Lakewood, CO 80226","address_details":{"address1":"1075
         S Yukon St","address2":"Ste 120","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(720)
-        519-1548","gym_member_count":0}},{"id":"nBw5ptq7W9OpC7C0Fa8upw","type":"gym","attributes":{"name":"Xpress
+        519-1548","gym_member_count":0}},{"id":"Tlpgq3uyAqRNxMtSpsJVhQ","type":"gym","attributes":{"name":"Davita
+        Denver Acutes","address":"1057 S Wadsworth Blvd, Lakewood, CO 80226","address_details":{"address1":"1057
+        S Wadsworth Blvd","address2":"","address3":"","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
+        761-6696","gym_member_count":0}},{"id":"nBw5ptq7W9OpC7C0Fa8upw","type":"gym","attributes":{"name":"Xpress
         Fitness Trainning","address":"1057 S Wadsworth Blvd, Ste 10, Lakewood, CO
         80226","address_details":{"address1":"1057 S Wadsworth Blvd","address2":"Ste
         10","address3":null,"city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
-        987-1045","gym_member_count":0}},{"id":"Tlpgq3uyAqRNxMtSpsJVhQ","type":"gym","attributes":{"name":"Davita
-        Denver Acutes","address":"1057 S Wadsworth Blvd, Lakewood, CO 80226","address_details":{"address1":"1057
-        S Wadsworth Blvd","address2":"","address3":"","city":"Lakewood","zip_code":"80226","country":"US","state":"CO"},"phone":"(303)
-        761-6696","gym_member_count":0}},{"id":"mRjQmf7JNkTGgcJXySftSg","type":"gym","attributes":{"name":"Body
+        987-1045","gym_member_count":0}},{"id":"mRjQmf7JNkTGgcJXySftSg","type":"gym","attributes":{"name":"Body
         \u0026 Brain - Lakewood","address":"1535 S Kipling Pkwy, Unit M, Lakewood,
         CO 80232","address_details":{"address1":"1535 S Kipling Pkwy","address2":"Unit
         M","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
@@ -245,7 +245,7 @@ http_interactions:
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","address_details":{"address1":"4625
         W Warren Ave","address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"(303)
         568-9192","gym_member_count":0}}]}'
-  recorded_at: Tue, 11 Nov 2025 23:23:58 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:37 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_search/BJBXzKYxQAXZKb5W6HrRnA
@@ -273,19 +273,19 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=etx5A1T5t8TzMabSiHio1%2BtCBI%2Bli0DqvNsGWUi00os%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903439"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=GPqVmhbw4QGiq4GSmyGQIHR%2FykRRnBk5eUo9rXNEtmY%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169157"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=etx5A1T5t8TzMabSiHio1%2BtCBI%2Bli0DqvNsGWUi00os%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903439"
+      - heroku-nel="https://nel.heroku.com/reports?s=GPqVmhbw4QGiq4GSmyGQIHR%2FykRRnBk5eUo9rXNEtmY%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169157"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 9e7331b9-cb32-062d-6a8c-b100529c930d
+      - 9c0939f9-16f7-2e00-12a0-57a5306a618d
       X-Runtime:
-      - '0.127254'
+      - '0.181077'
       Date:
-      - Tue, 11 Nov 2025 23:23:59 GMT
+      - Sat, 15 Nov 2025 01:12:38 GMT
       Content-Length:
       - '376'
     body:
@@ -295,7 +295,7 @@ http_interactions:
         CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         601-0789","gym_member_count":1}}}'
-  recorded_at: Tue, 11 Nov 2025 23:23:59 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:38 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships
@@ -319,25 +319,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"994395f587e36c3f8ff19562e8a26cb8"
+      - W/"8f0ef4c59ba95230aff7285b34ca0536"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=etx5A1T5t8TzMabSiHio1%2BtCBI%2Bli0DqvNsGWUi00os%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903439"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=2M9iz%2FH3UGosrUdFJF3Qct8LN%2BaWoA5c9BN4Ofp%2FXc4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169158"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=etx5A1T5t8TzMabSiHio1%2BtCBI%2Bli0DqvNsGWUi00os%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903439"
+      - heroku-nel="https://nel.heroku.com/reports?s=2M9iz%2FH3UGosrUdFJF3Qct8LN%2BaWoA5c9BN4Ofp%2FXc4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169158"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - f5d22a05-a9e5-c7b1-0794-912d4a865d32
+      - 2d0d0a05-b321-b919-5214-5e556f72def1
       X-Runtime:
-      - '0.940607'
+      - '1.231872'
       Date:
-      - Tue, 11 Nov 2025 23:24:00 GMT
+      - Sat, 15 Nov 2025 01:12:39 GMT
       Content-Length:
-      - '1366'
+      - '1414'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ","gym_name":"24
@@ -347,9 +347,10 @@ http_interactions:
         Denver, CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"}}},{"id":"24","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"P1jMOLxPXUObfl-W1Tz7tw","gym_name":"barre3"},"meta":{"address":"3150
         E Ray Rd, Ste 112, Gilbert, AZ 85296","address_details":{"address1":"3150
-        E Ray Rd","address2":"Ste 112","address3":null,"city":"Gilbert","zip_code":"85296","country":"US","state":"AZ"}}},{"id":"35","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"XAnjU4ziPMNjIHcy7G66Iw","gym_name":"Project
-        Refined Life"},"meta":{"address":"Gilbert, AZ 85296","address_details":{"address1":"","address2":"","address3":"","city":"Gilbert","zip_code":"85296","country":"US","state":"AZ"}}}]}'
-  recorded_at: Tue, 11 Nov 2025 23:24:00 GMT
+        E Ray Rd","address2":"Ste 112","address3":null,"city":"Gilbert","zip_code":"85296","country":"US","state":"AZ"}}},{"id":"40","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"AWNHi1TdBlMrTtKP6Zt4EA","gym_name":"Unstoppable
+        Martial Arts"},"meta":{"address":"1534 E Ray Rd, Ste 109, Gilbert, AZ 85296","address_details":{"address1":"1534
+        E Ray Rd","address2":"Ste 109","address3":"","city":"Gilbert","zip_code":"85296","country":"US","state":"AZ"}}}]}'
+  recorded_at: Sat, 15 Nov 2025 01:12:39 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -377,26 +378,26 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=UOA22mvWceMSOVEEt%2FLU%2BaaBkKpKs6uF%2BKsk6XnEqyc%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903440"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=lDY4phj2NzKhVXKU3W0Mbwcc%2BAtRn74zL%2BUCZpm9jEc%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169160"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=UOA22mvWceMSOVEEt%2FLU%2BaaBkKpKs6uF%2BKsk6XnEqyc%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903440"
+      - heroku-nel="https://nel.heroku.com/reports?s=lDY4phj2NzKhVXKU3W0Mbwcc%2BAtRn74zL%2BUCZpm9jEc%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169160"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 9a204a9d-c919-c134-0d15-c2a3d239ebb9
+      - '0469d52e-77f6-fb29-8b7d-1bbf250c9ec6'
       X-Runtime:
-      - '0.007522'
+      - '0.007196'
       Date:
-      - Tue, 11 Nov 2025 23:24:00 GMT
+      - Sat, 15 Nov 2025 01:12:40 GMT
       Content-Length:
       - '430'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxY8jq2Y2Xu0yJyh--ARjG5om-JB_iwBV06UVibcJQ=s96-c","zip_code":"85296","summary":"Let''s
         get swoll!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Taylor"}}],"meta":{"gym_member_count":1}}'
-  recorded_at: Tue, 11 Nov 2025 23:24:00 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:40 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/gym_memberships/users?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -424,26 +425,26 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=YdgehyCtXlc7k6xKuTNhrz8wpNhb53ao70wki3tLqxU%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903441"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=lDY4phj2NzKhVXKU3W0Mbwcc%2BAtRn74zL%2BUCZpm9jEc%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169160"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=YdgehyCtXlc7k6xKuTNhrz8wpNhb53ao70wki3tLqxU%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903441"
+      - heroku-nel="https://nel.heroku.com/reports?s=lDY4phj2NzKhVXKU3W0Mbwcc%2BAtRn74zL%2BUCZpm9jEc%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169160"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 72f7122f-2685-f539-35f0-f0f055a6d60a
+      - 544e8b04-65da-a609-596b-77b085347731
       X-Runtime:
-      - '0.007839'
+      - '0.005114'
       Date:
-      - Tue, 11 Nov 2025 23:24:01 GMT
+      - Sat, 15 Nov 2025 01:12:40 GMT
       Content-Length:
       - '430'
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"1","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxY8jq2Y2Xu0yJyh--ARjG5om-JB_iwBV06UVibcJQ=s96-c","zip_code":"85296","summary":"Let''s
         get swoll!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Taylor"}}],"meta":{"gym_member_count":1}}'
-  recorded_at: Tue, 11 Nov 2025 23:24:01 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:40 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/friendships?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -471,25 +472,25 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=YdgehyCtXlc7k6xKuTNhrz8wpNhb53ao70wki3tLqxU%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903441"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=RYynhF2keQP2kkkjLUwRGPnbpSTnerW7eXRX8ihiy%2BQ%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169161"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=YdgehyCtXlc7k6xKuTNhrz8wpNhb53ao70wki3tLqxU%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903441"
+      - heroku-nel="https://nel.heroku.com/reports?s=RYynhF2keQP2kkkjLUwRGPnbpSTnerW7eXRX8ihiy%2BQ%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169161"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - f2337dac-bec1-3c6d-9a34-a62811b1a5bf
+      - 18844e99-508f-355d-d6f1-ec3dcebe22c9
       X-Runtime:
-      - '0.007718'
+      - '0.007282'
       Date:
-      - Tue, 11 Nov 2025 23:24:01 GMT
+      - Sat, 15 Nov 2025 01:12:41 GMT
       Content-Length:
       - '11'
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 11 Nov 2025 23:24:01 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:41 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_members?yelp_gym_id=BJBXzKYxQAXZKb5W6HrRnA
@@ -517,23 +518,23 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=YdgehyCtXlc7k6xKuTNhrz8wpNhb53ao70wki3tLqxU%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903441"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=GyPN6mJX4e6KvzAFV%2BLpk1iGGRuBLVFMMIprVxeNpR8%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169162"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=YdgehyCtXlc7k6xKuTNhrz8wpNhb53ao70wki3tLqxU%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903441"
+      - heroku-nel="https://nel.heroku.com/reports?s=GyPN6mJX4e6KvzAFV%2BLpk1iGGRuBLVFMMIprVxeNpR8%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169162"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - ef88cd8b-077f-78c8-34e5-c048630743dc
+      - 5ca541ed-983f-c033-7ece-453fdb2030ea
       X-Runtime:
-      - '0.009487'
+      - '0.006338'
       Date:
-      - Tue, 11 Nov 2025 23:24:01 GMT
+      - Sat, 15 Nov 2025 01:12:42 GMT
       Content-Length:
       - '11'
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 11 Nov 2025 23:24:01 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:42 GMT
 recorded_with: VCR 6.3.1

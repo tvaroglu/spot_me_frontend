@@ -27,19 +27,19 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=UrT1vVZYHEaQmMwBlUpFwJCBVL64P7oCo%2FpQ7FDOI%2FA%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903443"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=wPeSRTcOXES6V4ZOwsL8j6iDVrUIErHjcZxb5IGpb5o%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169165"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=UrT1vVZYHEaQmMwBlUpFwJCBVL64P7oCo%2FpQ7FDOI%2FA%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903443"
+      - heroku-nel="https://nel.heroku.com/reports?s=wPeSRTcOXES6V4ZOwsL8j6iDVrUIErHjcZxb5IGpb5o%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169165"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - adbbf9d4-f4b4-4201-f736-0dac1d549be9
+      - a929e924-1a38-b0de-69df-050bf91e4007
       X-Runtime:
-      - '0.005988'
+      - '0.004998'
       Date:
-      - Tue, 11 Nov 2025 23:24:03 GMT
+      - Sat, 15 Nov 2025 01:12:45 GMT
       Content-Length:
       - '814'
     body:
@@ -49,5 +49,5 @@ http_interactions:
         Varoglu"}},{"id":"4","type":"user","attributes":{"email":"alli.j.varoglu@gmail.com","google_id":"103649569578369516428","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxa57thf-8CUIvUYwFC87xcBHs_pVHNwWAbRSTI7=s96-c","zip_code":"80302","summary":"Stay
         healthy","goal":"Lose Weight","availability_morning":false,"availability_afternoon":false,"availability_evening":true,"full_name":"Alexandria
         Varoglu"}}]}'
-  recorded_at: Tue, 11 Nov 2025 23:24:03 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:45 GMT
 recorded_with: VCR 6.3.1

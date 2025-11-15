@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8f0ef4c59ba95230aff7285b34ca0536"
+      - W/"7902eff88a1404d84597535727011141"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Sjw5JLgy5W%2FtTviQhABL0NxcNlkXQD8T92lReoZyUEo%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169148"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=L9vpxMjFmDFVmUwSgVb2iZNsW%2B3TUHEC%2BP0KxXZcYcc%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224876"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=Sjw5JLgy5W%2FtTviQhABL0NxcNlkXQD8T92lReoZyUEo%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169148"
+      - heroku-nel="https://nel.heroku.com/reports?s=L9vpxMjFmDFVmUwSgVb2iZNsW%2B3TUHEC%2BP0KxXZcYcc%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224876"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 5715327d-2f2f-c63e-0a8b-5d8342252f12
+      - 6acf389c-d981-1d06-d08d-505f794583ce
       X-Runtime:
-      - '2.496173'
+      - '1.032505'
       Date:
-      - Sat, 15 Nov 2025 01:12:31 GMT
+      - Sat, 15 Nov 2025 16:41:17 GMT
       Content-Length:
       - '1414'
     body:
@@ -51,8 +51,8 @@ http_interactions:
         Denver, CO 80227","address_details":{"address1":"2750 S Wadsworth Blvd","address2":"Bldg
         D, Ste 202","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"}}},{"id":"24","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"P1jMOLxPXUObfl-W1Tz7tw","gym_name":"barre3"},"meta":{"address":"3150
         E Ray Rd, Ste 112, Gilbert, AZ 85296","address_details":{"address1":"3150
-        E Ray Rd","address2":"Ste 112","address3":null,"city":"Gilbert","zip_code":"85296","country":"US","state":"AZ"}}},{"id":"40","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"AWNHi1TdBlMrTtKP6Zt4EA","gym_name":"Unstoppable
+        E Ray Rd","address2":"Ste 112","address3":null,"city":"Gilbert","zip_code":"85296","country":"US","state":"AZ"}}},{"id":"42","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"AWNHi1TdBlMrTtKP6Zt4EA","gym_name":"Unstoppable
         Martial Arts"},"meta":{"address":"1534 E Ray Rd, Ste 109, Gilbert, AZ 85296","address_details":{"address1":"1534
         E Ray Rd","address2":"Ste 109","address3":"","city":"Gilbert","zip_code":"85296","country":"US","state":"AZ"}}}]}'
-  recorded_at: Sat, 15 Nov 2025 01:12:31 GMT
+  recorded_at: Sat, 15 Nov 2025 16:41:17 GMT
 recorded_with: VCR 6.3.1

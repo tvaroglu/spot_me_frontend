@@ -25,26 +25,26 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=RMwLKE5Fm0myLTbbM6ajX%2FIRRVOctwGDsEZ%2Fhmc%2BAv8%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903447"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=2fJudtlBbpwLjkp%2BvJQDoIqXhr5yNSRy5rGpGtSFrCM%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169171"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=RMwLKE5Fm0myLTbbM6ajX%2FIRRVOctwGDsEZ%2Fhmc%2BAv8%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903447"
+      - heroku-nel="https://nel.heroku.com/reports?s=2fJudtlBbpwLjkp%2BvJQDoIqXhr5yNSRy5rGpGtSFrCM%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169171"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 5ec9488e-3398-cd50-b750-3cc5168e1631
+      - 98a8d3f7-7ae5-6e86-f380-d62b444e20a9
       X-Runtime:
-      - '0.003708'
+      - '0.004505'
       Date:
-      - Tue, 11 Nov 2025 23:24:07 GMT
+      - Sat, 15 Nov 2025 01:12:51 GMT
       Content-Length:
       - '92'
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User with ''id''=11"]}'
-  recorded_at: Tue, 11 Nov 2025 23:24:07 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:51 GMT
 - request:
     method: get
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/11/friendships?relationship=followers
@@ -70,24 +70,24 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2FT4au%2Fao8Rpa6Ie3E3%2BCMltLHN%2BGd0t4kxCO3BjWpd0%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903448"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=Hf9DcgRYirxTNrOzY%2FuKB9h3F3L0TQtXIUnNMinQWgg%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169172"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=%2FT4au%2Fao8Rpa6Ie3E3%2BCMltLHN%2BGd0t4kxCO3BjWpd0%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903448"
+      - heroku-nel="https://nel.heroku.com/reports?s=Hf9DcgRYirxTNrOzY%2FuKB9h3F3L0TQtXIUnNMinQWgg%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169172"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 5ccc49f8-1985-31bc-78cf-de10e58b82da
+      - 66298a7d-86b9-e9cc-732f-62bcea0376b0
       X-Runtime:
-      - '0.004468'
+      - '0.003355'
       Date:
-      - Tue, 11 Nov 2025 23:24:08 GMT
+      - Sat, 15 Nov 2025 01:12:52 GMT
       Content-Length:
       - '92'
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User with ''id''=11"]}'
-  recorded_at: Tue, 11 Nov 2025 23:24:08 GMT
+  recorded_at: Sat, 15 Nov 2025 01:12:52 GMT
 recorded_with: VCR 6.3.1

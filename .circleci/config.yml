@@ -8,8 +8,8 @@ workflows:
   heroku_deploy:
     jobs:
       - build
-      # TODO: comment in revised heroku/deploy-via-git job post-stack upgrade
-      # - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+      # TODO: uncomment job job post-stack upgrade
+      # - heroku/deploy-via-git:
       #     requires:
       #       - build
       #     filters:
@@ -22,12 +22,13 @@ jobs:
   build:
     parallelism: 1
     docker:
-      - image: cimg/ruby:3.0.6
+      - image: cimg/ruby:3.1.4
       - image: cimg/postgres:13.9
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: spot_me_frontend_test
     environment:
+      # Bundler config to match local
       BUNDLE_PATH: vendor/bundle
       BUNDLE_JOBS: 3
       BUNDLE_RETRY: 3
@@ -40,14 +41,17 @@ jobs:
       - run:
           name: Which bundler?
           command: bundle -v
+      - run:
+          name: Ensure Bundler 2.3.25 (matches lockfile)
+          command: gem install bundler -v 2.3.25
       - ruby/bundle-install
       - run:
-          name: Install Node + Yarn (Rails 6 asset compilation)
+          name: Install Node + Yarn (for Rails 6 assets)
           command: |
             sudo apt-get update
             sudo apt-get install -y nodejs yarn
       - run:
-          name: Setup DB
+          name: Setup Test DB
           command: bundle exec rails db:create db:schema:load --trace
       - run:
           name: Run Test Suite

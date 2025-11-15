@@ -23,23 +23,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a0e60f15ae7ada8abcf5d040771db805"
+      - W/"c2dc8ecd09ee4c1831ef5f58f500dc2e"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=5s6cFqKJ3a8YLwXCdIAZfA3HM4LIuFLVUitXfaB%2FzTU%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903454"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=C%2BLYCNVMUp9Mlqztu5VfH%2BTTiz8p8YAVWWQ1k%2FqovVE%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169182"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=5s6cFqKJ3a8YLwXCdIAZfA3HM4LIuFLVUitXfaB%2FzTU%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903454"
+      - heroku-nel="https://nel.heroku.com/reports?s=C%2BLYCNVMUp9Mlqztu5VfH%2BTTiz8p8YAVWWQ1k%2FqovVE%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169182"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - '0488db61-0543-b955-4e5c-c8f1f7f9ff64'
+      - 7f5c4141-1747-5a0f-2164-f6f1fb214ac8
       X-Runtime:
-      - '0.405686'
+      - '0.570692'
       Date:
-      - Tue, 11 Nov 2025 23:24:15 GMT
+      - Sat, 15 Nov 2025 01:13:03 GMT
       Transfer-Encoding:
       - chunked
     body:
@@ -47,12 +47,12 @@ http_interactions:
       string: '{"data":[{"id":"k7FJbD1gnvZKyg2f4nLwgA","type":"gym","attributes":{"name":"Barnabas-Paul","address":"4560
         South Balsom Way, Unit 2102, Denver, CO 80227","address_details":{"address1":"4560
         South Balsom Way","address2":"Unit 2102","address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(800)
-        653-7042","gym_member_count":0}},{"id":"PgKY-X5NQEUxchReaTG5GA","type":"gym","attributes":{"name":"Swing
-        Doctor","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
-        915-9969","gym_member_count":0}},{"id":"wq9ZKBEPwcYl-OrjL-kxFQ","type":"gym","attributes":{"name":"Fred
+        653-7042","gym_member_count":0}},{"id":"wq9ZKBEPwcYl-OrjL-kxFQ","type":"gym","attributes":{"name":"Fred
         Fitness","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":null,"city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"","gym_member_count":0}},{"id":"GsWRqEopfNAQC2E9cXAhng","type":"gym","attributes":{"name":"Pure
         X Fitness","address":"Denver, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80227","country":"US","state":"CO"},"phone":"(720)
-        402-8595","gym_member_count":0}},{"id":"whFEoCGD0ZdXDc9yfisEmw","type":"gym","attributes":{"name":"Sound
+        402-8595","gym_member_count":0}},{"id":"PgKY-X5NQEUxchReaTG5GA","type":"gym","attributes":{"name":"Swing
+        Doctor","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
+        915-9969","gym_member_count":0}},{"id":"whFEoCGD0ZdXDc9yfisEmw","type":"gym","attributes":{"name":"Sound
         Body Training","address":"Lakewood, CO 80227","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80227","country":"US","state":"CO"},"phone":"(303)
         916-9914","gym_member_count":0}},{"id":"BJBXzKYxQAXZKb5W6HrRnA","type":"gym","attributes":{"name":"Rishi''s
         Community Yoga","address":"2750 S Wadsworth Blvd, Bldg D, Ste 202, Denver,
@@ -133,11 +133,11 @@ http_interactions:
         356-4910","gym_member_count":0}},{"id":"qTbwGQM_TCO2iZk8ON6jsQ","type":"gym","attributes":{"name":"Lakewood
         Fitness and Massage","address":"1880 S Pierce St, Lakewood, CO 80232","address_details":{"address1":"1880
         S Pierce St","address2":null,"address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        349-1380","gym_member_count":0}},{"id":"4uSMExlyy8a1FsSbR62sPg","type":"gym","attributes":{"name":"Fluid
-        Fusion","address":"Lakewood, CO 80232","address_details":{"address1":"","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
-        623-3179","gym_member_count":0}},{"id":"6zfuMhQ0Q9CQSS_6-yW03w","type":"gym","attributes":{"name":"Fitness
+        349-1380","gym_member_count":0}},{"id":"6zfuMhQ0Q9CQSS_6-yW03w","type":"gym","attributes":{"name":"Fitness
         Solutions by Jess","address":"Lakewood, CO 80232","address_details":{"address1":null,"address2":null,"address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
-        339-3049","gym_member_count":0}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
+        339-3049","gym_member_count":0}},{"id":"4uSMExlyy8a1FsSbR62sPg","type":"gym","attributes":{"name":"Fluid
+        Fusion","address":"Lakewood, CO 80232","address_details":{"address1":"","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(303)
+        623-3179","gym_member_count":0}},{"id":"SKsXhIk_xlCZO3RhUygw6g","type":"gym","attributes":{"name":"Gentle
         Winds and Hands","address":"Lakewood, CO 80232","address_details":{"address1":"","address2":"","address3":"","city":"Lakewood","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
         939-1723","gym_member_count":0}},{"id":"y-2NJfVIWQEwHjtWlkqP4w","type":"gym","attributes":{"name":"CK
         Health and Wellness","address":"Denver, CO 80232","address_details":{"address1":null,"address2":null,"address3":"","city":"Denver","zip_code":"80232","country":"US","state":"CO"},"phone":"(720)
@@ -195,5 +195,5 @@ http_interactions:
         Star Swim Lessons","address":"4625 W Warren Ave, Denver, CO 80219","address_details":{"address1":"4625
         W Warren Ave","address2":null,"address3":"","city":"Denver","zip_code":"80219","country":"US","state":"CO"},"phone":"(303)
         568-9192","gym_member_count":0}}]}'
-  recorded_at: Tue, 11 Nov 2025 23:24:15 GMT
+  recorded_at: Sat, 15 Nov 2025 01:13:03 GMT
 recorded_with: VCR 6.3.1

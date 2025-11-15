@@ -75,7 +75,7 @@
   * Ruby version
       ```bash
       $ ruby -v
-      ruby 3.0.6p216 (2023-03-30 revision 23a532679b) [arm64-darwin23]
+      ruby 3.1.4p223 (2023-03-30 revision 957bb7cb81) [arm64-darwin23]
       ```
 
   * [System dependencies](https://github.com/tvaroglu/spot_me_frontend/blob/main/Gemfile)
@@ -149,7 +149,7 @@
       => Rails 6.0.6.1 application starting in development 
       => Run `rails server --help` for more startup options
       Puma starting in single mode...
-      * Version 4.3.12 (ruby 3.0.6-p216), codename: Mysterious Traveller
+      * Version 4.3.12 (ruby 3.1.4-p223), codename: Mysterious Traveller
       * Min threads: 5, max threads: 5
       * Environment: development
       * Listening on tcp://127.0.0.1:3000

@@ -26,34 +26,34 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2e3b7c9cb58de020be19ab0ad5b05e76"
+      - W/"61814dc12d909f0eec3f23752f104cbb"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=6K%2F72JdlHXltX1PD%2Fsfe53kKWetL%2Fpk9HPnN4Yldl50%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903452"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2Bza742dQmh%2FWCSVNLv0GKlf%2FAV%2FIhiRA5ur5U7pFwp4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169179"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=6K%2F72JdlHXltX1PD%2Fsfe53kKWetL%2Fpk9HPnN4Yldl50%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903452"
+      - heroku-nel="https://nel.heroku.com/reports?s=%2Bza742dQmh%2FWCSVNLv0GKlf%2FAV%2FIhiRA5ur5U7pFwp4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169179"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - dad351d4-d661-fddc-655b-02b7bc5783eb
+      - f538a736-9bc8-dccd-c581-95753d560131
       X-Runtime:
-      - '0.242723'
+      - '0.624204'
       Date:
-      - Tue, 11 Nov 2025 23:24:12 GMT
+      - Sat, 15 Nov 2025 01:13:00 GMT
       Content-Length:
       - '339'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"36","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+      string: '{"data":{"id":"41","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
         Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}}'
-  recorded_at: Tue, 11 Nov 2025 23:24:12 GMT
+  recorded_at: Sat, 15 Nov 2025 01:13:00 GMT
 - request:
     method: delete
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/36
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/41
     body:
       encoding: US-ASCII
       string: ''
@@ -74,21 +74,21 @@ http_interactions:
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=ph2DaUQD9l9oRFwJdEejnhmjKLkdzdgVuU7%2F%2BpzkTPg%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1762903453"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=smPASmKgZmFt44bBtzd7xl%2FCkIKFyeEKtVSpbyumqJI%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763169180"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=ph2DaUQD9l9oRFwJdEejnhmjKLkdzdgVuU7%2F%2BpzkTPg%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1762903453"
+      - heroku-nel="https://nel.heroku.com/reports?s=smPASmKgZmFt44bBtzd7xl%2FCkIKFyeEKtVSpbyumqJI%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763169180"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
       X-Request-Id:
-      - 8245a166-9f52-fc61-c3f5-0bf96444df0a
+      - c995d308-a868-cbbe-3e4c-5e0fea1146c1
       X-Runtime:
-      - '0.012201'
+      - '0.011973'
       Date:
-      - Tue, 11 Nov 2025 23:24:13 GMT
+      - Sat, 15 Nov 2025 01:13:00 GMT
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 11 Nov 2025 23:24:13 GMT
+  recorded_at: Sat, 15 Nov 2025 01:13:00 GMT
 recorded_with: VCR 6.3.1

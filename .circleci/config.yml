@@ -82,4 +82,8 @@ jobs:
       - run:
           name: Run migrations
           command: |
-            heroku run rails db:migrate --app spotme-app
+            if heroku config:get DATABASE_URL --app spotme-app | grep -q 'postgres'; then
+              heroku run rails db:migrate --app spotme-app
+            else
+              echo "No database detected; skipping migrations."
+            fi

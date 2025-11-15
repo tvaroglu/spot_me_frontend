@@ -2,20 +2,17 @@ version: 2.1
 
 orbs:
   ruby: circleci/ruby@0.1.2
-  heroku: circleci/heroku@0.0.10
 
 workflows:
   heroku_deploy:
     jobs:
       - build
-      - heroku/deploy-via-git:
+      - deploy:
           requires:
             - build
           filters:
             branches:
               only: main
-          post-steps:
-            - run: heroku run rails db:migrate --app spotme-app
 
 jobs:
   build:
@@ -55,3 +52,25 @@ jobs:
       - run:
           name: Run Test Suite
           command: bundle exec rspec -fd
+
+  deploy:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: Install Heroku CLI
+          command: |
+            curl https://cli-assets.heroku.com/install.sh | sh
+      - run:
+          name: Authenticate with Heroku
+          command: |
+            heroku login --apikey $HEROKU_API_KEY
+      - run:
+          name: Deploy to Heroku via Git
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/spotme-app.git main
+      - run:
+          name: Run migrations
+          command: |
+            heroku run rails db:migrate --app spotme-app

@@ -42,15 +42,15 @@
 
 |Development|Development|Testing|Deployment
 |--- |--- |--- |--- |
-|[Ruby 2.7.2](https://www.ruby-lang.org/en/downloads/)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
-|[Rails 5.2.6](https://rubygems.org/gems/rails/versions/5.2.6)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[CircleCI](https://circleci.com/)|
+|[Ruby 3.1.4](https://www.ruby-lang.org/en/downloads/)|[Git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[RSpec for Rails](https://github.com/rspec/rspec-rails)|[Heroku](http://virtual-watch-party.herokuapp.com)|
+|[Rails 6.0.6.1](https://rubygems.org/gems/rails/versions/5.2.6)|[Github](https://desktop.github.com/)|[Capybara](https://github.com/teamcapybara/capybara)|[CircleCI](https://circleci.com/)|
 |[Pry](https://rubygems.org/gems/pry/versions/0.10.3)|[Bootstrap](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[Webmock](https://github.com/bblimke/webmock)
 |[PostgresQL](https://www.postgresql.org/)|[HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)|[VCR](https://github.com/vcr/vcr)
 |[Postico](https://eggerapps.at/postico/)|[CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)|[Launchy](https://rubygems.org/gems/launchy/versions/2.4.3)
 |[OmniAuth Google OAuth2](https://github.com/zquestz/omniauth-google-oauth2)|[Rubocop](https://rubygems.org/gems/rubocop/versions/0.39.0)|[FactoryBot](https://github.com/thoughtbot/factory_bot)
-|[Figaro](https://github.com/laserlemon/figaro)|[Atom](https://atom.io/)|[Faker](https://github.com/faker-ruby/faker)
-|[Faraday](https://github.com/lostisland/faraday)||[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
-|[Postman](https://www.postman.com/product/rest-client/)|
+|[Faraday](https://github.com/lostisland/faraday)|[Atom](https://atom.io/)|[Faker](https://github.com/faker-ruby/faker)
+|[Postman](https://www.postman.com/product/rest-client/)||[SimpleCov](https://rubygems.org/gems/simplecov/versions/0.12.0)|
+|
 
 </div>
 
@@ -93,7 +93,7 @@
 
   * [OAuth setup](https://github.com/zquestz/omniauth-google-oauth2#installation)
       ```bash
-      #Gemfile
+      # Gemfile
         gem 'omniauth-google-oauth2'
         gem 'omniauth-rails_csrf_protection'
       ```
@@ -125,16 +125,16 @@
 
   * [API key configuration](https://github.com/laserlemon/figaro)
       ```bash
-      $ bundle exec figaro install
+      $ touch .env
       ```
-      Add your credentials & API keys to `config/application.yml`:
+      Add your credentials & API keys into `config/application.yml` (legacy) or `.env`:
       ```yml
-      #Frontend Repo:
+      # Frontend Repo:
       GOOGLE_CLIENT_ID: <your client id>
       GOOGLE_CLIENT_SECRET: <your client secret>
 
-      #Backend Repo:
-      yelp_api_key: 'Bearer <your v3 token>'
+      # Backend Repo:
+      YELP_API_KEY: "Bearer <your v3 token>"
       ```
 
   * How to run the test suite

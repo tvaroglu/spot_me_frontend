@@ -136,7 +136,9 @@
                 <div class="fit-content no-pad">
                   <ul class='no-bullets'>
                     <li class='address'>
-                      <%= gym_membership.address1 %> <br>
+                      <% if gym_membership.address_details.present? %>
+                        <%= gym_membership.address1 %> <br>
+                      <% end %>
                       <%= gym_membership.city_state_zip %>
                     </li>
                   </ul>

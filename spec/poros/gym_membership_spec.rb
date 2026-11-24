@@ -56,6 +56,18 @@ describe GymMembership, type: :poro do
     end
   end
 
+  describe 'when Yelp address metadata is unavailable' do
+    it 'still represents the membership without raising' do
+      membership = GymMembership.new(gym_membership_params.merge(meta: {
+        address: nil, address_details: {}
+      }))
+
+      expect(membership.gym_name).to eq('Planet Fitness')
+      expect(membership.address1).to be_nil
+      expect(membership.city_state_zip).to eq('Address temporarily unavailable')
+    end
+  end
+
   describe 'instance methods' do
     describe '#city_state_zip' do
       it 'returns the concatenated city, state, and zip' do

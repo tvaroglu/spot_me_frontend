@@ -25,29 +25,41 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"fc71092d0bd02f03741373c2af3091dc"
+      - W/"97db774d30fbff6fa601c9f4d7a5e762"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224893"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=wAdqcHk%2F0np9De8xOYyyiPyFCOOuIl8k7v1nLDWTJgc%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563065"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224893"
+      - heroku-nel="https://nel.heroku.com/reports?s=wAdqcHk%2F0np9De8xOYyyiPyFCOOuIl8k7v1nLDWTJgc%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563065"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
       X-Request-Id:
-      - 6ca388f6-91c7-9e03-ec96-10b1139b2cd0
+      - 4f9fa83d-1225-fba4-5ae6-5cc15a2b6d4d
       X-Runtime:
-      - '0.015136'
+      - '0.010085'
+      X-Xss-Protection:
+      - 1; mode=block
       Date:
-      - Sat, 15 Nov 2025 16:41:33 GMT
+      - Tue, 24 Nov 2026 23:31:05 GMT
       Content-Length:
-      - '87'
+      - '88'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"56","type":"friendship","attributes":{"follower_id":2,"followee_id":3}}}'
-  recorded_at: Sat, 15 Nov 2025 16:41:33 GMT
+      string: '{"data":{"id":"185","type":"friendship","attributes":{"follower_id":2,"followee_id":3}}}'
+  recorded_at: Tue, 24 Nov 2026 23:31:05 GMT
 - request:
     method: delete
     uri: https://spotme-app-api.herokuapp.com/api/v1/users/2/friendships/3
@@ -70,22 +82,34 @@ http_interactions:
       - no-cache
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224893"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=y8fEDLv5%2BBPa5%2BJU6X3iA2Mwen%2Bp4UROOR%2F48zJOvu4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563066"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=QGRnYdjVAq6acb%2Bgr%2FUXQptC1wjnv2wE0yYgp1BToUM%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224893"
+      - heroku-nel="https://nel.heroku.com/reports?s=y8fEDLv5%2BBPa5%2BJU6X3iA2Mwen%2Bp4UROOR%2F48zJOvu4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563066"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
       X-Request-Id:
-      - d040af93-8eb4-66c2-0fc3-da17a26d5d7e
+      - ba5568c4-d833-c559-a1f4-adb9cf95e338
       X-Runtime:
-      - '0.010071'
+      - '0.007211'
+      X-Xss-Protection:
+      - 1; mode=block
       Date:
-      - Sat, 15 Nov 2025 16:41:33 GMT
+      - Tue, 24 Nov 2026 23:31:06 GMT
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sat, 15 Nov 2025 16:41:33 GMT
+  recorded_at: Tue, 24 Nov 2026 23:31:05 GMT
 recorded_with: VCR 6.3.1

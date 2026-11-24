@@ -26,20 +26,32 @@ http_interactions:
       - W/"924f0f292bf47d1872b18a0e04f7ccd1"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=txbNkmx4D%2BxkmQgD0MBmJJmrWjI2tUGSzOqvYa3Yqp4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224891"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=2hFyHp8eGpYeJvBpMBSRDZzicrz1Ztkavq0CY6%2FT2PA%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563064"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=txbNkmx4D%2BxkmQgD0MBmJJmrWjI2tUGSzOqvYa3Yqp4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224891"
+      - heroku-nel="https://nel.heroku.com/reports?s=2hFyHp8eGpYeJvBpMBSRDZzicrz1Ztkavq0CY6%2FT2PA%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563064"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
       X-Request-Id:
-      - 98c2cb65-cf46-44aa-ac25-7ea730c44381
+      - ee2aec55-d884-e0dc-2cc5-edaef2a4e77f
       X-Runtime:
-      - '0.011100'
+      - '0.007772'
+      X-Xss-Protection:
+      - 1; mode=block
       Date:
-      - Sat, 15 Nov 2025 16:41:31 GMT
+      - Tue, 24 Nov 2026 23:31:04 GMT
       Content-Length:
       - '297'
     body:
@@ -47,5 +59,5 @@ http_interactions:
       string: '{"data":[{"id":"3","type":"event","attributes":{"user_id":2,"gym_membership_id":1,"date_time":"2030-11-11T03:45:00.000Z","activity":"Lift!"},"meta":{"friend_name":"Taylor
         Varoglu","friend_role":"invited","gym_name":"24 Hour Fitness - Boulder Iris
         Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}}]}'
-  recorded_at: Sat, 15 Nov 2025 16:41:31 GMT
+  recorded_at: Tue, 24 Nov 2026 23:31:04 GMT
 recorded_with: VCR 6.3.1

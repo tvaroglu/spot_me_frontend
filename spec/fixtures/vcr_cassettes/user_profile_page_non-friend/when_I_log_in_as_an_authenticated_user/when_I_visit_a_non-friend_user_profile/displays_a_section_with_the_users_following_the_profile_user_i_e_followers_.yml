@@ -24,25 +24,37 @@ http_interactions:
       - application/json; charset=utf-8
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=EEKPjn8NBc8AwBclNSAY%2FLCu5QlKpUCtqqj01ubEpB8%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224889"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=JvtaoXM8tjZ5qwxfR0f%2FTy90ZBVc7T4LOgxk3D%2B2VvQ%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563062"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=EEKPjn8NBc8AwBclNSAY%2FLCu5QlKpUCtqqj01ubEpB8%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224889"
+      - heroku-nel="https://nel.heroku.com/reports?s=JvtaoXM8tjZ5qwxfR0f%2FTy90ZBVc7T4LOgxk3D%2B2VvQ%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563062"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
       X-Request-Id:
-      - 685dd301-338f-e81f-b62e-4e27a09551b9
+      - 14533014-b418-3bae-906c-42e69cb88e01
       X-Runtime:
-      - '0.003612'
+      - '0.002749'
+      X-Xss-Protection:
+      - 1; mode=block
       Date:
-      - Sat, 15 Nov 2025 16:41:29 GMT
+      - Tue, 24 Nov 2026 23:31:02 GMT
       Content-Length:
       - '92'
     body:
       encoding: UTF-8
       string: '{"message":"your query could not be completed","errors":["Couldn''t
         find User with ''id''=11"]}'
-  recorded_at: Sat, 15 Nov 2025 16:41:29 GMT
+  recorded_at: Tue, 24 Nov 2026 23:31:02 GMT
 recorded_with: VCR 6.3.1

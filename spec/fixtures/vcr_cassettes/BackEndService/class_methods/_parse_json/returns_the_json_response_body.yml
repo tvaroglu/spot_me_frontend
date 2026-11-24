@@ -23,28 +23,40 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"44c12615a96e145d62f01316cb9b2aa2"
+      - W/"a29226b2942037cd58dc8d3e58071d40"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=txbNkmx4D%2BxkmQgD0MBmJJmrWjI2tUGSzOqvYa3Yqp4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224891"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=2hFyHp8eGpYeJvBpMBSRDZzicrz1Ztkavq0CY6%2FT2PA%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563064"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=txbNkmx4D%2BxkmQgD0MBmJJmrWjI2tUGSzOqvYa3Yqp4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224891"
+      - heroku-nel="https://nel.heroku.com/reports?s=2hFyHp8eGpYeJvBpMBSRDZzicrz1Ztkavq0CY6%2FT2PA%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563064"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
       X-Request-Id:
-      - 1b0f3d53-bb5c-e8d4-034f-b966ca2247d3
+      - 781e2405-0240-7bbb-87cc-4ad47cf8f71b
       X-Runtime:
-      - '0.005602'
+      - '0.002837'
+      X-Xss-Protection:
+      - 1; mode=block
       Date:
-      - Sat, 15 Nov 2025 16:41:31 GMT
+      - Tue, 24 Nov 2026 23:31:04 GMT
       Content-Length:
-      - '398'
+      - '399'
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"tayz44@gmail.com","google_id":"101912462697049277959","google_image_url":"https://lh3.googleusercontent.com/a/AGNmyxY8jq2Y2Xu0yJyh--ARjG5om-JB_iwBV06UVibcJQ=s96-c","zip_code":"85296","summary":"Let''s
-        get swoll!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Taylor"}}}'
-  recorded_at: Sat, 15 Nov 2025 16:41:31 GMT
+        get swoll!!!","goal":"Gain Muscle","availability_morning":true,"availability_afternoon":true,"availability_evening":true,"full_name":"Taylor"}}}'
+  recorded_at: Tue, 24 Nov 2026 23:31:04 GMT
 recorded_with: VCR 6.3.1

@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"924f0f292bf47d1872b18a0e04f7ccd1"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=0Bejt5tGIvdhCKE2SMY12j53UUoWWCGHvlhvCVtiDZI%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563049"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=0Bejt5tGIvdhCKE2SMY12j53UUoWWCGHvlhvCVtiDZI%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563049"
+      Server:
+      - Heroku
+      Via:
+      - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - d8b003a1-66ab-455c-fc09-8622667a9b3f
+      X-Runtime:
+      - '0.821524'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 24 Nov 2026 23:30:50 GMT
+      Content-Length:
+      - '297'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"3","type":"event","attributes":{"user_id":2,"gym_membership_id":1,"date_time":"2030-11-11T03:45:00.000Z","activity":"Lift!"},"meta":{"friend_name":"Taylor
+        Varoglu","friend_role":"invited","gym_name":"24 Hour Fitness - Boulder Iris
+        Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}}]}'
+  recorded_at: Tue, 24 Nov 2026 23:30:50 GMT
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/events?time_frame=past
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"60c143b992db9460fed3de2f757dfeb4"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=2ALQKMzH7dSSlM8XnA2%2FDQ5xY2oF53JJ2X26SP0gLno%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563050"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=2ALQKMzH7dSSlM8XnA2%2FDQ5xY2oF53JJ2X26SP0gLno%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563050"
+      Server:
+      - Heroku
+      Via:
+      - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - f44b4bd6-c110-9403-796b-0024c8f9ab0c
+      X-Runtime:
+      - '0.007977'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 24 Nov 2026 23:30:51 GMT
+      Content-Length:
+      - '583'
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"2","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-12-31T04:20:00.000Z","activity":"Lift
+        more!!"},"meta":{"friend_name":"Taylor Varoglu","friend_role":"host","gym_name":"24
+        Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}},{"id":"1","type":"event","attributes":{"user_id":1,"gym_membership_id":9,"date_time":"2023-04-23T02:30:00.000Z","activity":"Lift"},"meta":{"friend_name":"Taylor
+        Varoglu","friend_role":"host","gym_name":"24 Hour Fitness - Boulder Iris Street","yelp_gym_id":"3uDPhomf9Ik_CebjtpCcvQ"}}]}'
+  recorded_at: Tue, 24 Nov 2026 23:30:50 GMT
+recorded_with: VCR 6.3.1

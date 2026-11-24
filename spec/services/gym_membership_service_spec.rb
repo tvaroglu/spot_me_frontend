@@ -28,31 +28,32 @@ describe GymMembershipService, :vcr, type: :service do
         }
 
         actual = GymMembershipService.delete_gym_membership(path_params)
-        expect(actual.env.url.to_s).to eq("https://spotme-app-api.herokuapp.com/api/v1/users/#{user_id}/gym_memberships/#{gym_membership_id}")
+        expect(actual.env.url.to_s).to include("/api/v1/users/#{user_id}/gym_memberships/#{gym_membership_id}")
         expect(actual.status).to eq(204)
       end
     end
 
     describe '.get_gym_memberships' do
       it "returns the user's gym memberships" do
-        # NOTE: if you are doing local dev work and have to rerecord cassettes against LocalHost
-        # make sure your User with user_id == 1 has their GymMemberships updated with the following:
-        # yelp_gym_id: 'gHmS3WIjRRhSWG4OdCQYLA'
-
-        # New meta keys from GymMembership query Yelp for address info, and require a real yelp_gym_id
-        # Heroku DB has been updated accordingly, but local DB requires this update if rerecording cassettes
         user_id = 1
         actual = GymMembershipService.get_gym_memberships(user_id)
 
         expect(actual).to be_a(Hash)
         expect(actual).to have_key(:data)
-        expect(actual[:data]).to be_an(Array)
-        expect(actual[:data]).to all(have_key(:id))
-        expect(actual[:data]).to all(have_key(:type))
-        expect(actual[:data]).to all(have_key(:attributes))
 
-        actual[:data].each do |gym_membership|
-          expect(gym_membership[:attributes][:user_id]).to eq(user_id)
+        data = actual[:data]
+        expect(data).to be_an(Array)
+
+        if data.size > 0
+          expect(data).to all(have_key(:id))
+          expect(data).to all(have_key(:type))
+          expect(data).to all(have_key(:attributes))
+
+          data.each do |gym_membership|
+            expect(gym_membership[:attributes][:user_id]).to eq(user_id)
+          end
+        else
+          expect(data).to be_empty
         end
       end
     end

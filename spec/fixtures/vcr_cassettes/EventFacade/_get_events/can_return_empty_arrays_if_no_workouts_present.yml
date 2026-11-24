@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/0/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=8IUw8dd6qpunkohFRzevkG4%2BYmH6doxYhG45C3Fe%2F0M%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563051"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=8IUw8dd6qpunkohFRzevkG4%2BYmH6doxYhG45C3Fe%2F0M%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563051"
+      Server:
+      - Heroku
+      Via:
+      - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - a6d5c6fb-9a19-877e-e593-fc80aff2795b
+      X-Runtime:
+      - '0.029871'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 24 Nov 2026 23:30:51 GMT
+      Content-Length:
+      - '91'
+    body:
+      encoding: UTF-8
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=0"]}'
+  recorded_at: Tue, 24 Nov 2026 23:30:51 GMT
+- request:
+    method: get
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/0/events?time_frame=past
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=8IUw8dd6qpunkohFRzevkG4%2BYmH6doxYhG45C3Fe%2F0M%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563051"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=8IUw8dd6qpunkohFRzevkG4%2BYmH6doxYhG45C3Fe%2F0M%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563051"
+      Server:
+      - Heroku
+      Via:
+      - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - dcfc0ee3-8f33-0167-d439-8da40f5985de
+      X-Runtime:
+      - '0.003524'
+      X-Xss-Protection:
+      - 1; mode=block
+      Date:
+      - Tue, 24 Nov 2026 23:30:51 GMT
+      Content-Length:
+      - '91'
+    body:
+      encoding: UTF-8
+      string: '{"message":"your query could not be completed","errors":["Couldn''t
+        find User with ''id''=0"]}'
+  recorded_at: Tue, 24 Nov 2026 23:30:51 GMT
+recorded_with: VCR 6.3.1

@@ -26,34 +26,46 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"258bc03d53a19ad63bf9359f38eb6491"
+      - W/"f43e3f00f6b9ade2e30fde392f8fe9ee"
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=EVZOxUAeyrJtY0mYaM6VJE5x4t5iBj5ZNjhU5ZAxOrI%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224894"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=y8fEDLv5%2BBPa5%2BJU6X3iA2Mwen%2Bp4UROOR%2F48zJOvu4%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563066"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=EVZOxUAeyrJtY0mYaM6VJE5x4t5iBj5ZNjhU5ZAxOrI%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224894"
+      - heroku-nel="https://nel.heroku.com/reports?s=y8fEDLv5%2BBPa5%2BJU6X3iA2Mwen%2Bp4UROOR%2F48zJOvu4%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563066"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
       X-Request-Id:
-      - 35904e2f-2481-6f88-f50b-f217815b51f9
+      - 5a87406c-c288-ba65-d90e-ae474e1087c5
       X-Runtime:
-      - '0.252035'
+      - '0.135571'
+      X-Xss-Protection:
+      - 1; mode=block
       Date:
-      - Sat, 15 Nov 2025 16:41:34 GMT
+      - Tue, 24 Nov 2026 23:31:06 GMT
       Content-Length:
-      - '339'
+      - '336'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"44","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
+      string: '{"data":{"id":"328","type":"gym_membership","attributes":{"user_id":1,"yelp_gym_id":"gHmS3WIjRRhSWG4OdCQYLA","gym_name":"Planet
         Fitness"},"meta":{"address":"2 Livewell Dr, Kennebunk, ME 04043","address_details":{"address1":"2
-        Livewell Dr","address2":null,"address3":null,"city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}}'
-  recorded_at: Sat, 15 Nov 2025 16:41:34 GMT
+        Livewell Dr","address2":"","address3":"","city":"Kennebunk","zip_code":"04043","country":"US","state":"ME"}}}}'
+  recorded_at: Tue, 24 Nov 2026 23:31:06 GMT
 - request:
     method: delete
-    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/44
+    uri: https://spotme-app-api.herokuapp.com/api/v1/users/1/gym_memberships/328
     body:
       encoding: US-ASCII
       string: ''
@@ -73,22 +85,34 @@ http_interactions:
       - no-cache
       Nel:
       - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Report-To:
-      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2FSHvcKrI%2B8GIOFHh7cJdS19DrTIFEvBBxYvz%2FM9r7hk%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1763224895"}],"max_age":3600}'
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=0YARKHRCJ%2F90VyohQxAGHKUXmI4Eci3AtHfAG6iW58s%3D\u0026sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6\u0026ts=1795563067"}],"max_age":3600}'
       Reporting-Endpoints:
-      - heroku-nel="https://nel.heroku.com/reports?s=%2FSHvcKrI%2B8GIOFHh7cJdS19DrTIFEvBBxYvz%2FM9r7hk%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1763224895"
+      - heroku-nel="https://nel.heroku.com/reports?s=0YARKHRCJ%2F90VyohQxAGHKUXmI4Eci3AtHfAG6iW58s%3D&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&ts=1795563067"
       Server:
       - Heroku
       Via:
       - 1.1 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
       X-Request-Id:
-      - fb0115cc-3d99-232b-527b-fb97c8980c37
+      - 3b822aa9-b51c-df30-a8c4-5e9601e9e599
       X-Runtime:
-      - '0.011814'
+      - '0.007937'
+      X-Xss-Protection:
+      - 1; mode=block
       Date:
-      - Sat, 15 Nov 2025 16:41:35 GMT
+      - Tue, 24 Nov 2026 23:31:07 GMT
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Sat, 15 Nov 2025 16:41:35 GMT
+  recorded_at: Tue, 24 Nov 2026 23:31:06 GMT
 recorded_with: VCR 6.3.1

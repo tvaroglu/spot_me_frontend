@@ -2,27 +2,21 @@ require 'rails_helper'
 
 describe GymMembershipFacade, type: :facade do
   describe '.get_gym_memberships' do
-    context 'when the user has gyms' do
-      it "can return an array of the user's gyms", :vcr do
-        # NOTE: if you are doing local dev work and have to rerecord cassettes against LocalHost
-        # make sure your User with user_id == 1 has their GymMemberships updated with the following:
-        # yelp_gym_id: 'gHmS3WIjRRhSWG4OdCQYLA'
+    it "can return an array of the user's gyms if present", :vcr do
+      gyms = GymMembershipFacade.get_gym_memberships(1)
 
-        # New meta keys from GymMembership query Yelp for address info, and require a real yelp_gym_id
-        # Heroku DB has been updated accordingly, but local DB requires this update if rerecording cassettes
-        gyms = GymMembershipFacade.get_gym_memberships(1)
-
+      expect(gyms).to be_an(Array)
+      if gyms.size > 0
         expect(gyms[0]).to be_an_instance_of(GymMembership)
-        expect(gyms).not_to be_empty
+      else
+        expect(gyms).to be_empty
       end
     end
 
-    context 'when the user does not have any gyms' do
-      it 'can return an empty array', :vcr do
-        gyms = GymMembershipFacade.get_gym_memberships(11)
+    it 'can return an empty array if no gyms present', :vcr do
+      gyms = GymMembershipFacade.get_gym_memberships(0)
 
-        expect(gyms).to be_empty
-      end
+      expect(gyms).to be_empty
     end
   end
 

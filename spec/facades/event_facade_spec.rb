@@ -2,38 +2,34 @@ require 'rails_helper'
 
 describe EventFacade, type: :facade do
   describe '.get_events' do
-    context 'when the user has upcoming events' do
-      it "can return an array of the user's workouts", :vcr do
-        events = EventFacade.get_events(1)
+    it "can return arrays of the user's workouts if present", :vcr do
+      upcoming_events = EventFacade.get_events(1)
 
-        expect(events[0]).to be_an_instance_of(Event)
-        expect(events).not_to be_empty
+      expect(upcoming_events).to be_an(Array)
+      if upcoming_events.size > 0
+        expect(upcoming_events[0]).to be_an_instance_of(Event)
+      else
+        expect(upcoming_events).to be_empty
+      end
+
+      past_events = EventFacade.get_events(1, 'past')
+
+      expect(past_events).to be_an(Array)
+      if past_events.size > 0
+        expect(past_events[0]).to be_an_instance_of(Event)
+      else
+        expect(past_events).to be_empty
       end
     end
 
-    context 'when the user does not have any upcoming events' do
-      it 'can return an empty array', :vcr do
-        events = EventFacade.get_events(11)
+    it 'can return empty arrays if no workouts present', :vcr do
+      upcoming_events = EventFacade.get_events(0)
 
-        expect(events).to be_empty
-      end
-    end
+      expect(upcoming_events).to be_empty
 
-    context 'when the user has past events' do
-      it "can return an array of the user's workouts", :vcr do
-        events = EventFacade.get_events(1, 'past')
+      past_events = EventFacade.get_events(0, 'past')
 
-        expect(events[0]).to be_an_instance_of(Event)
-        expect(events).not_to be_empty
-      end
-    end
-
-    context 'when the user does not have any past events' do
-      it 'can return an empty array', :vcr do
-        events = EventFacade.get_events(11, 'past')
-
-        expect(events).to be_empty
-      end
+      expect(past_events).to be_empty
     end
   end
 

@@ -5,8 +5,6 @@ class BackEndService
   end
 
   def self.parse_json(response)
-    # TODO: debug API; receiving 500's on certain gym membership add/removes..?
-      # i.e. NoMethodError (undefined method `address' for #<Hash:0x000055cc15d77508>):
     return {} if response.body.nil? || response.body.strip.empty?
     # puts "STATUS: #{response.status}"
     # puts "BODY: #{response.body.inspect}"
